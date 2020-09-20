@@ -29,10 +29,12 @@
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator'
 import Cols from '~/components/Cols/Cols.vue'
+import Logo from '~/components/Logo.vue'
 
 @Component({
   components: {
     Cols,
+    Logo,
   },
 })
 export default class Cosmo extends Vue {}
