@@ -26,6 +26,10 @@ export default {
     // https://go.nuxtjs.dev/stylelint
     '@nuxtjs/stylelint-module',
     '@nuxtjs/dotenv',
+    [
+      '@nuxtjs/router',
+      { fileName: 'router/router.ts', keepDefaultRouter: false },
+    ],
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
