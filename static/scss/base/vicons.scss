@@ -1,0 +1,84 @@
+/* -------------------- vicons.css -------------------- */
+.vicon {
+	fill: currentcolor;
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	font: 20px/0 a;
+}
+.vicon__body {
+	width: 1em;
+	height: 1em;
+	background: inherit;
+	transform: translateX(0);
+	-ms-transform: translate(.5px, -.3px);
+}
+.vicon--small {
+	font-size: 16px;
+	margin-right: 4px;
+	line-height: 16px;
+}
+.vicon--larrow {
+	transform: rotate(180deg);
+}
+.vicon--circled,
+.vicon--circled .vicon__body {
+	border-radius: 50%;
+}
+
+.vicon--gull_left {
+	transform: rotate(90deg);
+}
+.vicon--gull_down {
+	transform: rotate(90deg);
+}
+.vicon--gull_up {
+	transform: rotate(-90deg);
+}
+
+.vicon--eye {
+	fill: #777;
+	font-size: 12px;
+}
+.vicon--sprocket {
+	fill: #999;
+	font-size: 12px;
+	padding-left: 6px;
+}
+.vicon--burger_cn {
+	font-size: 17px;
+}
+
+.footer_social__link:hover .vicon {
+	background-color: #fff;
+}
+.footer_social__link:hover .vicon--fb {
+	fill: #23599b;
+}
+.footer_social__link:hover .vicon--vk {
+	fill: #4680C2;
+}
+.footer_social__link:hover .vicon--gp {
+	fill: #f70c1e;
+}
+.footer_social__link:hover .vicon--tw {
+	fill: #1da1f2;
+}
+.footer_social__link:hover .vicon--ok {
+	fill: #ee8208;
+}
+.footer_social__link:hover .vicon--tg {
+	fill: #0088cc;
+}
+.footer_social__link:hover .vicon--ig {
+	fill: #000;
+}
+.footer_social__link:hover .vicon--flipboard {
+	fill: #e12828;
+}
+.footer_social__link:hover .vicon--subscribe_service {
+	fill: #c12133;
+}
+.footer_social__link:hover .vicon--vb {
+	fill: #7360f2;
+}

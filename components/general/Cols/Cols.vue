@@ -1,5 +1,5 @@
 <template>
-  <h1>alala</h1>
+  <h1>Cols</h1>
 </template>
 
 <script src="./Cols.ts" lang="ts"></script>

@@ -3,7 +3,7 @@ export default {
 
   globalName: 'kommersant',
 
-  modern: 'server',
+  // modern: 'server',
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
@@ -18,6 +18,11 @@ export default {
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [],
+
+  // Here are all the variables and shared functions/mixins for sass
+  styleResources: {
+    scss: ['@/static/scss/main.scss'],
+  },
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [],
@@ -36,6 +41,7 @@ export default {
       '@nuxtjs/router',
       { fileName: 'router/router.ts', keepDefaultRouter: false },
     ],
+    '@nuxtjs/style-resources',
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
