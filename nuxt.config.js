@@ -3,7 +3,7 @@ export default {
 
   globalName: 'kommersant',
 
-  // modern: 'server',
+  modern: 'server',
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {

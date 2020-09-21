@@ -21,3 +21,4 @@ import Footer from '~/components/general/Footer/Footer.vue'
 })
 export default class Kommersant extends Vue {}
 </script>
+<style src="./default.scss" lang="scss"></style>
