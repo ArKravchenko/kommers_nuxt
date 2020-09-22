@@ -1665,6 +1665,14 @@
     consola "^2.11.3"
     eslint-loader "^4.0.2"
 
+"@nuxtjs/global-components@^0.6.1":
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/global-components/-/global-components-0.6.1.tgz#7328530cea320871b19d2db2c814db9362b14784"
+  integrity sha512-9aNDUeSP1HaDwBWveRjOlpEKLL2h7kIwJyeGnr7CflT9upFcm0BkLyjy7eM4oACkUemuOtAIKCOulsnbz2ci2w==
+  dependencies:
+    chokidar "^3.3.1"
+    globby "^11.0.0"
+
 "@nuxtjs/proxy@^2.0.1":
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/@nuxtjs/proxy/-/proxy-2.0.1.tgz#2469b6e316311aa8c60d348502a54bfe6d5536aa"
@@ -3554,7 +3562,7 @@ check-types@^8.0.3:
   resolved "https://registry.yarnpkg.com/check-types/-/check-types-8.0.3.tgz#3356cca19c889544f2d7a95ed49ce508a0ecf552"
   integrity sha512-YpeKZngUmG65rLudJ4taU7VLkOCTMhNl/u4ctNC56LQS/zJTyNH0Lrtwm1tfTsbLlwvlfsA2d1c8vCf/Kh2KwQ==
 
-"chokidar@>=2.0.0 <4.0.0", chokidar@^3.4.1, chokidar@^3.4.2:
+"chokidar@>=2.0.0 <4.0.0", chokidar@^3.3.1, chokidar@^3.4.1, chokidar@^3.4.2:
   version "3.4.2"
   resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-3.4.2.tgz#38dc8e658dec3809741eb3ef7bb0a47fe424232d"
   integrity sha512-IZHaDeBeI+sZJRX7lGcXsdzgvZqKv6sECqsbErJA4mHWfpRrD8B97kSFN4cQz6nGBGiuFia1MKR4d6c1o8Cv7A==
@@ -5924,7 +5932,7 @@ globals@^9.18.0:
   resolved "https://registry.yarnpkg.com/globals/-/globals-9.18.0.tgz#aa3896b3e69b487f17e31ed2143d69a8e30c2d8a"
   integrity sha512-S0nG3CLEQiY/ILxqtztTWH/3iRRdyBLw6KMDxnKMchrtbj2OFmehVh0WUCfW3DUrIgx/qFrJPICrq4Z4sTR9UQ==
 
-globby@^11.0.1:
+globby@^11.0.0, globby@^11.0.1:
   version "11.0.1"
   resolved "https://registry.yarnpkg.com/globby/-/globby-11.0.1.tgz#9a2bf107a068f3ffeabc49ad702c79ede8cfd357"
   integrity sha512-iH9RmgwCmUJHi2z5o2l3eTtGBtXek1OYlHrbcxOYugyHLmAsZrPj43OtHThd62Buh/Vv6VyCBD2bdyWcGNQqoQ==
@@ -12112,6 +12120,11 @@ vue-eslint-parser@^7.0.0:
     espree "^6.2.1"
     esquery "^1.0.1"
     lodash "^4.17.15"
+
+vue-fragment@^1.5.1:
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/vue-fragment/-/vue-fragment-1.5.1.tgz#44c070d55ed1e9a6c698ef57a5c83f64bb06feeb"
+  integrity sha512-ig6eES6TcMBbANW71ylB+AJgRN+Zksb3f50AxjGpAk6hMzqmeuD80qeh4LJP0jVw2dMBMjgRUfIkrvxygoRgtQ==
 
 vue-hot-reload-api@^2.3.0:
   version "2.3.4"

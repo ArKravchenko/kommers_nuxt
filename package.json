@@ -3,13 +3,14 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "nuxt-ts",
+    "dev": "nuxt-ts --hostname localhost --port 3333",
     "build": "nuxt-ts build",
     "start": "nuxt-ts start",
     "generate": "nuxt-ts generate",
     "lint:js": "eslint --ext .js,.vue,.ts --ignore-path .gitignore .",
     "lint:style": "stylelint **/*.{vue,css,scss} --ignore-path .gitignore",
     "lint:fix": "eslint --ext .js,.vue,.ts . --fix",
+    "lint:stylefix": "stylelint **/*.{vue,css,scss} --fix",
     "lint": "yarn lint:js && yarn lint:style",
     "test": "jest"
   },
