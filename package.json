@@ -15,8 +15,8 @@
     "test": "jest"
   },
   "lint-staged": {
-    "*.{js,ts,vue}": "yarn lint:js:fix",
-    "*.{css,vue,scss}": "yarn lint:style:fix"
+    "*.{js,ts,vue}": "yarn lint:js",
+    "*.{css,vue,scss}": "yarn lint:style"
   },
   "husky": {
     "hooks": {
