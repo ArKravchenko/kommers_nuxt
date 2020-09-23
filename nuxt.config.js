@@ -21,7 +21,7 @@ export default {
 
   // Here are all the variables and shared functions/mixins for sass
   styleResources: {
-    scss: ['@/static/scss/main.scss'],
+    scss: ['@/assets/scss/main.scss'],
   },
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
@@ -35,7 +35,7 @@ export default {
     // https://go.nuxtjs.dev/typescript
     '@nuxt/typescript-build',
     // https://go.nuxtjs.dev/stylelint
-    '@nuxtjs/stylelint-module',
+    // '@nuxtjs/stylelint-module',
     '@nuxtjs/dotenv',
     [
       '@nuxtjs/router',

@@ -8,15 +8,14 @@
     "start": "nuxt-ts start",
     "generate": "nuxt-ts generate",
     "lint:js": "eslint --ext .js,.vue,.ts --ignore-path .gitignore .",
-    "lint:style": "stylelint **/*.{vue,css,scss}",
+    "lint:style": "stylelint --syntax scss **/*.{css,scss}",
     "lint:js:fix": "eslint --ext .js,.vue,.ts --ignore-path .gitignore . --fix",
-    "lint:style:fix": "stylelint **/*.{vue,css,scss} --fix",
+    "lint:style:fix": "stylelint --syntax scss **/*.{css,scss} --fix",
     "lint": "yarn lint:js && yarn lint:style",
     "test": "jest"
   },
   "lint-staged": {
-    "*.{js,ts,vue}": "yarn lint:js",
-    "*.{css,vue,scss}": "yarn lint:style"
+    "*.{js,ts,vue}": "yarn lint:js"
   },
   "husky": {
     "hooks": {
