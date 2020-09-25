@@ -1,5 +1,8 @@
 <template>
   <div>
+    <h1 class="alala">
+      Color of this text is passed directly from nuxt.config with var $env
+    </h1>
     <Vicons />
     <Header />
     <Nuxt />

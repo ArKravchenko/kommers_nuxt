@@ -3,7 +3,7 @@ export default {
 
   globalName: 'kommersant',
 
-  modern: 'server',
+  // modern: 'server',
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
@@ -56,5 +56,9 @@ export default {
   axios: {},
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
-  build: {},
+  build: {
+    extend(config, { isClient, isServer, loaders }) {
+      loaders.scss.additionalData = `$env: yellow;`
+    },
+  },
 }
