@@ -1,3 +1,10 @@
+import scssConfig from './config/scssConfig.ts'
+
+const scssVars = Object.keys(scssConfig).reduce(
+  (acc, value) => `${acc} ${value}: ${scssConfig[value]};`,
+  ''
+)
+
 export default {
   dev: process.env.NODE_ENV !== 'production',
 
@@ -58,9 +65,7 @@ export default {
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
     extend(config, { isClient, isServer, loaders }) {
-      loaders.scss.additionalData = `$envColor: yellow; $platform: ${
-        process.env.PLATFORM_NAME || 'platform1'
-      };`
+      loaders.scss.additionalData = scssVars
     },
   },
 }
