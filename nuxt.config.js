@@ -58,7 +58,9 @@ export default {
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
     extend(config, { isClient, isServer, loaders }) {
-      loaders.scss.additionalData = `$env: yellow;`
+      loaders.scss.additionalData = `$envColor: yellow; $platform: ${
+        process.env.PLATFORM_NAME || 'platform1'
+      };`
     },
   },
 }

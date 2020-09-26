@@ -1,7 +1,11 @@
 <template>
   <div>
-    <h1 class="alala">
-      Color of this text is passed directly from nuxt.config with var $env
+    <h1 class="envColor">
+      Color of this text is passed directly from nuxt.config with var $envColor
+    </h1>
+    <h1 class="platform_color">
+      Color of this text is ci conditionally set by importing different scss
+      files with var $test
     </h1>
     <Vicons />
     <Header />
