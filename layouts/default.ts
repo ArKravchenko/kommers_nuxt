@@ -7,7 +7,7 @@ import Header from '~/components/general/Header/Header/Header.vue'
   components: {
     Vicons,
     Footer,
-    Header,
+    Header, // : () => import('~/components/general/Header/Header/Header.vue'),
   },
 })
 export default class Kommersant extends Vue {}
