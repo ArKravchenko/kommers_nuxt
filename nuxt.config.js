@@ -1,4 +1,6 @@
 import scssConfig from './config/scssConfig.ts'
+import cacheConfig from './config/cacheConfig.ts'
+import { version } from './package'
 
 const scssVars = Object.keys(scssConfig).reduce(
   (acc, value) => `${acc} ${value}: ${scssConfig[value]};`,
@@ -6,9 +8,12 @@ const scssVars = Object.keys(scssConfig).reduce(
 )
 
 export default {
+  version,
   dev: process.env.NODE_ENV !== 'production',
 
   globalName: 'kommersant',
+
+  cache: cacheConfig,
 
   // modern: 'server',
 
@@ -57,6 +62,7 @@ export default {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
+    'nuxt-ssr-cache',
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
