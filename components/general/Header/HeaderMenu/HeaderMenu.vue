@@ -1,5 +1,8 @@
 <template>
-  <section id="site_menu" :class="[{ isHidden }, 'site_menu']">
+  <section
+    id="site_menu"
+    :class="[{ 'site_menu--active': isActive }, 'site_menu']"
+  >
     <div class="layout site_menu__body">
       <h4 id="site_menu__name" class="site_menu__name vh">Меню сайта</h4>
       <div class="site_menu__header">

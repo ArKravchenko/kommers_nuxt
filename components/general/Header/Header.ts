@@ -11,9 +11,9 @@ import HeaderRegion from './HeaderRegion/HeaderRegion.vue'
   },
 })
 export default class Header extends Vue {
-  private menuIsHidden: boolean = false
+  private menuIsActive: boolean = false
 
-  private toggleHideMenu() {
-    this.menuIsHidden = !this.menuIsHidden
+  private toggleMenuActive() {
+    this.menuIsActive = !this.menuIsActive
   }
 }

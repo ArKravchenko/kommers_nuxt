@@ -5,5 +5,5 @@ import { Component, Vue, Emit } from 'nuxt-property-decorator'
 })
 export default class HeaderNavbar extends Vue {
   @Emit()
-  burgerClicked() {}
+  burgerClick() {}
 }

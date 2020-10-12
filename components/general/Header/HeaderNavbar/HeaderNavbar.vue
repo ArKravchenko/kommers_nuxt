@@ -1,7 +1,7 @@
 <template>
   <header class="main_header">
     <div class="layout">
-      <div class="main_header__content" @click="burgerClicked">
+      <div class="main_header__content" @click="burgerClick">
         <input
           id="burger_trigger"
           type="checkbox"
@@ -15,7 +15,7 @@
           class="main_header__item main_header__burger"
           title="Рубрики и разделы"
           tabindex="0"
-          @click="burgerClicked"
+          @click="burgerClick"
         >
           <span
             class="vicon vicon--burger main_header__icon main_header__burger_icon"
