@@ -1,6 +1,7 @@
 import { Component, Vue } from 'nuxt-property-decorator'
 
 @Component({
-  components: {},
+  components: {}
 })
-export default class Header extends Vue {}
+
+export default class HeaderNavbar extends Vue {}

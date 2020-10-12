@@ -1,7 +1,7 @@
 import { Component, Vue } from 'nuxt-property-decorator'
 import Vicons from '~/components/general/Vicons/Vicons.vue'
 import Footer from '~/components/general/Footer/Footer.vue'
-import Header from '~/components/general/Header/Header/Header.vue'
+import Header from '~/components/general/Header/Header.vue'
 
 @Component({
   components: {

@@ -1,0 +1,53 @@
+@mixin screen($width) {
+	@media only screen and (min-width: $width) {
+		@content;
+	}
+}
+@mixin max_screen($width) {
+	@media only screen and (max-width: $width) {
+		@content;
+	}
+}
+
+@mixin mobile {
+	@include max_screen(#{$desktop1 - 1px}) {
+		@content;
+	}
+}
+
+@mixin desk1 {
+	@include screen($desktop1) {
+		@content;
+	}
+}
+
+@mixin desk3 {
+	@include screen($desktop3) {
+		@content;
+	}
+}
+$breakpoints: (
+	'mobile': #{'only screen and (max-width: #{$desktop1 - 1})'},
+	'desktop': #{'only screen and (min-width: #{$desktop1})'},
+	'desktop_half': #{'only screen and (min-width: #{$desktop1 / 2})'},
+	'desktop_wide': #{'only screen and (min-width: #{$desktop3})'},
+	'site_menu_middle': #{'only screen and (min-width: #{240px * 2 + 17px * 2 + $mobile_gap * 2})'}
+) !default;
+
+@mixin media($media_var) {
+	// If the key exists in the map
+	@if map-has-key($breakpoints, $media_var) {
+		// Prints a media query based on the value
+		@media #{inspect(map-get($breakpoints, $media_var))} {
+			@content;
+		}
+	}
+ 	// If the key doesn't exist in the map
+	@else {
+		@warn "Unfortunately, no value could be retrieved from `#{$media_var}`. "
+		+ "Available breakpoints are: #{map-keys($breakpoints)}.";
+		@media only screen and (#{$media_var}) {
+			@content;
+		}
+	}
+}

@@ -33,7 +33,7 @@ export default {
 
   // Here are all the variables and shared functions/mixins for sass
   styleResources: {
-    scss: ['@/assets/scss/main.scss'],
+    scss: ['@/assets/scss/main.scss', '@/assets/scss/mixins.scss'],
   },
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)

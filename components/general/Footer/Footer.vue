@@ -5,13 +5,13 @@
         <div class="footer_content">
           <div class="footer_section footer_rusfond">
             <a href="#" class="footer_rusfond__link footer__link">
-              <p class="footer__title_13 footer__title_13--grey">
+              <p class="footer__title footer__title--grey">
                 Благотворительный фонд
               </p>
               <div class="footer_rusfond__logo">
                 <img
                   src="/i/rusfond.png"
-                  alt="Русфонд"
+                  alt="Логотип Русфонда"
                   class="footer_rusfond__img"
                 />
               </div>
@@ -19,30 +19,30 @@
           </div>
           <div class="footer_section footer_nav">
             <ul class="footer_nav__list">
-              <li class="footer__title_13">
+              <li class="footer__title">
                 <a href="#" class="footer__link">О «Коммерсанте»</a>
               </li>
-              <li class="footer__title_13">
+              <li class="footer__title">
                 <a href="#" class="footer__link">Контакты</a>
               </li>
-              <li class="footer__title_13">
+              <li class="footer__title">
                 <a href="#" class="footer__link">Реклама</a>
               </li>
-              <li class="footer__title_13">
+              <li class="footer__title">
                 <a href="#" class="footer__link">Вакансии</a>
               </li>
             </ul>
             <ul class="footer_nav__list">
-              <li class="footer__title_13">
+              <li class="footer__title">
                 <a href="#" class="footer__link">iOS&Android</a>
               </li>
-              <li class="footer__title_13">
+              <li class="footer__title">
                 <a href="#" class="footer__link">Обратная связь</a>
               </li>
-              <li class="footer__title_13">
+              <li class="footer__title">
                 <a href="#" class="footer__link">Правовая информация</a>
               </li>
-              <li class="footer__title_13">
+              <li class="footer__title">
                 <a href="#" class="footer__link">E-mail рассылки</a>
               </li>
             </ul>
@@ -145,7 +145,7 @@
             <span class="footer__age">16+</span>
           </div>
           <div class="footer_section footer_section--wide">
-            <p class="footer__title_13 footer__title_13--grey">
+            <p class="footer__title footer__title--grey">
               Партнерские проекты и новости компаний опубликованы на
               коммерческой основе
             </p>

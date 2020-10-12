@@ -1,3 +1,4 @@
+// old temporary style
 $mobile-width: 600px;
 $mobile-gap: 30px;
 $desktop-gap: 50px;
@@ -21,7 +22,16 @@ $desktop3: $main-width + $aside-size + $desktop-gap * 2;
 	$desktop3: 1600px;
 }
 
+// new style
 $brand_color: #004465;
+
+$mobile_icon_size: 20px;
+$mobile_icon_padding: 5px;
+$mobile_icon_box: $mobile_icon_size + $mobile_icon_padding * 2;
+
+$desktop_icon_size: 30px;
+$desktop_icon_padding: 0;
+$desktop_icon_box: $desktop_icon_size + $desktop_icon_padding * 2;
 
 @function grid_cell($size, $span, $gap) {
 	$result: 0;
