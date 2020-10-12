@@ -1,9 +1,7 @@
 <template>
-  <section class="site_menu" id="site_menu">
+  <section id="site_menu" :class="[{ isHidden }, 'site_menu']">
     <div class="layout site_menu__body">
-      <h4 class="site_menu__name vh" id="site_menu__name">
-        Меню сайта
-      </h4>
+      <h4 id="site_menu__name" class="site_menu__name vh">Меню сайта</h4>
       <div class="site_menu__header">
         <label
           for="burger_trigger"
@@ -13,16 +11,19 @@
         >
           <span class="vicon site_menu__icon site_menu__burger_icon">
             <svg class="vicon__body">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#vicon-burger"></use>
+              <use
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                xlink:href="#vicon-burger"
+              ></use>
             </svg>
           </span>
         </label>
-        <nuxt-link
-          to="/"
-          class="site_menu__logo"
-        >
+        <nuxt-link to="/" class="site_menu__logo">
           <svg class="site_menu__logo_img">
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#vicon-main_logo"></use>
+            <use
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              xlink:href="#vicon-main_logo"
+            ></use>
           </svg>
         </nuxt-link>
         <label
@@ -31,9 +32,15 @@
           tabindex="0"
         >
           <span class="site_menu__close_text">Закрыть</span>
-          <span class="vicon vicon--close site_menu__icon site_menu__close_icon" aria-hidden="true">
+          <span
+            class="vicon vicon--close site_menu__icon site_menu__close_icon"
+            aria-hidden="true"
+          >
             <svg class="vicon__body">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#vicon-close"></use>
+              <use
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                xlink:href="#vicon-close"
+              ></use>
             </svg>
           </span>
         </label>
@@ -47,7 +54,12 @@
         </li>
         <li class="site_menu__item site_menu__item--big">
           <a href="#">Русфонд</a>
-          <a href="#"><img src="i/rusfond_logo.png" alt="Русфонд" class="site_menu__rusfond_img"></a>
+          <a href="#"
+            ><img
+              src="i/rusfond_logo.png"
+              alt="Русфонд"
+              class="site_menu__rusfond_img"
+          /></a>
         </li>
       </ul>
       <ul class="site_menu__list">

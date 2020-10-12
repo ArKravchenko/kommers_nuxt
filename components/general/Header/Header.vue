@@ -1,7 +1,7 @@
 <template>
   <div>
-    <HeaderNavbar />
-    <HeaderMenu />
+    <HeaderNavbar @burger-clicked="toggleHideMenu" />
+    <HeaderMenu :is-hidden="menuIsHidden" />
     <HeaderRegion />
   </div>
 </template>

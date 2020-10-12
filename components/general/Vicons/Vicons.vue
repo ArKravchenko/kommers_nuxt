@@ -167,7 +167,9 @@
       />
     </symbol>
     <symbol id="vicon-exit" viewBox="0 0 16 16">
-      <path d="M13 5.993V4.52l3 2.456-3 2.544V8H8V5.993h5zM2 1l.045.02H12v4h-2V3H4.213L7 5.02V11h3V9.02h2v3.996H7v2.172l-4.876-2.172H2V1z"></path>
+      <path
+        d="M13 5.993V4.52l3 2.456-3 2.544V8H8V5.993h5zM2 1l.045.02H12v4h-2V3H4.213L7 5.02V11h3V9.02h2v3.996H7v2.172l-4.876-2.172H2V1z"
+      ></path>
     </symbol>
   </svg>
 </template>

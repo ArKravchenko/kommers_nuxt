@@ -1,7 +1,9 @@
-import { Component, Vue } from 'nuxt-property-decorator'
+import { Component, Vue, Emit } from 'nuxt-property-decorator'
 
 @Component({
-  components: {}
+  components: {},
 })
-
-export default class HeaderNavbar extends Vue {}
+export default class HeaderNavbar extends Vue {
+  @Emit()
+  burgerClicked() {}
+}

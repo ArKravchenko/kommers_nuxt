@@ -9,10 +9,7 @@
               :key="region.id"
               class="regions__item"
             >
-              <nuxt-link
-                to="/"
-                class="regions__link"
-              >
+              <nuxt-link to="/" class="regions__link">
                 {{ region }}
               </nuxt-link>
             </li>
