@@ -29,7 +29,7 @@ export default {
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
-  css: [],
+  css: ['@/node_modules/swiper/css/swiper.css'],
 
   // Here are all the variables and shared functions/mixins for sass
   styleResources: {

@@ -3,6 +3,7 @@
     <div>
       <!-- Cols is just the example component with action and getter-->
       <Cols />
+      <Gallery />
     </div>
   </div>
 </template>
