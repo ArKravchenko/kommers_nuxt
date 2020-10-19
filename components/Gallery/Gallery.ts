@@ -70,11 +70,11 @@ export default class Gallery extends Vue {
     this.$nextTick(() => {
       if (this.swiperTop && this.swiperThumbs) {
         if (this.swiperTop.controller) {
-          ;(<any>this.swiperTop.controller).control = this.swiperThumbs
+          this.swiperTop.controller.control = this.swiperThumbs
         }
 
         if (this.swiperThumbs.controller) {
-          ;(<any>this.swiperThumbs.controller).control = this.swiperTop
+          this.swiperThumbs.controller.control = this.swiperTop
         }
       }
     })
