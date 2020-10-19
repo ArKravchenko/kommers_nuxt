@@ -33,6 +33,11 @@ export default class Gallery extends Vue {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'progressbar',
+      draggable: true,
+    },
   }
 
   protected swiperOptionThumbs = {

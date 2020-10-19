@@ -20,6 +20,10 @@
       <button slot="button-prev" type="button" class="swiper-button-prev">
         prev
       </button>
+      <div
+        slot="pagination"
+        class="swiper-pagination gallery__pagination"
+      ></div>
     </swiper>
 
     <div class="gallery-horizontal__progress">

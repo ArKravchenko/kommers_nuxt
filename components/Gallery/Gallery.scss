@@ -6,6 +6,11 @@ $red: red;
 
 
 .gallery {
+  &__pagination.swiper-pagination{
+    bottom: 0;
+    top: unset;
+    height: 20px;
+  }
   &-thumbs {
     padding: 10px;
     margin-top: 10px;
