@@ -1,0 +1,80 @@
+.light_spot {
+  position: relative;
+  margin: 0 -#{$mobile_gap} 30px;
+  padding: 20px $mobile_gap 30px;
+  background-color: #fff;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, .1);
+
+  @include media('desktop') {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.light_spot_slider {
+  position: relative;
+
+  &__nav {
+    position: absolute;
+    top: -.4rem + 2.5rem;
+    z-index: 2;
+    width: 20px;
+    margin-top: 28.125%;
+    text-align: center;
+
+    @include media('desktop') {
+      top: 50%;
+      width: 30px;
+      margin-top: -15px;
+      opacity: .66;
+      transition: opacity .25s ease-in-out 0s,
+        transform .25s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
+    }
+  }
+
+  &__nav:hover {
+    @include media('desktop') {
+      opacity: 1;
+    }
+  }
+
+  &__nav_icon {
+    width: 20px;
+    height: 20px;
+    color: #666;
+    font-size: 20px;
+
+    @include media('desktop') {
+      padding: 5px;
+      color: #000;
+    }
+  }
+
+  &__nav--prev {
+    left: 10px;
+
+    @include media('desktop') {
+      left: -40px;
+    }
+  }
+
+  &__nav--prev:hover {
+    @include media('desktop') {
+      transform: translateX(-5px);
+    }
+  }
+
+  &__nav--next {
+    right: 10px;
+
+    @include media('desktop') {
+      right: -40px;
+    }
+  }
+
+  &__nav--next:hover {
+    @include media('desktop') {
+      transform: translateX(5px);
+    }
+  }
+}

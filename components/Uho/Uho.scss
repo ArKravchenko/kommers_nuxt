@@ -1,0 +1,117 @@
+.uho {
+  position: relative;
+
+  @include media('desktop') {
+    margin-bottom: 40px;
+  }
+
+  &_small {
+    @include media('desktop') {
+      margin-bottom: 20px;
+    }
+  }
+
+  &_separated:nth-child(-n+2) {
+    @include media('desktop') {
+      border-bottom: 1px solid #eee;
+    }
+  }
+
+  &__photo {
+    display: block;
+    margin: 0 -#{$mobile_gap} 20px -#{$mobile_gap};
+
+    @include media('desktop') {
+      margin: 0 0 20px;
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-flow: column wrap;
+    margin-bottom: 30px;
+
+    @include media('desktop') {
+      margin: 0 10px 20px;
+    }
+  }
+
+  &__tag {
+    margin-top: -.4rem;
+    margin-bottom: -.2rem + 1.5rem;
+    color: #666;
+    font-size: 1.2rem;
+    line-height: 1;
+    font-weight: normal;
+  }
+
+  &__name {
+    margin-top: -.8rem;
+    margin-bottom: -.6rem;
+    color: #111;
+    font-size: 2.4rem;
+    line-height: 2.6rem;
+    font-weight: bold;
+
+    @include media('desktop') {
+      margin-top: -.6rem;
+      margin-bottom: -.4rem;
+      font-size: 2rem;
+      line-height: 1;
+    }
+  }
+
+  &__name--big {
+    @include media('desktop') {
+      margin-top: -.9rem;
+      margin-bottom: -.5rem;
+      font-size: 2.8rem;
+      line-height: 1;
+    }
+  }
+
+  &__subtitle {
+    margin-top: -.8rem + 1.5rem;
+    margin-bottom: -.6rem;
+    color: #111;
+    font-size: 2rem;
+    line-height: 2.4rem;
+    font-weight: normal;
+
+    @include media('desktop') {
+      margin-top: -.6rem + 1.5rem;
+      margin-bottom: -.5rem;
+      font-size: 1.5rem;
+      line-height: 1.8rem;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  &__link--overlay::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -#{$mobile_gap};
+    right: -#{$mobile_gap};
+    bottom: 0;
+
+    @include media('desktop') {
+      left: 0;
+      right: 0;
+    }
+  }
+
+  &:hover .uho__tag {
+    color: #999;
+  }
+
+  &__link:focus,
+  &:hover &__name,
+  &:hover &__subtitle {
+    color: #666;
+  }
+}

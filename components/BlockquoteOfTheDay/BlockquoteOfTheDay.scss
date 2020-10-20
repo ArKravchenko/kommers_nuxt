@@ -1,0 +1,167 @@
+.bqotd {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+
+	@include media('desktop') {
+		flex-direction: row;
+		justify-content: space-between;
+		height: 240px;
+		padding: 30px;
+		box-sizing: border-box;
+	}
+
+	&__tag {
+		margin-top: -.4rem;
+		margin-bottom: -.2rem + 1.5rem;
+		font-size: 1.2rem;
+		line-height: 1;
+		font-weight: normal;
+		color: #666;
+
+		@include media('desktop') {
+			position: absolute;
+			top: 30px;
+			left: 30px;
+		}
+	}
+
+	&__text {
+		position: relative;
+		height: 0;
+		padding-bottom: 56.25%;
+
+		@include media('desktop') {
+			height: auto;
+			padding-bottom: 0;
+		}
+	}
+
+	&__name {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0 15px;
+		font-size: 2.2rem;
+		line-height: 2.8rem;
+		font-weight: bold;
+		color: #111;
+
+		@include media('desktop') {
+			position: static;
+			height: 100%;
+			padding: 0 30px 0 35px;
+			box-sizing: border-box;
+			font-size: 2.4rem;
+		}
+	}
+
+	&__subtitle {
+		font-size: 1.6rem;
+		line-height: 1.8rem;
+		font-weight: normal;
+		color: #333;
+
+		@include media('desktop') {
+			font-size: 1.4rem;
+			line-height: 1;
+		}
+	}
+
+	&__author {
+		display: block;
+		font-size: 1.8rem;
+		line-height: 2rem;
+		font-weight: bold;
+		color: #111;
+
+		@include media('desktop') {
+			font-size: 1.4rem;
+		}
+	}
+
+	&__footer {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		margin-top: 20px;
+
+		@include media('desktop') {
+			flex-shrink: 0;
+			align-self: flex-end;
+		}
+	}
+
+	&__photo {
+		width: 40px;
+		height: 40px;
+		margin-left: 20px;
+		position: relative;
+		display: block;
+		border-radius: 50%;
+		flex-shrink: 0;
+
+		@include media('desktop') {
+			width: 80px;
+			height: 80px;
+		}
+	}
+
+	&__photo:focus {
+		box-shadow: 0 0 0 2px #fff, 0 0 0 4px #000, 0 0 8px 1px #000;
+		outline: none;
+	}
+
+	&__img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		border-radius: 50%;
+		object-fit: contain;
+		object-position: 50% 50%;
+	}
+
+	&__link {
+		color: inherit;
+		text-decoration: none;
+	}
+
+	&__link--overlay::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: -#{$mobile_gap};
+		right: -#{$mobile_gap};
+		bottom: 0;
+		z-index: 1;
+
+		@include media('desktop') {
+			left: 0;
+			right: 0;
+		}
+	}
+
+	&__name &__link:focus,
+	&__subtitle &__link:focus,
+	&__subtitle &__link:focus &__author {
+		color: #666;
+	}
+
+	&:hover &__tag {
+		color: #999;
+	}
+
+	&:hover &__name,
+	&:hover &__author,
+	&:hover &__subtitle {
+		color: #666;
+	}
+}

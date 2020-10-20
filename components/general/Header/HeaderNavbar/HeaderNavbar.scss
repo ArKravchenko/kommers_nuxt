@@ -63,6 +63,10 @@
 		}
 	}
 
+  &__item--focused {
+    opacity: 1;
+  }
+
 	&__item:last-child {
 		@include media('desktop') {
 			margin-right: 0;

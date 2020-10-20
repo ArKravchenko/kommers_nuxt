@@ -1,0 +1,29 @@
+/* имя плашки съезжает при наведении и меняет цвет */
+.slided_title__link {
+	outline: none;
+	color: inherit;
+	transition: color .25s ease-in-out 0s;
+}
+.slided_title__text {
+	position: relative;
+	transition: transform .5s ease-in-out 0s;
+	display: inline-block;
+}
+.slided_title__nav {
+	opacity: 0;
+	transition: opacity .5s ease-in-out 0s;
+}
+@media only screen and (min-width: $desktop1) {
+	.slided_title:hover .slided_title__text,
+	.slided_title__link:focus .slided_title__text {
+		transform: translateX(-10px);
+	}
+	.slided_title:hover .slided_title__link,
+	.slided_title__link:focus {
+		color: $brand_color;
+	}
+	.slided_title:hover .slided_title__nav,
+	.slided_title__link:focus .slided_title__nav {
+		opacity: 1;
+	}
+}

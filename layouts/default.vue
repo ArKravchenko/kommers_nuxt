@@ -10,7 +10,11 @@
     </h1>
     <Vicons />
     <Header />
+    <Actual />
     <Nuxt />
+    <Main />
+    <AsideNews />
+    <BasementNews />
     <Footer />
   </div>
 </template>

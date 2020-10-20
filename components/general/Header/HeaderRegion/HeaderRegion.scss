@@ -15,7 +15,6 @@ $regions_bg: #eee;
 		transform .6s cubic-bezier(.165, 0.84, 0.44, 1) .25s;
 	will-change: opacity transform;
 
-	// to show regions
 	&--active {
 		opacity: 1;
 		visibility: visible;
@@ -32,7 +31,7 @@ $regions_bg: #eee;
 	&__body::before {
 		content: '';
 		position: absolute;
-		/* две иконки с отступами, плюс половина иконки, минус ширина якоря */ 
+		/* две иконки с отступами, плюс половина иконки, минус ширина якоря */
 		right: ($desktop_icon_box + 10px) * 2 + $desktop_icon_box / 2 - 5px;
 		top: -5px;
 		width: 0;
@@ -48,8 +47,7 @@ $regions_bg: #eee;
 		align-items: center;
 		justify-content: center;
 		max-width: 820px;
-		padding: 10px 0;
-		margin: 0 auto;	
+		margin: 0 auto;
 	}
 
 	&__item {

@@ -1,0 +1,93 @@
+.grotd {
+	position: relative;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: flex-start;
+
+	@include media('desktop') {
+		flex-direction: row-reverse;
+		max-height: 240px;
+	}
+
+	&__tag {
+		margin-top: -.4rem;
+		margin-bottom: -.2rem + 1.5rem;
+		font-weight: normal;
+		font-size: 1.2rem;
+		line-height: 1;
+		color: #666;
+
+		@include media('desktop') {
+			position: absolute;
+			top: 30px;
+			left: 30px;
+		}
+	}
+
+	&__name {
+		margin-top: -.8rem;
+		margin-bottom: -.6rem;
+		font-weight: normal;
+		font-size: 2rem;
+		line-height: 2.4rem;
+		color: #111;
+
+		@include media('desktop') {
+			display: flex;
+			align-items: center;
+			padding-left: 65px;
+			margin-top: 0;
+			font-size: 2.8rem;
+			line-height: 1;
+			font-weight: bold;
+		}
+	}
+
+	&__photo {
+		display: block;
+		margin: 0 -#{$mobile_gap} 20px;
+
+		@include media('desktop') {
+			flex-shrink: 0;
+			width: calc(100% - 300px);
+			margin: 0;
+		}
+	}
+
+	&__img {
+		@include media('desktop') {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__link {
+		color: inherit;
+		text-decoration: none;
+	}
+
+	&__link--overlay::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: -#{$mobile_gap};
+		right: -#{$mobile_gap};
+		bottom: 0;
+		z-index: 1;
+
+		@include media('desktop') {
+			left: 0;
+			right: 0;
+		}
+	}
+
+	&:hover &__tag {
+		color: #999;
+	}
+
+	&:hover &__name,
+	&__name &__link:focus {
+		color: #666;
+	}
+}

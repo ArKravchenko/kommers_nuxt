@@ -1,0 +1,124 @@
+.ui-radio {
+	width: 15px;
+	height: 15px;
+	margin: 0;
+	vertical-align: middle;
+}
+.ui-tumbler {
+	display: inline-block;
+	vertical-align: middle;
+}
+.ui-tumbler_trigger:not([disabled]) + .ui-tumbler:hover {
+	cursor: pointer;
+}
+	.ui-tumbler_trigger {
+		position: absolute;
+		overflow: hidden;
+		clip: rect(1px, 1px, 1px, 1px);
+		padding: 0;
+		border: 0;
+		height: 1px;
+		width: 1px;
+		opacity: 0;
+	}
+	.ui-tumbler__box {
+		transition: background-color .15s cubic-bezier(.05, .69, .14, 1) 0s;
+		width: 21px;
+		height: 14px;
+		box-sizing: border-box;
+		border-radius: 7px;
+		position: relative;
+		overflow: hidden;
+		color: #999;
+		border: 3px solid currentcolor;
+		display: inline-block;
+		vertical-align: middle;
+	}
+	.ui-tumbler__dot {
+		border-radius: 50%;
+		width: 6px;
+		height: 0;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 1px;
+		margin: auto 0;
+		background-color: currentcolor;
+		transition: left .15s cubic-bezier(.05, .69, .14, 1) 0s,
+					background-color .15s cubic-bezier(.05, .69, .14, 1) 0s;
+		overflow: hidden;
+		padding-top: 6px;
+	}
+	.ui-tumbler_trigger:checked + .ui-tumbler .ui-tumbler__box {
+		background-color: #e6e6e6;
+	}
+	.ui-tumbler_trigger:checked + .ui-tumbler .ui-tumbler__box > .ui-tumbler__dot {
+		left: calc(100% - 7px);
+	}
+	.ui-tumbler_trigger:focus + .ui-tumbler .ui-tumbler__box > .ui-tumbler__dot {
+		background-color: $brand_color;
+	}
+.ui-button {
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+	background-color: transparent;
+	border: 0;
+	padding: 0;
+	margin: 0;
+	border-radius: 0;
+  position: relative;
+  cursor: pointer;
+	// z-index: 100;
+}
+.up_button {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
+	position: fixed;
+	bottom: 20px;
+	right: 0;
+  z-index: 3;
+}
+.up_button:before {
+	background-color: $brand_color;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	opacity: .5;
+	transition: opacity .15s ease-in-out 0s;
+	will-change: opacity;
+	z-index: -1;
+	display: flex;
+	content: '';
+	border-radius: 50%;
+}
+.up_button:hover:before {
+	opacity: 1;
+}
+.up_button__arrow {
+	fill: #fff;
+	transform: rotate(-90deg);
+}
+
+.ui-button--standart {
+	display: block;
+	width: auto;
+	border-radius: 3px;
+	background-color: $brand_color;
+	color: #fff;
+	text-align: center;
+	cursor: pointer;
+	transition: opacity .2s ease-in-out 0s;
+}
+.ui-button--standart:hover {
+	opacity: .8;
+}

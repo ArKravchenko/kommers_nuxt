@@ -34,7 +34,7 @@
             </ul>
             <ul class="footer_nav__list">
               <li class="footer__title">
-                <a href="#" class="footer__link">iOS&Android</a>
+                <a href="#" class="footer__link">iOS&amp;Android</a>
               </li>
               <li class="footer__title">
                 <a href="#" class="footer__link">Обратная связь</a>

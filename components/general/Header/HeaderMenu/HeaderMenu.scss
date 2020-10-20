@@ -10,9 +10,9 @@
 	opacity: 1;
 	visibility: visible;
 	transform: translateY(0);
-	 opacity: 0;
-	 visibility: hidden;
-	 transform: translateY(25px);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(25px);
 	overflow: auto;
 	-webkit-overflow-scrolling: touch;
 	transition: opacity .2s ease-in-out 0s,

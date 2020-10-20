@@ -15,9 +15,15 @@ export default class Gallery extends Vue {
   // @Prop(Array) private images!: imageInstance[];
 
   private imagesList: ImageInstance[] = [
-    'https://bakunin.com/wp-content/uploads/2018/07/city-1024x576.jpg',
-    'https://cdn.gobankingrates.com/wp-content/uploads/2018/03/how-long-1-million-in-savings-will-last-in-every-state-1024x576.jpg',
-    'https://www.nyhabitat.com/de/blog/wp-content/uploads/2016/01/Top-10-Brunch-Gelegenheiten-New-York-Skyline-1024x682.jpg',
+    'https://im.kommersant.ru/Issues.photo/CORP/2020/10/18/KMO_178270_00032_1_t218_181220.webp',
+    'https://im.kommersant.ru/Issues.photo/CORP/2020/10/19/KMO_162543_21861_1_t218_182151.webp',
+    'https://im.kommersant.ru/Issues.photo/CORP/2015/10/18/KMO_085514_02321_1_t218_103652.webp',
+    'https://im.kommersant.ru/Issues.photo/CORP/2020/10/16/KMO_178300_00026_1_t218_184926.webp',
+    'https://im.kommersant.ru/Issues.photo/CORP/2020/10/15/KMO_162543_21802_1_t218_192719.webp',
+    'https://im.kommersant.ru/Issues.photo/CORP/2020/10/15/KMO_141501_05851_1_t218_202052.webp',
+    'https://im.kommersant.ru/Issues.photo/CORP/2020/10/14/KMO_111307_32788_1_t218_115537.webp',
+    'https://im.kommersant.ru/Issues.photo/CORP/2020/09/28/KMO_178314_00007_1_t218_200910.webp',
+    'https://im.kommersant.ru/Issues.photo/CORP/2020/03/20/KMO_162543_21760_1_t218_172127.webp',
   ]
 
   protected activeSlideIndex: number = 0
@@ -25,10 +31,13 @@ export default class Gallery extends Vue {
   protected swiperThumbs: null | SwiperClass = null
 
   protected swiperOptionTop = {
-    loop: false,
+    loop: true,
+    loopedSlides: 4,
+    loopFillGroupWithBlank: false,
     autoHeight: true,
-    slidesPerView: 1,
-    spaceBetween: 10,
+    slidesPerView: 4,
+    spaceBetween: 40,
+    slidesPerGroup: 4,
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
@@ -41,15 +50,12 @@ export default class Gallery extends Vue {
   }
 
   protected swiperOptionThumbs = {
-    loop: false,
+    loop: true,
+    loopedSlides: 4,
     spaceBetween: 10,
     centeredSlides: true,
     slidesPerView: 'auto',
     slideToClickedSlide: true,
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
   }
 
   protected get countSlides(): number {

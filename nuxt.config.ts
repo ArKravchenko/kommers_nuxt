@@ -29,11 +29,11 @@ export default {
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
-  css: ['@/node_modules/swiper/css/swiper.css'],
+  css: ['@/node_modules/swiper/css/swiper.css', '@/assets/scss/main.scss'],
 
   // Here are all the variables and shared functions/mixins for sass
   styleResources: {
-    scss: ['@/assets/scss/main.scss', '@/assets/scss/mixins.scss'],
+    scss: ['@/assets/scss/base/vars.scss', '@/assets/scss/mixins.scss'],
   },
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)

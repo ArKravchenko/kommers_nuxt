@@ -1,5 +1,9 @@
 <template>
-  <div class="regions">
+  <div
+    :class="[{ 'regions--active': isActive }, 'regions']"
+    @mouseenter="regionsActive"
+    @mouseleave="regionsInactive"
+  >
     <div class="layout">
       <div class="main">
         <div class="regions__body">

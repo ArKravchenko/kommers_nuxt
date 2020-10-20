@@ -40,6 +40,11 @@ $red: red;
         justify-content: center;
       }
     }
+    &__text {
+      font-size: 1.6rem;
+      line-height: 1;
+      color: #333;
+    }
   }
   &-horizontal {
     &__source {

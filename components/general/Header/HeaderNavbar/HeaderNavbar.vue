@@ -1,20 +1,11 @@
 <template>
   <header class="main_header">
     <div class="layout">
-      <div class="main_header__content" @click="burgerClick">
-        <input
-          id="burger_trigger"
-          type="checkbox"
-          hidden
-          aria-hidden="true"
-          class="hide"
-          aria-labeledby="site_menu"
-        />
-        <label
-          for="burger_trigger"
-          class="main_header__item main_header__burger"
+      <div class="main_header__content">
+        <button
+          type="button"
+          class="main_header__item main_header__burger ui-button"
           title="Рубрики и разделы"
-          tabindex="0"
           @click="burgerClick"
         >
           <span
@@ -27,7 +18,7 @@
               ></use>
             </svg>
           </span>
-        </label>
+        </button>
         <nuxt-link to="/" class="main_header__logo">
           <svg class="main_header__logo_img">
             <use
@@ -54,14 +45,17 @@
               </svg>
             </span>
           </nuxt-link>
-          <nuxt-link
-            to="/"
+          <a
+            href="/"
             class="main_header__item main_header__item--regions hide_mobile"
+            :class="{ 'main_header__item--focused': hasFocus }"
             title="Регионы"
+            @mouseenter="regionsShow"
+            @mouseleave="regionsHide"
           >
             <span class="main_header__pointer"></span>
             <img class="main_header__icon" src="i/regions.png" alt="Регионы" />
-          </nuxt-link>
+          </a>
           <nuxt-link
             to="/"
             class="main_header__item main_header__item--fm hide_mobile"

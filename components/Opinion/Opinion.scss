@@ -1,0 +1,143 @@
+.opinion {
+  position: relative;
+  margin-bottom: 30px;
+
+  @include media('desktop') {
+    margin: 10px 0 50px;
+  }
+
+  &__header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    border-bottom: 1px solid #eee;
+
+    @include media('desktop') {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    border-bottom: 1px solid #eee;
+
+    @include media('desktop') {
+      padding-left: 20px;
+    }
+  }
+
+  &__text {
+    width: calc(100% - 110px);
+    margin: 0 20px 0 0;
+
+    @include media('desktop') {
+      width: auto;
+      margin: 0 10px;
+    }
+  }
+
+  &__text--big {
+    @include media('desktop') {
+      width: calc(100% - 190px);
+      margin: 0 10px 0 0;
+    }
+  }
+
+  &__tag {
+    margin-top: -.4rem;
+    margin-bottom: -.2rem + 1.5rem;
+    color: #666;
+    font-size: 1.2rem;
+    line-height: 1;
+    font-weight: normal;
+  }
+
+  &__name {
+    margin-top: -.8rem;
+    margin-bottom: -.6rem + 2rem;
+    color: #111;
+    font-size: 2rem;
+    line-height: 2.4rem;
+    font-weight: normal;
+
+    @include media('desktop') {
+      margin-top: -.6rem;
+      margin-bottom: -.4rem;
+      line-height: 1;
+      font-weight: bold;
+    }
+  }
+
+  &__name--big {
+    @include media('desktop') {
+      margin-top: -.9rem;
+      margin-bottom: -.5rem + 2rem;
+      font-size: 2.8rem;
+    }
+  }
+
+  &__photo {
+    flex-shrink: 0;
+    width: 60px;
+    margin-left: auto;
+
+    @include media('desktop') {
+      margin-top: 0;
+      margin-right: 10px;
+    }
+  }
+
+  &__photo--big {
+    @include media('desktop') {
+      width: 160px;
+      margin: 0 auto 0 0;
+    }
+  }
+
+  &__img {
+    max-width: 100%;
+  }
+
+  &__img--small {
+    @include media('desktop') {
+      transition: transform .25s ease-in-out 0s;
+      will-change: transform;
+    }
+  }
+
+  &:hover &__img--small {
+    @include media('desktop') {
+      transform: translateX(10px);
+    }
+  }
+
+  &__link {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  &__link--overlay::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -#{$mobile_gap};
+    right: -#{$mobile_gap};
+    bottom: 0;
+
+    @include media('desktop') {
+      left: 0;
+      right: 0;
+    }
+  }
+
+  &:hover &__tag {
+    color: #999;
+  }
+
+  &:hover &__name,
+  &__link:focus {
+    color: #666;
+  }
+}

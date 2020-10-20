@@ -1,0 +1,158 @@
+.section_header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  width: 100%;
+  margin: -.6rem 0 0 0;
+  box-sizing: border-box;
+
+  @include media('desktop') {
+    padding: 0 0 2px 0;
+    margin-top: -.7rem;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #eee;
+  }
+
+  &--main {
+    @include media('desktop') {
+      padding-bottom: 4px;
+      margin-top: -.7rem + 5rem;
+    }
+  }
+
+  &--aside {
+    @include media('desktop') {
+      padding-bottom: 4px;
+      margin-bottom: 0;
+    }
+  }
+
+  &--spend {
+    @include media('desktop') {
+      margin-top: -.7rem + 1rem;
+    }
+  }
+
+  &__link {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  &__nav {
+    font-size: 13px;
+
+    @include media('desktop') {
+      font-size: 16px;
+    }
+  }
+
+  &__nav--small {
+    @include media('desktop') {
+      font-size: 15px;
+    }
+  }
+
+  &__list {
+    display: none;
+
+    @include media('desktop') {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      margin: 0 10px -4px 0;
+      opacity: 0;
+      transition: opacity .5s ease-in-out 0s;
+      will-change: opacity;
+    }
+  }
+
+  &:hover &__list,
+  &__list:focus-within {
+    @include media('desktop') {
+      opacity: 1;
+    }
+  }
+
+  &__list--visible {
+    display: flex;
+    width: 100%;
+    margin-top: -.3rem;
+    margin-bottom: 14px;
+
+    @include media('desktop') {
+      width: auto;
+      margin: 0 10px -4px 0;
+      opacity: 1;
+    }
+  }
+
+  &__more {
+    margin-right: 18px;
+    color: #999;
+    font-size: 1.2rem;
+    line-height: 2rem;
+    font-weight: normal;
+    transition: color .25s ease-in-out 0s,
+      border-color .25s ease-in-out 0s;
+
+    @include media('desktop') {
+      position: relative;
+      display: block;
+      border-bottom: 2px solid transparent;
+      outline: none;
+      padding: 4px 10px;
+      margin-right: 0;
+    }
+  }
+
+  &__more:hover,
+  &__more:focus {
+    color: #000;
+
+    @include media('desktop') {
+      border-bottom: 2px solid #004465;
+      opacity: 1;
+    }
+  }
+}
+
+.section_name {
+  color: #999;
+  font-size: 1.8rem;
+  line-height: 4rem;
+  font-weight: normal;
+
+  @include media('desktop') {
+    font-size: 2.2rem;
+    line-height: 2.4rem;
+    padding-left: 10px;
+  }
+}
+
+.section_small_name {
+  padding: 0 10px 4px 0;
+  margin: 20px 10px 10px 10px;
+  border-bottom: 4px solid #eee;
+  color: #999;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+
+  @include media('desktop') {
+    padding-left: 20px;
+    margin: 20px 0 10px 0;
+    font-size: 2.2rem;
+    line-height: 1;
+  }
+}
+
+.section_small_name--aside {
+  @include media('desktop') {
+    margin-bottom: 0;
+  }
+}
+
+.section_link {
+  color: inherit;
+  text-decoration: none;
+}

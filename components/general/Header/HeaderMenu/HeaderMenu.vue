@@ -6,11 +6,11 @@
     <div class="layout site_menu__body">
       <h4 id="site_menu__name" class="site_menu__name vh">Меню сайта</h4>
       <div class="site_menu__header">
-        <label
-          for="burger_trigger"
-          class="site_menu__header_item site_menu__burger"
+        <button
+          type="button"
+          class="site_menu__header_item site_menu__burger ui-button"
           title="Рубрики и разделы"
-          tabindex="0"
+          @click="burgerClick"
         >
           <span class="vicon site_menu__icon site_menu__burger_icon">
             <svg class="vicon__body">
@@ -20,7 +20,7 @@
               ></use>
             </svg>
           </span>
-        </label>
+        </button>
         <nuxt-link to="/" class="site_menu__logo">
           <svg class="site_menu__logo_img">
             <use
@@ -29,10 +29,11 @@
             ></use>
           </svg>
         </nuxt-link>
-        <label
-          for="burger_trigger"
-          class="site_menu__header_item site_menu__close"
+        <button
+          type="button"
+          class="site_menu__header_item site_menu__close ui-button"
           tabindex="0"
+          @click="burgerClick"
         >
           <span class="site_menu__close_text">Закрыть</span>
           <span
@@ -46,7 +47,7 @@
               ></use>
             </svg>
           </span>
-        </label>
+        </button>
       </div>
       <ul class="site_menu__list site_menu__list--big">
         <li class="site_menu__item site_menu__item--big">

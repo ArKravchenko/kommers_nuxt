@@ -26,15 +26,9 @@
       ></div>
     </swiper>
 
-    <div class="gallery-horizontal__progress">
+    <!-- <div class="gallery-horizontal__progress">
       {{ activeSlideIndex + 1 }} / {{ countSlides }}
-    </div>
-
-    <template v-if="activeSlide">
-      <div class="gallery-horizontal__source">
-        {{ activeSlide }}
-      </div>
-    </template>
+    </div> -->
 
     <div v-if="preview" class="gallery-thumbs">
       <swiper
@@ -49,11 +43,14 @@
         >
           <img :src="href" class="gallery-top__picture" />
         </swiper-slide>
-
-        <button slot="button-next" type="button" class="swiper-button-next" />
-        <button slot="button-prev" type="button" class="swiper-button-prev" />
       </swiper>
     </div>
+
+    <template v-if="activeSlide">
+      <div class="gallery-horizontal__source">
+        {{ activeSlide }}
+      </div>
+    </template>
   </div>
 </template>
 

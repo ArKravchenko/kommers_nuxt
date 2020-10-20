@@ -1,24 +1,22 @@
 // old temporary style
-$mobile-width: 600px;
-$mobile-gap: 30px;
-$desktop-gap: 50px;
+$mobile_width: 600px;
+$mobile_gap: 20px;
+$desktop_gap: 50px;
 
-$cell-size: 240px;
-$cell-size-large: 300px;
+$cell_size: 240px;
+$cell_size: 240px;
+$cell_size_large: 300px;
 
-$cell-gap-narrow: 40px;
-$main-width-narrow: $cell_size * 4 + $cell-gap-narrow * 3;
+$cell_gap: 40px;
+$main_width: $cell_size * 4 + $cell_gap * 3;
 
-$cell-gap: 40px;
-$main-width: $cell_size * 4 + $cell-gap * 3;
+$main_width: $cell_size * 4 + $cell_gap * 3;
 
-$aside-size-narrow: 220px;
-$aside-size: 300px;
+$aside_size: 300px;
 
-$desktop1: $main-width-narrow + $desktop-gap * 2;
-$desktop2: $main-width-narrow + $aside-size-narrow + $desktop-gap * 2;
-$desktop3: $main-width + $aside-size + $desktop-gap * 2;
-@if ($main-width + $aside-size + $desktop-gap * 2) < 1600px {
+$desktop1: $main_width + $desktop_gap * 2 + 18;
+$desktop3: $main_width + $aside_size + $desktop_gap * 2 + 18;
+@if ($main_width + $aside_size + $desktop_gap * 2) < 1600px {
 	$desktop3: 1600px;
 }
 

@@ -11,9 +11,21 @@ import HeaderRegion from './HeaderRegion/HeaderRegion.vue'
   },
 })
 export default class Header extends Vue {
+  private iconHasFocus: boolean = false
   private menuIsActive: boolean = false
+  private regionsIsActive: boolean = false
 
   private toggleMenuActive() {
     this.menuIsActive = !this.menuIsActive
+  }
+
+  private showRegionsActive() {
+    this.regionsIsActive = true
+    this.iconHasFocus = true
+  }
+
+  private hideRegionsActive() {
+    this.regionsIsActive = false
+    this.iconHasFocus = false
   }
 }

@@ -1,0 +1,112 @@
+.dotd {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	@include media('desktop') {
+		height: 240px;
+		padding: 30px;
+		box-sizing: border-box;
+	}
+
+	&__tag {
+		margin-top: -.4rem;
+		margin-bottom: -.2rem + 1.5rem;
+		font-weight: normal;
+		font-size: 1.2rem;
+		line-height: 1;
+		color: #666;
+
+		@include media('desktop') {
+			position: absolute;
+			top: 30px;
+			left: 30px;
+		}
+	}
+
+	&__text {
+		position: relative;
+		height: 0;
+		padding-bottom: 56.25%;
+
+		@include media('desktop') {
+			height: auto;
+			padding-bottom: 0;
+		}
+	}
+
+	&__name {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0 15px;
+		color: #111;
+		font-weight: bold;
+		font-size: 6rem;
+		line-height: 1;
+		text-align: center;
+
+		@include media('desktop') {
+			position: static;
+			height: 100%;
+			padding: 0 30px 0 35px;
+			box-sizing: border-box;
+			font-size: 10rem;
+		}
+	}
+
+	&__subtitle {
+		margin-top: -.6rem + 2rem;
+		margin-bottom: -.5rem;
+		font-weight: bold;
+		font-size: 1.8rem;
+		line-height: 2rem;
+		color: #111;
+		text-align: center;
+
+		@include media('desktop') {
+			margin-top: -.9rem + 3rem;
+			margin-bottom: -.7rem;
+			color: #333;
+			font-size: 2.4rem;
+			line-height: 2.8rem;
+		}
+	}
+
+	&__link {
+		color: inherit;
+		text-decoration: none;
+	}
+
+	&__link--overlay::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: -#{$mobile_gap};
+		right: -#{$mobile_gap};
+		bottom: 0;
+		z-index: 1;
+
+		@include media('desktop') {
+			left: 0;
+			right: 0;
+		}
+	}
+
+	&:hover &__name,
+	&:hover &__subtitle,
+	&__name &__link:focus,
+	&__subtitle &__link:focus {
+		color: #666;
+	}
+
+	&:hover &__tag {
+		color: #999;
+	}
+}

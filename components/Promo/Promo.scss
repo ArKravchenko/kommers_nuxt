@@ -1,0 +1,75 @@
+.promo {
+  position: relative;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  max-width: 300px;
+  min-height: 300px;
+  margin: 0 auto 30px;
+
+  @include media('desktop') {
+    margin: 0 0 40px;
+  }
+
+  &__photo {
+    display: block;
+    margin-bottom: 2rem;
+  }
+
+  &__text {
+    @include media('desktop') {
+      margin: 0 10px;
+    }
+  }
+
+  &__tag {
+    margin-top: -0.4rem;
+    margin-bottom: -0.2rem + 1.5rem;
+    color: #666;
+    font-size: 1.2rem;
+    line-height: 1;
+    font-weight: normal;
+  }
+
+  &__name {
+    margin-top: -0.8rem;
+    margin-bottom: -0.6rem;
+    color: #111;
+    font-size: 2rem;
+    line-height: 2.4rem;
+    font-weight: bold;
+  }
+
+  &__subtitle {
+    margin-top: -0.5rem + 1.5rem;
+    margin-bottom: -0.4rem;
+    color: #111;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    font-weight: normal;
+  }
+
+  &__link {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  &__link--overlay::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  &:hover &__tag {
+    color: #999;
+  }
+
+  &__link:focus,
+  &:hover &__name,
+  &:hover &__subtitle {
+    color: #666;
+  }
+}

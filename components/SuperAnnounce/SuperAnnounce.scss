@@ -1,0 +1,260 @@
+.superannounce {
+	position: relative;
+	z-index: 0;
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: space-between;
+	margin: 30px -#{$mobile_gap} 40px;
+
+	@include media('desktop') {
+		margin: 50px 0 0;
+	}
+
+	&--news {
+		@include media('desktop') {
+			flex-flow: row nowrap;
+		}
+	}
+
+	&__cover {
+		position: relative;
+		display: flex;
+	}
+
+	&__cover::before {
+		content: '';
+		position: relative;
+		z-index: 0;
+		padding-bottom: 56.25%;
+		height: 0;
+
+		@include media('desktop') {
+			padding-bottom: 0;
+			height: 360px;
+		}
+	}
+
+	&__photo {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}
+
+	&__photo::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 1;
+		background-color: rgba(0, 0, 0, .55);
+		transition: background-color .25s linear 0s;
+	}
+
+	&--news:hover &__photo::before {
+		@include media('desktop') {
+			background-color: rgba(0, 0, 0, .75);
+		}
+	}
+
+	&__img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: 100% 50%;
+	}
+
+	&__content {
+		z-index: 2;
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: flex-start;
+		padding: 15px $mobile_gap 20px;
+
+		@include media('desktop') {
+			padding: 30px;
+		}
+	}
+
+	&__text--news {
+		@include media('desktop') {
+			flex-grow: 1;
+			width: 45%;
+		}
+	}
+
+	&__text--media {
+		@include media('desktop') {
+			position: relative;
+			width: 75%;
+		}
+	}
+
+	&__text--story {
+		@include media('desktop') {
+			position: relative;
+			width: 65%;
+		}
+	}
+
+	&__name {
+		margin-top: -.8rem;
+		margin-bottom: -.6rem;
+		font-size: 2rem;
+		line-height: 2.4rem;
+		font-weight: bold;
+		color: #fff;
+
+		@include media('desktop') {
+			font-size: 4.4rem;
+			line-height: 1;
+			margin-top: -1.4rem;
+			margin-bottom: -.8rem + 2rem;
+		}
+	}
+
+	&__subtitle {
+		margin-top: -0.5rem + 1.5rem;
+		margin-bottom: -0.4rem;
+		font-size: 1.4rem;
+		line-height: 1.6rem;
+		font-weight: normal;
+		color: #fff;
+
+		@include media('desktop') {
+			font-size: 2.4rem;
+			line-height: 1;
+			color: #ccc;
+			margin-top: -.7rem;
+			margin-bottom: -.5rem;
+		}
+	}
+
+	&__subtitle--news {
+		@include media('desktop') {
+			width: 85%;
+		}
+	}
+
+	&__subtitle--media {
+		@include media('desktop') {
+			color: #eee;
+			font-size: 1.8rem;
+			margin-top: -.5rem;
+			margin-bottom: -.4rem;
+		}
+	}
+
+	&__subname {
+		color: #111;
+		font-size: 1.4rem;
+		line-height: 1.6rem;
+		font-weight: normal;
+		margin-top: -0.5rem;
+		margin-bottom: -0.4rem + 2rem;
+
+		@include media('desktop') {
+			color: #fff;
+			font-size: 1.8rem;
+			line-height: 1;
+			margin-bottom: -.4rem;
+		}
+	}
+
+	&__tag {
+		flex-grow: 1;
+		color: #fff;
+		font-size: 1.2rem;
+		line-height: 1;
+		font-weight: normal;
+		margin-top: -.4rem;
+		margin-bottom: -.2rem + 2rem;
+
+		@include media('desktop') {
+			flex-grow: 0;
+			color: #fff;
+		}
+	}
+
+	&__time {
+		margin-top: -.2rem;
+		margin-bottom: -.2rem + 1rem;
+		color: #666;
+		font-size: 1.2rem;
+		line-height: 1;
+		font-weight: normal;
+
+		@include media('desktop') {
+			width: auto;
+			margin-bottom: -.2rem + 1.5rem;
+			color: #999;
+		}
+	}
+
+	&__more {
+		margin-bottom: -0.4rem;
+		color: $brand_color;
+    text-decoration: underline;
+
+    @include media('desktop') {
+      color: #fff;
+    }
+	}
+
+	&__chapter {
+		padding: 20px $mobile_gap 0;
+
+		@include media('desktop') {
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			z-index: 2;
+			padding: 0 30px 30px;
+		}
+	}
+
+	&__list {
+		display: flex;
+		flex-flow: column nowrap;
+
+		@include media('desktop') {
+			flex-direction: row;
+			align-items: flex-start;
+			justify-content: space-between;
+		}
+	}
+
+	&__item {
+		position: relative;
+
+		@include media('desktop') {
+			margin: 0 40px 0 0;
+		}
+	}
+
+	&__item--story {
+		@include media('desktop') {
+			margin-top: -.2rem + 2.5rem;
+		}
+	}
+
+	&__link {
+		color: inherit;
+		text-decoration: none;
+	}
+
+	&__link--overlay::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}
+}

@@ -1,8 +1,17 @@
 <template>
   <div>
-    <HeaderNavbar @burger-click="toggleMenuActive" />
-    <HeaderMenu :is-active="menuIsActive" />
-    <HeaderRegion />
+    <HeaderNavbar
+      :has-focus="iconHasFocus"
+      @burger-click="toggleMenuActive"
+      @regions-show="showRegionsActive"
+      @regions-hide="hideRegionsActive"
+    />
+    <HeaderMenu :is-active="menuIsActive" @burger-click="toggleMenuActive" />
+    <HeaderRegion
+      :is-active="regionsIsActive"
+      @regions-active="showRegionsActive"
+      @regions-inactive="hideRegionsActive"
+    />
   </div>
 </template>
 

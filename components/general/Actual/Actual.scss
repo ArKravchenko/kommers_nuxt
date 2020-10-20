@@ -1,0 +1,98 @@
+.actual {
+	background-color: #eee;
+
+	&__body {
+		display: flex;
+		align-items: center;
+		margin: 0 -#{$mobile_gap / 2};
+
+		@include media('desktop') {
+			margin: 0;
+		}
+	}
+
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+		height: 40px;
+		overflow: hidden;
+
+		@include media('desktop') {
+			justify-content: flex-start;
+			height: 50px;
+			margin-right: 0;
+			margin-left: 10px;
+		}
+	}
+
+  &__item {
+		flex-shrink: 0;
+		color: #111;
+		font-size: 1.4rem;
+		line-height: 4rem;
+    font-weight: normal;
+
+    @include media('desktop') {
+      line-height: 5rem;
+    }
+	}
+
+	&__item:not(:first-child) {
+		margin-left: 30px;
+	}
+
+	&__link {
+		color: inherit;
+		text-decoration: underline;
+	}
+
+	&__link:hover,
+	&__link:focus {
+		text-decoration: none;
+	}
+
+	&__list_money {
+		display: flex;
+	}
+
+	&__item_money {
+		color: $brand_color;
+	}
+
+	&__item_money:not(:first-child) {
+		margin-left: 10px;
+	}
+
+	&__link_money {
+		color: inherit;
+		text-decoration: none;
+	}
+
+	&__nav {
+		flex-shrink: 0;
+		display: inline-block;
+		color: #666;
+		font-size: $mobile_icon_size;
+		vertical-align: middle;
+
+		@include media('desktop') {
+			margin-left: 14px;
+			font-size: 16px;
+			opacity: 0.6;
+			transition: opacity 0.25s ease-in-out 0s;
+			will-change: opacity;
+		}
+	}
+
+	&__nav--inactive {
+		color: #ccc;
+	}
+
+	&__nav:hover {
+		@include media('desktop') {
+			opacity: 1;
+		}
+	}
+}
