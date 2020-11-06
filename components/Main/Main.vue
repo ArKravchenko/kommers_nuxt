@@ -14,9 +14,9 @@
       <Promo />
     </div>
     <!-- мультимедиа -->
-    <div class="lyaout">
+    <div class="layout">
       <div class="main">
-        <!-- <Multimedia /> -->
+        <Multimedia />
       </div>
     </div>
     <div class="layout hide_desktop">

@@ -6,6 +6,7 @@ export default class SectionHeader extends Vue {
   @Prop({ type: Boolean, default: false }) isMain!: boolean
   @Prop({ type: Boolean, default: false }) isAside!: boolean
   @Prop({ type: Boolean, default: false }) isSpend!: boolean
+  @Prop({ type: Boolean, default: false }) isMultimedia!: boolean
 
   private spendList: string[] = [
     'Стиль',
@@ -19,4 +20,6 @@ export default class SectionHeader extends Vue {
     'Гаджеты',
     'Книги',
   ]
+
+  private mediaList: string[] = ['Фото', 'Видео', 'Спецпроекты', 'Подкасты']
 }

@@ -6,26 +6,18 @@
 		margin-bottom: -.5rem + 4rem;
 	}
 
-	&__text {
-		@include media('desktop') {
-			margin: 0 10px;
-		}
-	}
-
 	&__name {
-		margin-top: -.8rem + 1.5rem;
-		margin-bottom: -.6rem + 2.5rem;
-		color: #111;
-		font-size: 2rem;
-		line-height: 2.4rem;
-		font-weight: bold;
+    margin-top: -.8rem + 1.5rem;
+    margin-bottom: -.6rem + 2.5rem;
+    color: #111;
+    font: bold 2rem/2.4rem a;
+    font-family: inherit;
 
 		@include media('desktop') {
-			margin-top: -.6rem + 3rem;
-			margin-bottom: -.4rem + 2.5rem;
-			font-size: 2rem;
-			line-height: 1;
-		}
+      margin: -.6rem + 3rem 10px -.4rem + 2.5rem 10px;
+      font-size: 2rem;
+      line-height: 1;
+    }
 	}
 
 	&__list {
@@ -45,15 +37,18 @@
 		}
 	}
 
-	&__answer {
-		display: inline-block;
-		width: calc(100% - 30px);
-		margin-left: 10px;
-		color: #333;
-		font-size: 1.4rem;
-		line-height: 1.6rem;
-		font-weight: normal;
-		vertical-align: top;
+  &__input {
+    vertical-align: top;
+    margin-right: 10px;
+  }
+
+	&__text {
+    color: #333;
+    font: bold 1.4rem/1.5rem a;
+    font-family: inherit;
+    vertical-align: middle;
+    display: inline-block;
+    width: calc(100% - 30px);
 
 		@include media('desktop') {
 			font-size: 1.5rem;
@@ -61,19 +56,18 @@
 		}
 	}
 
-	&__item:focus &__answer,
-	&__item:hover &__answer {
+	&__item:focus &__text,
+	&__item:hover &__text {
 		color: #666;
 	}
 
 	&__more {
-		display: inline-block;
-		margin-top: -0.5rem;
-		margin-left: 18px;
-		color: #004465;
-		font-size: 1.4rem;
-		line-height: 1.6rem;
-		font-weight: normal;
+    display: inline-block;
+    margin-top: -.5rem;
+    margin-left: 18px;
+    color: #004465;
+    font: 1.4rem/1.6rem a;
+    font-family: inherit;
 
 		@include media('desktop') {
 			margin-left: 25px;

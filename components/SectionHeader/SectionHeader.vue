@@ -41,6 +41,16 @@
           {{ subrubric }}
         </a>
       </template>
+      <template v-else-if="isMultimedia">
+        <a
+          v-for="subrubric in mediaList"
+          :key="subrubric.id"
+          href="#"
+          class="section_header__more link"
+        >
+          {{ subrubric }}
+        </a>
+      </template>
       <a v-else href="#" class="section_header__more link">Вся рубрика</a>
     </div>
   </div>

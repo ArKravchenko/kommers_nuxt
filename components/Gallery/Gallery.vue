@@ -26,9 +26,9 @@
       ></div>
     </swiper>
 
-    <!-- <div class="gallery-horizontal__progress">
+    <div class="gallery-horizontal__progress">
       {{ activeSlideIndex + 1 }} / {{ countSlides }}
-    </div> -->
+    </div>
 
     <div v-if="preview" class="gallery-thumbs">
       <swiper

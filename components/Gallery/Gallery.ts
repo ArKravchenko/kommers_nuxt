@@ -32,8 +32,7 @@ export default class Gallery extends Vue {
 
   protected swiperOptionTop = {
     loop: true,
-    loopedSlides: 4,
-    loopFillGroupWithBlank: false,
+    loopFillGroupWithBlank: true,
     autoHeight: true,
     slidesPerView: 4,
     spaceBetween: 40,

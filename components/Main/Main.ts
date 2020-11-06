@@ -8,6 +8,7 @@ import Rubric from '~/components/Rubric/Rubric.vue'
 import Spend from '~/components/Spend/Spend.vue'
 import Vote from '~/components/Vote/Vote.vue'
 import BigAnnounce from '~/components/BigAnnounce/BigAnnounce.vue'
+import Multimedia from '~/components/Multimedia/Multimedia.vue'
 
 @Component({
   components: {
@@ -20,6 +21,7 @@ import BigAnnounce from '~/components/BigAnnounce/BigAnnounce.vue'
     Spend,
     Vote,
     BigAnnounce,
+    Multimedia,
   },
 })
 export default class Main extends Vue {}

@@ -32,9 +32,7 @@
             class="ui-tumbler basement_news__small_name basement_news__business_lenta_trigger basement_news__control"
             for="business_lenta"
           >
-            <span class="basement_news__tumbler_name">
-              Только деловые новости
-            </span>
+            <span class="ui-tumbler__name">Только деловые новости</span>
             <div class="ui-tumbler__box" aria-hidden="true">
               <span class="ui-tumbler__dot">Только деловые новости</span>
             </div>

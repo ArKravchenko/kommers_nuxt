@@ -76,6 +76,7 @@
 
   &__list--visible {
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
     margin-top: -.3rem;
     margin-bottom: 14px;

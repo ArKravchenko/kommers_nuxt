@@ -20,6 +20,12 @@
 		height: 1px;
 		width: 1px;
 		opacity: 0;
+  }
+  .ui-tumbler__text {
+		color: $brand_color;
+	}
+	.ui-tumbler__name {
+		margin-right: 6px;
 	}
 	.ui-tumbler__box {
 		transition: background-color .15s cubic-bezier(.05, .69, .14, 1) 0s;
