@@ -7,7 +7,7 @@
 		align-items: center;
 		height: 40px;
 		margin: 0 -#{$mobile_icon_box / 2};
-		width: calc(100% + $mobile_icon_box);
+		width: calc(100% + #{$mobile_icon_box});
 
 		@include media('desktop') {
 			height: 50px;

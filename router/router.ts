@@ -1,9 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-import Home from '~/pages/Home/Home.vue'
+import Home from '~/pages/Home/Home.vue';
+import Document from '~/pages/Document/Document.vue'
 
-Vue.use(Router)
+Vue.use(Router);
 
 export function createRouter() {
   return new Router({
@@ -13,6 +14,10 @@ export function createRouter() {
         path: '/',
         component: Home,
       },
+        {
+            path: '/document',
+            component: Document,
+        },
     ],
   })
 }

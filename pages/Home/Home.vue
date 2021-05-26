@@ -2,8 +2,9 @@
   <div class="container">
     <div>
       <!-- Cols is just the example component with action and getter-->
-      <Cols />
-      <Gallery />
+      <!--<Cols />-->
+      <!--<Gallery />-->
+      <Main />
     </div>
   </div>
 </template>

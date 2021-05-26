@@ -38,7 +38,7 @@ export default class Multimedia extends Vue {
   }
 
   protected changeSlides() {
-    if (window.innerWidth > 1198) {
+    if (process.client && window.innerWidth > 1198) {
       this.slidesPerWindow = 4
       this.spaceBetween = 40
     }
@@ -48,11 +48,13 @@ export default class Multimedia extends Vue {
     this.$nextTick(() => {
       this.changeSlides()
 
+      if (process.client)
       window.addEventListener('resize', this.changeSlides)
     })
   }
 
   protected beforeDestroy() {
+      if (process.client)
     window.removeEventListener('resize', this.changeSlides)
   }
 }

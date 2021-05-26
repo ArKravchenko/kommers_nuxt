@@ -13,12 +13,12 @@
           </h4>
           <div class="superannounce__text superannounce__text--news">
             <h2 class="superannounce__name">
-              <a
-                href="#"
+              <SpaLink
+                href="/document"
                 class="superannounce__link superannounce__link--overlay"
               >
                 Владимир Путин распалялся все Польше и Польше
-              </a>
+              </SpaLink>
             </h2>
           </div>
           <h4 class="superannounce__tag hide_mobile">
@@ -47,7 +47,7 @@
           <div class="superannounce__text superannounce__text--media">
             <h2 class="superannounce__name">
               <a
-                href="#"
+                href="/document"
                 class="superannounce__link superannounce__link--overlay"
               >
                 Календарь нерабочего человека

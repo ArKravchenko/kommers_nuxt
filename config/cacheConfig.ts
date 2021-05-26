@@ -11,6 +11,7 @@ const cacheConfig: any = {
     // if you want to cache all pages, just include '/'
     // '/page1',
     '/',
+      '/document',
     // you can also pass a regular expression to test a path
     // /^\/page3\/\d+$/,
 

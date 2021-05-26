@@ -1,77 +1,89 @@
-import scssConfig from './config/scssConfig.ts'
-import cacheConfig from './config/cacheConfig.ts'
-import { version } from './package'
+/// <reference types="node" />
+import scssConfig from './config/scssConfig'
+import cacheConfig from './config/cacheConfig'
+import {version} from './package'
 
 const scssVars = Object.keys(scssConfig).reduce(
-  (acc, value) => `${acc} ${value}: ${scssConfig[value]};`,
-  ''
-)
+    (acc, value) => `${acc} ${value}: ${scssConfig[value]};`,
+    '',
+);
 
 export default {
-  version,
-  dev: process.env.NODE_ENV !== 'production',
+    version,
+    dev: process.env.NODE_ENV !== 'production',
 
-  globalName: 'kommersant',
+    globalName: 'kommersant',
 
-  cache: cacheConfig,
+    cache: cacheConfig,
 
-  // modern: 'server',
+    // modern: 'server',
 
-  // Global page headers (https://go.nuxtjs.dev/config-head)
-  head: {
-    title: 'kommersant_new',
-    meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
-    ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
-  },
-
-  // Global CSS (https://go.nuxtjs.dev/config-css)
-  css: ['@/node_modules/swiper/css/swiper.css', '@/assets/scss/main.scss'],
-
-  // Here are all the variables and shared functions/mixins for sass
-  styleResources: {
-    scss: ['@/assets/scss/base/vars.scss', '@/assets/scss/mixins.scss'],
-  },
-
-  // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
-  plugins: [],
-
-  // Auto import components (https://go.nuxtjs.dev/config-components)
-  components: false,
-
-  // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
-  buildModules: [
-    // https://go.nuxtjs.dev/typescript
-    '@nuxt/typescript-build',
-    // https://go.nuxtjs.dev/stylelint
-    // '@nuxtjs/stylelint-module',
-    '@nuxtjs/dotenv',
-    [
-      '@nuxtjs/router',
-      { fileName: 'router/router.ts', keepDefaultRouter: false },
-    ],
-    '@nuxtjs/style-resources',
-  ],
-
-  // Modules (https://go.nuxtjs.dev/config-modules)
-  modules: [
-    // https://go.nuxtjs.dev/axios
-    '@nuxtjs/axios',
-    // https://go.nuxtjs.dev/pwa
-    '@nuxtjs/pwa',
-    'nuxt-ssr-cache',
-  ],
-
-  // Axios module configuration (https://go.nuxtjs.dev/config-axios)
-  axios: {},
-
-  // Build Configuration (https://go.nuxtjs.dev/config-build)
-  build: {
-    extend(config, { isClient, isServer, loaders }) {
-      loaders.scss.additionalData = scssVars
+    // Global page headers (https://go.nuxtjs.dev/config-head)
+    head: {
+        title: 'kommersant_new',
+        meta: [
+            {charset: 'utf-8'},
+            {name: 'viewport', content: 'width=device-width, initial-scale=1'},
+            {hid: 'description', name: 'description', content: ''},
+        ],
+        link: [{rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'}],
     },
-  },
+
+    // Global CSS (https://go.nuxtjs.dev/config-css)
+    css: ['@/node_modules/swiper/css/swiper.css', '@/assets/scss/main.scss'],
+
+    // Here are all the variables and shared functions/mixins for sass
+    styleResources: {
+        scss: ['@/assets/scss/base/vars.scss', '@/assets/scss/mixins.scss'],
+    },
+
+    // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
+    plugins: [],
+
+    // Auto import components (https://go.nuxtjs.dev/config-components)
+    components: false,
+
+    // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
+    buildModules: [
+        // https://go.nuxtjs.dev/typescript
+        '@nuxt/typescript-build',
+        // https://go.nuxtjs.dev/stylelint
+        // '@nuxtjs/stylelint-module',
+        '@nuxtjs/dotenv',
+        [
+            '@nuxtjs/router',
+            {fileName: 'router/router.ts', keepDefaultRouter: false},
+        ],
+        '@nuxtjs/style-resources',
+    ],
+
+    // Modules (https://go.nuxtjs.dev/config-modules)
+    modules: [
+        // https://go.nuxtjs.dev/axios
+        '@nuxtjs/axios',
+        // https://go.nuxtjs.dev/pwa
+        '@nuxtjs/pwa',
+        'nuxt-ssr-cache',
+    ],
+
+    // Axios module configuration (https://go.nuxtjs.dev/config-axios)
+    axios: {},
+
+    // Build Configuration (https://go.nuxtjs.dev/config-build)
+    build: {
+        // extractCSS: true,
+
+        filenames: {
+            app: ({ isDev }:{isDev: boolean}) => isDev ? '[name].js' : '[contenthash].js',
+            chunk: ({ isDev }:{isDev: boolean}) => isDev ? '[name].js' : '[contenthash].js',
+            css: ({ isDev }:{isDev: boolean}) => isDev ? '[name].css' : '[contenthash].css',
+            img: ({ isDev }:{isDev: boolean}) => isDev ? '[path][name].[ext]' : 'img/[contenthash:7].[ext]',
+            font: ({ isDev }:{isDev: boolean}) => isDev ? '[path][name].[ext]' : 'fonts/[contenthash:7].[ext]',
+            video: ({ isDev }:{isDev: boolean}) => isDev ? '[path][name].[ext]' : 'videos/[contenthash:7].[ext]'
+        },
+
+        extend(config, {isClient, isServer, loaders}) {
+            loaders.scss.additionalData = scssVars
+        },
+    },
 }
