@@ -15,7 +15,7 @@ const mutations = {
 }
 
 const getters = {
-  testGetter(state: { counter: number }) {
+  testGetter(state: { counter: number }): number {
     return state.counter
   },
 }

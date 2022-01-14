@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div>
-      <Logo />
+      <!--      <Logo />-->
       <Cols />
       <h1 class="title">kommersant_new</h1>
       <div class="links">
@@ -28,13 +28,13 @@
 
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator'
-import Cols from '~/components/Cols/Cols.vue'
-import Logo from '~/components/Logo.vue'
+import Cols from '~/components/general/Cols/Cols.vue'
+// import Logo from '~/components/Logo.vue'
 
 @Component({
   components: {
     Cols,
-    Logo,
+    // Logo,
   },
 })
 export default class Cosmo extends Vue {}

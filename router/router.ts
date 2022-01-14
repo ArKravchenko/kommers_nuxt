@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 import Home from '~/pages/Home/Home.vue'
+import Document from '~/pages/Document/Home.vue'
 
 Vue.use(Router)
 
@@ -12,6 +13,10 @@ export function createRouter() {
       {
         path: '/',
         component: Home,
+      },
+      {
+        path: '/*',
+        component: Document,
       },
     ],
   })
