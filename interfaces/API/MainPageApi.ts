@@ -564,7 +564,7 @@ const generateEndpoint_2: () => MainPageAPI.Endpoint_4 = () => {
         return {
           type: 'theme',
           content: {
-            plashka: faker.word.noun(),
+            plashka: faker.lorem.word(randomLength(3,10)),
             img: generateImageSimple(),
             theme: Theme(),
             docsList: Array.from({length: randomLength(1, 4)}).map(el => Doc()) as ReturnType<typeof Doc>[]
@@ -581,6 +581,7 @@ const generateEndpoint_2: () => MainPageAPI.Endpoint_4 = () => {
           }
         }
     }
+    return null
   }
 
   const generateTop = (): Top.APIDataStructure => {
@@ -662,6 +663,7 @@ const generateEndpoint_2: () => MainPageAPI.Endpoint_4 = () => {
             }
           }
       }
+      return null
     }
 
     return {
