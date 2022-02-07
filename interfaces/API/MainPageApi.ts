@@ -570,6 +570,7 @@ const generateEndpoint_2: () => MainPageAPI.Endpoint_4 = () => {
           }
         }
     }
+    return null
   }
 
   const generateTop = (): Top.APIDataStructure => {
@@ -651,6 +652,7 @@ const generateEndpoint_2: () => MainPageAPI.Endpoint_4 = () => {
             }
           }
       }
+      return null
     }
 
     return {
