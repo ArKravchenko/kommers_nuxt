@@ -1,4 +1,4 @@
-import {faker} from '@faker-js/faker';
+import faker from '@faker-js/faker/locale/ru';
 import fs from 'fs'
 
 interface ImageSimple {
@@ -18,6 +18,11 @@ namespace Actualno {
     stable = 0
   }
 
+  export type ActualnoItem = {
+    title: string,
+    href: string,
+  }
+
   export interface IActualno {
     data: {
       rates: {
@@ -32,7 +37,8 @@ namespace Actualno {
           rate: number;
           changeTrend: ChangeTrend;
         };
-      }
+      },
+      items: ActualnoItem[]
     }
   }
 
@@ -475,8 +481,12 @@ const generateImageFull = (): ImageFull => {
 
 const randomLength = (min: number, max: number) => min + Math.round(Math.random() * (max - min))
 
-
 const generateEndpoint_1: () => MainPageAPI.Endpoint_1 = () => {
+
+  const generateActualnoItem = (): Actualno.ActualnoItem =>({
+    title: faker.lorem.sentence(randomLength(1, 5)),
+    href: faker.internet.url()
+  })
 
   const generateActualno = (): Actualno.IActualno => {
     return {
@@ -493,7 +503,8 @@ const generateEndpoint_1: () => MainPageAPI.Endpoint_1 = () => {
             rate: faker.datatype.float({min: 80, max: 100, precision: 0.01}),
             changeTrend: faker.datatype.number({min: -1, max: 1}),
           },
-        }
+        },
+        items: Array.from({length: randomLength(5, 10)}).map(el => generateActualnoItem()) as ReturnType<typeof generateActualnoItem>[]
       }
     }
   }
@@ -533,7 +544,7 @@ const generateEndpoint_2: () => MainPageAPI.Endpoint_4 = () => {
         return {
           type: 'doc',
           content: {
-            plashka: faker.word.noun(),
+            plashka: faker.lorem.word(randomLength(3,10)),
             img: generateImageSimple(),
             mainDoc: Doc(),
             docsList: Array.from({length: randomLength(1, 4)}).map(el => Doc()) as ReturnType<typeof Doc>[]
@@ -543,7 +554,7 @@ const generateEndpoint_2: () => MainPageAPI.Endpoint_4 = () => {
         return {
           type: 'issue',
           content: {
-            plashka: faker.word.noun(),
+            plashka: faker.lorem.word(randomLength(3,10)),
             img: generateImageSimple(),
             issue: Issue(),
             docsList: Array.from({length: randomLength(1, 4)}).map(el => Doc()) as ReturnType<typeof Doc>[]
@@ -570,7 +581,6 @@ const generateEndpoint_2: () => MainPageAPI.Endpoint_4 = () => {
           }
         }
     }
-    return null
   }
 
   const generateTop = (): Top.APIDataStructure => {
@@ -602,7 +612,7 @@ const generateEndpoint_2: () => MainPageAPI.Endpoint_4 = () => {
           return {
             type: 'quote',
             content: {
-              plashka: faker.word.noun(),
+              plashka: faker.lorem.word(randomLength(3,10)),
               quote: faker.lorem.sentence(randomLength(5, 15)),
               href: faker.internet.url(),
               person: {
@@ -615,7 +625,7 @@ const generateEndpoint_2: () => MainPageAPI.Endpoint_4 = () => {
           return {
             type: 'photo',
             content: {
-              plashka: faker.word.noun(),
+              plashka: faker.lorem.word(randomLength(3,10)),
               caption: faker.lorem.sentence(randomLength(5, 15)),
               href: faker.internet.url(),
               img: generateImageSimple(),
@@ -625,7 +635,7 @@ const generateEndpoint_2: () => MainPageAPI.Endpoint_4 = () => {
           return {
             type: 'video',
             content: {
-              plashka: faker.word.noun(),
+              plashka: faker.lorem.word(randomLength(3,10)),
               caption: faker.lorem.sentence(randomLength(5, 15)),
               href: faker.internet.url(),
               img: generateImageSimple(),
@@ -635,7 +645,7 @@ const generateEndpoint_2: () => MainPageAPI.Endpoint_4 = () => {
           return {
             type: 'chart',
             content: {
-              plashka: faker.word.noun(),
+              plashka: faker.lorem.word(randomLength(3,10)),
               caption: faker.lorem.sentence(randomLength(5, 15)),
               href: faker.internet.url(),
               img: generateImageSimple(),
@@ -645,14 +655,13 @@ const generateEndpoint_2: () => MainPageAPI.Endpoint_4 = () => {
           return {
             type: 'digit',
             content: {
-              plashka: faker.word.noun(),
+              plashka: faker.lorem.word(randomLength(3,10)),
               caption: faker.lorem.sentence(randomLength(5, 15)),
               href: faker.internet.url(),
               digit: `${faker.datatype.number()} ${faker.lorem.sentence(randomLength(1, 3))}`,
             }
           }
       }
-      return null
     }
 
     return {
@@ -666,7 +675,7 @@ const generateEndpoint_2: () => MainPageAPI.Endpoint_4 = () => {
     const Doc = (): MainToday.Doc => ({
       title: faker.lorem.sentence(randomLength(3, 10)),
       subtitle: faker.lorem.sentence(randomLength(10, 15)),
-      tag: faker.word.noun(),
+      tag: faker.lorem.word(),
       href: faker.internet.url(),
       img: generateImageFull(),
     });
@@ -682,7 +691,7 @@ const generateEndpoint_2: () => MainPageAPI.Endpoint_4 = () => {
       type: faker.random.arrayElement(['photo', 'video', 'podcast', 'special', 'visual']),
       title: faker.lorem.sentence(randomLength(3, 10)),
       subtitle: faker.lorem.sentence(randomLength(10, 15)),
-      tag: faker.word.noun(),
+      tag: faker.lorem.word(),
       href: faker.internet.url(),
       img: generateImageSimple(),
     });
@@ -721,7 +730,7 @@ const generateEndpoint_2: () => MainPageAPI.Endpoint_4 = () => {
       subtitle: faker.lorem.sentence(randomLength(10, 15)),
       href: faker.internet.url(),
       img: generateImageFull(),
-      tag: faker.word.noun(),
+      tag: faker.lorem.word(),
     })
 
     return {
@@ -753,7 +762,7 @@ const generateEndpoint_5_6: () => MainPageAPI.Endpoint_5 | MainPageAPI.Endpoint_
   const PromoDoc = ():PromoGalleryTop.PromoDoc  => ({
     title: faker.lorem.sentence(randomLength(3, 10)),
     subtitle: faker.lorem.sentence(randomLength(10, 15)),
-    tag: faker.word.noun(),
+    tag: faker.lorem.word(),
     href: faker.internet.url(),
     img: generateImageSimple()
   })
