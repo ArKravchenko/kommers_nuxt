@@ -481,6 +481,113 @@ export namespace ListPageDocs {
   }
 }
 
+export namespace ArticleLong {
+
+  export type ArticleLongTag = {
+    text: string;
+    href: string;
+    subscription: {
+      type: number;
+      id: number;
+    }
+  }
+
+  export interface HTMLTagElement  {
+    type: 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'ol' | 'ul' | 'li' | 'hr' | 'a' | 'b' | 'i' | 'span';
+    attributes: { [key: string]: string };
+    children: string | HTMLTagElement[]
+  }
+
+  export interface WidgetElement  {
+    // TODO WIP
+  }
+
+  export type DocBodyElement = {
+    element: 'tag'
+    content: HTMLTagElement
+  } | {
+    element: 'widget'
+    content: WidgetElement
+  }
+
+  // Описанный интерфейс преддполагает что каждый абзац в content не содержит вложенных тегов,
+  // то есть схема справедлива для "новых" доков, созданных через предстоящую новую админку.
+  // В старой админке внутрь тега <p> мог попасть встраиваемый код или другие вложенные теги, в том числе в тело дока в абзац
+  // вписывали кастомный HTML со скриптами. Такие документа если и удастся распарсить, то не до конца, и все что прилетит ему в тело
+  // придется вставлять как сырой HTML
+  interface IArticleLong {
+    data: {
+      docId: number;
+      regionId: number;
+      // дата обновления тела документа в базе, его принадлежности к рубрикам/темам,
+      // включения/выключения комментов, нэтивролла etc
+      // Вместе с docId будет использоваться для кеширования отдельных компонентов страницы в redis
+      updatedAt: Date;
+
+      meta: {
+        commentsOff: boolean;
+        nativeRollOff: boolean;
+        noIndex: boolean;
+        lazyLoadOff: boolean;
+        puids: number[];
+      },
+      breadcrumb: {
+        href: string,
+        text: string
+      };
+      pubDate: {
+        hideDate: boolean; // показывать дату публикации
+        date: Date; // статья опубликована
+        dateUpdate: Date; // статья обновлена(перепубликована)
+      }
+      title: string;
+      titlePhoto: string; // title для показа на странице /gallery/{docId}
+      subtitle: string;
+      subtitlePhoto: string; // subtitle для показа на странице /gallery/{docId}
+      vvodka: string;
+      centralIllustration: WidgetElement;
+      readingTime: string; // время на прочтение в формате готовом для отображения "1 мин."
+      views: number; // количество просмотров, возможно можно вывести на отдельный эндпоинт и отображать только на фронте
+      content: {
+        isHtml: boolean;
+        htmlContent: {
+          rawHtml: string;
+          styles: string;
+          scripts: string;
+        };
+        authorLine: string;
+        docBodyElements: DocBodyElement[]
+      },
+      // seo:{
+      //     metaKeywords: string[];
+      //     metaTitle: string;
+      //     metaSubtitle: string;
+      //     metaDesc: string;
+      //     metaImage: ImageSimple;
+      // },
+      footer:{ // От этого проперти в принципе можно избавиться, вынеся issue authors themes на уровень вывше
+        issue: {
+          title: string;
+          appendix: string;
+          // если есть ссылка то в нее обернется title,
+          // если нет то отобразится друг за другом title + appendix,
+          // нужно для доков, которые публикуются до выхода печатного издания
+          href: string;
+        },
+        authors: ArticleLongTag[],
+        themes: ArticleLongTag[]
+      }
+    }
+  }
+
+  export interface APIDataStructure extends IArticleLong {
+  }
+}
+
+
+
+
+
 export namespace MainPageAPI {
   export interface Endpoint_1 extends Actualno.APIDataStructure {
   }
@@ -553,5 +660,32 @@ export namespace ListPageAPI {
   }
 
   export interface Endpoint_6 extends ListPageDocs.APIDataStructure{
+  }
+}
+
+export namespace DocPageAPI {
+  export interface Endpoint_1 extends Actualno.APIDataStructure {
+  }
+
+  // Лента не описывалась
+  // export interface Endpoint_2 extends Lenta.APIDataStructure{}
+
+  // Реклама не описывалась
+  // interface Endpoint_3 extends Ads.APIDataStructure{}
+
+  export interface Endpoint_4 extends ArticleLong.APIDataStructure{
+
+  }
+
+  export interface Endpoint_5 extends Multimedia.APIDataStructure {
+  }
+
+  export interface Endpoint_6 extends MainToday.APIDataStructure {
+  }
+
+  export interface Endpoint_7 extends MostReadable.APIDataStructure {
+  }
+
+  export interface Endpoint_8 extends CompanyNews.APIDataStructure {
   }
 }
