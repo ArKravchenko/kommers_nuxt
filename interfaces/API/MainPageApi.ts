@@ -498,9 +498,142 @@ export namespace ArticleLong {
     children: string | HTMLTagElement[]
   }
 
-  export interface WidgetElement  {
-    // TODO WIP
+  export type Incut = {
+    type: 'incut'
+    position: 'center' | 'right' | 'left'
+    content: {
+      img: ImageFull;
+      href: string;
+      title: string;
+      text: string;
+    }
   }
+
+  export type Audio = {
+    type: 'audio'
+    content: {
+      href: string;
+      caption: string;
+    }
+  }
+
+  type VoteAnswer = {
+    text: string;
+    value: number;
+    name: string;
+  }
+
+  export type Vote = {
+    type: 'vote'
+    content: {
+      resultsHref: string;
+      question: string;
+      questionId: number;
+      regionId: number;
+      uid: number;
+      redirectUrlOnClose: string
+      answers: VoteAnswer[]
+    }
+  }
+
+  export type Citation = {
+    type: 'citation'
+    content: {
+      text: string
+    }
+  }
+
+  export type Spravka = {
+    type: 'spravka'
+    position: 'center' | 'right' | 'left'
+    content: {
+      href: string;
+      title: string;
+      bodyElements: HTMLTagElement[]
+    }
+  }
+
+  export type Illustration = {
+    type: 'illustration'
+    position: 'center' | 'right' | 'left'
+    expandable: boolean; //может быть true только для широкой, это параметр указывающий можно ли открыть фото в darkGallery
+    content: {
+      img: ImageFull;
+      caption: string;
+      credentials: string;
+    }
+  }
+
+  export type AdaptivePhoto = {
+    type: 'adaptive_photo'
+    expandable: boolean; // параметр указывающий можно ли открыть фото в darkGallery
+    content: {
+      imgDesktop: ImageFull;
+      imgMobile: ImageFull;
+      caption: string;
+      credentials: string;
+    }
+  }
+
+  export type Video = {
+    type: 'video'
+    expandable: boolean; // параметр указывающий можно ли открыть фото в darkGallery
+    content: {
+      embedHtml: string;
+      caption: string;
+      credentials: string;
+    }
+  }
+
+  export type Photo = {
+    type: 'photo'
+    expandable: boolean; // параметр указывающий можно ли открыть фото в darkGallery
+    content: {
+      img: ImageFull;
+      caption: string;
+      credentials: string;
+    }
+  }
+
+  type GalleryPhoto = {
+    img: ImageFull;
+    imageId: number;
+    caption: string;
+    credentials: string;
+  }
+
+  export type Gallery = {
+    type: 'gallery'
+    expandable: boolean; // параметр указывающий можно ли открыть фото в darkGallery
+    external: boolean;  // если виджет - внешняя галерея, то true, тогда
+    content: {
+      images: GalleryPhoto[];
+      title: string; // title внешней док-галереи, если external==true, в противном случае игнорируется
+      href: string; // ссылка на внешнюю док-галерею, если external==true, в противном случае игнорируется
+    }
+  }
+
+  export type Collapse = { //врез расхлоп
+    type: 'collapse'
+    content: {
+      defaultExpanded: boolean; // раскрыт ли по-умолчанию
+      title: string;
+      bodyElements: HTMLTagElement[]
+    }
+  }
+
+
+  export type WidgetElement = Collapse
+    | Gallery
+    | Photo
+    | Video
+    | AdaptivePhoto
+    | Illustration
+    | Spravka
+    | Citation
+    | Vote
+    | Audio
+    | Incut
 
   export type DocBodyElement = {
     element: 'tag'
