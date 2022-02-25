@@ -549,7 +549,7 @@ export namespace ArticleLong {
     content: {
       href: string;
       title: string;
-      bodyElements: HTMLTagElement[]
+      bodyElements: DocBodyElement[]
     }
   }
 
@@ -595,7 +595,7 @@ export namespace ArticleLong {
     }
   }
 
-  type GalleryPhoto = {
+  export type GalleryPhoto = {
     img: ImageFull;
     imageId: number;
     caption: string;
@@ -618,7 +618,7 @@ export namespace ArticleLong {
     content: {
       defaultExpanded: boolean; // раскрыт ли по-умолчанию
       title: string;
-      bodyElements: HTMLTagElement[]
+      bodyElements: DocBodyElement[]
     }
   }
 
@@ -648,7 +648,7 @@ export namespace ArticleLong {
   // В старой админке внутрь тега <p> мог попасть встраиваемый код или другие вложенные теги, в том числе в тело дока в абзац
   // вписывали кастомный HTML со скриптами. Такие документа если и удастся распарсить, то не до конца, и все что прилетит ему в тело
   // придется вставлять как сырой HTML
-  interface IArticleLong {
+  export interface IArticleLong {
     data: {
       docId: number;
       regionId: number;
