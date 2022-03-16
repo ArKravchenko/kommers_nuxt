@@ -538,8 +538,10 @@ export namespace ArticleLong {
 
   export type Citation = {
     type: 'citation'
+    //TODO  может быть выделение (большой текст) рандомный HTML
     content: {
-      text: string
+      title: HTMLTagElement[];
+      text: HTMLTagElement[]
     }
   }
 
@@ -558,7 +560,7 @@ export namespace ArticleLong {
     position: 'center' | 'right' | 'left'
     expandable: boolean; //может быть true только для широкой, это параметр указывающий можно ли открыть фото в darkGallery
     content: {
-      img: ImageFull;
+      img: ImageFull | ImageSimple;
       caption: string;
       credentials: string;
     }
@@ -566,11 +568,12 @@ export namespace ArticleLong {
 
   export type AdaptivePhoto = {
     type: 'adaptive_photo'
-    expandable: boolean; // параметр указывающий можно ли открыть фото в darkGallery
+    // expandable: boolean; // параметр указывающий можно ли открыть фото в darkGallery
     content: {
       imgDesktop: ImageFull;
       imgMobile: ImageFull;
       caption: string;
+      // TODO добавить возможность оборачивать в ссылку
       credentials: string;
     }
   }
@@ -585,15 +588,15 @@ export namespace ArticleLong {
     }
   }
 
-  export type Photo = {
-    type: 'photo'
-    expandable: boolean; // параметр указывающий можно ли открыть фото в darkGallery
-    content: {
-      img: ImageFull;
-      caption: string;
-      credentials: string;
-    }
-  }
+  // export type Photo = {
+  //     type: 'photo'
+  //     expandable: boolean; // параметр указывающий можно ли открыть фото в darkGallery
+  //     content: {
+  //         img: ImageFull;
+  //         caption: string;
+  //         credentials: string;
+  //     }
+  // }
 
   export type GalleryPhoto = {
     img: ImageFull;
@@ -618,22 +621,42 @@ export namespace ArticleLong {
     content: {
       defaultExpanded: boolean; // раскрыт ли по-умолчанию
       title: string;
+      subtitle: string;
       bodyElements: DocBodyElement[]
+    }
+  }
+
+  export type Free = { //свободный врез
+    type: 'free'
+    content: {
+      rawHtml: string; // plain HTML
+    }
+  }
+
+  export type Socials = { //Соцсети, вероятно вместо raw HTML будет ссылка, а сам код будет храниться на стороне фронта, пока нарезать
+    //  давайте нарезать в том виде
+    type: 'socials'
+    content: {
+      socialType: 'fb' | 'tg' | 'insta' | 'vk' | 'simplecast' | 'twitter' | 'youtube'
+      href?: string, // строка url, которая будет обернута в код на фронте
+      rawHtml?: string; // plain HTML
     }
   }
 
 
   export type WidgetElement = Collapse
     | Gallery
-    | Photo
+    // | Photo
     | Video
     | AdaptivePhoto
     | Illustration
-    | Spravka
+    | Spravka  // сейчас  таких нет,  легаси,  всегда содержит заголовок ссылку и опционально  текст
     | Citation
     | Vote
     | Audio
     | Incut
+    | Free
+    | Socials
 
   export type DocBodyElement = {
     element: 'tag'
