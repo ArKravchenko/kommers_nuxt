@@ -483,6 +483,8 @@ export namespace ListPageDocs {
 
 export namespace ArticleLong {
 
+  type Alignment = 'center' | 'right' | 'left';
+
   export type ArticleLongTag = {
     text: string;
     href: string;
@@ -492,29 +494,31 @@ export namespace ArticleLong {
     }
   }
 
+  export type PlainTextElement = string;
+
   export interface HTMLTagElement  {
-    type: 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'ol' | 'ul' | 'li' | 'hr' | 'a' | 'b' | 'i' | 'span';
+    tagName: 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'ol' | 'ul' | 'li' | 'hr' | 'a' | 'b' | 'i' | 'span';
     attributes: { [key: string]: string };
-    children: string | HTMLTagElement[]
+    children: (PlainTextElement | HTMLTagElement)[]
   }
 
   export type Incut = {
-    type: 'incut'
-    position: 'center' | 'right' | 'left'
-    content: {
-      img: ImageFull;
-      href: string;
-      title: string;
-      text: string;
-    }
+    widgetType: 'incut'
+    align: Alignment
+    // content: {
+    img: ImageFull;
+    href: string;
+    title: string;
+    text: string;
+    // }
   }
 
   export type Audio = {
-    type: 'audio'
-    content: {
-      href: string;
-      caption: string;
-    }
+    widgetType: 'audio'
+    // content: {
+    href: string;
+    caption: string;
+    // }
   }
 
   type VoteAnswer = {
@@ -524,68 +528,68 @@ export namespace ArticleLong {
   }
 
   export type Vote = {
-    type: 'vote'
-    content: {
-      resultsHref: string;
-      question: string;
-      questionId: number;
-      regionId: number;
-      uid: number;
-      redirectUrlOnClose: string
-      answers: VoteAnswer[]
-    }
+    widgetType: 'vote'
+    // content: {
+    resultsHref: string;
+    question: string;
+    questionId: number;
+    regionId: number;
+    uid: number;
+    redirectUrlOnClose: string
+    answers: VoteAnswer[]
+    // }
   }
 
   export type Citation = {
-    type: 'citation'
+    widgetType: 'citation'
     //TODO  может быть выделение (большой текст) рандомный HTML
-    content: {
-      title: HTMLTagElement[];
-      text: HTMLTagElement[]
-    }
+    /// content: {
+    title: (PlainTextElement | HTMLTagElement)[];
+    text: (PlainTextElement | HTMLTagElement)[]
+    // }
   }
 
   export type Spravka = {
-    type: 'spravka'
-    position: 'center' | 'right' | 'left'
-    content: {
-      href: string;
-      title: string;
-      bodyElements: DocBodyElement[]
-    }
+    widgetType: 'spravka'
+    align: Alignment
+    // content: {
+    href: string;
+    title: (PlainTextElement | HTMLTagElement)[];
+    bodyElements: DocBodyElement[]
+    // }
   }
 
   export type Illustration = {
-    type: 'illustration'
-    position: 'center' | 'right' | 'left'
+    widgetType: 'illustration'
+    align: Alignment
     expandable: boolean; //может быть true только для широкой, это параметр указывающий можно ли открыть фото в darkGallery
-    content: {
-      img: ImageFull | ImageSimple;
-      caption: string;
-      credentials: string;
-    }
+    // content: {
+    img: ImageFull | ImageSimple;
+    caption: string;
+    credentials: string;
+    // }
   }
 
   export type AdaptivePhoto = {
-    type: 'adaptive_photo'
+    widgetType: 'adaptive_photo'
     // expandable: boolean; // параметр указывающий можно ли открыть фото в darkGallery
-    content: {
-      imgDesktop: ImageFull;
-      imgMobile: ImageFull;
-      caption: string;
-      // TODO добавить возможность оборачивать в ссылку
-      credentials: string;
-    }
+    // content: {
+    imgDesktop: ImageFull;
+    imgMobile: ImageFull;
+    caption: string;
+    // TODO добавить возможность оборачивать в ссылку
+    credentials: string;
+    // }
   }
 
   export type Video = {
-    type: 'video'
+    widgetType: 'video'
     expandable: boolean; // параметр указывающий можно ли открыть фото в darkGallery
-    content: {
-      embedHtml: string;
-      caption: string;
-      credentials: string;
-    }
+    // content: {
+    embedHtml: string;
+    caption: string;
+    credentials: string;
+    // }
   }
 
   // export type Photo = {
@@ -606,47 +610,85 @@ export namespace ArticleLong {
   }
 
   export type Gallery = {
-    type: 'gallery'
+    widgetType: 'gallery'
     expandable: boolean; // параметр указывающий можно ли открыть фото в darkGallery
     external: boolean;  // если виджет - внешняя галерея, то true, тогда
-    content: {
-      images: GalleryPhoto[];
-      title: string; // title внешней док-галереи, если external==true, в противном случае игнорируется
-      href: string; // ссылка на внешнюю док-галерею, если external==true, в противном случае игнорируется
-    }
+    // content: {
+    images: GalleryPhoto[];
+    title: string; // title внешней док-галереи, если external==true, в противном случае игнорируется
+    href: string; // ссылка на внешнюю док-галерею, если external==true, в противном случае игнорируется
+    // }
   }
 
   export type Collapse = { //врез расхлоп
-    type: 'collapse'
-    content: {
-      defaultExpanded: boolean; // раскрыт ли по-умолчанию
-      title: string;
-      subtitle: string;
-      bodyElements: DocBodyElement[]
-    }
+    widgetType: 'collapse'
+    // content: {
+    defaultExpanded: boolean; // раскрыт ли по-умолчанию
+    title: (PlainTextElement | HTMLTagElement)[];
+    subtitle: (PlainTextElement | HTMLTagElement)[];
+    bodyElements: DocBodyElement[]
+    // }
   }
 
   export type Free = { //свободный врез
-    type: 'free'
-    content: {
-      rawHtml: string; // plain HTML
-    }
+    widgetType: 'free'
+    // content: {
+    rawHtml: string; // plain HTML
+    // }
   }
 
   export type Socials = { //Соцсети, вероятно вместо raw HTML будет ссылка, а сам код будет храниться на стороне фронта, пока нарезать
     //  давайте нарезать в том виде
-    type: 'socials'
-    content: {
-      socialType: 'fb' | 'tg' | 'insta' | 'vk' | 'simplecast' | 'twitter' | 'youtube'
-      href?: string, // строка url, которая будет обернута в код на фронте
-      rawHtml?: string; // plain HTML
-    }
+    widgetType: 'socials'
+    // content: {
+    socialType: 'fb' | 'tg' | 'insta' | 'vk' | 'simplecast' | 'twitter' | 'youtube'
+    href?: string, // строка url, которая будет обернута в код на фронте
+    rawHtml?: string; // plain HTML
+    // }
+  }
+
+  export type PoseidonWidget = { // <widget> и <wtwidget>
+    widgetType: 'poseidonWidget';
+    id: number;
+    pageId?: string;
+  }
+
+  export type Vvodka = { // <vvodka>, <vvodka_main>
+    widgetType: 'vvodka';
+    bodyElements: (PlainTextElement | HTMLTagElement)[];
+  }
+
+  export type Title2 = { // <title2>
+    widgetType: 'title2';
+    bodyElements: (PlainTextElement | HTMLTagElement)[];
+  }
+
+  export type Author = { // <author>
+    widgetType: 'author';
+    bodyElements: (PlainTextElement | HTMLTagElement)[];
+  }
+
+  export type Para = {
+    widgetType: 'para';
+    bodyElements: (PlainTextElement | HTMLTagElement)[];
+  }
+
+  export type List = {
+    widgetType: 'list';
+    kind: 'ordered' | 'unordered'
+    bodyElements: DocBodyElement[];
   }
 
 
   export type WidgetElement = Collapse
+    | Vvodka
+    | Title2
+    | Author
+    | Para
     | Gallery
+    | List
     // | Photo
+    | PoseidonWidget
     | Video
     | AdaptivePhoto
     | Illustration
@@ -664,6 +706,9 @@ export namespace ArticleLong {
   } | {
     element: 'widget'
     content: WidgetElement
+  } | {
+    element: 'text'
+    content: PlainTextElement
   }
 
   // Описанный интерфейс преддполагает что каждый абзац в content не содержит вложенных тегов,
@@ -696,11 +741,11 @@ export namespace ArticleLong {
         date: Date; // статья опубликована
         dateUpdate: Date; // статья обновлена(перепубликована)
       }
-      title: string;
-      titlePhoto: string; // title для показа на странице /gallery/{docId}
-      subtitle: string;
-      subtitlePhoto: string; // subtitle для показа на странице /gallery/{docId}
-      vvodka: string;
+      title: (PlainTextElement | HTMLTagElement)[];
+      titlePhoto: (PlainTextElement | HTMLTagElement)[]; // title для показа на странице /gallery/{docId}
+      subtitle: (PlainTextElement | HTMLTagElement)[];
+      subtitlePhoto: (PlainTextElement | HTMLTagElement)[]; // subtitle для показа на странице /gallery/{docId}
+      vvodka: (PlainTextElement | HTMLTagElement)[];
       centralIllustration: WidgetElement;
       readingTime: string; // время на прочтение в формате готовом для отображения "1 мин."
       views: number; // количество просмотров, возможно можно вывести на отдельный эндпоинт и отображать только на фронте
@@ -711,7 +756,7 @@ export namespace ArticleLong {
           styles: string;
           scripts: string;
         };
-        authorLine: string;
+        // authorLine: string;
         docBodyElements: DocBodyElement[]
       },
       // seo:{
