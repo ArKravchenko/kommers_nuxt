@@ -483,7 +483,7 @@ export namespace ListPageDocs {
 
 export namespace ArticleLong {
 
-  type Alignment = 'center' | 'right' | 'left';
+  export type Alignment = 'center' | 'right' | 'left';
 
   export type ArticleLongTag = {
     text: string;
@@ -655,7 +655,7 @@ export namespace ArticleLong {
 
   export type Vvodka = { // <vvodka>, <vvodka_main>
     widgetType: 'vvodka';
-    bodyElements: (PlainTextElement | HTMLTagElement)[];
+    bodyElements: DocBodyElement[];
   }
 
   export type Title2 = { // <title2>
@@ -745,7 +745,7 @@ export namespace ArticleLong {
       titlePhoto: (PlainTextElement | HTMLTagElement)[]; // title для показа на странице /gallery/{docId}
       subtitle: (PlainTextElement | HTMLTagElement)[];
       subtitlePhoto: (PlainTextElement | HTMLTagElement)[]; // subtitle для показа на странице /gallery/{docId}
-      vvodka: (PlainTextElement | HTMLTagElement)[];
+      vvodka: DocBodyElement[];
       centralIllustration: WidgetElement;
       readingTime: string; // время на прочтение в формате готовом для отображения "1 мин."
       views: number; // количество просмотров, возможно можно вывести на отдельный эндпоинт и отображать только на фронте
