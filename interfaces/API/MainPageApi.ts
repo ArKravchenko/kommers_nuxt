@@ -568,6 +568,7 @@ export namespace ArticleLong {
     caption: (PlainTextElement | HTMLTagElement)[];
     credentials: {
       owner: (PlainTextElement | HTMLTagElement)[];
+      author: (PlainTextElement | HTMLTagElement)[];
       ownerHref: string;
       purchaseHref: string;
       photoKind: string
@@ -585,6 +586,7 @@ export namespace ArticleLong {
     // TODO добавить возможность оборачивать в ссылку
     credentials: {
       owner: (PlainTextElement | HTMLTagElement)[];
+      author: (PlainTextElement | HTMLTagElement)[];
       ownerHref: string;
       purchaseHref: string;
       photoKind: string
@@ -600,6 +602,7 @@ export namespace ArticleLong {
     caption: (PlainTextElement | HTMLTagElement)[];
     credentials: {
       owner: (PlainTextElement | HTMLTagElement)[];
+      author: (PlainTextElement | HTMLTagElement)[];
       ownerHref: string;
       purchaseHref: string;
       photoKind: string
@@ -623,6 +626,7 @@ export namespace ArticleLong {
     caption: (PlainTextElement | HTMLTagElement)[];
     credentials: {
       owner: (PlainTextElement | HTMLTagElement)[];
+      author: (PlainTextElement | HTMLTagElement)[];
       ownerHref: string;
       purchaseHref: string;
       photoKind: string
