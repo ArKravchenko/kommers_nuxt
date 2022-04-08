@@ -565,8 +565,13 @@ export namespace ArticleLong {
     expandable: boolean; //может быть true только для широкой, это параметр указывающий можно ли открыть фото в darkGallery
     // content: {
     img: ImageFull | ImageSimple;
-    caption: string;
-    credentials: string;
+    caption: (PlainTextElement | HTMLTagElement)[];
+    credentials: {
+      owner: (PlainTextElement | HTMLTagElement)[];
+      ownerHref: string;
+      purchaseHref: string;
+      photoKind: string
+    };
     // }
   }
 
@@ -576,9 +581,14 @@ export namespace ArticleLong {
     // content: {
     imgDesktop: ImageFull;
     imgMobile: ImageFull;
-    caption: string;
+    caption: (PlainTextElement | HTMLTagElement)[];
     // TODO добавить возможность оборачивать в ссылку
-    credentials: string;
+    credentials: {
+      owner: (PlainTextElement | HTMLTagElement)[];
+      ownerHref: string;
+      purchaseHref: string;
+      photoKind: string
+    };
     // }
   }
 
@@ -587,8 +597,13 @@ export namespace ArticleLong {
     expandable: boolean; // параметр указывающий можно ли открыть фото в darkGallery
     // content: {
     embedHtml: string;
-    caption: string;
-    credentials: string;
+    caption: (PlainTextElement | HTMLTagElement)[];
+    credentials: {
+      owner: (PlainTextElement | HTMLTagElement)[];
+      ownerHref: string;
+      purchaseHref: string;
+      photoKind: string
+    };
     // }
   }
 
@@ -605,8 +620,13 @@ export namespace ArticleLong {
   export type GalleryPhoto = {
     img: ImageFull;
     imageId: number;
-    caption: string;
-    credentials: string;
+    caption: (PlainTextElement | HTMLTagElement)[];
+    credentials: {
+      owner: (PlainTextElement | HTMLTagElement)[];
+      ownerHref: string;
+      purchaseHref: string;
+      photoKind: string
+    };
   }
 
   export type Gallery = {
@@ -673,10 +693,15 @@ export namespace ArticleLong {
     bodyElements: (PlainTextElement | HTMLTagElement)[];
   }
 
+  type IListElement = {
+    type: 'listElement'
+    bodyElements: DocBodyElement[]
+  }
+
   export type List = {
     widgetType: 'list';
     kind: 'ordered' | 'unordered'
-    bodyElements: DocBodyElement[];
+    listElements: IListElement[];
   }
 
 
