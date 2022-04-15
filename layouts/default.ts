@@ -10,4 +10,10 @@ import Header from '~/components/general/Header/Header/Header.vue'
     Header, // : () => import('~/components/general/Header/Header/Header.vue'),
   },
 })
-export default class Kommersant extends Vue {}
+export default class Default extends Vue {
+
+  mounted(){
+    // alert(process.env.NUXT_ENV_TEST)
+    // console.log('this.$style',JSON.stringify(this.$style))
+  }
+}

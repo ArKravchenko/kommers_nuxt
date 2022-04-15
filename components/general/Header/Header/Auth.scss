@@ -1,0 +1,7 @@
+.auth {
+  &:not(.is_active),
+  &.is_authorized &__login,
+  &:not(.is_authorized) &__profile {
+    display: none;
+  }
+}

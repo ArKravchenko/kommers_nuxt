@@ -1,0 +1,212 @@
+.site_menu {
+  color: $gray-1;
+  display: block;
+  @include media('desktop') {
+    position: sticky;
+    top: 50px;
+    z-index: 3;
+  }
+
+  &__close_overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  &_trigger:not(:checked) ~ & &__close_overlay {
+    display: none;
+  }
+  &__lift {
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    z-index: 53;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    transition: opacity .2s ease-in-out 0s,
+    visibility 0s linear .45s,
+    transform .8s cubic-bezier(.165, .84, .44, 1) 0s;
+    background-color: rgba(255,255,255,.99);
+    // box-shadow:	0 0 30px rgba(0, 0, 0, .7);
+    transform: translateY(25px);
+    @include media('desktop') {
+      position: absolute;
+      left: 0;
+      right: 0;
+      z-index: auto;
+      width: auto;
+      height: auto;
+      margin-top: -50px;
+      padding-bottom: 8px;
+      box-shadow:	0 1.4px 2.2px rgba(0, 0, 0, .028),
+      0 3.3px 5.3px rgba(0, 0, 0, .04),
+      0 6.3px 10px rgba(0, 0, 0, .05),
+      0 11.2px 17.9px rgba(0, 0, 0, 0.06),
+      0 20.9px 33.4px rgba(0, 0, 0, .072),
+      0 50px 80px rgba(0, 0, 0, .1);
+    }
+  }
+  &_trigger:checked ~ & &__lift {
+    transition-delay: 0s;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  &__body {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    @include media('site_menu_middle') {
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-start;
+    }
+  }
+
+  &__header {
+    position: relative;
+    width: calc(100% + #{$mobile_icon_box});
+    height: 40px;
+    margin: 0 -#{$mobile_icon_box * 0.5} 0 -#{$mobile_icon_box * 0.5};
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    @include media('desktop') {
+      justify-content: flex-start;
+      height: 50px;
+      width: calc(100% + #{$desktop_gap - ($desktop_gap - $desktop_icon_box) * 0.5});
+      margin: 0 0 0 -#{$desktop_gap - ($desktop_gap - $desktop_icon_box) * 0.5};
+    }
+  }
+  &__header_item {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    opacity: .5;
+    transition: opacity .25s ease-in-out 0s;
+    cursor: pointer;
+    will-change: opacity;
+    &:focus,
+    &:hover {
+      opacity: 1;
+    }
+  }
+  &__icon {
+    color: $brand_color;
+    font-size: $mobile_icon_size;
+    padding: $mobile_icon_padding;
+    @include media('desktop') {
+      font-size: $desktop_icon_size;
+      padding: $desktop_icon_padding;
+    }
+  }
+  &__auth_icon {
+    color: $brand_color;
+    font-size: 30px;
+    padding: 0;
+  }
+  &__logo {
+    margin-left: auto;
+    @include media('desktop') {
+      margin-left: 20px;
+    }
+  }
+  &__logo_img {
+    width: 158px;
+    height: 20px;
+    fill: $gray-1;
+    padding-top: 3px;
+  }
+  &__close {
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    margin-left: auto;
+    color: $gray-1;
+  }
+  &__close_icon {
+    color: inherit;
+    font-size: 16px;
+    padding: ($mobile_icon_box - 16px) * 0.5;
+  }
+  &__list {
+    margin-bottom: 25px;
+    width: 240px;
+    &--big {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 33px;
+      margin-bottom: 27px;
+      @include media('site_menu_middle') {
+        width: 480px;
+        margin-top: 26px;
+        margin-bottom: 19px;
+      }
+      @include media('desktop') {
+        width: 240px * 4;
+        margin-bottom: 20px;
+      }
+    }
+    &--auth {
+      margin-bottom: -8px;
+      margin-left: -5px;
+    }
+  }
+  &__item {
+    font: bold 1.8rem/2.4rem a;
+    font-family: inherit;
+    &--big {
+      font-size: 2.4rem;
+      line-height: 2.6rem;
+      width: 240px;
+      @include media('site_menu_middle') {
+        width: auto;
+        line-height: 3.8rem;
+      }
+      @include media('desktop') {
+        font-size: 3rem;
+      }
+      &:not(:first-child) {
+        @include media('site_menu_middle') {
+          margin-left: 30px;
+        }
+        @include media('desktop') {
+          margin-left: 40px;
+        }
+      }
+    }
+    &--indent {
+      margin-bottom: 2.4rem;
+    }
+  }
+  &__rusfond_img {
+    vertical-align: middle;
+    width: 19.5px;
+    height: 19px;
+    @include media('site_menu_middle') {
+      width: 39px;
+      height: 38px;
+    }
+  }
+  &__close_text {
+    display: none;
+    @include media('site_menu_middle') {
+      display: block;
+      margin-left: -43.34px;
+    }
+  }
+  & a {
+    color: inherit;
+    &:focus,
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

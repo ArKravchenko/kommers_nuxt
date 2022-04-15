@@ -1,24 +1,26 @@
-.envColor{
-  // var $envColor is passed directly from nuxt.config
-  color: $envColor;
-}
+//.envColor{
+//  // var $envColor is passed directly from nuxt.config
+//  color: $envColor;
+//}
+//
+//
+//
+////thi sets default color for class .platform_color
+//.platform_color{
+//  color: blue;
+//}
+//
+//// allows choose styles for .platform_color by ENV VAR PLATFORM_NAME during build
+//@import "@/assets/scss/platform1.scss";
+//@import "@/assets/scss/platform2.scss";
+//
+//@if $platform == platform1 {
+//  @include platform1
+//} @else if $platform == platform2 {
+//  @include platform2
+//}
+//// endof allows choose styles for .platform_color by ENV VAR PLATFORM_NAME during build
 
-
-
-//thi sets default color for class .platform_color
-.platform_color{
-  color: blue;
-}
-
-// allows choose styles for .platform_color by ENV VAR PLATFORM_NAME during build
-@import "@/assets/scss/platform1.scss";
-@import "@/assets/scss/platform2.scss";
-
-@if $platform == platform1 {
-  @include platform1
-} @else if $platform == platform2 {
-  @include platform2
-}
-// endof allows choose styles for .platform_color by ENV VAR PLATFORM_NAME during build
+//@import '~@/assets/scss/common.scss';
 
 

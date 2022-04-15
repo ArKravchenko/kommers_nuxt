@@ -1,0 +1,45 @@
+$amp: false !default;
+$desktop_breakpoints: (
+	'desktop': #{'only screen and (min-width: #{$desktop1})'},
+	'desktop_half': #{'only screen and (min-width: #{$desktop1 * 0.5})'},
+	'desktop_wide': #{'only screen and (min-width: #{$desktop3})'},
+	'modal': #{'only screen and (max-width: 1279.98px)'}
+) !default;
+$amp_breakpoints: (
+	'mobile': #{'only screen and (max-width: #{$desktop1 - .02})'},
+	'mobile_middle': #{'only screen and (min-width: 449.98px)'},
+	'mobile_max': #{'only screen and (min-width: #{$mobile_width + $mobile_gap * 2})'},
+	'site_menu_middle': #{'only screen and (min-width: #{$cell_size * 2 + 18px + $mobile_gap * 2})'}
+) !default;
+
+@mixin media($media_var) {
+    @if $amp {
+		// If the key exists in the map
+		@if map-has-key($amp_breakpoints, $media_var) {
+			@media #{inspect(map-get($amp_breakpoints, $media_var))} {
+				@content;
+			}
+        }
+    }
+    @else {
+		// из-за того, что map.merge работает только в dart sass пришлось проверять два раза. Пичалька. :(
+		@if map-has-key($desktop_breakpoints, $media_var) {
+            @media #{inspect(map-get($desktop_breakpoints, $media_var))} {
+    	        @content;
+            }
+        }
+		@else if map-has-key($amp_breakpoints, $media_var) {
+            @media #{inspect(map-get($amp_breakpoints, $media_var))} {
+    	        @content;
+            }
+		}
+		// If the key doesn't exist in the map
+    	@else {
+    		@warn "No value could be retrieved from `#{$media_var}`! "
+    		+ "Available breakpoints are: #{map-keys($breakpoints)}.";
+    		@media only screen and (#{$media_var}) {
+    			@content;
+    		}
+    	}
+    }
+}

@@ -1,10 +1,11 @@
 import { Component, Vue } from 'nuxt-property-decorator'
+import {Context} from "@nuxt/types";
 
 @Component({
 })
-export default class Parent extends Vue {
+export default class Kommersant extends Vue {
   text: string = '';
-  async asyncData(a:any){
+  async asyncData(a:Context){
     // console.log(a.error({statusCode:400, message:'Some error message'}))
     // throw new Error()
     return {

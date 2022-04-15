@@ -1,5 +1,20 @@
-.hide {
-	display: none !important;
+.no-js .hide_nojs {
+	display: none;
+}
+@if not $amp {
+	.hide {
+		display: none !important;
+	}
+	.hide_mobile {
+		@include media('mobile') {
+			display: none !important;
+		}
+	}
+	.hide_desktop {
+		@include media('desktop') {
+			display: none !important;
+		}
+	}
 }
 .link {
 	color: inherit;
@@ -11,151 +26,21 @@
 .decor {
 	text-decoration: underline;
 }
+.brand_color,
 a {
 	color: $brand_color;
 }
-.shadow_frame {
-	display: block;
-	position: relative;
-	padding: 0 10px;
+/* old school underline */
+a {
+	text-decoration-skip-ink: none;
+	text-decoration-thickness: .0667em;
 }
-/*
-@media only screen and (min-width: $desktop1) {
-	.shadow_frame::before,
-	.shadow_frame::after {
-		content: '';
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		box-shadow: 0 0 10px rgba(0,0,0,.01);
-		position: absolute;
-		z-index: -1;
-		transition: visibility .25s ease-in-out .25s,
-					opacity .25s ease-in-out 0s;
-	}
-	.shadow_frame:hover::before {
-		opacity: 1;
-		visibility: hidden;
-	}
-	.shadow_frame::after {
-		opacity: 0;
-		visibility: hidden;
-		box-shadow: 0 0 20px rgba(0,0,0,.1);
-	}
-	.shadow_frame:hover::after {
-		transition-delay: 0s;
-		opacity: 0;
-		visibility: visible;
-	}
-}
-*/
-.shadow_blind {
-	display: block;
-	position: relative;
-}
-.shadow_blind::before {
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	content: '';
-	background-color: rgba(0,0,0,.55);
-	z-index: 1;
-}
-
-.title_12 {
-	font: 1.2rem/1 MyriadPro-SemiCn, Arial, sans-serif;
-	color: #666;
-	margin: 10px 0 6px;
-}
-.title_14 {
-	font: 1.4rem/1.6rem MyriadPro-SemiCn, Arial, sans-serif;
-	color: #333;
-	margin-top: 2px;
-}
-.title_15 {
-	font: 1.5rem/1.8rem MyriadPro-SemiCn, Arial, sans-serif;
-	color: #111;
-	margin: 4px 0 15px 0;
-}
-.title_16 {
-	font: 1.6rem/1.8rem MyriadPro-SemiboldSemiCn, Arial, sans-serif;
-	color: #333;
-	margin-top: 5px;
-}
-.title_18 {
-	font: 1.8rem/1.6rem MyriadPro-SemiboldSemiCn, Arial, sans-serif;
-	color: #111;
-	margin: 3px 0 10px 0;
-}
-.title_20 {
-	font: 2rem/1 MyriadPro-SemiboldSemiCn, Arial, sans-serif;
-	color: #111;
-	margin: 0 0 5px 0;
-}
-.title_22 {
-	font: 2.2rem/1 MyriadPro-SemiboldSemiCn, Arial, sans-serif;
-	color: #111;
-	margin: 5px 0 2px 0;
-}
-.title_24 {
-	font: 2.4rem/1 MyriadPro-SemiboldSemiCn, Arial, sans-serif;
-}
-.title_28 {
-	font: 2.8rem/1 MyriadPro-SemiboldSemiCn, Arial, sans-serif;
-	color: #111;
-	margin: 4px 0 2px 0;
-}
-.title_36 {
-	font: 3.6rem/3.2rem MyriadPro-SemiboldSemiCn, Arial, sans-serif;
-}
-.title_44 {
-	font: 4.4rem/1 MyriadPro-SemiboldSemiCn, Arial, sans-serif;
-}
-
-.title_more {
-	font: 1.8rem/2rem MyriadPro-SemiCn, Arial, sans-serif;
-	color: #004465;
-}
-.title_more:hover {
-	color: #000;
-}
-@media only screen and (min-width: $desktop1) {
-	.title_more {
-    font-size: 1.8rem;
-    line-height: 1;
-	}
-}
-
-@media only screen and (max-width: ($desktop1 - 1px)) {
-	.hide_mobile {
-		display: none !important;
-	}
-	.m-title_18 {
-		font-size: 1.8rem;
-    line-height: 2rem;
-    margin-bottom: 5px;
-	}
-	.m-title_16 {
-		font-size: 1.6rem;
-		line-height: 1.6rem;
-	}
-	.m-title_14 {
-		font-size: 1.4rem;
-		line-height: 1.6rem;
-	}
-}
-
-@media only screen and (min-width: $desktop1) {
-	.hide_desktop {
-		display: none !important;
-	}
+.fm_color {
+	color: #006697;
 }
 .sticky {
 	position: sticky;
-	top: 19px;
+	top: 70px; /* отступ сверху по макету */
 }
 .vh {
 	position: absolute;
@@ -166,6 +51,163 @@ a {
 	height: 1px;
 	width: 1px;
 }
-.fm_color {
-	color: #006697;
+@if not $amp {
+	.title_12 {
+		font-size: 1.2rem;
+		line-height: 1;
+		font-weight: normal;
+		color: $gray-6;
+		margin-top: -.4rem;
+		margin-bottom: -.2rem + 1.5rem;
+	}
+	.title_15 {
+		font-size: 1.5rem;
+		line-height: 1.8rem;
+		font-weight: normal;
+		color: $gray-1;
+		margin-top: -.6rem + 1.5rem;
+		margin-bottom: -.5rem;
+	}
+	.title_20 {
+		font-size: 2rem;
+		line-height: 1;
+		font-weight: bold;
+		color: $gray-1;
+		margin-top: -.6rem;
+		margin-bottom: -.4rem;
+	}
+	.title_22 {
+		font: 2.2rem/1 a;
+		font-family: inherit;
+		color: $gray-1;
+		margin: 5px 0 2px 0;
+	}
+	.title_24 {
+		font: 2.4rem/1 a;
+		font-family: inherit;
+	}
+	.title_28 {
+		font: bold 2.8rem/1 a;
+		font-family: inherit;
+		color: $gray-1;
+		margin-top: -.9rem;
+		margin-bottom: -.5rem;
+	}
+	.m-title_24 {
+		@include media('mobile') {
+			font-size: 2.4rem;
+			line-height: 2.6rem;
+			margin-top: -.8rem;
+			margin-bottom: -.6rem;
+		}
+	}
+	.m-title_20 {
+		@include media('mobile') {
+			font-size: 2rem;
+			line-height: 2.4rem;
+			margin-top: -.8rem + 1.5rem;
+			margin-bottom: -.6rem;
+		}
+	}
+
+	.lazyload {
+		overflow-anchor: none;
+	}
+	.more,
+	.more-trigger,
+	.more-hidden {
+		overflow: hidden;
+	}
+	.more .more-hidden {
+		display: none;
+	}
+	/* прячем, если открыто */
+	.more.more-expanded .hide_opened,
+	/* прячем, если закрыто */
+	.more:not(.more-expanded) .hide_closed {
+		display: none;
+	}
+}
+
+.is_focused {
+	box-shadow: 0 0 2px 0 #000;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	min-width: 100%;
+}
+.stretch,
+.stretch_photo img,
+.stretch_photo iframe,
+.stretch_photo object,
+.stretch_photo video {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.stretch,
+.stretch_photo img,
+.stretch_photo video {
+	object-fit: contain;
+	object-position: 50% 50%;
+}
+.stretch--cover,
+.stretch_photo--cover img,
+.stretch_photo--cover video {
+	object-fit: cover;
+}
+.link_overlay::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+.link_overlay_wide::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -#{$mobile_gap};
+	right: -#{$mobile_gap};
+	bottom: 0;
+	@include media('desktop') {
+		left: 0;
+		right: 0;
+	}
+}
+@if not $amp {
+	.resizable-animated {
+		transition: height .4s ease-in-out 0s;
+	}
+}
+@if $amp {
+	.centered {
+		text-align: center;
+	}
+}
+.hide_while_loading {
+	display: none;
+}
+
+.window_popup {
+	margin: 0;
+}
+.html_customblock {
+	margin-bottom: 3rem;
+	@include media('desktop') {
+		margin-bottom: 5rem;
+	}
+}
+
+// temp stuff
+@if not $amp {
+	[data-socials-network="fb"],
+	.js-article-comment,
+	.sharing[href$="#comments"] {
+			display: none !important;
+	}
 }

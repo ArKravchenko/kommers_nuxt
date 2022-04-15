@@ -1,0 +1,76 @@
+.regions {
+  @include media('desktop') {
+    position: sticky;
+    top: 50px;
+    z-index: 3;
+    display: block;
+
+    &__menu {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      background-color: $regions_bg;
+      font-size: 0;
+      visibility: hidden;
+      opacity: 0;
+      transform-origin: 50% 0;
+      transform: translateY(15px);
+      transition:	opacity .2s ease-in-out .25s,
+      visibility 0s linear .5s,
+      transform .6s cubic-bezier(.165, .84, .44, 1) .25s;
+      will-change: opacity, transform;
+
+      &--active {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
+        transition-delay: 0s;
+      }
+    }
+
+    &__body {
+      position: relative;
+      padding: 10px 0;
+      /* Якорь. Если положение иконки регионов изменится, здесь придётся поправить смещение от правого края */
+      &::before {
+        content: '';
+        position: absolute;
+        /* две иконки с отступами, плюс половина иконки, минус ширина якоря */
+        right: ($desktop_icon_box + 10px) * 2 + $desktop_icon_box * 0.5 - 5px;
+        top: -5px;
+        width: 0;
+        height: 0;
+        border: 5px solid transparent;
+        border-bottom-color: $regions_bg;
+        border-top: 0;
+      }
+    }
+
+    &__list {
+      max-width: $cell_size * 3 + $desktop_gap * 2;
+      margin: 0 auto;
+      display: flex;
+      flex-flow: row wrap;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &__item {
+      margin: 3px 15px;
+      color: $gray-3;
+      font-size: 1.4rem;
+      line-height: 2.4rem;
+    }
+
+    &__link {
+      color: inherit;
+      text-decoration: underline;
+      &:focus,
+      &:hover,
+      &--current {
+        text-decoration: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+@use "sass:string";
+//@use "sass:math" as *;
+
+@function unicode($str) {
+  @return string.unquote("\"") + string.unquote(string.insert($str, "\\", 1)) + string.unquote("\"")
+}

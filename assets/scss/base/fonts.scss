@@ -1,25 +1,19 @@
-@font-face {
-	font-family: 'MyriadPro-SemiboldSemiCn';
-	src: url('/fonts/MyriadPro-SemiboldSemiCn.otf') format('truetype');
-	font-weight: normal;
-	font-style: normal;
-}
-@font-face {
-	font-family: 'MyriadPro-SemiCn';
-	src: url('/fonts/MyriadPro-SemiCn.woff') format('woff');
-	font-weight: normal;
-	font-style: normal;
-}
-@font-face {
-	font-family: 'MyriadPro-SemiCn';
-	src: url('/fonts/MyriadPro-SemiboldSemiCn.otf') format('truetype');
-	font-weight: bold;
-	font-style: normal;
-}
+ @font-face {
+ 	font-family: 'MyriadPro-SemiboldSemiCn';
+ 	src: url('~@/assets/fonts/MyriadPro-SemiboldSemiCn.otf') format('truetype');
+ 	font-weight: normal;
+ 	font-style: normal;
+ }
 
-@font-face {
-    font-family: 'MyriadPro-LightSemiCn';
-    src: url('/fonts/MyriadPro-LightSemiCn.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
+ @font-face {
+ 	font-family: 'MyriadPro-SemiCn';
+ 	src: url('~@/assets/fonts/MyriadPro-SemiCn.woff') format('woff');
+ 	font-weight: normal;
+ 	font-style: normal;
+ }
+ @font-face {
+ 	font-family: 'MyriadPro-SemiCn';
+ 	src: url('~@/assets/fonts/MyriadPro-SemiboldSemiCn.otf') format('truetype');
+ 	font-weight: bold;
+ 	font-style: normal;
+ }

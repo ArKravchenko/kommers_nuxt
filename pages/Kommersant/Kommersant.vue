@@ -6,5 +6,5 @@
     </div>
 </template>
 
-<script src="./Parent.ts" lang="ts"></script>
-<style src="./Parent.scss" lang="scss" scoped></style>
+<script src="./Kommersant.ts" lang="ts"></script>
+<style src="./Kommersant.scss" lang="scss" scoped></style>

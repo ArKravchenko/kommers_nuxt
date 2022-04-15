@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-import Home from '~/pages/Parent/Home/Home.vue'
-import Document from '~/pages/Parent/Document/Home.vue'
-import Parent from '~/pages/Parent/Parent.vue'
+import Main from '~/pages/Kommersant/Main/Main.vue'
+import Document from '~/pages/Kommersant/Document/Document.vue'
+import Kommersant from '~/pages/Kommersant/Kommersant.vue'
 
 Vue.use(Router)
 
@@ -13,14 +13,14 @@ export function createRouter() {
     routes: [
       {
         path: '/',
-        component: Parent,
+        component: Kommersant,
         children:[
           {
             path: '/',
-            component: Home,
+            component: Main,
           },
           {
-            path: '/*',
+            path: '/doc/:id',
             component: Document,
           },
         ]

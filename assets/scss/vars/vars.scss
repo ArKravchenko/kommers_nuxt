@@ -1,0 +1,83 @@
+/*
+
+каркасные переменные описываются в data.js и экспортятся сюда.
+
+Список:
+
+mobile_width,
+mobile_gap,
+desktop_gap,
+cell_size,
+cell_size_large,
+cell_gap,
+main_width,
+aside_size,
+desktop1,
+desktop3
+*/
+
+
+/*------------------------------------*\
+  #BASE COLORS
+\*------------------------------------*/
+$brand_color: #004465;
+$brand_color_hover: #336984;
+$brand_color_a8: rgba(0, 68, 101, .8);
+$brand_color_a5: rgba(0, 68, 101, .5);
+$white: #fff;
+$warning: #cf0d0d;
+$ok: #009a00;
+$black: #000;
+
+
+/*------------------------------------*\
+  #GRAY GRADATION
+\*------------------------------------*/
+$gray-1: #111;
+$gray-3: #333;
+$gray-6: #666;
+$gray-9: #999;
+$gray-a: #aaa;
+$gray-c: #ccc;
+$gray-e: #eee;
+
+
+/*------------------------------------*\
+  #BANKRUPTCY
+\*------------------------------------*/
+$bankruptcy_micro: #4a8abc;
+$bankruptcy_mini: #376f9a;
+$bankruptcy_standard: #24557a;
+
+
+$mobile_icon_size: 20px;
+$mobile_icon_padding: 5px;
+$mobile_icon_box: $mobile_icon_size + $mobile_icon_padding * 2;
+
+$desktop_icon_size: 30px;
+$desktop_icon_padding: 0;
+$desktop_icon_box: $desktop_icon_size + $desktop_icon_padding * 2;
+
+@function grid_cell($size, $span, $gap) {
+	$result: 0;
+	@if $span > 0 {
+		$result: $size * $span + ($span - 1) * $gap;
+	}
+	@return $result;
+}
+
+
+/*------------------------------------*\
+  #MODAL
+\*------------------------------------*/
+
+// moved to data.js, because we need them in HTML templates
+// $modal_aside_width: 30rem;
+// $modal_outer_horizontal_gap: 8rem;
+// $modal_inner_horizontal_gap: 3rem;
+// $modal_scroll_width: 1rem;
+// $modal_outer_vertical_gap: 3rem;
+
+$modal_nav_icon_size: 4rem;
+$modal_nav_icon_full_size: 4rem + 1rem * 2; // ширина иконки + 1rem*2 отступ
+$regions_bg: $gray-e;

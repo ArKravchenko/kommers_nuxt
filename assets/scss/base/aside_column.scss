@@ -1,0 +1,12 @@
+.aside_column {
+	display: none;
+	@include media('desktop_wide') {
+		display: block;
+		position: fixed;
+		right: 0;
+		top: 0;
+		z-index: 2;
+		height: 100vh;
+		box-shadow: 0 0 15px 0 rgba(0,0,0,.2);
+	}
+}

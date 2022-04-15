@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "nuxt-ts --hostname localhost --port 3333",
     "build": "nuxt-ts build",
-    "start": "nuxt-ts start",
+    "start": "nuxt-ts start --port 3333",
     "generate": "nuxt-ts generate",
     "lint:js": "eslint --ext .js,.vue,.ts --ignore-path .gitignore .",
     "lint:style": "stylelint --syntax scss **/*.{css,scss}",
@@ -57,7 +57,7 @@
     "lint-staged": "^10.3.0",
     "nuxt-property-decorator": "^2.8.3",
     "prettier": "^2.1.1",
-    "sass": "^1.26.11",
+    "sass": "^1.50.0",
     "sass-loader": "^10.0.2",
     "stylelint": "^13.7.0",
     "stylelint-config-prettier": "^8.0.2",

@@ -1,0 +1,154 @@
+body {
+	@include media('desktop') {
+		padding-bottom: 50px; /* отступ снизу, для горизонтальной ленты */
+	}
+	@include media('desktop_wide') {
+		position: relative;
+		margin-right: $aside_size;
+		padding-bottom: 0;
+		margin-bottom: 0;
+	}
+}
+
+.layout {
+	max-width: $mobile_width;
+	padding: 0 $mobile_gap;
+	margin: 0 auto;
+	position: relative;
+	@include media('desktop') {
+		max-width: none;
+		padding: 0 $desktop_gap;
+		width: $main_width;
+	}
+}
+.main {
+	@include media('desktop') {
+		width: $main_width;
+	}
+}
+
+.grid,
+.grid-popup,
+.grid-col,
+.grid-popup-col {
+	display: block;
+}
+.grid {
+	@include media('desktop') {
+		max-width: none;
+		margin-left: 0;
+		margin-right: 0;
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+}
+.grid-col {
+	@include media('desktop') {
+		width: auto;
+		position: relative;
+	}	
+}
+.grid-popup {
+	@include media('desktop_half') {
+		max-width: none;
+		margin-left: 0;
+		margin-right: 0;
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+}
+.grid-popup-col {
+	@include media('desktop_half') {
+		width: auto;
+		position: relative;
+	}	
+}
+
+.grid-col-separated:nth-child(-n+2) {
+	@include media('desktop') {
+		border-bottom: 1px solid $gray-e;
+		margin-bottom: 20px;
+	}
+}
+
+/* --- */
+.grid-col-xs {
+	@include media('desktop') {
+		width: ($main_width - $cell_size - $cell_gap - $cell_size_large - $desktop_gap - $cell_gap) * 0.5;
+	}
+}
+.grid-col-xs2 {
+	@include media('desktop') {
+		width: $main_width - $cell_size - $cell_gap - $cell_size_large - $desktop_gap;
+	}
+}
+
+.grid-col-s3 {
+	@include media('desktop') {
+		width: $main_width - $cell_size_large - $desktop_gap;
+		align-self: flex-start;
+	}
+}
+
+.grid-col-m {
+	@include media('desktop') {
+		width: $cell_size;
+	}
+}
+.grid-col-m2 {
+	@include media('desktop') {
+		width: grid_cell($cell_size, 2, $cell_gap);
+	}
+}
+.grid-col-m3 {
+	@include media('desktop') {
+		width: grid_cell($cell_size, 3, $cell_gap);
+	}
+}
+
+.grid-col-l {
+	@include media('desktop') {
+		width: $cell_size_large;
+	}
+}
+
+.grid-col-f {
+	@include media('desktop') {
+		width: 100%;
+	}
+}
+.grid-popup-col-f {
+	@include media('desktop_half') {
+		width: 100%;
+	}
+}
+
+.grid-col-half {
+	@include media('desktop') {
+		width: calc(50% - #{$cell_gap} / 2);
+	}
+}
+.grid-popup-col-half {
+	@include media('desktop_half') {
+		width: calc(50% - #{$cell_gap} / 2);
+	}
+}
+.grid-col-lenta {
+	width: $aside_size;
+}
+
+.sticky_container {
+	min-height: 1200px;
+	max-height: 1800px;
+	height: 100vh;
+	margin-bottom: 25px;
+}
+.sticky_container2 {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
