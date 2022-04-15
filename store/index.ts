@@ -16,23 +16,25 @@ export type RootState = {
 
 export const actions: ActionTree<RootState, RootState> = {
   async nuxtServerInit(actionContext, context) {
-    const delay = 0
-    if (context.req.headers) {
-      await new Promise<void>((resolve) => {
-        setTimeout(() => {
-          actionContext.commit('setHeaders', context.req.headers)
-          resolve()
-        }, delay)
-      })
-    }
-    if (context.query) {
-      await new Promise<void>((resolve) => {
-        setTimeout(() => {
-          actionContext.commit('setQuery', context.query)
-          resolve()
-        }, delay)
-      })
-    }
+    // const delay = 2000
+    // if (context.req.headers) {
+    //   await new Promise<void>((resolve) => {
+    //     setTimeout(() => {
+    //       actionContext.commit('setHeaders', context.req.headers)
+    //       resolve()
+    //     }, delay)
+    //   })
+    // }
+    // if (context.query) {
+    //   await new Promise<void>((resolve) => {
+    //     setTimeout(() => {
+    //       actionContext.commit('setQuery', context.query)
+    //       resolve()
+    //     }, delay)
+    //   })
+    // }
+
+    actionContext.commit('testModule/testMutation')
   },
 }
 

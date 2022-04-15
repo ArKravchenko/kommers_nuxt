@@ -14,6 +14,13 @@ export default class Cols extends mixins<Alert, ConsoleLog>(Alert, ConsoleLog) {
   @Mutation('testModule/testMutation') private testMutation!: () => void
   @Getter('testModule/testGetter') private count!: () => number
 
+  created(){
+    if(process.server){
+      this.testMutation()
+    }
+  }
+
+
   mounted() {
     // this.testAction()
     // this.testMutation()
