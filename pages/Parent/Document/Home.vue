@@ -40,7 +40,7 @@ import Cols from '~/components/general/Cols/Cols.vue'
 export default class Cosmo extends Vue {}
 </script>
 
-<style>
+<style scoped>
 .container {
   margin: 0 auto;
   min-height: 100vh;

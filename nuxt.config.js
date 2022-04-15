@@ -65,6 +65,10 @@ export default {
     'nuxt-ssr-cache',
   ],
 
+  render: {
+    // compressor: {},
+  },
+
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {},
 
