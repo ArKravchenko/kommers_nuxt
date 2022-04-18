@@ -22,6 +22,11 @@ export function createRouter() {
           {
             path: '/doc/:id',
             component: Document,
+            props: true,
+          },
+          {
+            path: '*',
+            component: Main,
           },
         ]
       },

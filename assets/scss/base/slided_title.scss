@@ -1,0 +1,47 @@
+/* имя плашки съезжает при наведении и меняет цвет */
+.slided_title {
+	$this: &;
+
+	&__link {
+		color: inherit;
+		transition: color .25s ease-in-out 0s;
+		display: block;
+		&:focus {
+			color: $brand_color;
+		}
+	}
+
+	&__text {
+		position: relative;
+		transition: transform .5s ease-in-out 0s;
+		display: inline-block;
+	}
+
+	&__nav {
+		display: none;
+		@include media('desktop') {
+			display: inline-block;
+			opacity: 0;
+			transition: opacity .5s ease-in-out 0s;
+		}
+	}
+
+	&:hover {
+		@include media('desktop') {
+			#{$this}__link {
+				color: $brand_color;
+			}
+		}
+	}
+	&:hover,
+	&__link:focus {
+		@include media('desktop') {
+			#{$this}__text {
+				transform: translateX(-10px);
+			}
+			#{$this}__nav {
+				opacity: 1;
+			}
+		}
+	}
+}

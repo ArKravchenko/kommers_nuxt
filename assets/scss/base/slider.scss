@@ -1,0 +1,114 @@
+/*------------------------------------*\
+  #SLIDER RESET
+\*------------------------------------*/
+.slider-draggable .slider-canvas {
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+.slider:not(.slider-ready) .slider-item ~ .slider-item,
+.slider:not(.slider-ready) .slider-prev,
+.slider:not(.slider-ready) .slider-next,
+.slider:not(.slider-ready) .slider-nav {
+  //TODO revert
+	//visibility: hidden;
+	//opacity: 0;
+}
+
+.slider-3d .slider-item,
+.slider-3d .slider-nav-item {
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.slider-3d .slider-item {
+	-webkit-transform: translate3d(0, 0, 0);
+	-moz-transform: translate3d(0, 0, 0);
+	-ms-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+	will-change: transform;
+}
+
+
+/*------------------------------------*\
+  #SLIDER COMMON
+\*------------------------------------*/
+.slider {
+	position: relative;
+}
+.slider-canvas {
+	position: relative;
+	overflow: hidden;
+  overflow-x: scroll;
+}
+
+.slider-nav_button {
+	position: absolute;
+	top: 0;
+	z-index: 1;
+	margin-top: calc(50% - #{$mobile_icon_size} / 2 - 10px);
+	text-align: center;
+	font: 0/0 a;
+	filter: drop-shadow(0 0 2px #fff);
+	@include media('desktop') {
+		margin-top: calc(50% - #{$desktop_icon_size} / 2 - 10px);
+		filter: none;
+	}
+	& {
+		.slider-link {
+			padding: 10px;
+			display: block;
+		}
+	}
+	&.slider-inactive {
+		.slider-link {
+			opacity: .25;
+		}
+	}
+}
+.slider-prev {
+	left: 0;
+	@include media('desktop') {
+		left: -50px;
+		padding-left: 0;
+		&:not(.slider-inactive) {
+			.slider-link:hover,
+			.slider-link:focus {
+				.slider-nav_icon {
+					transform: translateX(-5px);
+				}
+			}
+		}
+	}
+}
+.slider-next {
+	right: 0;
+	@include media('desktop') {
+		padding-right: 0;
+		right: -50px;
+		&:not(.slider-inactive) {
+			.slider-link:hover,
+			.slider-link:focus {
+				.slider-nav_icon {
+					transform: translateX(5px);
+				}
+			}
+		}
+	}
+}
+
+.slider-nav_icon {
+	font-size: $mobile_icon_size;
+	@include media('desktop') {
+		font-size: $desktop_icon_size;
+		will-change: transform;
+		transition: transform .5s cubic-bezier(.05, .69, .14, 1) 0s;
+	}
+}

@@ -1,0 +1,187 @@
+$bqotd_desktop_height: 24rem;
+.bqotd {
+  $this: &;
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  padding: 0 4rem;
+  height: 100%;
+  box-sizing:border-box;
+  @include media('desktop') {
+    height: $bqotd_desktop_height;
+    padding: 2rem 2rem 2rem 3rem;
+    margin: 0;
+  }
+  &__tag {
+    margin: 0 0 -.2rem + 1.5rem;
+    font: 1.2rem/1 a;
+    font-family: inherit;
+    color: $gray-6;
+    @include media('desktop') {
+      margin: 0 0 (-.2rem + .9rem);
+    }
+  }
+  &__text {
+    position: relative;
+    height: 0;
+    padding-bottom: calc(9 / 16 * (100% + #{($mobile_gap + 20px) * 2}));
+    @include media('desktop') {
+      display: flex;
+      align-items: center;
+      height: auto;
+      flex-grow: 1;
+      padding: 0 80px 0 2rem;
+      box-sizing: border-box;
+    }
+  }
+
+  &__name {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font: bold 1.8rem/2rem a;
+    font-family: inherit;
+    color: $gray-1;
+    @include media('desktop') {
+      position: static;
+      height: 100%;
+      box-sizing: border-box;
+      font-size: 2.4rem;
+      line-height: 2.6rem;
+    }
+    &--small {
+      font-size: 1.4rem;
+      line-height: 1.6rem;
+    }
+    &--big,
+    &--huge {
+      font-size: 3rem;
+      line-height: 1;
+    }
+    &--huge {
+      text-align: center;
+    }
+    @include media('mobile_middle') {
+      font-size: 3rem;
+      line-height: 1;
+      &--small {
+        font-size: 1.8rem;
+        line-height: 2rem;
+      }
+      &--big {
+        font-size: 4rem;
+      }
+      &--huge {
+        font-size: 7.2rem;
+      }
+    }
+  }
+  &__subtitle {
+    font: 1.5rem/1.8rem a;
+    font-family: inherit;
+    color: $gray-3;
+    text-align: right;
+  }
+
+  &__author {
+    display: block;
+    font-weight: bold;
+    color: $gray-1;
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: auto;
+    @include media('desktop') {
+      padding-left: 2rem;
+    }
+  }
+  &__photo {
+    width: 6rem;
+    height: 6rem;
+    position: relative;
+    display: block;
+    border-radius: 50%;
+    margin-left: 1rem;
+    flex-shrink: 0;
+    overflow: hidden;
+    @include media('desktop') {
+      margin-left: 2rem;
+    }
+    &:focus {
+      box-shadow: 0 0 0 2px #fff,
+      0 0 0 4px $black,
+      0 0 8px 1px $black;
+      outline: none;
+    }
+  }
+
+  &:hover &__tag {
+    @include media('desktop') {
+      color: $gray-9;
+    }
+  }
+  &__name &__link:focus,
+  &__subtitle &__link:focus,
+  &__subtitle &__link:focus &__author,
+  &:hover &__name,
+  &:hover &__author,
+  &:hover &__subtitle {
+    @include media('desktop') {
+      color: $gray-6;
+    }
+  }
+  /* цитата на темном фоне, с инвертированием цветов */
+  &--dark {
+    background-color: $gray-3;
+    margin-top: -2rem;
+    padding-top: 2rem;
+    padding-bottom: 2.4rem;
+    height: calc(100% + 4.4rem);
+    @include media('desktop') {
+      margin-top: 0;
+      height: $bqotd_desktop_height;
+    }
+    & #{$this}__name {
+      color: $gray-e;
+    }
+    & #{$this}__tag {
+      color: $gray-c;
+    }
+    & #{$this}__author {
+      color: $gray-e;
+    }
+    & #{$this}__subtitle {
+      color: $gray-c;
+    }
+
+    // hovers and focus links
+    &:hover #{$this}__tag {
+      @include media('desktop') {
+        color: $gray-e;
+      }
+    }
+    &__name #{$this}__link:focus,
+    &__subtitle #{$this}__link:focus,
+    &__subtitle #{$this}__link:focus &__author,
+    &:hover #{$this}__name,
+    &:hover #{$this}__author {
+      @include media('desktop') {
+        color: $white;
+      }
+    }
+    &:hover #{$this}__subtitle {
+      @include media('desktop') {
+        color: $gray-e;
+      }
+    }
+
+  }
+}

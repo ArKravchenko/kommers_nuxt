@@ -79,7 +79,7 @@
               <input type="hidden" name="regions" value="">
               <input type="hidden" name="results_count" value="">
               <input type="hidden" name="page" value="1">
-              <input type="search" name="search_query" placeholder="Поиск" class="main_header__search_field">
+              <input type="search" name="search_query" placeholder="Поиск" :class="['main_header__search_field',{'hide_while_loading':hideWhileLoading}]">
               <button @click.prevent="searchClickHandler" class="ui-button vicon main_header__icon" title="Поиск">
                 <svg class="vicon__body">
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#vicon-search"></use>
@@ -92,7 +92,7 @@
     </header>
 
     <!-- Site menu -->
-    <section class="site_menu " id="site_menu">
+    <section :class="['site_menu',{'hide_while_loading':hideWhileLoading}]" id="site_menu">
       <label for="burger_trigger" class="site_menu__close_overlay"><span class="vh">Закрыть меню</span></label>
       <div class="site_menu__lift">
         <div class="layout site_menu__body">
@@ -273,7 +273,7 @@
     </section>
 
     <!-- regions -->
-    <div class="regions hide_mobile" >
+    <div :class="['regions hide_mobile',{'hide_while_loading':hideWhileLoading}] ">
       <div :class="['regions__menu js-navmenu-item',{'regions__menu--active':isRegionsMenuActive}]"
            @mouseout="()=>regionsToggleHandler(false)"
            @mouseover="()=>regionsToggleHandler(true)"

@@ -8,4 +8,12 @@ import { Component, Vue } from 'nuxt-property-decorator'
     // Logo,
   },
 })
-export default class Document extends Vue {}
+export default class Document extends Vue {
+
+  mounted(){
+    console.log('this.$route',this.$route)
+    console.log('this.$router',this.$router)
+    console.log('this',this)
+    console.log('props',this.$props)
+  }
+}

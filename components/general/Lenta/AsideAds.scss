@@ -1,0 +1,127 @@
+.aside_ads {
+  $this: &;
+
+  font-size: 1.2rem;
+  line-height: 1;
+  position: relative;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 0 0 26px 0;
+  background-color: $white;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  &__item {
+    position: relative;
+    margin: 0 20px 3rem 20px;
+  }
+  &__item:last-child {
+    margin-bottom: 0;
+  }
+
+  &__item:hover {
+    #{$this}__name,
+    #{$this}__subheader {
+      color: $gray-6;
+    }
+
+    #{$this}__date {
+      color: $gray-9;
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-flow: column wrap;
+  }
+
+  &__date {
+    font-size: 1.2rem;
+    line-height: 1;
+    color: $gray-6;
+    font-weight: normal;
+    margin-top: -.4rem;
+    margin-bottom: -.2rem + 1.5rem;
+
+    &.inline_placeholder {
+      width: 100px;
+      height: 1.2rem;
+    }
+  }
+
+  &__tag::before {
+    content: ' |  ';
+    white-space: pre;
+  }
+
+  &__name {
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+    margin-top: -.6rem;
+    margin-bottom: -.4rem;
+    color: $gray-3;
+
+    &.inline_placeholder {
+      background-image: linear-gradient(90deg, $gray-9, transparent);
+      margin-bottom: .7rem;
+      height: 18px;
+    }
+  }
+
+  &__placeholder {
+    width: 100%;
+  }
+
+  &__placeholder_middle {
+    width: 50%;
+  }
+
+  &__subheader {
+    margin-top: -.6rem + 1.5rem;
+    margin-bottom: -.5rem;
+    color: $gray-3;
+    font: 1.5rem/1.8rem a;
+    font-family: inherit;
+
+    &.inline_placeholder {
+      height: 16px;
+      margin-top: 1px;
+      margin-bottom: 0;
+    }
+  }
+
+  &__link {
+    color: inherit;
+    text-decoration: none;
+
+    &--overlay::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+  }
+
+  &__more {
+    display: inline-block;
+    margin-left: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+
+    &:hover {
+      color: $gray-3;
+    }
+  }
+
+  &__button {
+    height: 35px;
+    font-size: 1.6rem;
+    position: absolute;
+    left: 20px;
+    width: calc(100% - 40px);
+    z-index: 1;
+    margin-top: -25px;
+  }
+}

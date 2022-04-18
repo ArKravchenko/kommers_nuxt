@@ -34,6 +34,11 @@ export namespace Actualno {
           rate: number;
           changeTrend: ChangeTrend;
         };
+        moex: {
+          href: string | null;
+          rate: number;
+          changeTrend: ChangeTrend;
+        };
       },
       items: ActualnoItem[]
     }
@@ -120,6 +125,7 @@ export namespace Top {
     title: string;
     href: string;
     exclusive: boolean;
+    img?: ImageFull;
   }
 
   interface ITop {
@@ -128,6 +134,7 @@ export namespace Top {
       partner: {
         title: string;
         href: string;
+        isSelfLink: boolean
       }
     }
   }
@@ -141,7 +148,7 @@ export namespace Top {
 export namespace LightSpot {
 
 
-  interface IQuote {
+  export interface IQuote {
     type: 'quote'
     content: {
       plashka: string | null;
@@ -154,7 +161,7 @@ export namespace LightSpot {
     }
   }
 
-  interface IPhoto {
+  export interface IPhoto {
     type: 'photo'
     content: {
       plashka: string | null;
@@ -165,7 +172,7 @@ export namespace LightSpot {
   }
 
 
-  interface IVideo {
+  export interface IVideo {
     type: 'video'
     content: {
       plashka: string | null;
@@ -175,7 +182,7 @@ export namespace LightSpot {
     };
   }
 
-  interface IChart {
+  export interface IChart {
     type: 'chart'
     content: {
       plashka: string | null;
@@ -185,7 +192,7 @@ export namespace LightSpot {
     };
   }
 
-  interface IDigit {
+  export interface IDigit {
     type: 'digit'
     content: {
       plashka: string | null;
@@ -836,7 +843,7 @@ export namespace MainPageAPI {
       }
     };
     top: Top.APIDataStructure;
-    ligthSpot: LightSpot.APIDataStructure;
+    lightSpot: LightSpot.APIDataStructure;
     mainToday: MainToday.APIDataStructure;
     multimedia: Multimedia.APIDataStructure;
     rubrics: Rubrics.APIDataStructure;

@@ -2,7 +2,13 @@
 
 @import 'base/common.scss';
 //@import 'base/body_mediaquery.scss';
-//@import 'base/slider.scss';
+//TODO remove slider
+@import 'base/slider.scss';
+//TODO move section_header to the main component
+@import 'base/section_header.scss';
+//TODO move slided_title to the main component
+@import 'base/slided_title.scss';
+
 @import 'base/vicons.scss';
 //@import 'base/fonts.scss';
 @import 'base/grid.scss';

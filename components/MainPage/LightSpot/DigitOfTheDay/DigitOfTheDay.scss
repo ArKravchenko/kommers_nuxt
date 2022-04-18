@@ -1,0 +1,152 @@
+$dotd_desktop_height: 24rem;
+.dotd {
+  $this: &;
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  padding: 0 4rem;
+  height: 100%;
+  box-sizing:border-box;
+  @include media('desktop') {
+    height: 24rem;
+    padding: 2rem 2rem 2rem 3rem;
+    box-sizing: border-box;
+  }
+  &__tag {
+    margin: 0 0 -.2rem + 1.5rem -1rem;
+    font: 1.2rem/1 a;
+    font-family: inherit;
+    color: $gray-6;
+    @include media('desktop') {
+      margin: 0 0 -.2rem + .9rem 0;
+    }
+  }
+  &__text {
+    position: relative;
+    height: 0;
+    padding-bottom: calc(9 / 16 * (100% + #{($mobile_gap + 20px) * 2}));
+    @include media('desktop') {
+      display: flex;
+      align-items: center;
+      height: auto;
+      padding: 0 2rem;
+      box-sizing: border-box;
+      margin-top: auto;
+    }
+  }
+
+  &__name {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font: bold 4.8rem/1 a;
+    font-family: inherit;
+    color: $gray-1;
+    text-align: center;
+    margin: 0 auto;
+    @include media('desktop') {
+      font-size: 7.2rem;
+    }
+    &--small {
+      font-size: 3.6rem;
+      @include media('desktop') {
+        font-size: 4.8rem;
+      }
+    }
+    &--big {
+      font-size: 6rem;
+      @include media('desktop') {
+        font-size: 12rem;
+        white-space: nowrap;
+        // font-variant: proportional-nums;
+        word-spacing: -.3rem;
+        letter-spacing: -.6rem;
+      }
+    }
+    @include media('desktop') {
+      position: static;
+      height: 100%;
+      box-sizing: border-box;
+    }
+  }
+
+  &__subtitle {
+    margin-top: -.6rem + 2rem;
+    font: 2rem/2.2rem a;
+    font-family: inherit;
+    color: $gray-1;
+    text-align: center;
+    @include media('desktop') {
+      margin-top: -.9rem + 3rem;
+      color: $gray-3;
+      font-weight: bold;
+      font-size: 2.4rem;
+      line-height: 3.2rem;
+      margin-bottom: auto;
+    }
+  }
+
+  &:hover &__name,
+  &:hover &__subtitle {
+    @include media('desktop') {
+      color: $gray-6;
+    }
+  }
+  &:hover &__tag {
+    @include media('desktop') {
+      color: $gray-9;
+    }
+  }
+
+  /* цифра на темном фоне, с инвертированием цветов */
+  &--dark {
+    background-color: $gray-3;
+    margin-top: -2rem;
+    padding-top: 2rem;
+    padding-bottom: 2.4rem;
+    height: calc(100% + 4.4rem);
+    @include media('desktop') {
+      margin-top: 0;
+      height: $dotd_desktop_height;
+    }
+    & #{$this}__name {
+      color: $gray-e;
+    }
+    & #{$this}__tag {
+      color: $gray-c;
+    }
+    & #{$this}__author {
+      color: $gray-e;
+    }
+    & #{$this}__subtitle {
+      color: $gray-c;
+    }
+
+    // hovers and focus links
+    &:hover #{$this}__tag {
+      @include media('desktop') {
+        color: $gray-e;
+      }
+    }
+    &__name #{$this}__link:focus,
+    &__subtitle #{$this}__link:focus,
+    &__subtitle #{$this}__link:focus &__author,
+    &:hover #{$this}__name,
+    &:hover #{$this}__author {
+      @include media('desktop') {
+        color: $white;
+      }
+    }
+    &:hover #{$this}__subtitle {
+      @include media('desktop') {
+        color: $gray-e;
+      }
+    }
+
+  }
+}

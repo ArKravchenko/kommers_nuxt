@@ -1,0 +1,36 @@
+.top_news_main {
+  &__name {
+    margin-top: -1rem;
+    margin-bottom: -.6rem + 3rem;
+    font: bold 2.4rem/2.6rem a;
+    font-family: inherit;
+    color: $black;
+    position: relative;
+    @include media('desktop') {
+      padding: 0 10px;
+      font-size: 3.6rem;
+      line-height: 1;
+      margin-top: -1.5rem;
+      margin-bottom: -.4rem + 3rem;
+    }
+  }
+  &__link {
+    @include media('desktop') {
+      &:hover {
+        color: $gray-6;
+      }
+    }
+  }
+  &__lightning {
+    position: absolute;
+    top: -3px;
+    left: -16px;
+    padding: 2px;
+    font-size: 12px;
+    color: $warning;
+    @include media('desktop') {
+      left: -38px;
+      font-size: 20px;
+    }
+  }
+}

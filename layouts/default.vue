@@ -29,7 +29,7 @@
         </div>
         <div class="adv_nest adv_nest--300x250_top hide_desktop">
           <div class="adv_300x250_top">
-            <div style="height: 300px; width: 250px; background-color: grey">970x250</div>
+            <div style="height: 300px; width: 300px; background-color: grey">970x250</div>
           </div>
         </div>
       </div>
@@ -38,6 +38,7 @@
       <Nuxt/>
 
     </div>
+    <Lenta/>
     <Footer/>
   </div>
 </template>

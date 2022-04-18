@@ -1,0 +1,75 @@
+.uho {
+  $this: &;
+
+  position: relative;
+  @include media('desktop') {
+    margin-bottom: 40px;
+  }
+  &__photo {
+    position: relative;
+    padding-bottom: calc((100% + #{$mobile_gap * 2}) / 16 * 9);
+    display: block;
+    margin: 0 -#{$mobile_gap} 20px -#{$mobile_gap};
+    @include media('desktop') {
+      margin: 0 0 20px;
+      padding-bottom: 56.25%;
+    }
+  }
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: 50% 50%;
+  }
+  &__text {
+    display: flex;
+    flex-flow: column wrap;
+    margin-bottom: 30px;
+    @include media('desktop') {
+      margin: 0 10px 20px;
+    }
+  }
+  &__link {
+    text-decoration: none;
+    color: inherit;
+    &--overlay::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -#{$mobile_gap};
+      right: -#{$mobile_gap};
+      bottom: 0;
+      @include media('desktop') {
+        left: 0;
+        right: 0;
+      }
+    }
+  }
+  &:hover {
+    @include media('desktop') {
+      #{$this}__tag {
+        color: $gray-9;
+      }
+      #{$this}__name,
+      #{$this}__subtitle {
+        color: $gray-6;
+      }
+    }
+  }
+}
+.uho_big,
+.uho_small {
+  @include media('desktop') {
+    margin-bottom: 20px;
+  }
+}
+/* TODO убрать отступы у uho_big и у uho_small, сделать отступы у контейнера и удалить эти классы */
+
+.uho_separated:nth-child(-n+2) {
+  @include media('desktop') {
+    border-bottom: 1px solid $gray-e;
+  }
+}

@@ -1,5 +1,5 @@
 import scssConfig from './config/scssConfig.ts'
-import cacheConfig from './config/cacheConfig.ts'
+// import cacheConfig from './config/cacheConfig.ts'
 import {version} from './package'
 
 // const scssVars = Object.keys(scssConfig).reduce(
@@ -32,6 +32,7 @@ export default {
   version,
   dev: process.env.NODE_ENV !== 'production',
   loading: false,
+  // modern: 'client',
 
   globalName: 'kommersant',
 
@@ -49,14 +50,14 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'preconnect', crossOrigin: true, href: 'https://use.typekit.net' },
-      { rel: 'preload', href: 'https://use.typekit.net/mfw2heq.css', as:'style' },
-      {
-        rel: 'stylesheet',
-        media: 'print',
-        href: 'https://use.typekit.net/mfw2heq.css',
-        onload: 'this.onload=null;this.removeAttribute("media");'
-      },
+      // { rel: 'preconnect', crossOrigin: true, href: 'https://use.typekit.net' },
+      // { rel: 'preload', href: 'https://use.typekit.net/mfw2heq.css', as:'style' },
+      // {
+      //   rel: 'stylesheet',
+      //   media: 'print',
+      //   href: 'https://use.typekit.net/mfw2heq.css',
+      //   onload: 'this.onload=null;this.removeAttribute("media");'
+      // },
 
     ],
   },
@@ -65,6 +66,16 @@ export default {
   css: [
     '@/assets/scss/common.scss'
   ],
+
+  // nuxt-font-loader config
+  fontLoader: {
+    url: {
+      custom: 'https://use.typekit.net/mfw2heq.css'
+    },
+    // Enable options
+    prefetch: true,
+    preconnect: true
+  },
 
   // Here are all the variables and shared functions/mixins for sass
   styleResources: {
@@ -75,7 +86,9 @@ export default {
   },
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
-  plugins: [],
+  plugins: [
+    '@/plugins/filters.ts'
+  ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
   components: false,
@@ -92,6 +105,7 @@ export default {
       { fileName: 'router/router.ts', keepDefaultRouter: false },
     ],
     '@nuxtjs/style-resources',
+    'nuxt-font-loader',
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
@@ -99,7 +113,7 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
-    '@nuxtjs/pwa',
+    // '@nuxtjs/pwa',
     // 'nuxt-ssr-cache',
   ],
 

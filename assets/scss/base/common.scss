@@ -190,7 +190,7 @@ table {
 	}
 }
 .hide_while_loading {
-	display: none;
+	display: none !important;
 }
 
 .window_popup {

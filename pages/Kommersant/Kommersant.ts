@@ -1,32 +1,33 @@
-import { Component, Vue } from 'nuxt-property-decorator'
-import {Context} from "@nuxt/types";
-import Cols from '@/components/oldGeneral/Cols/Cols'
+import {Component, Vue} from 'nuxt-property-decorator'
+import {Context} from '@nuxt/types';
+import type {Actualno as IActualno} from '~/interfaces/API/MainPageApi';
+// import Cols from '@/components/oldGeneral/Cols/Cols'
+import Actualno from '@/components/general/Actualno/Actualno';
+import {fetcher} from '@/helpers/fetcher';
 
 @Component({
-  components:{
-    Cols
+  components: {
+    // Cols,
+    Actualno
   }
 })
 export default class Kommersant extends Vue {
   text: string = '';
-  actualnoData: string = '';
+  actualnoData: IActualno.APIDataStructure['data'] | null = null;
 
-  async asyncData(ctx:Context){
-    // console.log(a.error({statusCode:400, message:'Some error message'}))
-    // throw new Error()
-
-    const actualnoData = await fetch('https://srdkprot.kommersant.ru/api/main_page/Endpoint_1')
-      .then(res=>{
-        if(res.ok){
+  async asyncData(ctx: Context) {
+    const actualnoData: IActualno.APIDataStructure = await fetcher('actualno')
+      .then(res => {
+        if (res.ok) {
           return res.json()
         }
       })
-      .catch(err=>{
-        ctx.error(err)
+      .catch(err => {
+        ctx.error({ statusCode: 404, message: err })
       })
     return {
       text: 'THIS IS PARENT PAGE WITH NESTED CHILDREN',
-      actualnoData,
+      actualnoData: actualnoData?.data || null,
     }
   }
 }
