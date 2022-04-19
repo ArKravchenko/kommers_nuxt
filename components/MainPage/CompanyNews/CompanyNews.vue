@@ -4,7 +4,7 @@
   <div class="ba">
     <div class="ba__text ba__text--shadow">
       <h2 class="ba__tag ba__tag--black">
-        <a href="#" class="link">Новости компаний</a>
+        <a href="#" class="link">Новости компаний <span style="color: red">ЗАГЛУШКА</span></a>
         <span class="ba__link_more"><a href="#" class="link decor">Все</a></span>
       </h2>
       <ul class="ba__list">

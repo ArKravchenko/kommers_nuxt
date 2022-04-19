@@ -1,7 +1,7 @@
 <template>
   <div>
     <aside class="grid-col-lenta aside_column">
-<!--      <LentaVertical/>-->
+      <LentaVertical/>
     </aside>
 
 

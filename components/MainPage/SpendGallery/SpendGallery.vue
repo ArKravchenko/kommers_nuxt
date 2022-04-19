@@ -28,7 +28,7 @@
             </noscript>
           </div>
           <div class="spend__text">
-            <p class="spend__tag">Партнерский проект</p>
+            <p class="spend__tag">Партнерский проект <span style="color: red">ЗАГЛУШКА</span></p>
             <h2 class="spend__name">
               <a
                 href="https://special.kommersant.ru/budu/office.html?utm_source=kommersant&amp;utm_medium=partner&amp;utm_campaign=renaissance "
@@ -55,7 +55,7 @@
             </noscript>
           </div>
           <div class="spend__text">
-            <p class="spend__tag">Партнерский проект</p>
+            <p class="spend__tag">Партнерский проект <span style="color: red">ЗАГЛУШКА</span></p>
             <h2 class="spend__name">
               <a
                 href="https://www.kommersant.ru/doc/5117088?utm_source=kommersant&amp;utm_medium=partner&amp;utm_campaign=dyson "
@@ -82,7 +82,7 @@
             </noscript>
           </div>
           <div class="spend__text">
-            <p class="spend__tag">Партнерский материал</p>
+            <p class="spend__tag">Партнерский материал <span style="color: red">ЗАГЛУШКА</span></p>
             <h2 class="spend__name">
               <a href="/doc/5119139" class="spend__link link link_overlay slider-link">Все как у людей</a>
             </h2>
@@ -106,7 +106,7 @@
             </noscript>
           </div>
           <div class="spend__text">
-            <p class="spend__tag">Конференция</p>
+            <p class="spend__tag">Конференция <span style="color: red">ЗАГЛУШКА</span></p>
             <h2 class="spend__name">
               <a
                 href="https://events.kommersant.ru/events/14-12-konferencziya-openran-russia-2021/?utm_source=glav&amp;utm_medium=banner&amp;utm_campaign=promogl1412"

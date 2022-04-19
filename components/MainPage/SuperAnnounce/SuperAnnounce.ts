@@ -1,9 +1,14 @@
 import {Component, Prop, Vue} from 'nuxt-property-decorator'
 import type {MainPageAPI} from "~/interfaces/API/MainPageApi";
-import DocSa from "./SaComponent/DocSa/DocSa";
-import IssueSa from "./SaComponent/IssueSa/IssueSa";
-import ThemeSa from "./SaComponent/ThemeSa/ThemeSa";
-import CustomHtmlSa from "./SaComponent/CustomHtmlSa/CustomHtmlSa";
+// import DocSa from "./SaComponent/DocSa/DocSa";
+// import IssueSa from "./SaComponent/IssueSa/IssueSa";
+// import ThemeSa from "./SaComponent/ThemeSa/ThemeSa";
+// import CustomHtmlSa from "./SaComponent/CustomHtmlSa/CustomHtmlSa";
+
+const DocSa = () => import(/* webpackChunkName: "DocSa" */'./SaComponent/DocSa/DocSa')
+const IssueSa = () => import(/* webpackChunkName: "IssueSa" */'./SaComponent/IssueSa/IssueSa')
+const ThemeSa = () => import(/* webpackChunkName: "ThemeSa" */'./SaComponent/ThemeSa/ThemeSa')
+const CustomHtmlSa = () => import(/* webpackChunkName: "CustomHtmlSa" */'./SaComponent/CustomHtmlSa/CustomHtmlSa')
 
 
 

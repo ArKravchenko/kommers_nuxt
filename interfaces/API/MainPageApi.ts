@@ -273,7 +273,7 @@ export namespace Multimedia {
     img: ImageSimple;
   }
 
-  interface IMultimedia {
+  export interface IMultimedia {
     data: {
       items: MultimediaItem[]
     }

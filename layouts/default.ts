@@ -1,20 +1,22 @@
-import { Component, Vue } from 'nuxt-property-decorator'
-import Vicons from '~/components/general/Vicons/Vicons.vue'
-import Footer from '~/components/general/Footer/Footer.vue'
+import {Component, Vue} from 'nuxt-property-decorator'
+
+const Vicons = () => import(/* webpackChunkName: "Vicons" */'~/components/general/Vicons/Vicons.vue')
+// import Footer from '~/components/general/Footer/Footer.vue'
 import Header from '~/components/general/Header/Header/Header.vue'
-import Lenta from '~/components/general/Lenta/Lenta.vue'
+const Lenta = () => import(/* webpackChunkName: "Lenta" */'~/components/general/Lenta/Lenta.vue')
+const Footer = () => import(/* webpackChunkName: "Footer" */'~/components/general/Footer/Footer.vue')
 
 @Component({
   components: {
     Vicons,
     Footer,
     Lenta,
-    Header, // : () => import('~/components/general/Header/Header/Header.vue'),
+    Header,
   },
 })
 export default class Default extends Vue {
 
-  mounted(){
+  mounted() {
     // alert(process.env.NUXT_ENV_TEST)
     // console.log('this.$style',JSON.stringify(this.$style))
   }

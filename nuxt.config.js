@@ -108,6 +108,27 @@ export default {
     ],
     '@nuxtjs/style-resources',
     'nuxt-font-loader',
+    // ['nuxt-lazy-load', {
+    //   // These are the default values
+    //   images: true,
+    //   videos: false,
+    //   audios: false,
+    //   iframes: false,
+    //   native: true,
+    //   directiveOnly: false,
+    //
+    //   // Default image must be in the static folder
+    //   defaultImage: 'data:image/webp;base64,UklGRh4AAABXRUJQVlA4TBEAAAAvDwACAAdQ97rXvf+BiOh/AAA=',
+    //
+    //   // To remove class set value to false
+    //   loadingClass: 'isLoading',
+    //   loadedClass: 'isLoaded',
+    //   appendClass: 'lazyLoad',
+    //
+    //   observerConfig: {
+    //     // See IntersectionObserver documentation
+    //   }
+    // }]
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)

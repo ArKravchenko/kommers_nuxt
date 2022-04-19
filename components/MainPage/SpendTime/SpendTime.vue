@@ -5,7 +5,7 @@
       <h3 class="section_name">
         <a href="#" class="link section_name__link slided_title__link">
           <span class="section_name__text slided_title__text">Провести время</span>
-          <span href="#" class="vicon vicon--rarrow section_header__nav slided_title__nav">
+          <span class="vicon vicon--rarrow section_header__nav slided_title__nav">
 					<svg class="vicon__body">
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#vicon-rarrow"></use>
 					</svg>

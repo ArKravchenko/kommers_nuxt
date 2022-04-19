@@ -8,7 +8,7 @@
       </div>
       <div class="promo__text">
         <h2 class="promo__tag">
-          Партнерский проект
+          Партнерский проект <span style="color: red">ЗАГЛУШКА</span>
           <!-- удалить span, если ссылка Все не нужна, иначе отобразится | -->
           <!-- <span class="promo__link_more"><a href="/companynews" class="link decor">Все</a></span> -->
         </h2>
