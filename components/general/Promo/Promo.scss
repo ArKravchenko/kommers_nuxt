@@ -1,0 +1,117 @@
+.promo {
+  $this: &;
+
+  position: relative;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  max-width: 300px;
+  min-height: 300px;
+  @include media('desktop') {
+    justify-content: flex-start;
+  }
+
+  &__photo {
+    display: block;
+    margin-bottom: 2rem - .4rem;
+  }
+
+  &__text {
+    @include media('desktop') {
+      margin: 0 10px;
+    }
+  }
+
+  &__tag {
+    margin-bottom: -.2rem + 1.5rem;
+    color: $gray-6;
+    font: 1.2rem/1 a;
+    font-family: inherit;
+  }
+
+  &__link_more {
+    position: relative;
+    z-index: 1;
+    color: $brand_color;
+    &:before {
+      content: '  |  ';
+      color: $gray-6;
+      white-space: pre;
+    }
+  }
+
+  &__name {
+    color: $gray-1;
+    font: bold 2rem/2.4rem a;
+    font-family: inherit;
+    margin-top: -.9rem;
+    margin-bottom: -.6rem;
+    @include media('desktop') {
+      line-height: 1;
+      margin-top: -.7rem;
+      margin-bottom: -.3rem;
+    }
+  }
+
+  &__subtitle {
+    color: $gray-1;
+    font: 1.4rem/1.6rem a;
+    font-family: inherit;
+    margin-top: -.6rem + 1.5rem;
+    margin-bottom: -.3rem;
+  }
+
+  &__remark {
+    font: 1rem/1.2 a;
+    font-family: inherit;
+    color: $gray-9;
+    margin-top: -.4rem + 1.5rem;
+
+    &--slider {
+      font-size: 1.4rem;
+      line-height: 1.6rem;
+      margin-top: -.6rem;
+      margin-bottom: -.3rem;
+    }
+  }
+
+  &__link {
+    color: inherit;
+    text-decoration: none;
+
+    &--overlay::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+  }
+
+  &:hover {
+    @include media('desktop') {
+      #{$this}__tag {
+        color: $gray-9;
+      }
+      #{$this}__name,
+      #{$this}__subtitle {
+        color: $gray-6;
+      }
+    }
+  }
+}
+
+.promo_slider {
+  &__canvas {
+    display: flex;
+    margin: -5px 0;
+  }
+
+  &__item {
+    flex-shrink: 0;
+    width: 100%;
+    padding: 5px 0;
+    margin-right: -100%;
+  }
+}

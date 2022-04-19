@@ -8,6 +8,15 @@ import SuperAnnounce from '~/components/MainPage/SuperAnnounce/SuperAnnounce.vue
 import TopNews from '~/components/MainPage/TopNews/TopNews.vue'
 import LightSpot from '~/components/MainPage/LightSpot/LightSpot.vue'
 import MainToday from '~/components/MainPage/MainToday/MainToday.vue'
+import Opinions from '~/components/MainPage/Opinions/Opinions.vue'
+import Promo from '~/components/general/Promo/Promo.vue'
+import SpendTime from '~/components/MainPage/SpendTime/SpendTime.vue'
+import Rubric from '~/components/MainPage/Rubric/Rubric.vue'
+import Vote from '~/components/MainPage/Vote/Vote.vue'
+import MostReadableAside from '~/components/MainPage/MostReadableAside/MostReadableAside.vue'
+import SpendGallery from '~/components/MainPage/SpendGallery/SpendGallery.vue'
+import CompanyNews from '~/components/MainPage/CompanyNews/CompanyNews.vue'
+
 
 @Component({
   components: {
@@ -16,6 +25,14 @@ import MainToday from '~/components/MainPage/MainToday/MainToday.vue'
     TopNews,
     LightSpot,
     MainToday,
+    Opinions,
+    Promo,
+    SpendTime,
+    Rubric,
+    Vote,
+    MostReadableAside,
+    SpendGallery,
+    CompanyNews
   },
 })
 export default class Main extends Vue {
@@ -38,7 +55,7 @@ export default class Main extends Vue {
   }
 
   mounted(){
-    console.log(this.mainPageWidgets)
+    console.log('this.mainPageWidgets',this.mainPageWidgets)
   }
 
 }

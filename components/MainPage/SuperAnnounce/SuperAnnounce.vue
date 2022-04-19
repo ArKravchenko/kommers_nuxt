@@ -1,9 +1,11 @@
 <template>
 
+
   <div>
-    <h1>SuperAnnounce</h1>
-    {{JSON.stringify(saData)}}
+    <DocSa v-if="saData.type === 'doc'" :doc-sa-data="saData"/>
+    <ThemeSa v-else-if="saData.type === 'theme'" :theme-sa-data="saData" />
   </div>
+<!--    <IssueSa/>-->
 
 </template>
 

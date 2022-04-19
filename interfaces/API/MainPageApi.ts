@@ -56,7 +56,7 @@ export namespace SuperAnnounce {
     href: string;
   }
 
-  interface DocSA {
+  export interface IDocSA {
     type: 'doc';
     content: {
       plashka: string | null;
@@ -72,7 +72,7 @@ export namespace SuperAnnounce {
     href: string;
   }
 
-  interface IssueSA {
+  export interface IIssueSA {
     type: 'issue';
     content: {
       plashka: string | null;
@@ -88,7 +88,7 @@ export namespace SuperAnnounce {
     href: string;
   }
 
-  interface ThemeSA {
+  export interface IThemeSA {
     type: 'theme';
     content: {
       plashka: string | null;
@@ -98,7 +98,7 @@ export namespace SuperAnnounce {
     }
   }
 
-  interface CustomHtmlSA {
+  export interface ICustomHtmlSA {
     type: 'customHtml';
     content: {
       customHtml: string | null;
@@ -107,7 +107,7 @@ export namespace SuperAnnounce {
     }
   }
 
-  export type SuperAnnounceData =  null | IssueSA | ThemeSA | DocSA | CustomHtmlSA;
+  export type SuperAnnounceData =  null | IIssueSA | IThemeSA | IDocSA | ICustomHtmlSA;
 
   export interface ISuperAnnounce {
     data: {
@@ -299,7 +299,7 @@ export namespace Rubrics {
     docs: Doc[]
   }
 
-  interface IRubrics {
+  export interface IRubrics {
     data: {
       rubrics: Rubric[]
     }
@@ -344,7 +344,7 @@ export namespace CompanyNews {
     pubDate: Date;
   }
 
-  interface ICompanyNews {
+  export interface ICompanyNews {
     data: {
       title: string;
       href: string;
@@ -389,7 +389,7 @@ export namespace SpendTime {
   }
 
 
-  interface ISpendTime {
+  export interface ISpendTime {
     data: {
       docs: Doc[]
     }

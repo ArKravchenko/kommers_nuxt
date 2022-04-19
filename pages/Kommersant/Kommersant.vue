@@ -1,6 +1,6 @@
 <template>
     <div>
-      <h1>{{text}}</h1>
+<!--      <h1>{{text}}</h1>-->
       <Actualno :actualnoData="actualnoData"/>
       <!-- Cols is just the example component with action and getter-->
 <!--      <Cols/>-->

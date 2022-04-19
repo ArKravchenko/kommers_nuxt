@@ -12,7 +12,7 @@ import {fetcher} from '@/helpers/fetcher';
   }
 })
 export default class Kommersant extends Vue {
-  text: string = '';
+  // text: string = '';
   actualnoData: IActualno.APIDataStructure['data'] | null = null;
 
   async asyncData(ctx: Context) {
@@ -26,7 +26,7 @@ export default class Kommersant extends Vue {
         ctx.error({ statusCode: 404, message: err })
       })
     return {
-      text: 'THIS IS PARENT PAGE WITH NESTED CHILDREN',
+      // text: 'THIS IS PARENT PAGE WITH NESTED CHILDREN',
       actualnoData: actualnoData?.data || null,
     }
   }

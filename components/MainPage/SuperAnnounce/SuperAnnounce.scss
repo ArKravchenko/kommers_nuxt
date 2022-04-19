@@ -1,0 +1,272 @@
+::v-deep .sa {
+  position: relative;
+  z-index: 0;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  margin: 30px -#{$mobile_gap} 40px;
+  @include media('desktop') {
+    margin: 50px 0 0;
+  }
+  &__custom {
+    max-height: 250px;
+    overflow: hidden;
+    width: 100%;
+  }
+  &__cover {
+    position: relative;
+    display: flex;
+    flex-grow: 1;
+    &::before {
+      content: '';
+      position: relative;
+      z-index: 0;
+      padding-bottom: 56.25%;
+      height: 0;
+      @include media('desktop') {
+        padding-bottom: 0;
+        height: 360px;
+      }
+    }
+  }
+
+  /* для виджетов высота подложки ограничивается 250px в десктопе. В мобильном режиме не меняется ничего. */
+  &__cover--widget:before {
+    content: none;
+  }
+
+  &__photo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+      background-color: rgba(0, 0, 0, .55);
+      transition: background-color .25s linear 0s;
+    }
+  }
+  &--news:hover &__photo::before {
+    @include media('desktop') {
+      background-color: rgba(0, 0, 0, .75);
+    }
+  }
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 100% 50%;
+  }
+  &__content {
+    z-index: 2;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    flex-grow: 1;
+    padding: 15px $mobile_gap 20px;
+    @include media('desktop') {
+      padding: 30px;
+    }
+  }
+  &__text {
+    &--news {
+      @include media('desktop') {
+        flex-grow: 1;
+        width: 50%;
+      }
+    }
+    &--media {
+      @include media('desktop') {
+        position: relative;
+        width: 75%;
+      }
+    }
+    &--story {
+      @include media('desktop') {
+        position: relative;
+        width: 65%;
+      }
+    }
+  }
+  &__name {
+    color: $white;
+    font: bold 2rem/2.4rem a;
+    font-family: inherit;
+    margin-top: -.8rem;
+    margin-bottom: -.6rem;
+    @include media('desktop') {
+      font-size: 3.6rem;
+      line-height: 1;
+      margin-top: -1.5rem;
+      margin-bottom: -.4rem + 2rem;
+    }
+  }
+  &__subtitle {
+    color: $white;
+    font: 1.4rem/1.6rem a;
+    font-family: inherit;
+    margin-top: -.6rem + 1.5rem;
+    margin-bottom: -.3rem;
+    @include media('desktop') {
+      font-size: 2.4rem;
+      line-height: 1;
+      color: $gray-c;
+      margin-top: -.9rem;
+    }
+    &--news {
+      @include media('desktop') {
+        width: 50%;
+        margin-top: -.9rem + 2rem;
+      }
+    }
+    &--media {
+      @include media('desktop') {
+        color: $gray-e;
+        font-size: 1.8rem;
+        margin-top: -.6rem;
+      }
+    }
+    &--story {
+      @include media('desktop') {
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+    }
+  }
+  &__subname {
+    color: $gray-1;
+    font: 1.4rem/1.6rem a;
+    font-family: inherit;
+    margin-top: -.6rem;
+    margin-bottom: -.3rem;
+    @include media('desktop') {
+      color: $white;
+      font-size: 1.8rem;
+      line-height: 1;
+    }
+  }
+  &__subname--widget {
+    @include media('desktop') {
+      margin-bottom: 0;
+      color: $gray-1;
+    }
+  }
+  &__subheader {
+    color: $gray-1;
+    font: 1.2rem/1 a;
+    font-family: inherit;
+    margin-top: -.4rem + 1rem;
+    margin-bottom: -.2rem;
+    @include media('desktop') {
+      color: $white;
+      font-size: 1.4rem;
+      line-height: 1.6rem;
+      margin-top: -.6rem + 1.5rem;
+      margin-bottom: -.3rem;
+    }
+  }
+  &__more {
+    color: $brand_color;
+    text-decoration: underline;
+    @include media('desktop') {
+      color: $white;
+    }
+  }
+  &__chapter--widget &__more {
+    @include media('desktop') {
+      color: $brand_color;
+    }
+  }
+  &__tag {
+    flex-grow: 1;
+    color: $white;
+    font: 1.2rem/1 a;
+    font-family: inherit;
+    margin-top: -.4rem;
+    margin-bottom: -.2rem + 2rem;
+    @include media('desktop') {
+      flex-grow: 0;
+      color: $white;
+      margin-bottom: -.2rem;
+    }
+  }
+  &__time {
+    margin-top: -.2rem;
+    margin-bottom: -.2rem + 1rem;
+    color: $gray-6;
+    font: 1.2rem/1 a;
+    font-family: inherit;
+    white-space: nowrap;
+    @include media('desktop') {
+      width: auto;
+      margin-bottom: -.2rem + 1.5rem;
+      color: $gray-9;
+    }
+  }
+  &__time--widget {
+    @include media('desktop') {
+      color: $gray-6;
+    }
+  }
+  &__chapter {
+    padding: 20px $mobile_gap 0;
+    @include media('desktop') {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 2;
+      padding: 0 30px 30px;
+    }
+  }
+
+  &__chapter--widget {
+    @include media('desktop') {
+      position: static;
+      box-sizing: border-box;
+      max-height: 11rem;
+      padding: 20px 10px 0;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-flow: column nowrap;
+    @include media('desktop') {
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-top: 2rem;
+    }
+  }
+  &__item {
+    position: relative;
+    margin-bottom: 2rem;
+    @include media('desktop') {
+      margin: 0 40px 0 0;
+    }
+    &--more {
+      margin-bottom: 0;
+    }
+    &--story {
+      @include media('desktop') {
+        margin-top: -.2rem + 2.5rem;
+      }
+    }
+  }
+  &__link {
+    color: inherit;
+    text-decoration: none;
+  }
+}

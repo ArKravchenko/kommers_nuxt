@@ -1,0 +1,214 @@
+.ba {
+  $this: &;
+
+  margin: 0 -#{$mobile_gap} 3rem;
+  @include media('desktop') {
+    margin: 10px 0 50px;
+  }
+
+  &__photo {
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      background-color: rgba(0, 0, 0, .25);
+      transition: background-color 0.25s linear 0s
+    }
+  }
+
+  &__content {
+    position: relative;
+    &:hover #{$this}__photo::before {
+      background-color: rgba(0, 0, 0, .45);
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    justify-content: center;
+    &--shadow {
+      width: 100%;
+      padding: 20px $mobile_gap 10px;
+      box-sizing: border-box;
+      background-color: $white;
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, .1);
+      @include media('desktop') {
+        padding: 30px 0 0 30px;
+      }
+    }
+    &--absolute {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+      @include media('desktop') {
+        padding: 0 0 0 30px;
+      }
+    }
+  }
+
+  &__tag {
+    margin-top: -.4rem;
+    margin-bottom: -.2rem + 2rem;
+    color: $white;
+    font: 1.2rem/1 a;
+    font-family: inherit;
+    &--black {
+      color: $gray-6;
+    }
+  }
+
+  &__date {
+    margin-top: -.2rem;
+    margin-bottom: -.2rem + 1.5rem;
+    color: $gray-a;
+    font: 1.2rem/1 a;
+    font-family: inherit;
+  }
+
+  &__name {
+    color: $white;
+    font: bold 2rem/2.4rem a;
+    font-family: inherit;
+    margin-top: -.8rem;
+    margin-bottom: -.6rem;
+    @include media('desktop') {
+      line-height: 1;
+      margin-top: -.6rem;
+      margin-bottom: -.4rem;
+    }
+    &_28 {
+      @include media('desktop') {
+        margin-top: -.9rem + 1rem;
+        margin-bottom: -.5rem;
+        font-size: 2.8rem;
+        line-height: 1;
+      }
+    }
+    &--half {
+      @include media('desktop') {
+        width: 50%;
+      }
+    }
+    &--black {
+      color: $gray-1;
+    }
+  }
+
+  &__subtitle {
+    color: $white;
+    font: 1.4rem/1.6rem a;
+    font-family: inherit;
+    margin-top: -.5rem + 1.5rem;
+    margin-bottom: -.4rem;
+    @include media('desktop') {
+      font-size: 1.5rem;
+      line-height: 1.8rem;
+      margin-top: -.6rem + 1.5rem;
+      margin-bottom: -.5rem;
+    }
+    &--half {
+      @include media('desktop') {
+        width: 50%;
+      }
+    }
+    &--bold {
+      @include media('desktop') {
+        margin-top: -.5rem +2rem;
+        margin-bottom: -.5rem;
+        font-weight: bold;
+      }
+    }
+    &--small {
+      @include media('desktop') {
+        font-size: 1.2rem;
+        line-height: 1;
+        margin-top: -.4rem + 1.5rem;
+        margin-bottom: -.2rem;
+      }
+    }
+    &--black {
+      color: $gray-1;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-flow: column wrap;
+    width: 100%;
+    @include media('desktop') {
+      flex-flow: row nowrap;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    flex-flow: column wrap;
+    width: 100%;
+    margin-bottom: 2rem;
+    @include media('desktop') {
+      margin-right: 50px;
+    }
+    &--five {
+      @include media('desktop') {
+        width: calc(100% / 5);
+        margin: 0 40px 0 0;
+      }
+    }
+    &--more {
+      @include media('desktop') {
+        width: auto;
+      }
+    }
+  }
+
+  &__more {
+    margin-top: -.5rem;
+    margin-bottom: -.4rem;
+    color: $white;
+    font-size: 1.8rem;
+    line-height: 2rem;
+    text-decoration: underline;
+  }
+
+  &__link_more:before {
+    content: '  |  ';
+    color: $gray-6;
+    white-space: pre;
+  }
+
+
+  &__date,
+  &__tag--black .link:hover {
+    @include media('desktop') {
+      color: $gray-9;
+    }
+  }
+
+  &__item:hover &__name--black,
+  &__item:hover &__subtitle--black {
+    @include media('desktop') {
+      color: $gray-6;
+    }
+  }
+  &__tag--black .ba__link_more .link {
+    color: $brand_color;
+    @include media('desktop') {
+      &:hover {
+        color: $black;
+      }
+    }
+  }
+}
