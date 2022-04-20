@@ -6,8 +6,8 @@
     <div class="layout">
       <!-- картина дня -->
       <div class="main">
-        <div v-if="mainPageWidgets && mainPageWidgets.superAnnounce && mainPageWidgets.superAnnounce.data && mainPageWidgets.superAnnounce.data.primary">
-          <SuperAnnounce :saData="mainPageWidgets.superAnnounce.data.primary"/>
+        <div v-if="getSaPrimary">
+          <SuperAnnounce :saData="getSaPrimary"/>
         </div>
       </div>
     </div>
@@ -16,11 +16,11 @@
       <div class="main grid">
         <div class="grid-col grid-col-s3">
           <!-- топ -->
-          <TopNews v-if="mainPageWidgets && mainPageWidgets.top" :topNewsData="mainPageWidgets.top"/>
+          <TopNews v-if="getTop" :topNewsData="getTop"/>
 
           <div class="hide_mobile">
             <!-- яркое пятно -->
-            <LightSpot :lightSpotData="mainPageWidgets && mainPageWidgets.lightSpot"/>
+            <LightSpot  v-if="getLightSpot" :lightSpotData="getLightSpot"/>
           </div>
         </div>
 
@@ -34,8 +34,8 @@
           </div>
         </div>
 
-        <div v-if="mainPageWidgets && mainPageWidgets.superAnnounce && mainPageWidgets.superAnnounce.data && mainPageWidgets.superAnnounce.data.secondary">
-          <SuperAnnounce :saData="mainPageWidgets.superAnnounce.data.secondary"/>
+        <div v-if="getSaSecondary">
+          <SuperAnnounce :saData="getSaSecondary"/>
         </div>
       </div>
     </div>
@@ -49,18 +49,18 @@
 
     <div class="layout hide_desktop">
       <!-- яркое пятно мобильное -->
-      <LightSpot :lightSpotData="mainPageWidgets && mainPageWidgets.lightSpot"/>
+      <LightSpot v-if="getLightSpot" :lightSpotData="getLightSpot"/>
     </div>
 
 
     <!-- главное -->
     <div class="layout">
-      <MainToday :main-today-data="mainPageWidgets && mainPageWidgets.mainToday"/>
+      <MainToday v-if="getMainToday" :main-today-data="getMainToday"/>
     </div>
 
     <!-- мнения -->
     <div class="layout">
-      <Opinions :opinions-data="mainPageWidgets && mainPageWidgets.opinions"/>
+      <Opinions v-if="getOpinions" :opinions-data="getOpinions"/>
     </div>
 
     <div class="layout hide_desktop">
@@ -70,7 +70,7 @@
     <!-- мультимедиа -->
     <div class="layout">
       <div class="main">
-        <Multimedia :multimedia-data="mainPageWidgets && mainPageWidgets.multimedia"/>
+        <Multimedia v-if="getMultimedia" :multimedia-data="getMultimedia"/>
       </div>
     </div>
 
@@ -92,8 +92,8 @@
       <div class="main grid">
         <div class="grid-col grid-col-s3">
 
-          <template v-if="mainPageWidgets && mainPageWidgets.rubrics && index < 3"
-                    v-for="(rubric, index) in mainPageWidgets.rubrics.data.rubrics">
+          <template v-if="getRubrics && index < 3"
+                    v-for="(rubric, index) in getRubrics">
             <Rubric :rubric-data="rubric"/>
           </template>
 
@@ -120,8 +120,8 @@
       <div class="main grid">
         <div class="grid-col grid-col-s3">
 
-          <template v-if="mainPageWidgets && mainPageWidgets.rubrics && index >=3 && index < 7 "
-                    v-for="(rubric, index) in mainPageWidgets.rubrics.data.rubrics">
+          <template v-if="getRubrics && index >=3 && index < 7 "
+                    v-for="(rubric, index) in getRubrics">
             <Rubric :rubric-data="rubric"/>
           </template>
 
@@ -148,8 +148,8 @@
       <div class="main grid">
         <div class="grid-col grid-col-s3">
 
-          <template v-if="mainPageWidgets && mainPageWidgets.rubrics && index >=7 && index < 9"
-                    v-for="(rubric, index) in mainPageWidgets.rubrics.data.rubrics">
+          <template v-if="getRubrics && index >=7 && index < 9"
+                    v-for="(rubric, index) in getRubrics">
             <Rubric :rubric-data="rubric"/>
           </template>
 
@@ -157,8 +157,8 @@
             <CompanyNews :company-news-data="{}"/>
           </div>
 
-          <template v-if="mainPageWidgets && mainPageWidgets.rubrics && index >=9 && index < 11"
-                    v-for="(rubric, index) in mainPageWidgets.rubrics.data.rubrics">
+          <template v-if="getRubrics && index >=9 && index < 11"
+                    v-for="(rubric, index) in getRubrics">
             <Rubric :rubric-data="rubric"/>
           </template>
 
@@ -184,7 +184,7 @@
     <div class="layout">
       <div class="main">
         <!-- провести время -->
-        <SpendTime :spend-time-data="mainPageWidgets &&  mainPageWidgets.spendTime"/>
+        <SpendTime v-if="getSpendTime" :spend-time-data="getSpendTime"/>
       </div>
     </div>
 

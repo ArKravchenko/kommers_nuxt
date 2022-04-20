@@ -13,6 +13,12 @@ const CustomHtmlSa = () => import(/* webpackChunkName: "CustomHtmlSa" */'./SaCom
 
 
 @Component({
+  //@ts-ignore
+  serverCacheKey(a:any) {
+    // console.log(a)
+    return false
+    // return JSON.stringify(a)
+  },
   components:{
     DocSa,
     IssueSa,

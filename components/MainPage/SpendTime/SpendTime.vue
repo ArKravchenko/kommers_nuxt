@@ -32,7 +32,8 @@
         <article :class="['spend__item',{'spend__item--wide':i === 2 || i === 4 || i === 6}] ">
           <div class="spend__photo">
             <img class="spend__img"
-                 :src="cdnUrl+item.img.src"
+                 :src="$imgPlaceholder"
+                 v-lazy="cdnUrl+item.img.src"
                  :alt="item.img.alt"
             />
           </div>

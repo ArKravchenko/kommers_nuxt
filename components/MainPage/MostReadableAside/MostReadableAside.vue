@@ -17,7 +17,10 @@
     <div class="most_readable__content most_readable__shadow">
       <article class="most_readable__item">
         <div class="most_readable__photo stretch_photo">
-          <img class="most_readable__img" src="https://im.kommersant.ru/Issues.photo/CORP/2020/08/09/KMO_177361_00007_1_t218_161801.jpg" alt="">
+          <img class="most_readable__img"
+               :src="$imgPlaceholder"
+               v-lazy="'https://im.kommersant.ru/Issues.photo/CORP/2020/08/09/KMO_177361_00007_1_t218_161801.jpg'"
+               alt="">
         </div>
         <div class="most_readable__text">
           <h4 class="most_readable__tag">

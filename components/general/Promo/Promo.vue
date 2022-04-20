@@ -3,7 +3,10 @@
     <article class="promo">
       <div class="promo__photo">
         <a href="#" class="promo__link promo__link--overlay">
-          <img class="promo__img" src="https://im.kommersant.ru/CorpImages/GBox/00846933.jpg" alt="">
+          <img class="promo__img"
+               :src="$imgPlaceholder"
+               v-lazy="'https://im.kommersant.ru/CorpImages/GBox/00846933.jpg'"
+               alt="">
         </a>
       </div>
       <div class="promo__text">

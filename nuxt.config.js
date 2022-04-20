@@ -1,5 +1,5 @@
 import scssConfig from './config/scssConfig.ts'
-// import cacheConfig from './config/cacheConfig.ts'
+import cacheConfig from './config/cacheConfig.ts'
 import {version} from './package'
 
 // const scssVars = Object.keys(scssConfig).reduce(
@@ -36,7 +36,7 @@ export default {
 
   globalName: 'kommersant',
 
-  // cache: cacheConfig,
+  cache: cacheConfig,
 
   // modern: 'server',
 
@@ -50,6 +50,8 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'preconnect', crossOrigin: true, href: 'https://p.typekit.net' },
+      { rel: 'preconnect', crossOrigin: true, href: 'https://im.kommersant.ru' },
       // { rel: 'preconnect', crossOrigin: true, href: 'https://use.typekit.net' },
       // { rel: 'preload', href: 'https://use.typekit.net/mfw2heq.css', as:'style' },
       // {
@@ -89,7 +91,8 @@ export default {
   plugins: [
     '@/plugins/filters.ts',
     '@/plugins/errorCatcher.ts',
-
+    {src:'@/plugins/vueLazyLoad.ts' , ssr: false},
+    '@/plugins/imgPlaceholder.ts'
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
@@ -108,27 +111,6 @@ export default {
     ],
     '@nuxtjs/style-resources',
     'nuxt-font-loader',
-    // ['nuxt-lazy-load', {
-    //   // These are the default values
-    //   images: true,
-    //   videos: false,
-    //   audios: false,
-    //   iframes: false,
-    //   native: true,
-    //   directiveOnly: false,
-    //
-    //   // Default image must be in the static folder
-    //   defaultImage: 'data:image/webp;base64,UklGRh4AAABXRUJQVlA4TBEAAAAvDwACAAdQ97rXvf+BiOh/AAA=',
-    //
-    //   // To remove class set value to false
-    //   loadingClass: 'isLoading',
-    //   loadedClass: 'isLoaded',
-    //   appendClass: 'lazyLoad',
-    //
-    //   observerConfig: {
-    //     // See IntersectionObserver documentation
-    //   }
-    // }]
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
@@ -138,6 +120,13 @@ export default {
     // https://go.nuxtjs.dev/pwa
     // '@nuxtjs/pwa',
     // 'nuxt-ssr-cache',
+    [
+      '@nuxtjs/component-cache',
+      {
+        max: 10000,
+        maxAge: 1000 * 60
+      }
+    ]
   ],
 
   render: {
@@ -153,5 +142,6 @@ export default {
       loaders.scss.additionalData = scssVars
     },
     extractCSS: true,
+    analyze: false,
   },
 }

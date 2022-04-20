@@ -3,7 +3,11 @@
   <div class="sa">
     <div class="sa__cover">
 		<span class="sa__photo">
-			<img class="sa__img" :src="cdnUrl+themeSaData.content.img.src" :alt="themeSaData.content.img.alt">
+			<img class="sa__img"
+           v-lazy="cdnUrl+themeSaData.content.img.src"
+           :src="$imgPlaceholder"
+           :alt="themeSaData.content.img.alt"
+      >
 		</span>
       <div class="sa__content">
         <p class="sa__tag hide_desktop"><a :href="themeSaData.content.theme.href" class="link">{{ themeSaData.content.plashka }}</a></p>

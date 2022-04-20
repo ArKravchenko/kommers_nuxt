@@ -21,7 +21,8 @@
             <div class="uho__photo">
               <!-- TODO make srcset-->
               <img class="uho__img"
-                   :src="cdnUrl+getFlag.img.src"
+                   v-lazy="cdnUrl+getFlag.img.src"
+                   :src="$imgPlaceholder"
                    :alt="getFlag.img.alt"/>
             </div>
             <div class="uho__text">
@@ -44,7 +45,8 @@
               <article :class="['uho uho_small grid-col grid-col-m',{'uho_separated':index<2}]">
                 <div class="uho__photo hide_mobile" v-if="index<2">
                   <img class="uho__img"
-                       :src="cdnUrl+item.img.src"
+                       v-lazy="cdnUrl+item.img.src"
+                       :src="$imgPlaceholder"
                        :alt="item.img.alt"/>
                 </div>
                 <div class="uho__text">

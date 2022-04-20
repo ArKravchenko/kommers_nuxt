@@ -1,6 +1,10 @@
 import {Component, Vue} from 'nuxt-property-decorator'
 
 @Component({
+  //@ts-ignore
+  serverCacheKey(a:any) {
+    return 'Header'
+  },
   components: {},
 })
 export default class Header extends Vue {

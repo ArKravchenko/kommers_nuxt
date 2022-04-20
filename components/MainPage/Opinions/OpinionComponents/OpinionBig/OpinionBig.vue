@@ -10,7 +10,8 @@
     </div>
     <div class="opinion_big__photo stretch_photo stretch_photo--cover">
       <img class="opinion_big__img fallback_image"
-           :src="cdnUrl+opinionData.img.src"
+           v-lazy="cdnUrl+opinionData.img.src"
+           :src="$imgPlaceholder"
            :alt="opinionData.img.alt">
     </div>
   </article>

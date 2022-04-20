@@ -15,7 +15,9 @@
     </div>
     <div class="vote__branding">
       <a href="http://ya.ru" target="_blank">
-        <img src="https://www.kommersant.ru/banner/poll/kommersant_poll_big.jpg" alt="Коммерсант">
+        <img :src="$imgPlaceholder"
+             v-lazy="'https://www.kommersant.ru/banner/poll/kommersant_poll_big.jpg'"
+             alt="Коммерсант">
       </a>
     </div>
 

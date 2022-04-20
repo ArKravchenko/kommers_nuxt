@@ -38,7 +38,8 @@
             <article class="uho">
               <div class="uho__photo">
                 <img class="uho__img fallback_image"
-                     :src="cdnUrl+item.img.src"
+                     v-lazy="cdnUrl+item.img.src"
+                     :src="$imgPlaceholder"
                      :alt="item.img.alt">
               </div>
               <div class="uho__text">

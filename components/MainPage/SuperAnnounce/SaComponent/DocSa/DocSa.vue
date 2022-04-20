@@ -4,7 +4,10 @@
       <!-- <div class="sa"> -->
       <div class="sa__cover">
         <div class="sa__photo">
-          <img class="sa__img" :src="cdnUrl+docSaData.content.img.src" :alt="docSaData.content.img.alt">
+          <img class="sa__img"
+               v-lazy="cdnUrl+docSaData.content.img.src"
+               :src="$imgPlaceholder"
+               :alt="docSaData.content.img.alt">
         </div>
         <div class="sa__content">
           <p class="sa__tag hide_desktop"><a :href="docSaData.content.mainDoc.href" class="link">{{docSaData.content.plashka}}</a></p>

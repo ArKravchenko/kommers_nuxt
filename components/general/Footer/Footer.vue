@@ -118,5 +118,5 @@
   </footer>
 </template>
 
-<!--<script src="./Footer.ts" lang="ts"></script>-->
+<script src="./Footer.ts" lang="ts"></script>
 <style src="./Footer.scss" lang="scss" scoped></style>

@@ -21,7 +21,8 @@
           <article class="uho">
             <div class="uho__photo">
               <img class="uho__img"
-                   :src="cdnUrl+getFirst.img.src"
+                   v-lazy="cdnUrl+getFirst.img.src"
+                   :src="$imgPlaceholder"
                    alt="">
             </div>
             <div class="uho__text">
