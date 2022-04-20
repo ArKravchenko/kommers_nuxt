@@ -131,6 +131,17 @@ export default {
 
   render: {
     compressor: {},
+    http2: {
+      push: true,
+      pushAssets: (req, res, publicPath, preloadFiles) =>{
+        // console.log(preloadFiles)
+        return preloadFiles
+          .filter(f => f.asType === 'style')
+          // .filter(f => f.asType === 'script' && f.file === 'runtime.js')
+          .map(f => `<${publicPath}${f.file}>; rel=preload; as=${f.asType}`)
+      }
+
+    }
   },
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)

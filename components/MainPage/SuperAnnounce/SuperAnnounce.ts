@@ -1,25 +1,25 @@
 import {Component, Prop, Vue} from 'nuxt-property-decorator'
+import type {AsyncComponent} from 'vue'
 import type {MainPageAPI} from "~/interfaces/API/MainPageApi";
 // import DocSa from "./SaComponent/DocSa/DocSa";
 // import IssueSa from "./SaComponent/IssueSa/IssueSa";
 // import ThemeSa from "./SaComponent/ThemeSa/ThemeSa";
 // import CustomHtmlSa from "./SaComponent/CustomHtmlSa/CustomHtmlSa";
 
-const DocSa = () => import(/* webpackChunkName: "DocSa" */'./SaComponent/DocSa/DocSa')
-const IssueSa = () => import(/* webpackChunkName: "IssueSa" */'./SaComponent/IssueSa/IssueSa')
-const ThemeSa = () => import(/* webpackChunkName: "ThemeSa" */'./SaComponent/ThemeSa/ThemeSa')
-const CustomHtmlSa = () => import(/* webpackChunkName: "CustomHtmlSa" */'./SaComponent/CustomHtmlSa/CustomHtmlSa')
-
+const DocSa: AsyncComponent = () => import(/* webpackChunkName: "DocSa" */'./SaComponent/DocSa/DocSa')
+const IssueSa: AsyncComponent = () => import(/* webpackChunkName: "IssueSa" */'./SaComponent/IssueSa/IssueSa')
+const ThemeSa: AsyncComponent = () => import(/* webpackChunkName: "ThemeSa" */'./SaComponent/ThemeSa/ThemeSa')
+const CustomHtmlSa: AsyncComponent = () => import(/* webpackChunkName: "CustomHtmlSa" */'./SaComponent/CustomHtmlSa/CustomHtmlSa')
 
 
 @Component({
   //@ts-ignore
-  serverCacheKey(a:any) {
+  serverCacheKey(a: any) {
     // console.log(a)
-    return false
-    // return JSON.stringify(a)
+    // return false
+    return JSON.stringify(a)
   },
-  components:{
+  components: {
     DocSa,
     IssueSa,
     ThemeSa,
@@ -36,8 +36,8 @@ export default class SuperAnnounce extends Vue {
     // }
   }) saData!: MainPageAPI.Endpoint_4['superAnnounce'] | null;
 
-  mounted(){
-    console.log('this.saData',this.saData)
+  mounted() {
+    console.log('this.saData', this.saData)
   }
 
 

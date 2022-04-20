@@ -2,6 +2,7 @@
 
 
   <div>
+    {{Math.random()}}
     <DocSa v-if="saData.type === 'doc'" :doc-sa-data="saData"/>
     <ThemeSa v-else-if="saData.type === 'theme'" :theme-sa-data="saData" />
   </div>

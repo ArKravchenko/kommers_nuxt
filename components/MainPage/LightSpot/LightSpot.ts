@@ -1,16 +1,17 @@
 import {Component, Prop, Vue} from 'nuxt-property-decorator'
 import type {MainPageAPI} from "~/interfaces/API/MainPageApi";
+import type {AsyncComponent} from 'vue'
 // import BlockquoteOfTheDay from "./BlockquoteOfTheDay/BlockquoteOfTheDay.vue";
 // import DigitOfTheDay from "./DigitOfTheDay/DigitOfTheDay.vue";
 // import VideoOfTheDay from "./VideoOfTheDay/VideoOfTheDay.vue";
 // import PhotoOfTheDay from "./PhotoOfTheDay/PhotoOfTheDay.vue";
 // import GraphOfTheDay from "./GraphOfTheDay/GraphOfTheDay.vue";
 
-const GraphOfTheDay = () => import(/* webpackChunkName: "GraphOfTheDay" */"./GraphOfTheDay/GraphOfTheDay.vue");
-const DigitOfTheDay = () => import(/* webpackChunkName: "DigitOfTheDay" */"./DigitOfTheDay/DigitOfTheDay.vue");
-const VideoOfTheDay = () => import(/* webpackChunkName: "VideoOfTheDay" */"./VideoOfTheDay/VideoOfTheDay.vue");
-const PhotoOfTheDay = () => import(/* webpackChunkName: "PhotoOfTheDay" */"./PhotoOfTheDay/PhotoOfTheDay.vue");
-const BlockquoteOfTheDay = () => import(/* webpackChunkName: "BlockquoteOfTheDay" */"./BlockquoteOfTheDay/BlockquoteOfTheDay.vue");
+const GraphOfTheDay:AsyncComponent = () => import(/* webpackChunkName: "GraphOfTheDay" */"./GraphOfTheDay/GraphOfTheDay.vue");
+const DigitOfTheDay:AsyncComponent = () => import(/* webpackChunkName: "DigitOfTheDay" */"./DigitOfTheDay/DigitOfTheDay.vue");
+const VideoOfTheDay:AsyncComponent = () => import(/* webpackChunkName: "VideoOfTheDay" */"./VideoOfTheDay/VideoOfTheDay.vue");
+const PhotoOfTheDay:AsyncComponent = () => import(/* webpackChunkName: "PhotoOfTheDay" */"./PhotoOfTheDay/PhotoOfTheDay.vue");
+const BlockquoteOfTheDay:AsyncComponent = () => import(/* webpackChunkName: "BlockquoteOfTheDay" */"./BlockquoteOfTheDay/BlockquoteOfTheDay.vue");
 
 
 @Component({

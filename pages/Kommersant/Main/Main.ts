@@ -1,6 +1,7 @@
 import {Component, Vue} from 'nuxt-property-decorator'
 import {Context} from "@nuxt/types";
 import type {MainPageAPI} from "~/interfaces/API/MainPageApi";
+// import type {AsyncComponent} from 'vue'
 import {fetcher} from "~/helpers/fetcher";
 // import {ArticleLong} from "~/interfaces/API/MainPageApi";
 // import Cols from '~/components/general/Cols/Cols.vue'
@@ -18,16 +19,16 @@ import SpendGallery from '~/components/MainPage/SpendGallery/SpendGallery.vue'
 import CompanyNews from '~/components/MainPage/CompanyNews/CompanyNews.vue'
 import Multimedia from '~/components/MainPage/Multimedia/Multimedia.vue'
 
-// const MainToday = () => import(/* webpackChunkName: "MainToday" */'~/components/MainPage/MainToday/MainToday.vue')
-// const Opinions = () => import(/* webpackChunkName: "Opinions" */'~/components/MainPage/Opinions/Opinions.vue')
-// const Multimedia = () => import(/* webpackChunkName: "Multimedia" */'~/components/MainPage/Multimedia/Multimedia.vue')
-// const CompanyNews = () => import(/* webpackChunkName: "CompanyNews" */'~/components/MainPage/CompanyNews/CompanyNews.vue')
-// const Rubric = () => import(/* webpackChunkName: "Rubric" */'~/components/MainPage/Rubric/Rubric.vue')
-// const MostReadableAside = () => import(/* webpackChunkName: "MostReadableAside" */'~/components/MainPage/MostReadableAside/MostReadableAside.vue')
-// const Vote = () => import(/* webpackChunkName: "Vote" */'~/components/MainPage/Vote/Vote.vue')
-// const SpendGallery = () => import(/* webpackChunkName: "SpendGallery" */'~/components/MainPage/SpendGallery/SpendGallery.vue')
-// const SpendTime = () => import(/* webpackChunkName: "SpendTime" */'~/components/MainPage/SpendTime/SpendTime.vue')
-// const Promo = () => import(/* webpackChunkName: "Promo" */'~/components/general/Promo/Promo.vue')
+// const MainToday: AsyncComponent = () => import(/* webpackChunkName: "MainToday" */'~/components/MainPage/MainToday/MainToday.vue')
+// const Opinions: AsyncComponent = () => import(/* webpackChunkName: "Opinions" */'~/components/MainPage/Opinions/Opinions.vue')
+// const Multimedia: AsyncComponent = () => import(/* webpackChunkName: "Multimedia" */'~/components/MainPage/Multimedia/Multimedia.vue')
+// const CompanyNews: AsyncComponent = () => import(/* webpackChunkName: "CompanyNews" */'~/components/MainPage/CompanyNews/CompanyNews.vue')
+// const Rubric: AsyncComponent = () => import(/* webpackChunkName: "Rubric" */'~/components/MainPage/Rubric/Rubric.vue')
+// const MostReadableAside: AsyncComponent = () => import(/* webpackChunkName: "MostReadableAside" */'~/components/MainPage/MostReadableAside/MostReadableAside.vue')
+// const Vote: AsyncComponent = () => import(/* webpackChunkName: "Vote" */'~/components/MainPage/Vote/Vote.vue')
+// const SpendGallery: AsyncComponent = () => import(/* webpackChunkName: "SpendGallery" */'~/components/MainPage/SpendGallery/SpendGallery.vue')
+// const SpendTime: AsyncComponent = () => import(/* webpackChunkName: "SpendTime" */'~/components/MainPage/SpendTime/SpendTime.vue')
+// const Promo: AsyncComponent = () => import(/* webpackChunkName: "Promo" */'~/components/general/Promo/Promo.vue')
 
 
 @Component({

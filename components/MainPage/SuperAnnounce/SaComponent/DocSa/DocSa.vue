@@ -32,7 +32,7 @@
         <ul class="sa__list">
           <li class="sa__item" v-for="(doc,index) in docSaData.content.docsList">
             <p class="sa__time"><a :href="doc.href" class="link">{{ doc.pubDate }}</a></p>
-            <h2 class="sa__subname"><a href="#" class="link link_overlay">{{doc.title}}</a></h2>
+            <h2 class="sa__subname"><a :href="doc.href" class="link link_overlay">{{doc.title}}</a></h2>
           </li>
         </ul>
       </div>

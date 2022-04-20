@@ -3,7 +3,14 @@ import type {Rubrics} from "~/interfaces/API/MainPageApi";
 
 
 
-@Component({})
+@Component({
+  //@ts-ignore
+  serverCacheKey(a:any) {
+    // console.log(a)
+    // return false
+    return JSON.stringify(a)
+  },
+})
 export default class Rubric extends Vue {
   @Prop({
     type: Object,

@@ -3,7 +3,14 @@ import type {SpendTime as ISpendTime} from "~/interfaces/API/MainPageApi";
 
 
 
-@Component({})
+@Component({
+  //@ts-ignore
+  serverCacheKey(a:any) {
+    // console.log(a)
+    // return false
+    return JSON.stringify(a)
+  },
+})
 export default class SpendTime extends Vue {
   @Prop({
     type: Object,

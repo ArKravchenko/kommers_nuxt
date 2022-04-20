@@ -1,6 +1,7 @@
 <template>
 
   <section id="spend" class="spend section">
+    {{Math.random()}}
     <div class="section_header slided_title">
       <h3 class="section_name">
         <a href="#" class="link section_name__link slided_title__link">

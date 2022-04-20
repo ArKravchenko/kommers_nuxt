@@ -1,6 +1,7 @@
 <template>
 
     <section id="economy" class="section">
+      {{Math.random()}}
       <div class="section_header slided_title">
         <h3 class="section_name">
           <a :href="rubricData.href" class="link section_name__link slided_title__link">
