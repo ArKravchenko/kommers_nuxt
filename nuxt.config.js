@@ -51,15 +51,15 @@ export default {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'preconnect', crossOrigin: true, href: 'https://p.typekit.net' },
+      { rel: 'preconnect', crossOrigin: true, href: 'https://use.typekit.net' },
+      { rel: 'preload', href: 'https://use.typekit.net/mfw2heq.css', as:'style' },
+      {
+        rel: 'stylesheet',
+        media: 'print',
+        href: 'https://use.typekit.net/mfw2heq.css',
+        onload: 'this.onload=null;this.removeAttribute("media");'
+      },
       { rel: 'preconnect', crossOrigin: true, href: 'https://im.kommersant.ru' },
-      // { rel: 'preconnect', crossOrigin: true, href: 'https://use.typekit.net' },
-      // { rel: 'preload', href: 'https://use.typekit.net/mfw2heq.css', as:'style' },
-      // {
-      //   rel: 'stylesheet',
-      //   media: 'print',
-      //   href: 'https://use.typekit.net/mfw2heq.css',
-      //   onload: 'this.onload=null;this.removeAttribute("media");'
-      // },
 
     ],
   },
@@ -70,14 +70,15 @@ export default {
   ],
 
   // nuxt-font-loader config
-  fontLoader: {
-    url: {
-      custom: 'https://use.typekit.net/mfw2heq.css'
-    },
-    // Enable options
-    prefetch: true,
-    preconnect: true
-  },
+  // fontLoader: {
+  //   url: {
+  //     custom: 'https://use.typekit.net/mfw2heq.css'
+  //   },
+  //   // Enable options
+  //   prefetch: true,
+  //   preconnect: true,
+  //   stylesheet: true,
+  // },
 
   // Here are all the variables and shared functions/mixins for sass
   styleResources: {
@@ -110,7 +111,7 @@ export default {
       { fileName: 'router/router.ts', keepDefaultRouter: false },
     ],
     '@nuxtjs/style-resources',
-    'nuxt-font-loader',
+    // 'nuxt-font-loader',
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)

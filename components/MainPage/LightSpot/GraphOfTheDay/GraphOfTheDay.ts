@@ -17,7 +17,7 @@ export default class GraphOfTheDay extends Vue {
   cdnUrl: string = process.env.CDN_URL || ''
 
   mounted(){
-    console.log('this.graphOfTheDayData',this.graphOfTheDayData)
+    //  console.log('this.graphOfTheDayData',this.graphOfTheDayData)
   }
 
 

@@ -34,7 +34,7 @@ export default class LightSpot extends Vue {
   }) lightSpotData!: MainPageAPI.Endpoint_4['lightSpot'] | null;
 
   mounted() {
-    console.log('this.lightSpotData', this.lightSpotData)
+    //  console.log('this.lightSpotData', this.lightSpotData)
   }
 
 

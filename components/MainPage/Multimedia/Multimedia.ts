@@ -17,7 +17,7 @@ export default class Multimedia extends Vue {
 
 
   mounted(){
-    console.log('this.multimediaData',this.multimediaData)
+    //  console.log('this.multimediaData',this.multimediaData)
   }
 
 }

@@ -4,7 +4,7 @@ import Component from "vue-class-component";
 
 @Component({
   errorCaptured(err: Error, vm: Vue, info: string) {
-    if (process.client){
+    if (process.client) {
       console.group('Caught error')
 
       console.group('err')
@@ -12,7 +12,7 @@ import Component from "vue-class-component";
       console.groupEnd()
 
       console.group('vm')
-      console.log( vm);
+      console.log(vm);
       console.groupEnd()
 
       console.group('info')

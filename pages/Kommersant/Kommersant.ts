@@ -30,4 +30,7 @@ export default class Kommersant extends Vue {
       actualnoData: actualnoData?.data || null,
     }
   }
+  mounted(){
+    console.log('kommersamt component props',this.$props)
+  }
 }

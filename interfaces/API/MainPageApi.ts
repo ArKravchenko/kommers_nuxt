@@ -887,7 +887,7 @@ export namespace ListPageAPI {
       data: SuperAnnounce.SuperAnnounceData
     };
     top: Top.APIDataStructure & Order;
-    ligthSpot: LightSpot.APIDataStructure & Order;
+    lightSpot: LightSpot.APIDataStructure & Order;
     mainToday: MainToday.APIDataStructure & Order;
     multimedia: Multimedia.APIDataStructure & Order;
     opinions: Opinions.APIDataStructure & Order

@@ -25,7 +25,7 @@ export default class MainToday extends Vue {
   }
 
   mounted(){
-    console.log('this.mainTodayData',this.mainTodayData)
+    //  console.log('this.mainTodayData',this.mainTodayData)
   }
 
 

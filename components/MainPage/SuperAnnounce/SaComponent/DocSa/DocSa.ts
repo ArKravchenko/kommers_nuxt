@@ -17,7 +17,7 @@ export default class DocSa extends Vue {
   cdnUrl: string = process.env.CDN_URL || ''
 
   mounted(){
-    console.log('this.docSaData', this.docSaData)
+    //  console.log('this.docSaData', this.docSaData)
   }
 
 

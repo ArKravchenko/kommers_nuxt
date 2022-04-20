@@ -17,6 +17,6 @@ export default class IssueSa extends Vue {
   cdnUrl: string = process.env.CDN_URL || ''
 
   mounted(){
-    console.log('this.issueSaData', this.issueSaData)
+    //  console.log('this.issueSaData', this.issueSaData)
   }
 }

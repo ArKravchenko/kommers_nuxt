@@ -24,6 +24,9 @@
               <a href="/">
                 <h2>Main</h2>
               </a>
+              <a href="/listPage/123">
+                <h2>ListPage</h2>
+              </a>
             </div>
           </div>
         </div>

@@ -17,6 +17,6 @@ export default class CustomHtmlSa extends Vue {
   cdnUrl: string = process.env.CDN_URL || ''
 
   mounted(){
-    console.log('this.customHtmlSaData', this.customHtmlSaData)
+    //  console.log('this.customHtmlSaData', this.customHtmlSaData)
   }
 }

@@ -25,7 +25,7 @@ export default class Opinions extends Vue {
 
 
   mounted(){
-    console.log('this.mainTodayData',this.opinionsData)
+    //  console.log('this.mainTodayData',this.opinionsData)
   }
 
 

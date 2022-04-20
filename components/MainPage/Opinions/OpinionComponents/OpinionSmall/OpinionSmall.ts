@@ -18,7 +18,7 @@ export default class OpinionSmall extends Vue {
 
 
   mounted(){
-    console.log('this.opinionSmallData',this.opinionData)
+    //  console.log('this.opinionSmallData',this.opinionData)
   }
 
 

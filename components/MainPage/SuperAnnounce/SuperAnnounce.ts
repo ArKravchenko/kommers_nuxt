@@ -37,7 +37,7 @@ export default class SuperAnnounce extends Vue {
   }) saData!: MainPageAPI.Endpoint_4['superAnnounce'] | null;
 
   mounted() {
-    console.log('this.saData', this.saData)
+    //  console.log('this.saData', this.saData)
   }
 
 

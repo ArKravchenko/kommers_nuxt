@@ -18,7 +18,7 @@ export default class OpinionBig extends Vue {
 
 
   mounted(){
-    console.log('this.opinionBigData',this.opinionData)
+    //  console.log('this.opinionBigData',this.opinionData)
   }
 
 

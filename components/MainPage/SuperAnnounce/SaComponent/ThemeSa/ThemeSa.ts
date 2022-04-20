@@ -17,7 +17,7 @@ export default class ThemeSa extends Vue {
   cdnUrl: string = process.env.CDN_URL || ''
 
   mounted(){
-    console.log('this.themeSaData', this.themeSaData)
+    //  console.log('this.themeSaData', this.themeSaData)
   }
 
 }

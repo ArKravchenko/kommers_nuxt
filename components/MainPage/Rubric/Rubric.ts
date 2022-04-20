@@ -32,7 +32,7 @@ export default class Rubric extends Vue {
   }
 
   mounted(){
-    console.log('this.rubricData',this.rubricData)
+    //  console.log('this.rubricData',this.rubricData)
   }
 
 

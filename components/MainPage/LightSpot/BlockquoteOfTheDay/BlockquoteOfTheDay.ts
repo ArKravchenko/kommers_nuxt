@@ -17,7 +17,7 @@ export default class BlockquoteOfTheDay extends Vue {
   cdnUrl: string = process.env.CDN_URL || ''
 
   mounted(){
-    console.log('this.blockquoteOfTheDayData',this.blockquoteOfTheDayData)
+    // console.log('this.blockquoteOfTheDayData',this.blockquoteOfTheDayData)
   }
 
 

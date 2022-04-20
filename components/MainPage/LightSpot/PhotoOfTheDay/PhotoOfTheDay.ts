@@ -17,7 +17,7 @@ export default class PhotoOfTheDay extends Vue {
   cdnUrl: string = process.env.CDN_URL || ''
 
   mounted(){
-    console.log('this.photoOfTheDayData',this.photoOfTheDayData)
+    //  console.log('this.photoOfTheDayData',this.photoOfTheDayData)
   }
 
 

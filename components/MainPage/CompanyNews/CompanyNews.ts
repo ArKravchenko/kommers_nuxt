@@ -17,7 +17,7 @@ export default class CompanyNews extends Vue {
 
 
   mounted(){
-    console.log('this.companyNewsData',this.companyNewsData)
+    // console.log('this.companyNewsData',this.companyNewsData)
   }
 
 }

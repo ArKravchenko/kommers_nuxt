@@ -17,7 +17,7 @@ export default class VideoOfTheDay extends Vue {
   cdnUrl: string = process.env.CDN_URL || ''
 
   mounted(){
-    console.log('this.videoOfTheDayData',this.videoOfTheDayData)
+    //  console.log('this.videoOfTheDayData',this.videoOfTheDayData)
   }
 
 

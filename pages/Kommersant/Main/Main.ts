@@ -121,7 +121,7 @@ export default class Main extends Vue {
   }
 
   mounted(){
-    console.log('this.mainPageWidgets',this.mainPageWidgets)
+    //  console.log('this.mainPageWidgets',this.mainPageWidgets)
   }
 
 }

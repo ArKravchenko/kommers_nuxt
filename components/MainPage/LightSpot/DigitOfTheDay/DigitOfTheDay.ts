@@ -15,7 +15,7 @@ export default class DigitOfTheDay extends Vue {
   }) digitOfTheDayData!: LightSpot.IDigit | null;
 
   mounted(){
-    console.log('this.digitOfTheDayData',this.digitOfTheDayData)
+    //  console.log('this.digitOfTheDayData',this.digitOfTheDayData)
   }
 
 

@@ -17,7 +17,7 @@ export default class SpendGallery extends Vue {
 
 
   mounted(){
-    console.log('this.spendGalleryData',this.spendGalleryData)
+    //  console.log('this.spendGalleryData',this.spendGalleryData)
   }
 
 }
