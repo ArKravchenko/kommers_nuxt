@@ -1,0 +1,30 @@
+.sharing_list {
+  display: flex;
+  flex-flow: row wrap;
+  margin-bottom: 2rem;
+  & .sharing {
+    margin: 0 5px 0 0;
+    transition: opacity .2s ease-in-out,
+    visibility 0s linear,
+    margin-left .4s cubic-bezier(.05, .69, .14, 1);
+  }
+  & .sharing + .sharing {
+    transition-delay: .02s;
+  }
+  & .sharing + .sharing + .sharing {
+    transition-delay: .04s;
+  }
+  & .sharing.is_hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+  & .sharing.is_hidden + .sharing.is_hidden {
+    margin-left: -25px;
+  }
+  & .sharing_more {
+    margin-top: 3px;
+  }
+  & .js-article-comment.sharing .sharing__text {
+    display: none;
+  }
+}

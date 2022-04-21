@@ -463,6 +463,7 @@ export namespace ListPageDocs {
   }
 
   export type ListPageDoc = {
+    readTime: number;
     title: string;
     subtitle: string;
     href: string;
@@ -477,7 +478,7 @@ export namespace ListPageDocs {
   }
 
 
-  interface IListPageDocs {
+  export interface IListPageDocs {
     data: {
       timestamp: number;
       docs: ListPageDoc[]

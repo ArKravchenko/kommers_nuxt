@@ -7,11 +7,11 @@ import type {AsyncComponent} from 'vue'
 // import PhotoOfTheDay from "./PhotoOfTheDay/PhotoOfTheDay.vue";
 // import GraphOfTheDay from "./GraphOfTheDay/GraphOfTheDay.vue";
 
-const GraphOfTheDay:AsyncComponent = () => import(/* webpackChunkName: "GraphOfTheDay" */"./GraphOfTheDay/GraphOfTheDay.vue");
-const DigitOfTheDay:AsyncComponent = () => import(/* webpackChunkName: "DigitOfTheDay" */"./DigitOfTheDay/DigitOfTheDay.vue");
-const VideoOfTheDay:AsyncComponent = () => import(/* webpackChunkName: "VideoOfTheDay" */"./VideoOfTheDay/VideoOfTheDay.vue");
-const PhotoOfTheDay:AsyncComponent = () => import(/* webpackChunkName: "PhotoOfTheDay" */"./PhotoOfTheDay/PhotoOfTheDay.vue");
-const BlockquoteOfTheDay:AsyncComponent = () => import(/* webpackChunkName: "BlockquoteOfTheDay" */"./BlockquoteOfTheDay/BlockquoteOfTheDay.vue");
+const GraphOfTheDay:AsyncComponent = () => import("./GraphOfTheDay/GraphOfTheDay.vue");
+const DigitOfTheDay:AsyncComponent = () => import("./DigitOfTheDay/DigitOfTheDay.vue");
+const VideoOfTheDay:AsyncComponent = () => import("./VideoOfTheDay/VideoOfTheDay.vue");
+const PhotoOfTheDay:AsyncComponent = () => import("./PhotoOfTheDay/PhotoOfTheDay.vue");
+const BlockquoteOfTheDay:AsyncComponent = () => import("./BlockquoteOfTheDay/BlockquoteOfTheDay.vue");
 
 
 @Component({
@@ -32,6 +32,13 @@ export default class LightSpot extends Vue {
     //   return !!value.rates && !!value.items
     // }
   }) lightSpotData!: MainPageAPI.Endpoint_4['lightSpot'] | null;
+
+  get getItems(){
+    return this.lightSpotData?.data?.items?.length
+      && this.lightSpotData?.data?.items
+  }
+
+
 
   mounted() {
     //  console.log('this.lightSpotData', this.lightSpotData)

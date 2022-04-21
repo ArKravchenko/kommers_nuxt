@@ -1,0 +1,130 @@
+.rubric_lenta {
+  margin-bottom: 3rem;
+  @include media('desktop') {
+    margin-left: 10px;
+    margin-bottom: 4rem;
+  }
+
+  &__item {
+    border-top: 1px solid $gray-e;
+    margin: 30px -10px;
+    padding: 20px 10px 0;
+    @include media('desktop') {
+      padding-right: 0;
+      margin-right: 0;
+    }
+
+    &:last-child {
+      @include media('desktop') {
+        margin-bottom: 0;
+      }
+    }
+    &:first-child {
+      margin-top: 0;
+    }
+    &::after {
+      content: '';
+      display: table;
+      width: 100%;
+    }
+  }
+
+  &__item_text {
+    position: relative;
+    margin: 0 0 20px;
+  }
+
+  &__item_tag {
+    font: 1.4rem/1 a;
+    font-family: inherit;
+    color: $gray-6;
+    margin: -.3rem 0 -.2rem;
+    @include media('desktop') {
+      margin-bottom: -.2rem + 2rem;
+    }
+
+    & + & {
+      margin-top: -.5rem + 1.5rem;
+      @include media('desktop') {
+        margin-top: -1rem;
+      }
+    }
+  }
+
+  &__item_name {
+    font: bold 2.4rem/2.6rem a;
+    font-family: inherit;
+    margin: (-1rem + 2rem) 0 -.4rem;
+    @include media('desktop') {
+      font-size: 3rem;
+      line-height: 1;
+      margin: -.9rem 0 -.6rem;
+    }
+  }
+
+  &__item_subtitle {
+    font: 2rem/2.4rem a;
+    font-family: inherit;
+    margin: (-.8rem + 2rem) 0 -.6rem;
+  }
+
+  &__thumbs {
+    display: flex;
+    flex-flow: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: -1rem + 1.5rem;
+    margin-left: -1rem;
+    @include media('desktop') {
+      float: right;
+      width: 250px;
+      margin: 0 0 0 3rem;
+    }
+  }
+
+  &__thumbs_photo {
+    position: relative;
+    width: calc((100% / 3) - 10px);
+    padding-bottom: calc(((100% - 20px) / 3) / 16 * 9);
+    margin-top: 1rem;
+    margin-left: 1rem;
+    @include media('desktop') {
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    &:first-child {
+      width: calc(100% - 10px);
+      padding-bottom: calc((100% - 10px) / 16 * 9);
+    }
+    &--blind:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: rgba(0,0,0,.5);
+    }
+  }
+
+  &__thumbs_vicon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    font-size: 3rem;
+    width: 1em;
+    height: 1em;
+    margin: auto;
+    color: #fff;
+    transition: opacity .25s linear 0s;
+    will-change: opacity;
+    opacity: .75;
+  }
+  &__thumbs_photo:focus &__thumbs_vicon,
+  &__thumbs_photo:hover &__thumbs_vicon {
+    opacity: 1;
+  }
+}

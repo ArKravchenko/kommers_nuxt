@@ -1,6 +1,6 @@
 <template>
 
-  <div class="light_spot slider slider-lightspot" data-slider-auto-delay="99995000">
+  <div v-if="getItems" class="light_spot slider slider-lightspot" data-slider-auto-delay="99995000">
     <div class="slider-nav_button slider-prev light_spot__nav_button">
       <a class="slider-link link">
 			<span class="vicon vicon--larrow slider-nav_icon" aria-hidden="true">
@@ -10,7 +10,7 @@
       </a>
     </div>
     <div class="slider-canvas light_spot__canvas">
-      <template v-for="(item,index) in lightSpotData.data.items">
+      <template v-for="(item,index) in getItems">
         <div class="slider-item light_spot__item"
              :key="index"
         >

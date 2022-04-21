@@ -1,0 +1,14 @@
+.crumbs {
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  margin: -.5rem 0 26px 0;
+  color: $gray-6;
+  min-width: 100%;
+  &__item {
+    display: inline-block;
+
+    &:not(:last-child) {
+      margin-right: 13px;
+    }
+  }
+}

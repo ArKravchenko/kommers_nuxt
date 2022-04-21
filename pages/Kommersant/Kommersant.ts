@@ -1,5 +1,5 @@
 import {Component, Vue} from 'nuxt-property-decorator'
-import {Context} from '@nuxt/types';
+import type {Context} from '@nuxt/types';
 import type {Actualno as IActualno} from '~/interfaces/API/MainPageApi';
 // import Cols from '@/components/oldGeneral/Cols/Cols'
 import Actualno from '@/components/general/Actualno/Actualno';
@@ -26,11 +26,10 @@ export default class Kommersant extends Vue {
         ctx.error({ statusCode: 404, message: err })
       })
     return {
-      // text: 'THIS IS PARENT PAGE WITH NESTED CHILDREN',
       actualnoData: actualnoData?.data || null,
     }
   }
   mounted(){
-    console.log('kommersamt component props',this.$props)
+    // console.log('this.actualnoData',this.actualnoData)
   }
 }

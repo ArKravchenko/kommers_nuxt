@@ -15,6 +15,11 @@ export default class Multimedia extends Vue {
 
   cdnUrl: string = process.env.CDN_URL || ''
 
+  get getItems(){
+    return this.multimediaData?.data?.items?.length
+    && this.multimediaData.data.items
+  }
+
 
   mounted(){
     //  console.log('this.multimediaData',this.multimediaData)

@@ -6,10 +6,10 @@ import type {AsyncComponent} from 'vue'
 // import Document from '~/pages/Kommersant/Document/Document.vue'
 // import ListPage from '~/pages/Kommersant/ListPage/ListPage.vue'
 import Kommersant from '~/pages/Kommersant/Kommersant.vue'
-// const Kommersant = () => import(/* webpackChunkName: "Kommersant" */'~/pages/Kommersant/Kommersant.vue').then(i => i.default)
-const Main: AsyncComponent = () => import(/* webpackChunkName: "Main" */'~/pages/Kommersant/Main/Main.vue').then(i => i.default)
-const Document: AsyncComponent = () => import(/* webpackChunkName: "Document" */'~/pages/Kommersant/Document/Document.vue').then(i => i.default)
-const ListPage: AsyncComponent = () => import(/* webpackChunkName: "ListPage" */'~/pages/Kommersant/ListPage/ListPage.vue').then(i => i.default)
+// const Kommersant = () => import('~/pages/Kommersant/Kommersant.vue').then(i => i.default)
+const Main: AsyncComponent = () => import('~/pages/Kommersant/Main/Main.vue').then(i => i.default)
+const Document: AsyncComponent = () => import('~/pages/Kommersant/Document/Document.vue').then(i => i.default)
+const ListPage: AsyncComponent = () => import('~/pages/Kommersant/ListPage/ListPage.vue').then(i => i.default)
 
 
 Vue.use(Router)

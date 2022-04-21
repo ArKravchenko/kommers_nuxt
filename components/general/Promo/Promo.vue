@@ -1,9 +1,12 @@
 <template>
   <div class="adv_300x300">
+    {{Math.random()}} Promo
     <article class="promo">
       <div class="promo__photo">
         <a href="#" class="promo__link promo__link--overlay">
           <img class="promo__img"
+               width="300px"
+               height="168.75px"
                :src="$imgPlaceholder"
                v-lazy="'https://im.kommersant.ru/CorpImages/GBox/00846933.jpg'"
                alt="">

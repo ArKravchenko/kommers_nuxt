@@ -14,6 +14,10 @@ export default class TopNews extends Vue {
     // }
   }) topNewsData!: MainPageAPI.Endpoint_4['top'] | null;
 
+  get getDocs() {
+    return this.topNewsData?.data?.docs?.length
+      && this.topNewsData.data.docs
+  }
   // mounted(){
   //   console.log('this.topNewsData',this.topNewsData)
   // }

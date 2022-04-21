@@ -1,0 +1,16 @@
+::v-deep.simple_page {
+	margin: 0 0 30px 0;
+	font-size: 1.6rem;
+	line-height: 2.4rem;
+	position: relative;
+	@include media('desktop') {
+		font-size: 2rem;
+		line-height: 1.5;
+		margin: 3.9rem 0 30px 0;
+	}
+	& .multimedia__scroll_indicator {
+		@include media('desktop') {
+			display: block;
+		}
+	}
+}

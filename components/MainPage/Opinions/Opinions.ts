@@ -23,6 +23,11 @@ export default class Opinions extends Vue {
 
   cdnUrl: string = process.env.CDN_URL || ''
 
+  get getOpinions(){
+    return this.opinionsData?.data?.opinions?.length
+    && this.opinionsData.data.opinions
+  }
+
 
   mounted(){
     //  console.log('this.mainTodayData',this.opinionsData)

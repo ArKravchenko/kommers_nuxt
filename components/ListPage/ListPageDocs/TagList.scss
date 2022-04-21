@@ -1,0 +1,27 @@
+.tag_list {
+  margin-bottom: -.4rem;
+  line-height: 1.8rem;
+
+  &__item {
+    &--plus::before {
+      content: '+ ';
+      display: inline;
+      color: $gray-6;
+      white-space: pre;
+    }
+    @include media('desktop') {
+      display: inline;
+    }
+  }
+
+  &__item:not(&__item--plus) &__link {
+    color: $gray-6;
+    text-decoration: none;
+  }
+
+  &__item--plus &__link {
+    &:hover {
+      color: $black;
+    }
+  }
+}

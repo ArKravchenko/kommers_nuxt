@@ -2,7 +2,12 @@ import {Component, Prop, Vue} from 'nuxt-property-decorator'
 import type {CompanyNews as ICompanyNews} from "~/interfaces/API/MainPageApi";
 
 
-@Component({})
+@Component({
+  // @ts-ignore
+  serverCacheKey(a:any) {
+    return 'CompanyNews'
+  },
+})
 export default class CompanyNews extends Vue {
   @Prop({
     type: Object,

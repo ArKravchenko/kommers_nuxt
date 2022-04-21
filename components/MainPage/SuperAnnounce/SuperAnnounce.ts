@@ -6,10 +6,10 @@ import type {MainPageAPI} from "~/interfaces/API/MainPageApi";
 // import ThemeSa from "./SaComponent/ThemeSa/ThemeSa";
 // import CustomHtmlSa from "./SaComponent/CustomHtmlSa/CustomHtmlSa";
 
-const DocSa: AsyncComponent = () => import(/* webpackChunkName: "DocSa" */'./SaComponent/DocSa/DocSa')
-const IssueSa: AsyncComponent = () => import(/* webpackChunkName: "IssueSa" */'./SaComponent/IssueSa/IssueSa')
-const ThemeSa: AsyncComponent = () => import(/* webpackChunkName: "ThemeSa" */'./SaComponent/ThemeSa/ThemeSa')
-const CustomHtmlSa: AsyncComponent = () => import(/* webpackChunkName: "CustomHtmlSa" */'./SaComponent/CustomHtmlSa/CustomHtmlSa')
+const DocSa: AsyncComponent = () => import('./SaComponent/DocSa/DocSa')
+const IssueSa: AsyncComponent = () => import('./SaComponent/IssueSa/IssueSa')
+const ThemeSa: AsyncComponent = () => import('./SaComponent/ThemeSa/ThemeSa')
+const CustomHtmlSa: AsyncComponent = () => import('./SaComponent/CustomHtmlSa/CustomHtmlSa')
 
 
 @Component({

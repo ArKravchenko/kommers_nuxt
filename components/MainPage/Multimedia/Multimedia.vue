@@ -1,7 +1,7 @@
 <template>
 
 
-  <section class="multimedia" id="multimedia">
+  <section v-if="getItems" class="multimedia" id="multimedia">
     <div class="section_header slided_title">
       <h3 class="section_name">
         <a href="/specials?from=multimedia" class="link section_name__link slided_title__link">
@@ -33,7 +33,7 @@
         </a>
       </div>
       <div class="multimedia__canvas slider-canvas slider-multimedia-resizable">
-        <template v-for="item in multimediaData.data.items">
+        <template v-for="item in getItems">
           <div class="multimedia__item slider-item slider-multimedia-resizable-item" style="margin-right: 40px">
             <article class="uho">
               <div class="uho__photo">

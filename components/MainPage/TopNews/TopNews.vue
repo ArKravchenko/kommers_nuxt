@@ -1,10 +1,10 @@
 <template>
 
-  <section class="top_news">
+  <section v-if="getDocs" class="top_news">
     <h2 class="vh">Главные новости</h2>
     <template>
 
-      <template v-for="(item, index) in topNewsData.data.docs">
+      <template v-for="(item, index) in getDocs">
         <!-- TODO доделать картинку-->
         <!-- главная новость -->
         <article v-if="index===0"

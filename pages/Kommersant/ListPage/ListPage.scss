@@ -1,0 +1,54 @@
+::v-deep.rubric {
+
+  // костыль таргета для top отступов у суперанонсов
+  & .sa {
+    // margin-top: 0;
+    margin-bottom: 40px;
+    @include media('desktop') {
+      margin-bottom: 50px;
+    }
+  }
+
+  & #r_multimedia {
+    margin-top: -16px;
+    @include media('desktop') {
+      margin-top: 0;
+    }
+  }
+
+  & .opinion_big,
+  & .opinion {
+    @include media('desktop') {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+::v-deep#rubric_spot {
+  margin-bottom: 30px;
+  @include media('desktop') {
+    margin-bottom: 40px;
+  }
+}
+
+::v-deep#r_common_rubric .section_name {
+  @include media('mobile') {
+    padding-top: 0;
+  }
+}
+
+::v-deep#r_top_news {
+  #r_multimedia + & {
+    margin-top: -30px;
+    @include media('desktop') {
+      margin-top: -50px;
+    }
+  }
+
+  #r_common_rubric + &,
+  #opinion + & {
+    @include media('desktop') {
+      margin-top: -50px;
+    }
+  }
+}

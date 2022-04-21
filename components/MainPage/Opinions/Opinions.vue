@@ -1,9 +1,9 @@
 <template>
 
-  <section id="main" class="section">
+  <section v-if="getOpinions" id="main" class="section">
     <h2 class="vh">Мнение</h2>
     <div class="grid">
-      <template v-for="(opinion,index) in opinionsData.data.opinions">
+      <template v-for="(opinion,index) in getOpinions">
         <div v-if="index % 2 === 0" class="grid-col grid-col-m">
           <OpinionSmall :opinion-data="opinion"/>
         </div>
