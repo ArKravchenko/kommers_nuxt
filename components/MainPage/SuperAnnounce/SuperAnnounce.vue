@@ -1,12 +1,12 @@
 <template>
 
-
-  <div>
+  <div v-if="saData">
     {{Math.random()}} SuperAnnounce
     <DocSa v-if="saData.type === 'doc'" :doc-sa-data="saData"/>
     <ThemeSa v-else-if="saData.type === 'theme'" :theme-sa-data="saData" />
+    <IssueSa v-else-if="saData.type === 'issue'" :issue-sa-data="saData" />
+    <CustomHtmlSa v-else-if="saData.type === 'customHtml'" :custom-html-sa-data="saData" />
   </div>
-<!--    <IssueSa/>-->
 
 </template>
 

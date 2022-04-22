@@ -57,6 +57,7 @@ export namespace SuperAnnounce {
   }
 
   export interface IDocSA {
+    dataHash: string;
     type: 'doc';
     content: {
       plashka: string | null;
@@ -73,6 +74,7 @@ export namespace SuperAnnounce {
   }
 
   export interface IIssueSA {
+    dataHash: string;
     type: 'issue';
     content: {
       plashka: string | null;
@@ -89,6 +91,7 @@ export namespace SuperAnnounce {
   }
 
   export interface IThemeSA {
+    dataHash: string;
     type: 'theme';
     content: {
       plashka: string | null;
@@ -99,6 +102,7 @@ export namespace SuperAnnounce {
   }
 
   export interface ICustomHtmlSA {
+    dataHash: string;
     type: 'customHtml';
     content: {
       customHtml: string | null;
@@ -129,6 +133,7 @@ export namespace Top {
   }
 
   interface ITop {
+    dataHash: string;
     data: {
       docs: Doc[]
       partner: {
@@ -151,6 +156,7 @@ export namespace LightSpot {
   export interface IQuote {
     type: 'quote'
     content: {
+      invertColors?: boolean;
       plashka: string | null;
       quote: string;
       href: string;
@@ -164,6 +170,7 @@ export namespace LightSpot {
   export interface IPhoto {
     type: 'photo'
     content: {
+      invertColors?: boolean;
       plashka: string | null;
       caption: string;
       href: string;
@@ -175,6 +182,7 @@ export namespace LightSpot {
   export interface IVideo {
     type: 'video'
     content: {
+      invertColors?: boolean;
       plashka: string | null;
       caption: string;
       href: string;
@@ -185,6 +193,7 @@ export namespace LightSpot {
   export interface IChart {
     type: 'chart'
     content: {
+      invertColors?: boolean;
       plashka: string | null;
       caption: string;
       href: string;
@@ -195,6 +204,7 @@ export namespace LightSpot {
   export interface IDigit {
     type: 'digit'
     content: {
+      invertColors?: boolean;
       plashka: string | null;
       caption: string;
       href: string;
@@ -207,6 +217,7 @@ export namespace LightSpot {
   export type ILightSpotItem = null | IQuote | IPhoto | IVideo | IChart | IDigit;
 
   interface ILightSpot {
+    dataHash: string;
     data: {
       items: ILightSpotItem[];
     }
@@ -230,6 +241,7 @@ export namespace MainToday {
   }
 
   interface IMainToday {
+    dataHash: string;
     data: {
       // href: string
       docs: Doc[]
@@ -245,13 +257,14 @@ export namespace Opinions {
 
   export type Opinion = {
     title: string;
-    subtitle: string;
+    // subtitle: string;
     tag: string;
     href: string;
     img: ImageSimple;
   }
 
   interface IOpinions {
+    dataHash: string;
     data: {
       opinions: Opinion[]
     }
@@ -274,6 +287,7 @@ export namespace Multimedia {
   }
 
   export interface IMultimedia {
+    dataHash: string;
     data: {
       items: MultimediaItem[]
     }
@@ -300,6 +314,7 @@ export namespace Rubrics {
   }
 
   export interface IRubrics {
+    dataHash: string;
     data: {
       rubrics: Rubric[]
     }
@@ -390,6 +405,7 @@ export namespace SpendTime {
 
 
   export interface ISpendTime {
+    dataHash: string;
     data: {
       docs: Doc[]
     }

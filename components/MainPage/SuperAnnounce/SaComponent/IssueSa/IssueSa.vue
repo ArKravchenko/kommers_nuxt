@@ -2,6 +2,7 @@
 
   <div>
     <h1>IssueSa</h1>
+    <div>{{JSON.stringify(issueSaData)}}</div>
   </div>
 
 </template>

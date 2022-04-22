@@ -2,7 +2,7 @@
 
   <div>
     <h1>CustomHtmlSa</h1>
-
+    <div>{{JSON.stringify(customHtmlSaData)}}</div>
   </div>
 
 </template>

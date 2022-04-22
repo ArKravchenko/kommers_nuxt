@@ -31,25 +31,25 @@ export default class LogTimings extends Vue {
 
     console.log('browserToSsrReceived',
       getTimings.browserToSsrReceived,
-      getTimings.browserToSsrReceived - perfData.requestStart + 'ms'
+      `+${getTimings.browserToSsrReceived - perfData.requestStart}ms`
     )
 
     console.log('ssrToApiSent',
       getTimings.ssrToApiSent,
-      getTimings.ssrToApiSent - getTimings.browserToSsrReceived + 'ms'
+      `+${getTimings.ssrToApiSent - getTimings.browserToSsrReceived}ms`
     )
 
     console.log('apiToSsrReceived',
       getTimings.apiToSsrReceived,
-      getTimings.apiToSsrReceived - getTimings.ssrToApiSent + 'ms'
+      `+${getTimings.apiToSsrReceived - getTimings.ssrToApiSent}ms`
     )
     console.log('responseStart',
       perfData.responseStart,
-      perfData.responseStart - getTimings.apiToSsrReceived  + 'ms'
+      `+${perfData.responseStart - getTimings.apiToSsrReceived}ms`
     )
     console.log('responseEnd',
       perfData.responseEnd,
-      perfData.responseEnd - perfData.responseStart  + 'ms'
+      `+${perfData.responseEnd - perfData.responseStart}ms`
     )
     console.groupEnd()
 
