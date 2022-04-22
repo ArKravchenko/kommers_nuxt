@@ -18,7 +18,7 @@ export function fetcher(requiredData: string, params?: { query: { [key: string]:
       : ''
   }
 
-  if (false && process.env.MOCK_DATA && process.env.MOCK_DATA === 'true') {
+  if (process.env.MOCK_DATA && process.env.MOCK_DATA === 'true') {
     console.log(`Required data for ${requiredData} been taken from mock`)
     return Promise.resolve(
       Promise.resolve(

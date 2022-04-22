@@ -59,6 +59,6 @@ export default class ListPageDocs extends Vue {
 
 
   mounted() {
-    console.log('this.listPageDocsData',this.listPageDocsData)
+    // console.log('this.listPageDocsData',this.listPageDocsData)
   }
 }

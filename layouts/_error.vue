@@ -31,7 +31,6 @@ export default class Error extends Vue {
 
   mounted(){
     console.error(this.error)
-    // alert(process.env.NUXT_ENV_TEST)
     // console.log('this.$style',JSON.stringify(this.$style))
   }
 }

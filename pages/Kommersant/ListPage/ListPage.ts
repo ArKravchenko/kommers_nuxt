@@ -48,6 +48,11 @@ export default class ListPage extends Vue {
 
     const tagId = 15
     // console.log(Object.keys(ctx))
+
+    if (process.server) {
+      ctx.store.commit('setSsrToApiSent', Date.now())
+    }
+
     const listPageWidgetsPromise: Promise<ListPageAPI.Endpoint_4>
       = fetcher('listPageWidgets',{
       query: {
@@ -81,8 +86,9 @@ export default class ListPage extends Vue {
       listPageDocs
     ] = await Promise.all([listPageWidgetsPromise,listPageDocsPromise])
 
-
-
+    if(process.server) {
+      ctx.store.commit('setApiToSsrReceived', Date.now())
+    }
     return {
       listPageWidgets,
       listPageDocs,
@@ -117,8 +123,8 @@ export default class ListPage extends Vue {
     // } else {
     //   alert(this.$route.params.id)
     // }
-    console.log('this.listPageWidgets', this.listPageWidgets)
-    console.log('this.listPageDocs', this.listPageDocs)
+    // console.log('this.listPageWidgets', this.listPageWidgets)
+    // console.log('this.listPageDocs', this.listPageDocs)
   }
 
 }

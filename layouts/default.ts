@@ -1,5 +1,6 @@
-import {Component, Vue} from 'nuxt-property-decorator'
+import {Component ,mixins} from 'nuxt-property-decorator'
 // import type {AsyncComponent} from 'vue'
+import LogTimings from "~/mixins/logTimings.mixin";
 
 import Footer from '~/components/general/Footer/Footer.vue'
 import Header from '~/components/general/Header/Header/Header.vue'
@@ -18,10 +19,9 @@ import Vicons from '~/components/general/Vicons/Vicons.vue'
     Header,
   },
 })
-export default class Default extends Vue {
+export default class Default extends mixins<LogTimings>(LogTimings) {
 
   mounted() {
-    // alert(process.env.NUXT_ENV_TEST)
     // console.log('this.$style',JSON.stringify(this.$style))
   }
 }

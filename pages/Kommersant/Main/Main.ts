@@ -56,6 +56,10 @@ export default class Main extends Vue {
 
   async asyncData(ctx: Context) {
 
+    if (process.server) {
+      ctx.store.commit('setSsrToApiSent', Date.now())
+    }
+
     const mainPageWidgets: MainPageAPI.Endpoint_4 = await fetcher('mainPageWidgets')
       .then(res => {
         if (res.ok) {
@@ -65,6 +69,11 @@ export default class Main extends Vue {
       .catch(err => {
         ctx.error({ statusCode: 404, message: err })
       })
+
+    if(process.server) {
+      ctx.store.commit('setApiToSsrReceived', Date.now())
+    }
+
     return {
       mainPageWidgets,
     }

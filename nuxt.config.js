@@ -69,6 +69,10 @@ export default {
     '@/assets/scss/common.scss'
   ],
 
+  serverMiddleware: [
+    '@/serverMiddleware/timings.ts'
+  ],
+
   // nuxt-font-loader config
   // fontLoader: {
   //   url: {

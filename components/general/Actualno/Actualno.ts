@@ -7,11 +7,11 @@ import type {Actualno as IActualno} from "~/interfaces/API/MainPageApi";
 export default class Actualno extends Vue {
   @Prop({
     type: Object,
-    required: true,
+    required: false,
     default: null,
-    validator(value: IActualno.APIDataStructure['data']): boolean {
-      return !!value.rates && !!value.items
-    }
+    // validator(value: IActualno.APIDataStructure['data']): boolean {
+    //   return !!value.rates && !!value.items
+    // }
   }) actualnoData!: IActualno.APIDataStructure['data'] | null;
 
   indices = {

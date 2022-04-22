@@ -41,7 +41,7 @@
       <Nuxt/>
 
     </div>
-<!--    <Lenta/>-->
+    <Lenta/>
     <Footer/>
   </div>
 </template>

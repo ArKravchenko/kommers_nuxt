@@ -1,5 +1,5 @@
 <template>
-  <div class="actual">
+  <div v-if="actualnoData" class="actual">
     <div class="layout">
       <div class="main">
         <div class="actual__body slider slider-actual">
