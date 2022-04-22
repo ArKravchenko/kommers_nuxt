@@ -2,7 +2,7 @@
 
 
   <div class="ba">
-    {{Math.random()}} CompanyNews
+    {{Math.random()}} CompanyNews component cache
     <div class="ba__text ba__text--shadow">
       <h2 class="ba__tag ba__tag--black">
         <a href="#" class="link">Новости компаний <span style="color: red">ЗАГЛУШКА {{JSON.stringify(companyNewsData)}}</span></a>

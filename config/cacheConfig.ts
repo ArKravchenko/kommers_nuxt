@@ -22,13 +22,13 @@ const cacheConfig: any = {
     // custom function to return cache key, when used previous
     // properties (useHostPrefix, pages) are ignored. return
     // falsy value to bypass the cache
-    // if (route === '/') {
-    //   return 'page:home:string';
-    // }
-    // let page = route.substr(1).split('/');
-    // page = page.join('.');
-    // // return false
-    // return `page:${page}:string`;
+    if (route === '/') {
+      return 'page:home:string';
+    }
+    let page = route.substr(1).split('/');
+    page = page.join('.');
+    // return false
+    return `page:${page}:string`;
   },
 
   store: {
@@ -40,7 +40,7 @@ const cacheConfig: any = {
     max: 100,
 
     // number of seconds to store this page in cache
-    ttl: 60,
+    ttl: 5,
   },
 }
 

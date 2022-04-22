@@ -1,6 +1,6 @@
 <template>
   <div class="adv_300x300">
-    {{Math.random()}} Promo
+    {{Math.random()}} Promo component cache
     <article class="promo">
       <div class="promo__photo">
         <a href="#" class="promo__link promo__link--overlay">

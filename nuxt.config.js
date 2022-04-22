@@ -140,10 +140,13 @@ export default {
       push: true,
       pushAssets: (req, res, publicPath, preloadFiles) =>{
         // console.log(preloadFiles)
-        return preloadFiles
-          .filter(f => f.asType === 'style')
-          // .filter(f => f.asType === 'script' && f.file === 'runtime.js')
-          .map(f => `<${publicPath}${f.file}>; rel=preload; as=${f.asType}`)
+        const typeKitUrl = 'https://use.typekit.net/mfw2heq.css';
+        return [`<${typeKitUrl}>; rel=preload; as=style`]
+
+        // return preloadFiles
+        //   // .filter(f => f.asType === 'style')
+        //   .filter(f => f.asType === 'script' && f.file === 'runtime.js')
+        //   .map(f => `<${publicPath}${f.file}>; rel=preload; as=${f.asType}`)
       }
 
     }

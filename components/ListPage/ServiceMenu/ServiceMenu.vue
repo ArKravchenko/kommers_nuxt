@@ -1,7 +1,7 @@
 <template>
 
  <div>
-   {{Math.random()}} ServiceMenu
+   {{Math.random()}} ServiceMenu component cache
 
    <input type="checkbox" class="hide js-toggle-input" id="archive_compact" checked>
 
