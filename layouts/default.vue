@@ -24,8 +24,14 @@
               <a href="/">
                 <h2>Main</h2>
               </a>
-              <a href="/listPage/123">
-                <h2>ListPage</h2>
+              <a href="/listPage/15">
+                <h2>ListPage Урал 15</h2>
+              </a>
+              <a href="/listPage/10">
+                <h2>ListPage Культура 10</h2>
+              </a>
+              <a href="/listPage/14">
+                <h2>ListPage Сибирь 14</h2>
               </a>
             </div>
           </div>

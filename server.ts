@@ -1,5 +1,5 @@
 // @ts-ignore
-import {loadNuxt, build} from 'nuxt';
+import {loadNuxt, build} from 'nuxt-ts';
 import connect from 'connect'
 import http from 'http';
 // import compression from 'compression'
@@ -26,7 +26,7 @@ app.use(function (req, res) {
 });
 
 http.createServer(app).listen(process.env.PORT || '3000', () => {
-  console.log('is listening')
+  console.log(`Is listening on port ${process.env.PORT || '3000'}`)
 });
 
 

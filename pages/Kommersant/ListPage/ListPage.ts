@@ -46,8 +46,8 @@ export default class ListPage extends Vue {
     // TODO опечатка в listPageWidgets.opinions
     // TODO listPageWidgets.mainToday заменить на данные как у среза рубрики
 
-    const tagId = 15
-    // console.log(Object.keys(ctx))
+    const tagId = ctx.route.params.id
+    // console.log(ctx.route.params.id)
 
     if (process.server) {
       ctx.store.commit('setSsrToApiSent', Date.now())

@@ -71,7 +71,8 @@ const config: NuxtConfig = {
   ],
 
   serverMiddleware: [
-    '@/serverMiddleware/timings.ts'
+    '@/serverMiddleware/timings.ts',
+    '@/serverMiddleware/headers.ts'
   ],
 
   // nuxt-font-loader config
