@@ -47,7 +47,7 @@
               </li>
             </template>
             <template v-if="doc.tags.rest && doc.tags.rest.length">
-              <li v-for="tag in doc.tags.rest" class="crumbs__item tag_list__item">
+              <li v-for="tag in doc.tags.rest" class="crumbs__item tag_list__item tag_list__item--plus">
                 <a :href="tag.href"
                    class="tag_list__label"
                 >{{ tag.text }}</a>

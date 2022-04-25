@@ -484,7 +484,7 @@ export namespace ListPageDocs {
     subtitle: string;
     href: string;
     pubDate: Date;
-    img: ImageFull;
+    img: ImageFull | null;
     views: number;
     comments: number;
     tags: {
@@ -899,6 +899,18 @@ export namespace ListPageAPI {
   }
 
   export interface Endpoint_4 {
+    pageData:{
+      title: string | null,
+      description: string | null,
+      mainPhoto: ImageFull | null,
+      breadcrumbs: {text: string, href: string |null }[]
+      serviceMenu: {
+        // TODO archive data including all search hrefs,
+        //  all search meta,
+        //  all calendar data
+      },
+
+    },
     timestamp: number;
     superAnnounce: {
       data: SuperAnnounce.SuperAnnounceData
