@@ -1,6 +1,7 @@
 <template>
 
   <section v-if="getDocs" class="top_news">
+    {{Math.random()}} TopNews component cache
     <h2 class="vh">Главные новости</h2>
     <template>
 
@@ -11,12 +12,12 @@
                  :key="index"
                  class="top_news_main">
           <h1 class="top_news_main__name">
-            <a href="#" class="top_news_main__link link">
+            <a :href="item.href || '#'" class="top_news_main__link link">
               <span class="vicon vicon--hot_news top_news_main__lightning">
                 <svg class="vicon__body"><use xmlns:xlink="http://www.w3.org/1999/xlink"
                                               xlink:href="#vicon-hot_news"></use></svg>
               </span>
-              Грузия отказывается от «Йогурта» с 16 марта и закрывает границу с&nbsp;РФ из-за коронавируса
+              {{ item.title }}
             </a>
           </h1>
         </article>

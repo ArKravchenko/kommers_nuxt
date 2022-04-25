@@ -3,7 +3,12 @@ import type {MainPageAPI} from "~/interfaces/API/MainPageApi";
 
 
 
-@Component({})
+@Component({
+  //@ts-ignore
+  serverCacheKey(a:any) {
+    return JSON.stringify(a)
+  },
+})
 export default class TopNews extends Vue {
   @Prop({
     type: Object,

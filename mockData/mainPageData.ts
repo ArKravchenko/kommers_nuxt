@@ -1,8 +1,3 @@
-export const demoData: { [key: string]: any } = {
-  tetDataField: 'testDataContent',
-}
-
-
 //https://srdkprot.kommersant.ru/api/main_page/Endpoint_1
 export const actualno = {
   "data": {

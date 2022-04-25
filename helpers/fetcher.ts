@@ -24,7 +24,7 @@ export function fetcher(requiredData: string, params?: { query: { [key: string]:
       Promise.resolve(
         {
           ok: true,
-          json: () => Promise.resolve(require('./../demoData/testData.ts')[requiredData])
+          json: () => Promise.resolve(require('./../mockData/mainPageData.ts')[requiredData])
         })
     )
   }

@@ -141,12 +141,19 @@ export default {
       pushAssets: (req, res, publicPath, preloadFiles) =>{
         // console.log(preloadFiles)
         const typeKitUrl = 'https://use.typekit.net/mfw2heq.css';
-        return [`<${typeKitUrl}>; rel=preload; as=style`]
+        // return [`<${typeKitUrl}>; rel=preload; as=style`]
 
-        // return preloadFiles
-        //   // .filter(f => f.asType === 'style')
-        //   .filter(f => f.asType === 'script' && f.file === 'runtime.js')
-        //   .map(f => `<${publicPath}${f.file}>; rel=preload; as=${f.asType}`)
+        const pushList = preloadFiles
+          // .filter(f => f.asType === 'style')
+          .filter(f => f.file.includes('app') || f.file.includes('runtime'))
+          // .filter(f => f.asType === 'script' && f.file === 'runtime.js')
+          .map(f => f.file.includes('chunk')
+            ? `<${publicPath}${f.file}>; rel=prefetch; as=${f.asType}`
+            : `<${publicPath}${f.file}>; rel=preload; as=${f.asType}`
+          )
+
+          pushList.push(`<${typeKitUrl}>; rel=preload; as=style`)
+        return pushList
       }
 
     }
@@ -157,10 +164,17 @@ export default {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
+    // publicPath: 'https://cdn.nuxtjs.org',
     extend(config, { isClient, isServer, loaders }) {
       loaders.scss.additionalData = scssVars
     },
     extractCSS: true,
     analyze: false,
+    filenames: {
+      // chunk: ({ isDev }) => (isDev ? '[name].js' : '[id].[contenthash].js'),
+      css: ({isDev}) => isDev ? '[name].css' : 'css/[name].[contenthash:7].css',
+      app: ({ isDev, isModern }) => isDev ? `[name]${isModern ? '.modern' : ''}.js` : `js/[name].[contenthash:7]${isModern ? '.modern' : ''}.js`,
+      chunk: ({ isDev, isModern }) => isDev ? `[name]${isModern ? '.modern' : ''}.js` : `js/chunk.[name][contenthash:7]${isModern ? '.modern' : ''}.js`,
+    }
   },
 }
