@@ -1,0 +1,12 @@
+{
+  "apps": [
+    {
+      "name": "kommersant_new_cluster",
+      "namespace": "kommersant",
+      "exec_mode": "cluster",
+      "instances": "max",
+      "script": "./node_modules/.bin/nuxt-ts",
+      "args": "start"
+    }
+  ]
+}

@@ -124,7 +124,7 @@ export default class ListPage extends Vue {
     //   alert(this.$route.params.id)
     // }
     // console.log('this.listPageWidgets', this.listPageWidgets)
-    console.log('this.listPageDocs', this.listPageDocs)
+    // console.log('this.listPageDocs', this.listPageDocs)
   }
 
 }

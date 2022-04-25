@@ -1,5 +1,6 @@
 {
   "name": "kommersant_new",
+  "type": "module",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -12,7 +13,9 @@
     "lint:js:fix": "eslint --ext .js,.vue,.ts --ignore-path .gitignore . --fix",
     "lint:style:fix": "stylelint --syntax scss **/*.{css,scss} --fix",
     "lint": "yarn lint:js && yarn lint:style",
-    "test": "jest"
+    "test": "jest",
+    "pm2start": "pm2 start ecosystem.config.json",
+    "pm2del": "pm2 del kommersant"
   },
   "lint-staged": {
     "*.{js,ts,vue}": "yarn lint:js"

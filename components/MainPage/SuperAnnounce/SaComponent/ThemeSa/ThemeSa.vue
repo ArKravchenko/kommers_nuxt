@@ -21,7 +21,7 @@
       <p class="sa__tag hide_mobile"><a :href="themeSaData.content.theme.href" class="link">{{ themeSaData.content.plashka }}</a></p>
       <ul class="sa__list">
         <li class="sa__item" v-for="(doc,index) in themeSaData.content.docsList">
-          <p class="sa__time"><a :href="doc.href" class="link">{{ doc.pubDate }}</a></p>
+          <p class="sa__time"><a :href="doc.href" class="link">{{ formatDate(doc.pubDate) }}</a></p>
           <h2 class="sa__subname"><a :href="doc.href" class="link link_overlay">{{doc.title}}</a></h2>
         </li>
 

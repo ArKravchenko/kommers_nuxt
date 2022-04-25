@@ -1,6 +1,7 @@
-import scssConfig from './config/scssConfig.ts'
-import cacheConfig from './config/cacheConfig.ts'
-import {version} from './package'
+import scssConfig from './config/scssConfig'
+import cacheConfig from './config/cacheConfig'
+import {version} from './package.json'
+import type {NuxtConfig} from '@nuxt/types'
 
 // const scssVars = Object.keys(scssConfig).reduce(
 //   (acc, value) => `${acc} ${value}: ${scssConfig[value]};`,
@@ -28,7 +29,7 @@ $modal_scroll_width: ${scssConfig.modal_scroll_width}rem;
 $modal_outer_vertical_gap: ${scssConfig.modal_outer_vertical_gap}rem;`;
 
 
-export default {
+const config: NuxtConfig = {
   version,
   dev: process.env.NODE_ENV !== 'production',
   loading: false,
@@ -50,8 +51,8 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'preconnect', crossOrigin: true, href: 'https://p.typekit.net' },
-      { rel: 'preconnect', crossOrigin: true, href: 'https://use.typekit.net' },
+      { rel: 'preconnect', crossOrigin: 'true', href: 'https://p.typekit.net' },
+      { rel: 'preconnect', crossOrigin: 'true', href: 'https://use.typekit.net' },
       { rel: 'preload', href: 'https://use.typekit.net/mfw2heq.css', as:'style' },
       {
         rel: 'stylesheet',
@@ -59,7 +60,7 @@ export default {
         href: 'https://use.typekit.net/mfw2heq.css',
         onload: 'this.onload=null;this.removeAttribute("media");'
       },
-      { rel: 'preconnect', crossOrigin: true, href: 'https://im.kommersant.ru' },
+      { rel: 'preconnect', crossOrigin: 'true', href: 'https://im.kommersant.ru' },
 
     ],
   },
@@ -166,7 +167,8 @@ export default {
   build: {
     // publicPath: 'https://cdn.nuxtjs.org',
     extend(config, { isClient, isServer, loaders }) {
-      loaders.scss.additionalData = scssVars
+      // @ts-ignore
+      loaders!.scss!.additionalData = scssVars
     },
     extractCSS: true,
     analyze: false,
@@ -178,3 +180,5 @@ export default {
     }
   },
 }
+
+export default config;

@@ -14,7 +14,24 @@ export default class DocSa extends Vue {
     // }
   }) docSaData!: SuperAnnounce.IDocSA | null;
 
-  cdnUrl: string = process.env.CDN_URL || ''
+  cdnUrl: string = process.env.CDN_URL || '';
+
+  formatDate(date: Date){
+    return new Date(date).toLocaleDateString('ru-ru',
+      {
+        year: 'numeric',
+        month: 'numeric',
+        day: 'numeric',
+        hour: 'numeric',
+        minute:'numeric'
+      })
+  }
+
+  get getDocsList() {
+    return this.docSaData?.content?.docsList?.length
+      && this.docSaData.content.docsList
+      // && false
+  }
 
   mounted(){
     //  console.log('this.docSaData', this.docSaData)
