@@ -1,5 +1,5 @@
 // @ts-ignore
-import {loadNuxt, build} from 'nuxt-ts';
+import {loadNuxt, build} from 'nuxt';
 import connect from 'connect'
 import http from 'http';
 // import compression from 'compression'

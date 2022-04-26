@@ -129,7 +129,7 @@ const config: NuxtConfig = {
     // 'nuxt-ssr-cache',
     [
       // '@nuxtjs/component-cache',
-      '@/modules/componentCache',
+      '@/modules/componentCache.ts',
       {
         max: 10000,
         maxAge: 1000 * 60
