@@ -5,7 +5,8 @@ export function fetcher(requiredData: string, params?: { query: { [key: string]:
     actualno: '/main_page/Endpoint_1',
     mainPageWidgets: '/main_page/Endpoint_4',
     listPageWidgets: '/list_page/Endpoint_4',
-    listPageDocs: '/list_page/Endpoint_6'
+    listPageDocs: '/list_page/Endpoint_6',
+    docPageData: '/doc_page/Endpoint_4',
   }
 
   let queryString = ''

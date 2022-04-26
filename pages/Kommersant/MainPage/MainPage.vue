@@ -207,5 +207,5 @@
 
 </template>
 
-<script src="./Main.ts" lang="ts"></script>
-<style src="./Main.scss" lang="scss" scoped></style>
+<script src="./MainPage.ts" lang="ts"></script>
+<style src="./MainPage.scss" lang="scss" scoped></style>

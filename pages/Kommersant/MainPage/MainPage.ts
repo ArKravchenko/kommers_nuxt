@@ -51,7 +51,7 @@ import Multimedia from '~/components/MainPage/Multimedia/Multimedia.vue'
     Multimedia
   },
 })
-export default class Main extends Vue {
+export default class MainPage extends Vue {
   mainPageWidgets: MainPageAPI.Endpoint_4 | null = null;
 
   async asyncData(ctx: Context) {

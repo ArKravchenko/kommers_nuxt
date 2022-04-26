@@ -7,8 +7,8 @@ import type {AsyncComponent} from 'vue'
 // import ListPage from '~/pages/Kommersant/ListPage/ListPage.vue'
 import Kommersant from '~/pages/Kommersant/Kommersant.vue'
 // const Kommersant = () => import('~/pages/Kommersant/Kommersant.vue').then(i => i.default)
-const Main: AsyncComponent = () => import('~/pages/Kommersant/Main/Main.vue').then(i => i.default)
-const Document: AsyncComponent = () => import('~/pages/Kommersant/Document/Document.vue').then(i => i.default)
+const MainPage: AsyncComponent = () => import('~/pages/Kommersant/MainPage/MainPage.vue').then(i => i.default)
+const DocumentPage: AsyncComponent = () => import('~/pages/Kommersant/DocumentPage/DocumentPage.vue').then(i => i.default)
 const ListPage: AsyncComponent = () => import('~/pages/Kommersant/ListPage/ListPage.vue').then(i => i.default)
 
 
@@ -24,11 +24,11 @@ export function createRouter() {
         children: [
           {
             path: '/',
-            component: Main,
+            component: MainPage,
           },
           {
             path: '/doc/:id',
-            component: Document,
+            component: DocumentPage,
             props: true,
           },
           {
@@ -37,7 +37,7 @@ export function createRouter() {
           },
           {
             path: '*',
-            component: Main,
+            component: MainPage,
           },
         ]
       },

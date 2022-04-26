@@ -18,20 +18,20 @@
           <div class="adv_980x240">
             <div style="height: 250px; width: 970px; background-color: grey">
               970x250
-              <a href="/doc/12345678">
-                <h2>Doc</h2>
+              <a href="/doc/5154649">
+                <h2>Doc /doc/5154649</h2>
               </a>
               <a href="/">
                 <h2>Main</h2>
               </a>
               <a href="/listPage/15">
-                <h2>ListPage Урал 15</h2>
+                <h2>ListPage Урал /listPage/15</h2>
               </a>
               <a href="/listPage/10">
-                <h2>ListPage Культура 10</h2>
+                <h2>ListPage Культура /listPage/10</h2>
               </a>
               <a href="/listPage/14">
-                <h2>ListPage Сибирь 14</h2>
+                <h2>ListPage Сибирь /listPage/14</h2>
               </a>
             </div>
           </div>

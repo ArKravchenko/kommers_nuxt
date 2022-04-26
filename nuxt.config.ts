@@ -128,7 +128,8 @@ const config: NuxtConfig = {
     // '@nuxtjs/pwa',
     // 'nuxt-ssr-cache',
     [
-      '@nuxtjs/component-cache',
+      // '@nuxtjs/component-cache',
+      '@/modules/componentCache',
       {
         max: 10000,
         maxAge: 1000 * 60
