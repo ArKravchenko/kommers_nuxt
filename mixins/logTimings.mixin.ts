@@ -9,7 +9,7 @@ export default class LogTimings extends Vue {
     const getTimings = this.$store.getters.getTimings;
     const perfData = window.performance.timing;
 
-    // console.group('timings')
+    console.group('timings')
     console.log('this.getTimings', getTimings)
     console.log('perfData', perfData)
     //
@@ -41,7 +41,7 @@ export default class LogTimings extends Vue {
     // console.groupEnd()
 
 
-    console.group('timings')
+    // console.group('timings')
 
     console.log('Between requestStart and connectStart ',
       `${perfData.requestStart - perfData.connectStart}ms`

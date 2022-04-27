@@ -1,0 +1,7 @@
+.service_panel {
+	padding-top: .4rem;
+	@include media('desktop') {
+		margin-bottom: 2rem;
+		margin-left: 1rem;
+	}
+}

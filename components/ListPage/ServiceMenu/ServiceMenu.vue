@@ -98,4 +98,5 @@
 
 <script src="./ServiceMenu.ts" lang="ts"></script>
 <style src="./ServiceMenu.scss" lang="scss" scoped></style>
+<style src="./ServicePanel.scss" lang="scss" scoped></style>
 

@@ -33,6 +33,9 @@
               <a href="/listPage/14">
                 <h2>ListPage Сибирь /listPage/14</h2>
               </a>
+              <a href="/listPage/35">
+                <h2>ListPage с картинкой и описанием /listPage/35 (Описание есть также у 34, 36, 39, 40, 41)</h2>
+              </a>
             </div>
           </div>
         </div>
