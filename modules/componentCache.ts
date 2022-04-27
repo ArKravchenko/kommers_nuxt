@@ -1,7 +1,7 @@
 // This is the copy of @nuxt/component cache to replace LRU for redis cache in future
 import type {Module} from '@nuxt/types';
 import LRU from 'lru-cache';
-import type LRUCache from "lru-cache";
+// import type LRUCache from "lru-cache";
 
 
 const myModule: Module<any> = async function (moduleOptions) {
@@ -23,7 +23,7 @@ const myModule: Module<any> = async function (moduleOptions) {
 
       // this is the redis connection mimicking
       await new Promise((resolve)=>setTimeout(()=>{
-        console.log('cache initialized')
+        console.log('Component cache initialized')
         resolve(null)
       },3000))
        // console.log(this)

@@ -1,5 +1,6 @@
 import scssConfig from './config/scssConfig'
-import cacheConfig from './config/cacheConfig'
+import pageCacheConfig from './config/pageCacheConfig'
+import componentCacheConfig from './config/componentCacheConfig'
 import {version} from './package.json'
 import type {NuxtConfig} from '@nuxt/types'
 
@@ -37,7 +38,7 @@ const config: NuxtConfig = {
 
   globalName: 'kommersant',
 
-  cache: cacheConfig,
+  cache: pageCacheConfig,
 
   // modern: 'server',
 
@@ -127,14 +128,18 @@ const config: NuxtConfig = {
     // https://go.nuxtjs.dev/pwa
     // '@nuxtjs/pwa',
     // 'nuxt-ssr-cache',
-    [
-      // '@nuxtjs/component-cache',
-      '@/modules/componentCache.ts',
-      {
-        max: 10000,
-        maxAge: 1000 * 60
-      }
-    ]
+    //@ts-ignore
+    ...(() => process.env.PAGE_CACHE_ENABLED === 'true'
+      ? [
+        'nuxt-ssr-cache'
+      ] : [])(),
+    //@ts-ignore
+    ...(() => process.env.COMPONENT_CACHE_ENABLED === 'true'
+      ? [[
+        // '@nuxtjs/component-cache',
+        '@/modules/componentCache.ts',
+        componentCacheConfig
+      ]] : [])()
   ],
 
   render: {

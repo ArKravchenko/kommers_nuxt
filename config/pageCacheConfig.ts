@@ -1,4 +1,6 @@
-const cacheConfig: any = {
+import componentCacheConfig from "~/config/componentCacheConfig";
+
+const pageCacheConfig = {
   // if you're serving multiple host names (with differing
   // results) from the same server, set this option to true.
   // (cache keys will be prefixed by your host name)
@@ -37,11 +39,19 @@ const cacheConfig: any = {
     // maximum number of pages to store in memory
     // if limit is reached, least recently used page
     // is removed.
-    max: 100,
+    max: Number(process.env.PAGE_CACHE_MAX) || 100,
 
     // number of seconds to store this page in cache
-    ttl: 5,
+    ttl: process.env.PAGE_CACHE_ENABLED === 'true'
+      ? Number(process.env.PAGE_CACHE_TTL) || 5:
+      0 ,
   },
 }
 
-export default cacheConfig
+console.log()
+console.log('pageCacheConfig.max', pageCacheConfig.store.max)
+console.log('pageCacheConfig.ttl', pageCacheConfig.store.ttl, 's')
+console.log('PAGE_CACHE_ENABLED', process.env.PAGE_CACHE_ENABLED === 'true')
+console.log()
+
+export default pageCacheConfig
