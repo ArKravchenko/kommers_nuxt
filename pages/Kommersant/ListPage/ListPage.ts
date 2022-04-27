@@ -95,6 +95,8 @@ export default class ListPage extends Vue {
     }
   }
 
+  cdnUrl: string = process.env.CDN_URL || '';
+
   get getOpinions(){
     return this.listPageWidgets
       && this.listPageWidgets.opinions
@@ -113,6 +115,21 @@ export default class ListPage extends Vue {
   get getMultimedia(){
     return this.listPageWidgets
       && this.listPageWidgets.multimedia
+  }
+
+  get getTitle(){
+    return this.listPageWidgets?.pageData?.title
+      && this.listPageWidgets.pageData.title
+  }
+
+  get getDescription(){
+    return this.listPageWidgets?.pageData?.description
+      && this.listPageWidgets.pageData.description
+  }
+
+  get getMainPhoto(){
+    return this.listPageWidgets?.pageData?.mainPhoto
+      && this.listPageWidgets.pageData.mainPhoto
   }
 
 

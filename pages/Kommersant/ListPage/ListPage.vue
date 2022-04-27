@@ -22,10 +22,10 @@
               <ServiceMenu/>
 
 
-              <header class="simple_page__header">
+              <header v-if="getTitle" class="simple_page__header">
                 <h1 class="simple_page__name">
                   <!-- Пандемия коронавируса -->
-                  Культура <span style="color: red">ЗАГЛУШКА</span>
+                  {{ getTitle }}
 <!--                  <a href="#">-->
 <!--                    <span class="vicon vicon&#45;&#45;rarrow incut__arrow incut__arrow&#45;&#45;big" aria-hidden="true">-->
 <!--                      <svg class="vicon__body"><use xmlns:xlink="http://www.w3.org/1999/xlink"-->
@@ -35,10 +35,19 @@
                 </h1>
               </header>
 
-             <div class="simple_page__description">
+             <div v-if="getDescription" class="simple_page__description">
                 <p class="simple_page__description_text">
-                  <b><span style="color: red">ЗАГЛУШКА</span> В мире продолжается распространение нового коронавируса, эпицентром вспышки которого стал китайский город Ухань. 11 марта ВОЗ признала коронавирус пандемией. С марта в Европе и США резко увеличилось количество заболевших. Распространение коронавируса и введение режима самоизоляции в большинстве стран мира прямо сказывается на мировой экономике.</b>
+                  <b>{{getDescription}}</b>
                 </p>
+              </div>
+
+              <div v-if="getMainPhoto" class="rubric__main_media">
+                <div class="stretch_photo photo">
+                  <img :src="$imgPlaceholder"
+                       :alt="getMainPhoto.alt"
+                       v-lazy="cdnUrl+getMainPhoto.src"
+                  >
+                </div>
               </div>
 
 <!--               настраиваемые блоки-->
