@@ -16,6 +16,9 @@ export default class Kommersant extends Vue {
   actualnoData: IActualno.APIDataStructure['data'] | null = null;
 
   async asyncData(ctx: Context) {
+
+    ctx.res.timing?.start('act', 'actualnoData fetch')
+
     const actualnoData: IActualno.APIDataStructure = await fetcher('actualno')
       .then(res => {
         if (res.ok) {
@@ -25,6 +28,9 @@ export default class Kommersant extends Vue {
       .catch(err => {
         ctx.error({ statusCode: 404, message: err })
       })
+
+    ctx.res.timing?.end('act')
+
     return {
       actualnoData: actualnoData?.data || null,
     }

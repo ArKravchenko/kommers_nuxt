@@ -9,7 +9,7 @@ dotenv.config();
 
 console.log('\n\n\n\n\nenvironment:  ' + process.env.NODE_ENV,'\n\n\n\n\n');
 
-let nuxt: any;
+let nuxt;
 if (process.env.NODE_ENV === 'production') {
   nuxt = await loadNuxt('start');
 } else {

@@ -72,7 +72,7 @@ const config: NuxtConfig = {
 
   serverMiddleware: [
     '@/serverMiddleware/timings.ts',
-    '@/serverMiddleware/headers.ts'
+    // '@/serverMiddleware/headers.ts',
   ],
 
   // nuxt-font-loader config
@@ -141,7 +141,7 @@ const config: NuxtConfig = {
     compressor: {},
     http2: {
       push: true,
-      pushAssets: (req, res, publicPath, preloadFiles) =>{
+      pushAssets: (req, res, publicPath, preloadFiles) => {
         // console.log(preloadFiles)
         const typeKitUrl = 'https://use.typekit.net/mfw2heq.css';
         // return [`<${typeKitUrl}>; rel=preload; as=style`]
@@ -160,6 +160,24 @@ const config: NuxtConfig = {
       }
 
     }
+  },
+
+  hooks: {
+    render: {
+      routeContext:( context)=>{
+        // timings, routeContext hook calls
+        // right before all rendered data is sent to the recipient, allows adding some data into
+        // window.__NUXT__
+        // We use it to calculate the time needed for rendering
+        context.state.timings.ssrToClientSent = Date.now()
+      },
+    },
+  },
+
+  server: {
+    // Enables Server-Timing header
+    // example: Server-Timing: act;dur=1058;desc="actualnoData fetch", total;dur=2314;desc="Nuxt Server Time"
+    timing: true
   },
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)

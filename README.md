@@ -16,35 +16,16 @@ $ yarn start
 # generate static project
 $ yarn generate
 ```
-API URL: https://srdkprot.kommersant.ru/api/main_page/Endpoint_1
+## Swagger URL:
+[Swagger](https://srdkprot.kommersant.ru/swagger/index.html#/)
+
+##API URL: 
+[main_page/Endpoint_1](https://srdkprot.kommersant.ru/api/main_page/Endpoint_1)
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
 
 
-```js
-// I've figured it out.
-
-// I've created new Header component:
-
-export default {
-render(createElement: CreateElement) {
-if (process.server) {
-const fs = process.server ? require('fs') : null;
-const file = fs.readFileSync('./header.txt', 'utf8');
-return createElement('div', { domProps: { innerHTML: f } });
-}
-return createElement('div', { domProps: { innerHTML: this.$el.innerHTML } });
-},
-}
-And I use it instead v-html in main component:
-
-<Header />
-<div class="container">
-    <Nuxt />
-</div> 
-```
-
-##ListPages
+##Available ListPages
 ```
 Id           Title
 1             Промышленность
@@ -81,3 +62,33 @@ Id           Title
 42          ESG
 45          Регенерация
 ```
+
+## run server.ts with node
+node --loader ts-node/esm server.ts
+
+
+```js
+// I've figured it out.
+
+// I've created new Header component:
+
+export default {
+render(createElement: CreateElement) {
+if (process.server) {
+const fs = process.server ? require('fs') : null;
+const file = fs.readFileSync('./header.txt', 'utf8');
+return createElement('div', { domProps: { innerHTML: f } });
+}
+return createElement('div', { domProps: { innerHTML: this.$el.innerHTML } });
+},
+}
+And I use it instead v-html in main component:
+
+<Header />
+<div class="container">
+    <Nuxt />
+</div> 
+```
+
+## nuxt-multi-cache
+[nuxt-multi-cache](https://nuxt-multi-cache.netlify.app/caches/data)

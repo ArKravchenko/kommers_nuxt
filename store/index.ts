@@ -6,8 +6,8 @@ import type ITimings from '@/interfaces/ITimings'
 
 
 export const state = () => ({
-  requestHeaders: null,
-  requestQuery: null,
+  // requestHeaders: null,
+  // requestQuery: null,
   timings: {
     browserToSsrSent: -1,
     browserToSsrReceived: -1,
@@ -18,17 +18,17 @@ export const state = () => ({
   }
 })
 
-type NullOrAnyObject = { [key: string]: string } | null
+// type NullOrAnyObject = { [key: string]: string } | null
 
 export type RootState = {
-  requestHeaders: NullOrAnyObject
-  requestQuery: NullOrAnyObject
+  // requestHeaders: NullOrAnyObject
+  // requestQuery: NullOrAnyObject
   timings: ITimings['timings']
 }
 
 export const actions: ActionTree<RootState, RootState> = {
   async nuxtServerInit(actionContext: ActionContext<RootState, RootState>,
-                       context: Context & {req: Context['req'] & ITimings}) {
+                       context: Context) {
     // const delay = 2000
     // if (context.req.headers) {
     //   await new Promise<void>((resolve) => {
@@ -47,7 +47,7 @@ export const actions: ActionTree<RootState, RootState> = {
     //   })
     // }
 
-    await actionContext.commit('setBrowserToSsrReceived',context.req.timings.browserToSsrReceived)
+    await actionContext.commit('setBrowserToSsrReceived',context.res.timings.browserToSsrReceived)
   },
 }
 

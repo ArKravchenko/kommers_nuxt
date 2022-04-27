@@ -1,13 +1,11 @@
 import type {NextFunction, IncomingMessage} from 'connect'
-import type ITimings from '@/interfaces/ITimings'
 import type http from "http";
 
-export default function (req: IncomingMessage & ITimings, res: http.ServerResponse , next: NextFunction) {
+export default function (req: IncomingMessage, res: http.ServerResponse , next: NextFunction) {
   // req is the Node.js http request object
   // console.log(req.url)
 
-
-  req.timings = {...req.timings,...{
+  res.timings = {...res.timings,...{
     browserToSsrReceived: Date.now()
   }}
 
