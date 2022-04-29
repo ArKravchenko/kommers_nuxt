@@ -532,8 +532,8 @@ export namespace ArticleLong {
     // content: {
     img: ImageFull;
     href: string;
-    title: string;
-    text: string;
+    title: (PlainTextElement | HTMLTagElement)[];
+    text: (PlainTextElement | HTMLTagElement)[];
     // }
   }
 
@@ -721,7 +721,7 @@ export namespace ArticleLong {
     bodyElements: (PlainTextElement | HTMLTagElement)[];
   }
 
-  type IListElement = {
+  export type IListElement = {
     type: 'listElement'
     bodyElements: DocBodyElement[]
   }
@@ -729,6 +729,7 @@ export namespace ArticleLong {
   export type List = {
     widgetType: 'list';
     kind: 'ordered' | 'unordered'
+    bodyElements: IListElement[]; // TODO this is mistaken field, should be only listElements
     listElements: IListElement[];
   }
 
@@ -753,16 +754,18 @@ export namespace ArticleLong {
     | Free
     | Socials
 
-  export type DocBodyElement = {
-    element: 'tag'
-    content: HTMLTagElement
-  } | {
-    element: 'widget'
-    content: WidgetElement
-  } | {
-    element: 'text'
-    content: PlainTextElement
-  }
+  // export type DocBodyElement = {
+  //   element: 'tag'
+  //   content: HTMLTagElement
+  // } | {
+  //   element: 'widget'
+  //   content: WidgetElement
+  // } | {
+  //   element: 'text'
+  //   content: PlainTextElement
+  // }
+
+  export type DocBodyElement = PlainTextElement | WidgetElement | HTMLTagElement
 
   // Описанный интерфейс преддполагает что каждый абзац в content не содержит вложенных тегов,
   // то есть схема справедлива для "новых" доков, созданных через предстоящую новую админку.

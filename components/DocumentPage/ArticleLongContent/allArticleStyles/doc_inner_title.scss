@@ -1,0 +1,15 @@
+.document_inner_title,
+caption {
+	font: bold 2.4rem/1.2 a;
+	font-family: inherit;
+	color: $gray-1;
+	margin-top: -.8rem;
+	margin-bottom: -.6rem + 2rem;
+	padding-top: 1rem;
+	text-align: left;
+	@include media('desktop') {
+		font-size: 3rem;
+		margin-top: -9px;
+		margin-bottom: calc(-6px + 25px);
+	}
+}

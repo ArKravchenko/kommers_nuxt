@@ -1,0 +1,12 @@
+.doc hr {
+	display: block;
+	height: 0;
+	border: 0;
+	border-top: 2px solid $gray-e;
+	margin: 0 0 30px 0;
+	padding: 0;
+	clear: both;
+	@include media('desktop') {
+		margin-bottom: 40px;
+	}
+}

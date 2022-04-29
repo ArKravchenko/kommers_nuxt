@@ -1,0 +1,45 @@
+.illustration {
+	@include media('desktop') {
+		width: 240px;
+		float: right;
+		margin-left: 20px;
+	}
+	&--left {
+		@include media('desktop') {
+			float: left;
+			margin-right: 20px;
+			margin-left: 0;
+		}
+	}
+	&--center {
+		@include media('desktop') {
+			clear: both;
+			width: auto;
+			float: none;
+			margin-left: 0;
+		}
+	}
+	&__photo {
+		position: relative;
+		padding-bottom: 56.25%;
+		margin-bottom: 15px;
+	}
+	&__img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+		object-position: 50% 50%;
+	}
+	&__description {
+		font-size: 1.4rem;
+		line-height: 1.6rem;
+		color: $gray-1;
+		margin: -.5rem 0 -.4rem 0;
+	}
+	&__highlight {
+		color: $gray-6;
+	}
+}

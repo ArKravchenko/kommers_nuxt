@@ -1,0 +1,37 @@
+.doc {
+	ol:not([class]) {
+		font-size: 1.8rem;
+		line-height: 2.6rem;
+		margin: -11px 0 14px 0;
+		padding: 1px 0 1px 22px;
+		color: $gray-1;
+		@include media('desktop') {
+			font-size: 2rem;
+			line-height: 1.5;
+			margin: -1.3rem 0 2.3rem 0;
+		}
+	}
+	ul:not([class]) {
+		@extend ol, :not([class])
+	}
+	
+	%list {
+		margin-top: 6px;
+		margin-bottom: -8px;
+	}
+	ol:not([class]) ol,
+	ol:not([class]) ul,
+	ul:not([class]) ol,
+	ul:not([class]) ul {
+    	@extend %list;
+    }
+
+	%li {
+		padding: 1px 0;
+		margin-bottom: 6px;
+	}
+	ul:not([class]) > li,
+	ol:not([class]) > li {
+		@extend %li;
+	}
+}

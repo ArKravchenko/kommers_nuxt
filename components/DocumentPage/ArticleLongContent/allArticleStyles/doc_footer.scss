@@ -1,0 +1,51 @@
+.doc_footer {
+	font-size: 1.4rem;
+	line-height: 2.4rem;
+	color: $gray-6;
+	margin: -.6rem 0 -.5rem + 3rem 0;
+	@include media('desktop') {
+		margin-top: 0;
+		margin-bottom: -.5rem + 5rem;
+		padding-top: 4rem - .7rem;
+		border-top: 1px solid $gray-e;
+		font-size: 1.6rem;
+		line-height: 2rem;
+		padding-left: 151px;
+	}
+	&::before {
+		display: table;
+		width: 100%;
+		content: '';
+	}
+
+	&__term {
+		color: $gray-6;
+		font-weight: normal;
+		line-height: 1;
+		@include media('desktop') {
+			position: absolute;
+			width: 136px;
+			margin-left: -151px;
+			line-height: 2rem;
+			text-align: right;
+		}
+	}
+
+	&__list {
+		margin-bottom: 9px;
+	}
+
+	&__item {
+		display: inline-block;
+		margin-right: 30px;
+	}
+
+	&__subscribe {
+		margin-left: 7px;
+	}
+
+	&__tumbler_text {
+		color: $brand_color;
+		margin-left: 10px;
+	}
+}

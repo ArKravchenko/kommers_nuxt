@@ -1,0 +1,74 @@
+.doc_header {
+	margin-top: 2rem;
+	@include media('desktop') {
+		margin-top: 4.5rem;
+		padding-top: .5rem;
+	}
+
+	&__time {
+		font-size: 1.4rem;
+		line-height: 1.6rem;
+		margin-top: -2rem;
+		@if $amp {
+			margin-bottom: 2.1rem;
+		}
+		@else {
+			margin-bottom: .5rem;
+		}
+		@include media('desktop') {
+			margin-bottom: 2.6rem;
+		}
+	}
+	&__time_item:not(:last-child) {
+		margin-right: 13px;
+	}
+
+	&__publish_time,
+	&__publish_update {
+		color: $gray-6;
+		white-space: nowrap;
+	}
+	&__publish_time {
+		margin-right: 13px;
+	}
+
+	&__branding {
+		width: 30rem;
+		max-width: 100%;
+		margin-left: auto;
+		overflow: hidden;
+		@include media('mobile_max') {
+			margin: 2.7rem 0 3rem -.5rem + 3rem;
+			float: right;
+		}
+		@include media('desktop') {
+			margin-top: 0;
+			margin-bottom: -.4rem + 3rem;
+		}
+	}
+
+	&__name {
+		font-size: 2.8rem;
+		line-height: 3rem;
+		color: $black;
+		margin-top: -1.1rem + 2.7rem;
+		margin-bottom: -.5rem + 3rem;
+		@include media('desktop') {
+			font-size: 3.6rem;
+			line-height: 1;
+			margin-top: -1.5rem;
+			margin-bottom: -.4rem + 3rem;
+		}
+	}
+	
+	&__subheader {
+		font: bold 2rem/2.4rem a;
+		font-family: inherit;
+		color: $gray-3;
+		margin-top: -.9rem;
+		margin-bottom: -.5rem + 3rem;
+		@include media('desktop') {
+			margin-bottom: -.5rem + 3rem;
+		}
+	}
+}

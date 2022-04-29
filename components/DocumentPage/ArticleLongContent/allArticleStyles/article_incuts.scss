@@ -1,0 +1,299 @@
+.incut {
+	border-left: 2px solid $brand_color;
+	transition: color .25s ease-in-out;
+	margin-bottom: 2rem;
+	padding: 1rem 0 1rem #{$mobile_gap - 2px};
+	@include media('desktop') {
+		float: right;
+		width: 240px;
+		margin: 0 0 2rem 18px;
+		padding-right: 10px;
+		padding-left: 20px;
+		border-left: 2px solid $brand_color;
+		transition: color .25s ease-in-out;
+	}
+	&--left {
+		@include media('desktop') {
+			float: left;
+			margin: 0 30px 20px 18px;
+		}
+	}
+	&--wide {
+		float: none;
+		width: auto;
+		margin: 0 0 30px 0;
+		border: 0;
+		border-top: 2px solid $gray-e;
+		border-bottom: 2px solid $gray-e;
+		padding: 30px 0;
+		@include media('desktop') {
+			clear: both;
+			margin-bottom: 40px;
+		}
+		&:last-child {
+			@include media('desktop') {
+				margin-bottom: 0;
+				border-bottom: 0;
+			}
+		}
+	}
+
+	&--media {
+		clear: both;
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+	&--center {
+		clear: both;
+		width: auto;
+		float: none;
+		@include media('desktop') {
+			margin-bottom: 3rem;
+		}
+	}
+	& a:hover {
+		color: $black;
+	}
+	&__title {
+		font: 1.2rem/1.4rem a;
+		font-family: inherit;
+		color: $gray-9;
+		margin-top: -.5rem;
+		margin-bottom: 1.2rem;
+	}
+	&__name {
+		font: bold 2rem/2.6rem a;
+		font-family: inherit;
+		color: inherit;
+		margin-top: -1rem;
+		margin-bottom: -.6rem;
+	}
+
+	&__wide_name {
+		font: bold 2.4rem/1 a;
+		font-family: inherit;
+		margin-top: -.9rem;
+		margin-bottom: -.3rem + 2rem;
+		@include media('desktop') {
+			font-size: 3rem;
+			margin-top: -1.1rem;
+			margin-bottom: -.4rem + 2rem;
+		}
+	}
+	&__wide_name + .doc__text {
+		margin-top: 0;
+		@include media('desktop') {
+			margin-top: -.1rem;
+		}
+	}
+	&__wide_name + .incut__more--wide {
+		margin-top: 1.4rem;
+	}
+	&__note:not(&__note--linked) {
+		border-left-color: $gray-3;
+	}
+	&__note_name {
+		font: bold italic 1.6rem/2rem a;
+		font-family: inherit;
+		color: $gray-3;
+		margin-top: -.7rem ;
+		margin-bottom: -.5rem + 2rem;
+	}
+	&__note_text {
+		font: italic 1.6rem/2rem a;
+		font-family: inherit;
+		color: $gray-3;
+		margin-top: -.7rem;
+		margin-bottom: -.5rem + 2rem;
+	}
+	&__note_text:last-child {
+		margin-bottom: -.5rem;
+	}
+	&__media {
+		margin: 0 0 4px 0;
+	}
+	&__photo {
+		position: relative;
+		padding-bottom: 56.25%;
+		margin: -10px 0 20px 0;
+		@include media('desktop') {
+			max-width: 250px;
+		}
+		&--media,
+		&--wide {
+			margin: 0 0 2rem 0;
+			max-width: none;
+		}
+	}
+	&__wide_name + &__photo {
+		margin-top: 1.4rem;
+	}
+
+	&__img,
+	&__img > img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+		object-position: 50% 50%;
+	}
+	&__more {
+		font-size: 1.4rem;
+		line-height: 1;
+		margin-top: -.4rem;
+		margin-bottom: -.3rem;
+		text-decoration: none;
+		color: $brand_color;
+		&--wide,
+		&--media {
+			font-size: 1.6rem;
+			line-height: 1;
+			margin-top: -.6rem;
+			margin-bottom: -.4rem;
+			@include media('desktop') {
+				font-size: 2rem;
+				margin-top: -.7rem;
+				margin-bottom: -.5rem;
+			}
+		}
+	}
+	&__arrow {
+		font-size: 10px;
+		margin-left: 4px;
+		&--big {
+			font-size: 16px;
+			@include media('desktop') {
+				font-size: 20px;
+			}
+		}
+	}
+}
+
+.incut_content {
+	border-top: 2px solid $gray-e;
+	border-bottom: 2px solid $gray-e;
+	padding: 2rem 0;
+	margin-bottom: 3rem;
+	@include media('desktop') {
+		clear: both;
+		margin-bottom: 4rem;
+	}
+	&__name {
+		font: bold 2.4rem/1 a;
+		font-family: inherit;
+		color: $gray-1;
+		margin-top: -.7rem;
+		margin-bottom: -.5rem;
+		padding: 0 41px 0 0;
+		position: relative;
+		@if $amp {
+			background-color: $white;
+			border: 0;
+		}
+		@include media('desktop') {
+			font-size: 3rem;
+			margin-top: -1rem;
+			margin-bottom: -.6rem;
+		}
+	}
+	&__label {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		cursor: pointer;
+	}
+	&__body {
+		padding-top: 2rem;
+		& > .doc__text:last-child {
+			margin-bottom: 0;
+		}
+	}
+	&__subheader {
+		font: 1.8rem/2rem a;
+		font-family: inherit;
+		color: $gray-3;
+		margin-top: -.7rem - .5rem;
+		margin-bottom: -.6rem + 2rem;
+		@include media('desktop') {
+			font-size: 2rem;
+			line-height: 2.2rem;
+			margin-top: -.8rem;
+		}
+	}
+	&__arrow {
+		font-size: 20px;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 5px;
+		padding: 5px;
+		height: 20px;
+		width: 20px;
+		margin: auto 0;
+		color: $brand_color;
+		cursor: pointer;
+		will-change: transform;
+		transition: transform .4s cubic-bezier(.05, .69, .14, 1) 0s;
+		@include media('desktop') {
+			right: 10px;
+		}
+		& .vicon {
+			transform: rotate(90deg);
+		}
+	}
+	& .vote {
+		margin-top: -1.5rem;
+		margin-bottom: -.5rem;
+		@include media('desktop') {
+			padding-bottom: 0;
+			margin-top: -3rem;
+			margin-bottom: -.5rem;
+		}
+		& .section_header {
+			display: none;
+		}
+	}
+}
+@if $amp {
+	.incut_content section[expanded] .vicon {
+		transform: rotate(-90deg);
+	}
+}
+
+.incut_content + .incut_content,
+.incut--wide + .incut_content {
+	margin-top: -32px;
+	@include media('desktop') {
+		margin-top: -42px;
+	}
+}
+
+.incut_audio {
+	border-top: 2px solid $gray-e;
+	border-bottom: 2px solid $gray-e;
+	padding: 20px 0;
+	margin-bottom: 3rem;
+	@include media('desktop') {
+		clear: both;
+		margin-bottom: 4rem;
+	}
+	.incut--wide + & {
+		border-top: 0;
+		padding-top: 0;
+		margin-top: -2rem;
+	}
+	&__player {
+		margin-bottom: 1.5rem;
+	}
+	&__text {
+		font: bold 1.4rem/1.6rem a;
+		font-family: inherit;
+		margin-top: -.6rem;
+		margin-bottom: .4rem;
+		color: $gray-1;
+	}
+}

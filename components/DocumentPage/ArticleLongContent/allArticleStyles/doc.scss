@@ -1,0 +1,15 @@
+/* base styles for doc kind of pages */
+.doc {
+	margin: 0 0 30px 0;
+	font-size: 1.6rem;
+	line-height: 2.4rem;
+	position: relative;
+	@include media('desktop') {
+		font-size: 2rem;
+		line-height: 1.5;
+		margin: 0 0 30px 10px;
+	}
+	&__body {
+		position: relative;
+	}
+}

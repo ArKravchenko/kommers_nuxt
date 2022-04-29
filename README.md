@@ -92,3 +92,5 @@ And I use it instead v-html in main component:
 
 ## nuxt-multi-cache
 [nuxt-multi-cache](https://nuxt-multi-cache.netlify.app/caches/data)
+
+https://blog.vuestorefront.io/vue-and-nuxt-performance-optimization-checklist/

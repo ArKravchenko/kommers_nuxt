@@ -1,0 +1,33 @@
+.doc_button {
+	width: 270px;
+	height: 35px;
+	font-size: 2.2rem;
+	line-height: 2.8rem;
+	margin: 0 auto 3rem auto;
+	display: flex;
+	padding-bottom: 4px; /* fonts centering correction */
+	@include media('desktop') {
+		margin-bottom: 50px;
+	}
+	&--rubric {
+		@include media('desktop') {
+			margin: 0 auto 40px;
+		}
+	}
+	&__icon {
+		position: relative;
+		margin-left: -2rem;
+		left: 2.5rem;
+		font-size: 2rem;
+	}
+	&__arrow {
+		transform: rotate(90deg);
+	}
+	&__loaded &__arrow {
+		transform: rotate(-90deg);
+	}
+	&__loading &__arrow,
+	&:not(&__loading) .ui-loader {
+		display: none;
+	}
+}

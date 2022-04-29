@@ -20,12 +20,13 @@ export function fetcher(requiredData: string, params?: { query: { [key: string]:
   }
 
   if (process.env.MOCK_DATA && process.env.MOCK_DATA === 'true') {
-    console.log(`Required data for ${requiredData} been taken from mock`)
+    // console.log(`Required data for ${requiredData} been taken from mock`)
     return Promise.resolve(
       Promise.resolve(
         {
           ok: true,
-          json: () => Promise.resolve(require('./../mockData/mainPageData.ts')[requiredData])
+          //@ts-ignore
+          json: () => import(/* webpackChunkName: "MockData." */'./../mockData/index').then(data=>data[requiredData])
         })
     )
   }

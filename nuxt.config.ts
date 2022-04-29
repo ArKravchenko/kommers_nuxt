@@ -57,9 +57,10 @@ const config: NuxtConfig = {
       { rel: 'preload', href: 'https://use.typekit.net/mfw2heq.css', as:'style' },
       {
         rel: 'stylesheet',
-        media: 'print',
+        // media print should not be used for fonts as it causes layout shift when fonts loaded after all other styles
+        // media: 'print',
+        // onload: 'this.onload=null;this.removeAttribute("media");'
         href: 'https://use.typekit.net/mfw2heq.css',
-        onload: 'this.onload=null;this.removeAttribute("media");'
       },
       { rel: 'preconnect', crossOrigin: 'true', href: 'https://im.kommersant.ru' },
 

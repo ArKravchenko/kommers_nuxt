@@ -18,9 +18,6 @@
           <div class="adv_980x240">
             <div style="height: 250px; width: 970px; background-color: grey">
               970x250
-              <a href="/doc/5154649">
-                <h2>Doc /doc/5154649</h2>
-              </a>
               <a href="/">
                 <h2>Main</h2>
               </a>
@@ -35,6 +32,12 @@
               </a>
               <a href="/listPage/35">
                 <h2>ListPage с картинкой и описанием /listPage/35 (Описание есть также у 34, 36, 39, 40, 41)</h2>
+              </a>
+              <a href="/doc/5154649">
+                <h2>Doc /doc/5154649</h2>
+              </a>
+              <a href="/doc/3793243">
+                <h2>Hашпигованный тестовый док /doc/3793243</h2>
               </a>
             </div>
           </div>

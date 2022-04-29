@@ -1,0 +1,58 @@
+/* TODO: когда-нибудь убрать костыль для doc_sharing */
+/* crutch to avoid cls */
+.no-js .doc_sharing.hide_nojs {
+	display: block;
+	opacity: 0;
+	visibility: hidden;
+}
+/* crutch to avoid cls end */
+
+/* doc_sharing */
+.doc_sharing {
+	margin-top: 5px;
+	@include media('desktop') {
+		margin-top: 0;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: -50px;
+	}
+	&__body {
+		margin-bottom: -1.1rem;
+		display: flex;
+		flex-flow: row wrap;
+		align-items: center;
+		align-content: center;
+		text-align: center;
+		font-size: 0;
+		@include media('desktop') {
+			position: sticky;
+			top: 70px;
+			width: 30px;
+			flex-flow: column wrap;
+		}
+	}
+
+	& .sharing {
+		transition: opacity .2s ease-in-out,
+					visibility 0s linear,
+					margin-top .4s cubic-bezier(.05, .69, .14, 1);
+	}
+	& .sharing + .sharing {
+		transition-delay: .02s;
+	}
+	& .sharing + .sharing + .sharing {
+		transition-delay: .04s;
+	}
+	& .sharing.is_hidden {
+		opacity: 0;
+		visibility: hidden;
+	}
+	& .sharing.is_hidden + .sharing.is_hidden {
+		margin-top: -35px;
+	}
+}
+.lazyload .doc_sharing .sharing[title^="Количество просмотров"],
+.lazyload .doc_sharing .js-article-comment .sharing__text {
+	display: none;
+}

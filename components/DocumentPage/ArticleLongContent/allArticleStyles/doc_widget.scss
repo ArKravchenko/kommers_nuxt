@@ -1,0 +1,11 @@
+.doc__widget {
+	&--ig {
+		display: inline-block;
+		width: calc(100% - 2px);
+		max-width: 540px;
+	}
+	& .twitter-tweet {
+		margin-left: auto;
+		margin-right: auto;
+	}
+}

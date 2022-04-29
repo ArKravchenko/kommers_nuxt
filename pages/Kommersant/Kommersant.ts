@@ -2,7 +2,7 @@ import {Component, Vue} from 'nuxt-property-decorator'
 import type {Context} from '@nuxt/types';
 import type {Actualno as IActualno} from '~/interfaces/API/MainPageApi';
 // import Cols from '@/components/oldGeneral/Cols/Cols'
-import Actualno from '@/components/general/Actualno/Actualno';
+import Actualno from '@/components/general/Actualno/Actualno.vue';
 import {fetcher} from '@/helpers/fetcher';
 
 @Component({
