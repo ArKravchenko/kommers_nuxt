@@ -34,6 +34,12 @@ export default class DocHeader extends Vue {
     default: null,
   }) pubDate!: ArticleLong.IArticleLong['data']['pubDate'] | null;
 
+  @Prop({
+    // type: Object,
+    required: true,
+    default: null,
+  }) breadcrumb!: ArticleLong.IArticleLong['data']['breadcrumb'] | null;
+
 
   get getTitle(){
     return this.title?.length

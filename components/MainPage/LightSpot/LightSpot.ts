@@ -1,6 +1,7 @@
 import {Component, Prop, Vue} from 'nuxt-property-decorator'
 import type {MainPageAPI} from "~/interfaces/API/MainPageApi";
 import type {AsyncComponent} from 'vue'
+import {Fragment} from "vue-fragment";
 // import BlockquoteOfTheDay from "./BlockquoteOfTheDay/BlockquoteOfTheDay.vue";
 // import DigitOfTheDay from "./DigitOfTheDay/DigitOfTheDay.vue";
 // import VideoOfTheDay from "./VideoOfTheDay/VideoOfTheDay.vue";
@@ -15,12 +16,17 @@ const BlockquoteOfTheDay:AsyncComponent = () => import("./BlockquoteOfTheDay/Blo
 
 
 @Component({
+  //@ts-ignore
+  serverCacheKey(a:any) {
+    return a.lightSpotData?.dataHash ? a.lightSpotData.dataHash : JSON.stringify(a)
+  },
   components: {
     BlockquoteOfTheDay,
     DigitOfTheDay,
     GraphOfTheDay,
     PhotoOfTheDay,
-    VideoOfTheDay
+    VideoOfTheDay,
+    Fragment
   }
 })
 export default class LightSpot extends Vue {

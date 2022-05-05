@@ -25,7 +25,8 @@
 	&__item {
 		flex-shrink: 0;
 		width: 100%;
-		margin-right: -100%;
+    //todo revert after prototype
+		//margin-right: -100%;
 		padding-bottom: 2.6rem;
 	}
 	& .photo {
@@ -74,7 +75,7 @@
 			right: 7.6%;
 		}
 	}
-	
+
 	&__caption_limit {
 		max-height: calc(1.6rem * 2.2);
 		&::after {

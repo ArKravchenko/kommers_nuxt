@@ -2,13 +2,12 @@ import {Component, Prop, Vue} from 'nuxt-property-decorator'
 import type {SpendTime as ISpendTime} from "~/interfaces/API/MainPageApi";
 
 
-
 @Component({
   //@ts-ignore
-  serverCacheKey(a:any) {
+  serverCacheKey(a: any) {
     // console.log(a)
     // return false
-    return JSON.stringify(a)
+    return a.spendTimeData?.dataHash ? a.spendTimeData.dataHash : JSON.stringify(a)
   },
 })
 export default class SpendTime extends Vue {
@@ -24,8 +23,8 @@ export default class SpendTime extends Vue {
   cdnUrl: string = process.env.CDN_URL || ''
 
 
-  mounted(){
-    //  console.log('this.opinionBigData',this.spendTimeData)
+  mounted() {
+    console.log('this.spendTimeData', this.spendTimeData)
   }
 
 

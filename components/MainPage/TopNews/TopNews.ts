@@ -6,7 +6,7 @@ import type {MainPageAPI} from "~/interfaces/API/MainPageApi";
 @Component({
   //@ts-ignore
   serverCacheKey(a:any) {
-    return JSON.stringify(a)
+    return a.topNewsData?.dataHash ? a.topNewsData.dataHash : JSON.stringify(a)
   },
 })
 export default class TopNews extends Vue {

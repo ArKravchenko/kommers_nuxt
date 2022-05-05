@@ -2,6 +2,7 @@ import {Component, Prop, Vue} from 'nuxt-property-decorator'
 import type {ArticleLong} from "~/interfaces/API/MainPageApi";
 import HtmlTagElement from '@/components/DocumentPage/DocBodyElement/HtmlTagElement/HtmlTagElement.vue'
 
+// TODO в картинки прилетает абсолютный src
 @Component({
   // name is required for recursive components as AdaptivePhoto uses DocBodyElement and vice versa
   name: 'AdaptivePhoto',
@@ -19,7 +20,7 @@ export default class AdaptivePhoto extends Vue {
     // }
   }) adaptivePhotoWidgetData!: ArticleLong.AdaptivePhoto | null;
 
-  // cdnUrl: string = process.env.CDN_URL || '';
+  cdnUrl: string = process.env.CDN_URL || '';
 
   get getAdaptivePhotoMobileImg(){
     return this.adaptivePhotoWidgetData?.imgMobile

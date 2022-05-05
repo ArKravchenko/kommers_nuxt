@@ -1,30 +1,24 @@
 <template>
 
-  <p class="doc__thought">
-    <span style="color: red">
-        Citation has PARA inside
-    </span>
+  <div class="doc__thought">
 
     <template v-if="getCitationTitle">
-
       <DocBodyElement v-for="(child ,i) in getCitationTitle"
                       :key="'title'+i"
                       :doc-body-element="child"
+                      :para-wrapper-tag="'p'"
       />
-
     </template>
 
-
     <template v-if="getCitationText">
-
       <DocBodyElement v-for="(child ,j) in getCitationText"
                       :key="'text'+j"
                       :doc-body-element="child"
+                      :para-wrapper-tag="'p'"
       />
-
     </template>
 
-  </p>
+  </div>
 
 </template>
 

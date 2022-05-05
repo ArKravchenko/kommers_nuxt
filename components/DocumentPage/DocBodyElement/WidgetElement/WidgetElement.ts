@@ -10,7 +10,13 @@ import type {ArticleLong} from "~/interfaces/API/MainPageApi";
 // import AdaptivePhoto from "./Widgets/AdaptivePhoto/AdaptivePhoto.vue";
 // import Citation from "./Widgets/Citation/Citation.vue";
 // import Illustration from "./Widgets/Illustration/Illustration.vue";
-import LazyHydrate from 'vue-lazy-hydration'
+// import GalleryWrapper from "./Widgets/GalleryWrapper/GalleryWrapper.vue";
+// import Socials from "./Widgets/Socials/Socials.vue";
+// import Video from "./Widgets/Video/Video.vue";
+// import Collapse from "./Widgets/Collapse/Collapse.vue";
+// import Free from "./Widgets/Free/Free.vue";
+// import Author from "./Widgets/Author/Author.vue";
+// import LazyHydrate from 'vue-lazy-hydration'
 
 
 // these imports MUST be lazy (promise wrapped) because it's needed to avoid cross-recursive components' conflicts
@@ -42,6 +48,30 @@ const Illustration = () => import(
   /* webpackChunkName: "Illustration." */
   /* webpackMode: "lazy" */
   "./Widgets/Illustration/Illustration.vue");
+const GalleryWrapper = () => import(
+  /* webpackChunkName: "Gallery." */
+  /* webpackMode: "lazy" */
+  "./Widgets/GalleryWrapper/GalleryWrapper.vue");
+const Socials = () => import(
+  /* webpackChunkName: "Socials." */
+  /* webpackMode: "lazy" */
+  "./Widgets/Socials/Socials.vue");
+const Video = () => import(
+  /* webpackChunkName: "Video." */
+  /* webpackMode: "lazy" */
+  "./Widgets/Video/Video.vue");
+const Collapse = () => import(
+  /* webpackChunkName: "Collapse." */
+  /* webpackMode: "lazy" */
+  "./Widgets/Collapse/Collapse.vue");
+const Free = () => import(
+  /* webpackChunkName: "Free." */
+  /* webpackMode: "lazy" */
+  "./Widgets/Free/Free.vue");
+const Author = () => import(
+  /* webpackChunkName: "Author." */
+  /* webpackMode: "lazy" */
+  "./Widgets/Author/Author.vue");
 
 
 
@@ -60,7 +90,13 @@ const Illustration = () => import(
     AdaptivePhoto,
     Citation,
     Illustration,
-    LazyHydrate
+    GalleryWrapper,
+    Socials,
+    Video,
+    Collapse,
+    Free,
+    Author
+    // LazyHydrate
   }
 })
 export default class WidgetElement extends Vue {
@@ -72,5 +108,23 @@ export default class WidgetElement extends Vue {
     //   return !!value.rates && !!value.items
     // }
   }) widgetElement!: ArticleLong.WidgetElement | null;
+
+  @Prop({
+    // type: Object,
+    required: false,
+    default: null,
+    // validator(value: MainPageAPI.Endpoint_4): boolean {
+    //   return !!value.rates && !!value.items
+    // }
+  }) paraWrapperTag!: string | null;
+
+  @Prop({
+    // type: Object,
+    required: false,
+    default: null,
+    // validator(value: MainPageAPI.Endpoint_4): boolean {
+    //   return !!value.rates && !!value.items
+    // }
+  }) paraWrapperClass!: string | null;
 
 }

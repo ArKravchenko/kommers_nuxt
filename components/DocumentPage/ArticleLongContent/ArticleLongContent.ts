@@ -36,17 +36,22 @@ export default class ArticleLongContent extends Vue {
 
   get getTitle(){
     return this.articleLongContent?.data?.title?.length
-    && this.articleLongContent?.data?.title
+    && this.articleLongContent.data.title
   }
 
   get getSubtitle(){
     return this.articleLongContent?.data?.subtitle?.length
-      && this.articleLongContent?.data?.subtitle
+      && this.articleLongContent.data.subtitle
   }
 
   get getPubDate(){
     return this.articleLongContent?.data?.pubDate
-      && this.articleLongContent?.data.pubDate
+      && this.articleLongContent.data.pubDate
+  }
+
+  get getBreadcrumb(){
+    return this.articleLongContent?.data?.breadcrumb
+      && this.articleLongContent.data.breadcrumb
   }
 
   get getDocBodyElements(){
@@ -60,7 +65,7 @@ export default class ArticleLongContent extends Vue {
 
 
   mounted(){
-    console.log('this.articleLongContent',this.articleLongContent)
+    // console.log('this.articleLongContent',this.articleLongContent)
   }
 
 

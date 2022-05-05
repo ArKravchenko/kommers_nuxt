@@ -18,10 +18,6 @@ import ServiceMenu from '~/components/ListPage/ServiceMenu/ServiceMenu.vue'
 import ListPageDocs from '~/components/ListPage/ListPageDocs/ListPageDocs.vue'
 
 
-
-
-
-
 @Component({
   components: {
     // Cols,

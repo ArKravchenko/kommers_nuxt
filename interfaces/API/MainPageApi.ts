@@ -663,7 +663,7 @@ export namespace ArticleLong {
     external: boolean;  // если виджет - внешняя галерея, то true, тогда
     // content: {
     images: GalleryPhoto[];
-    title: string; // title внешней док-галереи, если external==true, в противном случае игнорируется
+    title: DocBodyElement[]; // title внешней док-галереи, если external==true, в противном случае игнорируется
     href: string; // ссылка на внешнюю док-галерею, если external==true, в противном случае игнорируется
     // }
   }
@@ -729,7 +729,7 @@ export namespace ArticleLong {
   export type List = {
     widgetType: 'list';
     kind: 'ordered' | 'unordered'
-    bodyElements: IListElement[]; // TODO this is mistaken field, should be only listElements
+    // bodyElements: IListElement[]; // TODO this is mistaken field, should be only listElements
     listElements: IListElement[];
   }
 

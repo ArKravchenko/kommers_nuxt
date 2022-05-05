@@ -1,13 +1,14 @@
 import {Component, Prop, Vue} from 'nuxt-property-decorator'
 import type {ArticleLong} from "~/interfaces/API/MainPageApi";
 import DocBodyElement from '@/components/DocumentPage/DocBodyElement/DocBodyElement.vue'
-
+import {Fragment} from 'vue-fragment'
 // TODO Vvodka has PARA inside, should not
 @Component({
   // name is required for recursive components as Vvodka uses DocBodyElement and vice versa
   name: 'Vvodka',
   components: {
     DocBodyElement,
+    Fragment
   }
 })
 export default class Vvodka extends Vue {

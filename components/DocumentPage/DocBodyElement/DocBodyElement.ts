@@ -24,6 +24,24 @@ export default class DocBodyElement extends Vue {
     // }
   }) docBodyElement!: ArticleLong.DocBodyElement | null;
 
+  @Prop({
+    // type: Object,
+    required: false,
+    default: null,
+    // validator(value: MainPageAPI.Endpoint_4): boolean {
+    //   return !!value.rates && !!value.items
+    // }
+  }) paraWrapperTag!: string | null;
+
+  @Prop({
+    // type: Object,
+    required: false,
+    default: null,
+    // validator(value: MainPageAPI.Endpoint_4): boolean {
+    //   return !!value.rates && !!value.items
+    // }
+  }) paraWrapperClass!: string | null;
+
   get getType() {
     if (!this.docBodyElement) return null
 

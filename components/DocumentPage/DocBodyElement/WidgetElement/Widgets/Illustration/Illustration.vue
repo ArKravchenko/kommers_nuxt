@@ -10,7 +10,7 @@
              :alt="getIllustrationImg.alt">
 
       </div>
-      <figcaption class="doc_media__caption ui-modal__hide">
+      <figcaption class="doc_media__caption">
         <p class="doc_media__text" v-if="getIllustrationCaption">
           <template v-for="(child ,i) in getIllustrationCaption">
             <template v-if="typeof child === 'string'">

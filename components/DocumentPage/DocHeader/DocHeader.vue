@@ -2,7 +2,7 @@
 
   <header class="doc_header">
 
-    <Crumbs/>
+    <Crumbs :breadcrumb="breadcrumb"/>
     <div class="doc_header__time">
       <time v-if="getArticlePublishedDate"
             :datetime="getArticlePublishedDate"

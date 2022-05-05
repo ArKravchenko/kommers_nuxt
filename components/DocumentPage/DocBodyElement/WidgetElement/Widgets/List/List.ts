@@ -27,8 +27,8 @@ export default class List extends Vue {
 
   // todo listWidgetData has wrong type, listElements field is called bodyElements
   get getListElements() {
-    return this.listWidgetData?.bodyElements?.length
-      && this.listWidgetData.bodyElements
+    return this.listWidgetData?.listElements?.length
+      && this.listWidgetData.listElements
   }
 
   getListElementBodyElements(listElement: ArticleLong.IListElement | any) {

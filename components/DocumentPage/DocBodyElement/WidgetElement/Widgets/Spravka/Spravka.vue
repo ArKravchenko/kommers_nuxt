@@ -9,16 +9,15 @@
         <HtmlTagElement v-else :key="i" :html-tag-element="child"/>
       </template>
     </h2>
-    <span style="color: red">
-        Spravka has PARA inside
-    </span>
-    <!--      //TODO classes should be added as DocBodyElement prop-->
-    <p class="incut__note_text" v-if="getSpravkaBodyElements">
+
+    <template v-if="getSpravkaBodyElements">
       <DocBodyElement v-for="(child ,i) in getSpravkaBodyElements"
                       :key="i"
                       :doc-body-element="child"
+                      :para-wrapper-tag="'p'"
+                      :para-wrapper-class="'incut__note_text'"
       />
-    </p>
+    </template>
 
     <p v-if="getSpravkaHref" class="incut__more">
       <a :href="getSpravkaHref" class="link">

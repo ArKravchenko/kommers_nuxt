@@ -1,15 +1,22 @@
 <template>
 
-    <p v-if="getParaElements"
-       class="doc__text"
-    >
-       <template v-for="(child ,i) in getParaElements">
-         <template v-if="typeof child === 'string'">
-           {{ child }}
-         </template>
-         <HtmlTagElement v-else :key="i" :html-tag-element="child"/>
-       </template>
-   </p>
+  <component :is="paraWrapperTag" v-if="paraWrapperTag && getParaElements" :class="paraWrapperClass">
+    <template v-for="(child ,i) in getParaElements">
+      <template v-if="typeof child === 'string'">
+        {{ child }}
+      </template>
+      <HtmlTagElement v-else :key="i" :html-tag-element="child"/>
+    </template>
+  </component>
+
+  <Fragment v-else-if="getParaElements">
+    <template v-for="(child ,i) in getParaElements">
+      <template v-if="typeof child === 'string'">
+        {{ child }}
+      </template>
+      <HtmlTagElement v-else :key="i" :html-tag-element="child"/>
+    </template>
+  </Fragment>
 
 </template>
 
