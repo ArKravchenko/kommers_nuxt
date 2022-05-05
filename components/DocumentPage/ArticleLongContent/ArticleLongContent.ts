@@ -4,6 +4,7 @@ import type {ArticleLong} from "~/interfaces/API/MainPageApi";
 import Vote from '@/components/MainPage/Vote/Vote.vue'
 import DocBodyElement from '@/components/DocumentPage/DocBodyElement/DocBodyElement.vue'
 import DocHeader from '@/components/DocumentPage/DocHeader/DocHeader.vue';
+import DocFooter from '@/components/DocumentPage/DocFooter/DocFooter.vue';
 import ArticleSharing from '@/components/DocumentPage/ArticleSharing/ArticleSharing.vue';
 
 
@@ -21,6 +22,7 @@ import ArticleSharing from '@/components/DocumentPage/ArticleSharing/ArticleShar
     Vote,
     DocBodyElement,
     DocHeader,
+    DocFooter,
     ArticleSharing
   }
 })
@@ -52,6 +54,11 @@ export default class ArticleLongContent extends Vue {
   get getBreadcrumb(){
     return this.articleLongContent?.data?.breadcrumb
       && this.articleLongContent.data.breadcrumb
+  }
+
+  get getFooterData(){
+    return this.articleLongContent?.data?.footer
+      && this.articleLongContent.data.footer
   }
 
   get getDocBodyElements(){

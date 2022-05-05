@@ -3,7 +3,9 @@ import pageCacheConfig from './config/pageCacheConfig'
 import componentCacheConfig from './config/componentCacheConfig'
 import {version} from './package.json'
 import type {NuxtConfig} from '@nuxt/types'
-
+// import shrinkRay from 'shrink-ray-current'
+import fs from 'fs';
+import path from 'path';
 // const scssVars = Object.keys(scssConfig).reduce(
 //   (acc, value) => `${acc} ${value}: ${scssConfig[value]};`,
 //   `@use "sass:string"; @use 'sass:math' as *; `
@@ -52,6 +54,7 @@ const config: NuxtConfig = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'preconnect', crossOrigin: 'true', href: '//im.kommersant.ru' },
       { rel: 'preconnect', crossOrigin: 'true', href: 'https://p.typekit.net' },
       { rel: 'preconnect', crossOrigin: 'true', href: 'https://use.typekit.net' },
       { rel: 'preload', href: 'https://use.typekit.net/mfw2heq.css', as:'style' },
@@ -144,7 +147,7 @@ const config: NuxtConfig = {
   ],
 
   render: {
-    compressor: {},
+    compressor: {},//shrinkRay(),
     http2: {
       push: true,
       pushAssets: (req, res, publicPath, preloadFiles) => {
@@ -191,7 +194,7 @@ const config: NuxtConfig = {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
-    // publicPath: 'https://cdn.nuxtjs.org',
+    publicPath: process.env.PUBLIC_PATH || '',
     extend(config, { isClient, isServer, loaders }) {
       // @ts-ignore
       loaders!.scss!.additionalData = scssVars
@@ -205,6 +208,15 @@ const config: NuxtConfig = {
       chunk: ({ isDev, isModern }) => isDev ? `[name]${isModern ? '.modern' : ''}.js` : `js/chunk.[name][contenthash:7]${isModern ? '.modern' : ''}.js`,
     }
   },
+}
+
+if (process.env.ENABLE_LOCALHOST_HTTPS === "true") {
+  config.server = {...config.server,...{
+    https: {
+      key: fs.readFileSync(path.resolve(__dirname, './certs/key.pem')),
+      cert: fs.readFileSync(path.resolve(__dirname, './certs/cert.pem'))
+    }
+  }}
 }
 
 export default config;

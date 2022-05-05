@@ -34,21 +34,21 @@
       </div>
     </div>
 
-    <% include article_footer.html %>
+    <DocFooter v-if="getFooterData" :footer-data="getFooterData" />
 
-    <button class="ui-button ui-button--standart doc_button doc_button__loading">
-      Обсудить
-      <span class="doc_button__icon">
-        <span class="vicon doc_button__arrow">
-          <svg class="vicon__body">
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#vicon-rarrow"></use>
-          </svg>
-        </span>
-        <span class="ui-loader ui-loader--white" aria-hidden="true"></span>
-      </span>
-    </button>
+<!--    <button class="ui-button ui-button&#45;&#45;standart doc_button doc_button__loading">-->
+<!--      Обсудить-->
+<!--      <span class="doc_button__icon">-->
+<!--        <span class="vicon doc_button__arrow">-->
+<!--          <svg class="vicon__body">-->
+<!--            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#vicon-rarrow"></use>-->
+<!--          </svg>-->
+<!--        </span>-->
+<!--        <span class="ui-loader ui-loader&#45;&#45;white" aria-hidden="true"></span>-->
+<!--      </span>-->
+<!--    </button>-->
 
-    <% include doc_comments.html %>
+<!--    <% include doc_comments.html %>-->
 
   </article>
 
