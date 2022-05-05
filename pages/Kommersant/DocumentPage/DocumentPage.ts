@@ -96,7 +96,7 @@ export default class DocumentPage extends Vue {
     //   alert(this.$route.params.id)
     // }
     // console.log('this.listPageWidgets', this.listPageWidgets)
-    console.log('this.docPageData', this.docPageData)
+    // console.log('this.docPageData', this.docPageData)
   }
 
 }

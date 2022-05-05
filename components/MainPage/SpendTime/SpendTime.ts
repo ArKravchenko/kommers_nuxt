@@ -24,7 +24,7 @@ export default class SpendTime extends Vue {
 
 
   mounted() {
-    console.log('this.spendTimeData', this.spendTimeData)
+    // console.log('this.spendTimeData', this.spendTimeData)
   }
 
 
