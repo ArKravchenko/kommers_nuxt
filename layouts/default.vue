@@ -14,7 +14,9 @@
       <Vicons/>
       <div class="layout">
         <div class="adv_nest adv_nest--980x250_top hide_mobile">
-          <div class="adv_dummy"><a href="/ad" target="_blank">Реклама в «Ъ» www.kommersant.ru/ad</a></div>
+          <div class="adv_dummy">
+            <a href="/ad" target="_blank">Реклама в «Ъ» www.kommersant.ru/ad</a>
+          </div>
           <div class="adv_980x240">
             <div style="height: 250px; width: 970px; background-color: grey">
               970x250
@@ -52,24 +54,11 @@
           </div>
         </div>
         <div class="adv_nest adv_nest--300x250_top hide_desktop">
-          <div class="adv_300x250_top"  v-once>
-            <div style="height: 300px; width: 300px; background-color: grey">300x250</div>
-<!--            <script>window.yaContextCb = window.yaContextCb || []</script>-->
-<!--            <script src="https://yandex.ru/ads/system/context.js" async></script>-->
-<!--            <div id="adfox_1485963383642980"></div>-->
-<!--            <script>-->
-<!--              window.yaContextCb.push(()=>{-->
-<!--                Ya.adfoxCode.create({-->
-<!--                  ownerId: 232598,-->
-<!--                  containerId: 'adfox_1485963383642980',-->
-<!--                  params: {-->
-<!--                    p1: 'bufhf',-->
-<!--                    p2: 'fbao',-->
-<!--                    'partner-stat-id': '34567'-->
-<!--                  }-->
-<!--                })-->
-<!--              })-->
-<!--            </script>-->
+          <div class="adv_300x250_top" v-once>
+            <!--/*            <div style="height: 300px; width: 300px; background-color: grey">300x250</div>*/-->
+            <client-only>
+              <Banner/>
+            </client-only>
 
           </div>
         </div>

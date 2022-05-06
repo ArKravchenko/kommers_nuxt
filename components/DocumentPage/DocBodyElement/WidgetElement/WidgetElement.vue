@@ -66,6 +66,9 @@
       :socials-widget-data="widgetElement"/>
   </client-only>
 
+  <Audio v-else-if="widgetElement && widgetElement.widgetType === 'audio'"
+         :audio-widget-data="widgetElement"/>
+
 
   <h2 v-else-if="widgetElement" style="margin-top: 30px; margin-bottom: 30px; color: red">
     WidgetElement {{ widgetElement.widgetType }}

@@ -11,6 +11,10 @@ import LightSpot from '~/components/MainPage/LightSpot/LightSpot.vue'
 import MainToday from '~/components/MainPage/MainToday/MainToday.vue'
 import Opinions from '~/components/MainPage/Opinions/Opinions.vue'
 import Promo from '~/components/general/Promo/Promo.vue'
+const Banner = () => import(
+  /* webpackChunkName: "Banner." */
+  /* webpackMode: "eager" */
+  "@/components/general/Banner/Banner.vue");
 
 // TODO keep imports in the same order on every page or replace with lazy pages
 import SpendTime from '~/components/MainPage/SpendTime/SpendTime.vue'
@@ -48,7 +52,8 @@ import Multimedia from '~/components/MainPage/Multimedia/Multimedia.vue'
     MostReadableAside,
     SpendGallery,
     CompanyNews,
-    Multimedia
+    Multimedia,
+    Banner
   },
 })
 export default class MainPage extends Vue {

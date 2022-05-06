@@ -52,12 +52,21 @@ const config: NuxtConfig = {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' },
     ],
+    script: [
+      {
+        innerHTML:'window.yaContextCb = window.yaContextCb || []',
+      },
+      {
+        src: 'https://yandex.ru/ads/system/context.js',
+        async: true,
+      }
+    ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'preconnect', crossOrigin: 'true', href: '//im.kommersant.ru' },
       { rel: 'preconnect', crossOrigin: 'true', href: 'https://p.typekit.net' },
       { rel: 'preconnect', crossOrigin: 'true', href: 'https://use.typekit.net' },
-      { rel: 'preload', href: 'https://use.typekit.net/mfw2heq.css', as:'style' },
+      { rel: 'preload', href: 'https://use.typekit.net/mfw2heq.css', as: 'style' },
       {
         rel: 'stylesheet',
         // media print should not be used for fonts as it causes layout shift when fonts loaded after all other styles
@@ -66,7 +75,6 @@ const config: NuxtConfig = {
         href: 'https://use.typekit.net/mfw2heq.css',
       },
       { rel: 'preconnect', crossOrigin: 'true', href: 'https://im.kommersant.ru' },
-
     ],
   },
 
@@ -103,7 +111,7 @@ const config: NuxtConfig = {
   plugins: [
     '@/plugins/filters.ts',
     '@/plugins/errorCatcher.ts',
-    {src:'@/plugins/vueLazyLoad.ts' , ssr: false},
+    { src: '@/plugins/vueLazyLoad.ts', ssr: false },
     '@/plugins/imgPlaceholder.ts'
   ],
 
@@ -164,7 +172,7 @@ const config: NuxtConfig = {
             : `<${publicPath}${f.file}>; rel=preload; as=${f.asType}`
           )
 
-          pushList.push(`<${typeKitUrl}>; rel=preload; as=style`)
+        pushList.push(`<${typeKitUrl}>; rel=preload; as=style`)
         return pushList
       }
 
@@ -173,26 +181,26 @@ const config: NuxtConfig = {
 
   hooks: {
     render: {
-      routeContext:( context)=>{
+      routeContext: (context) => {
         // timings, routeContext hook calls
         // right before all rendered data is sent to the recipient, allows adding some data into
         // window.__NUXT__
         // We use it to calculate the time needed for rendering
         context.state.timings.ssrToClientSent = Date.now()
       },
-    // },
-    // //@ts-ignore
-    // 'vue-renderer': {
-    //   ssr: {
-    //     context: (context: any) => {
-    //       // timings, routeContext hook calls
-    //       // right before all rendered data is sent to the recipient, allows adding some data into
-    //       // window.__NUXT__
-    //       // We use it to calculate the time needed for rendering
-    //       console.log(context.nuxt)
-    //       // context.state.timings.ssrToClientSent = Date.now()
-    //     },
-    //   }
+      // },
+      // //@ts-ignore
+      // 'vue-renderer': {
+      //   ssr: {
+      //     context: (context: any) => {
+      //       // timings, routeContext hook calls
+      //       // right before all rendered data is sent to the recipient, allows adding some data into
+      //       // window.__NUXT__
+      //       // We use it to calculate the time needed for rendering
+      //       console.log(context.nuxt)
+      //       // context.state.timings.ssrToClientSent = Date.now()
+      //     },
+      //   }
     }
   },
 
@@ -216,20 +224,28 @@ const config: NuxtConfig = {
     analyze: false,
     filenames: {
       // chunk: ({ isDev }) => (isDev ? '[name].js' : '[id].[contenthash].js'),
-      css: ({isDev}) => isDev ? '[name].css' : 'css/[name].[contenthash:7].css',
-      app: ({ isDev, isModern }) => isDev ? `[name]${isModern ? '.modern' : ''}.js` : `js/[name].[contenthash:7]${isModern ? '.modern' : ''}.js`,
-      chunk: ({ isDev, isModern }) => isDev ? `[name]${isModern ? '.modern' : ''}.js` : `js/chunk.[name][contenthash:7]${isModern ? '.modern' : ''}.js`,
+      css: ({ isDev }) => isDev ? '[name].css' : 'css/[name].[contenthash:7].css',
+      app: ({
+              isDev,
+              isModern
+            }) => isDev ? `[name]${isModern ? '.modern' : ''}.js` : `js/[name].[contenthash:7]${isModern ? '.modern' : ''}.js`,
+      chunk: ({
+                isDev,
+                isModern
+              }) => isDev ? `[name]${isModern ? '.modern' : ''}.js` : `js/chunk.[name][contenthash:7]${isModern ? '.modern' : ''}.js`,
     }
   },
 }
 
 if (process.env.ENABLE_LOCALHOST_HTTPS === "true") {
-  config.server = {...config.server,...{
-    https: {
-      key: fs.readFileSync(path.resolve(__dirname, './certs/key.pem')),
-      cert: fs.readFileSync(path.resolve(__dirname, './certs/cert.pem'))
+  config.server = {
+    ...config.server, ...{
+      https: {
+        key: fs.readFileSync(path.resolve(__dirname, './certs/key.pem')),
+        cert: fs.readFileSync(path.resolve(__dirname, './certs/cert.pem'))
+      }
     }
-  }}
+  }
 }
 
 export default config;

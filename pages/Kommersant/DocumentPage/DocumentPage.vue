@@ -29,7 +29,10 @@
         <div class="grid-col grid-col-l hide_mobile">
           <!-- 1.3. ADV вертикальная справа 300Х600 -->
           <div class="adv_300x600">
-            <div style="width: 300px; height: 600px;background-color: grey">300x600</div>
+<!--            <div style="width: 300px; height: 600px;background-color: grey">300x600</div>-->
+            <client-only>
+              <Banner/>
+            </client-only>
           </div>
           <!-- 1.4. Бизнес-анонс 1 (платная публикация) справа 300X300 -->
           <div class="sticky">

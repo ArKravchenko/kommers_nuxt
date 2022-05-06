@@ -27,9 +27,12 @@
         <div class="grid-col grid-col-l hide_mobile">
           <div class="sticky">
             <div class="adv_300x600">
-              <div style="width: 300px; height: 600px; background-color: grey">
-                300x600
-              </div>
+<!--              <div style="width: 300px; height: 600px; background-color: grey">-->
+<!--                300x600-->
+<!--              </div>-->
+              <client-only>
+                <Banner/>
+              </client-only>
             </div>
           </div>
         </div>
@@ -100,7 +103,10 @@
         </div>
         <div class="grid-col grid-col-l">
           <div class="adv_300x600 adv_300x600--gap_title hide_mobile">
-            <div style="width: 300px; height: 600px;background-color: grey">300x600</div>
+<!--            <div style="width: 300px; height: 600px;background-color: grey">300x600</div>-->
+            <client-only>
+              <Banner/>
+            </client-only>
           </div>
 
           <Promo/>
@@ -128,7 +134,10 @@
         </div>
         <div class="grid-col grid-col-l">
           <div class="adv_300x600 adv_300x600--gap_title hide_mobile">
-            <div style="width: 300px; height: 600px;background-color: grey">300x600</div>
+<!--            <div style="width: 300px; height: 600px;background-color: grey">300x600</div>-->
+            <client-only>
+              <Banner/>
+            </client-only>
           </div>
 
           <Promo/>
@@ -171,7 +180,10 @@
         </div>
         <div class="grid-col grid-col-l">
           <div class="adv_300x600 adv_300x600--gap_title hide_mobile">
-            <div style="width: 300px; height: 600px;background-color: grey">300x600</div>
+<!--            <div style="width: 300px; height: 600px;background-color: grey">300x600</div>-->
+            <client-only>
+              <Banner/>
+            </client-only>
           </div>
 
           <div class="hide_mobile">

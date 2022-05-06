@@ -13,6 +13,10 @@ import {fetcher} from "~/helpers/fetcher";
 import Promo from '~/components/general/Promo/Promo.vue'
 import CompanyNews from '~/components/MainPage/CompanyNews/CompanyNews.vue'
 // import Multimedia from '~/components/MainPage/Multimedia/Multimedia.vue'
+const Banner = () => import(
+  /* webpackChunkName: "Banner." */
+  /* webpackMode: "eager" */
+  "@/components/general/Banner/Banner.vue");
 
 
 import ArticleLongContent from '~/components/DocumentPage/ArticleLongContent/ArticleLongContent.vue'
@@ -24,6 +28,7 @@ import ArticleLongContent from '~/components/DocumentPage/ArticleLongContent/Art
     Promo,
     CompanyNews,
     ArticleLongContent,
+    Banner
   },
 })
 export default class DocumentPage extends Vue {

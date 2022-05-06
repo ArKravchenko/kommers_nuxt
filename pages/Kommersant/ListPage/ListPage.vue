@@ -106,7 +106,10 @@
             <div class="grid-col grid-col-l hide_mobile">
               <!-- banner 169 -->
               <div class="adv_300x600">
-                <div style="width: 300px; height: 600px;background-color: grey">300x600</div>
+<!--                <div style="width: 300px; height: 600px;background-color: grey">300x600</div>-->
+                <client-only>
+                  <Banner/>
+                </client-only>
               </div>
               <div class="sticky adv_sticky">
                 <!-- banner 170 -->

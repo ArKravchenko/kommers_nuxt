@@ -47,6 +47,6 @@ export default class DocFooter extends Vue {
 
 
   mounted() {
-    console.log('this.footerData',this.footerData)
+    // console.log('this.footerData',this.footerData)
   }
 }
