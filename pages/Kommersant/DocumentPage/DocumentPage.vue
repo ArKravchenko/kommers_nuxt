@@ -31,7 +31,7 @@
           <div class="adv_300x600">
 <!--            <div style="width: 300px; height: 600px;background-color: grey">300x600</div>-->
             <client-only>
-              <Banner/>
+              <Banner :place-id="300600"/>
             </client-only>
           </div>
           <!-- 1.4. Бизнес-анонс 1 (платная публикация) справа 300X300 -->

@@ -6,6 +6,10 @@ import DocBodyElement from '@/components/DocumentPage/DocBodyElement/DocBodyElem
 import DocHeader from '@/components/DocumentPage/DocHeader/DocHeader.vue';
 import DocFooter from '@/components/DocumentPage/DocFooter/DocFooter.vue';
 import ArticleSharing from '@/components/DocumentPage/ArticleSharing/ArticleSharing.vue';
+const Banner = () => import(
+  /* webpackChunkName: "Banner." */
+  /* webpackMode: "eager" */
+  "@/components/general/Banner/Banner.vue");
 
 
 
@@ -23,7 +27,8 @@ import ArticleSharing from '@/components/DocumentPage/ArticleSharing/ArticleShar
     DocBodyElement,
     DocHeader,
     DocFooter,
-    ArticleSharing
+    ArticleSharing,
+    Banner
   }
 })
 export default class ArticleLongContent extends Vue {

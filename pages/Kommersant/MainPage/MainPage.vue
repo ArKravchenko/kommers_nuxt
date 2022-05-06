@@ -31,7 +31,7 @@
 <!--                300x600-->
 <!--              </div>-->
               <client-only>
-                <Banner/>
+                <Banner :place-id="300600"/>
               </client-only>
             </div>
           </div>
@@ -46,7 +46,10 @@
 
     <div class="layout hide_desktop">
       <div class="adv_300x250">
-        <div style="background-color: grey; height: 250px; width: 300px"></div>
+<!--        <div style="background-color: grey; height: 250px; width: 300px"></div>-->
+        <client-only>
+          <Banner :place-id="300300"/>
+        </client-only>
       </div>
     </div>
 
@@ -87,7 +90,10 @@
 
     <section class="adv_section hide_mobile">
       <div class="adv_980x240">
-        <div style="width: 970px; height: 250px;background-color: grey">970x250</div>
+<!--        <div style="width: 970px; height: 250px;background-color: grey">970x250</div>-->
+        <client-only>
+          <Banner :place-id="970250"/>
+        </client-only>
       </div>
     </section>
 
@@ -105,7 +111,7 @@
           <div class="adv_300x600 adv_300x600--gap_title hide_mobile">
 <!--            <div style="width: 300px; height: 600px;background-color: grey">300x600</div>-->
             <client-only>
-              <Banner/>
+              <Banner :place-id="300600"/>
             </client-only>
           </div>
 
@@ -136,7 +142,7 @@
           <div class="adv_300x600 adv_300x600--gap_title hide_mobile">
 <!--            <div style="width: 300px; height: 600px;background-color: grey">300x600</div>-->
             <client-only>
-              <Banner/>
+              <Banner :place-id="300600"/>
             </client-only>
           </div>
 
@@ -173,7 +179,10 @@
 
           <div class="adv_layer hide_desktop">
             <div class="adv_300x250">
-              <div style="width: 300px; height: 250px;background-color: grey">300x250</div>
+<!--              <div style="width: 300px; height: 250px;background-color: grey">300x250</div>-->
+              <client-only>
+                <Banner :place-id="300300"/>
+              </client-only>
             </div>
           </div>
 
@@ -182,7 +191,7 @@
           <div class="adv_300x600 adv_300x600--gap_title hide_mobile">
 <!--            <div style="width: 300px; height: 600px;background-color: grey">300x600</div>-->
             <client-only>
-              <Banner/>
+              <Banner :place-id="300600"/>
             </client-only>
           </div>
 

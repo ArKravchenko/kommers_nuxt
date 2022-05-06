@@ -22,16 +22,22 @@
 
     <!-- 1.2. ADV 600Х250 (в конце статьи, перед блоком подписок) -->
     <div class="adv_600x240 hide_mobile">
-      <div style="width: 600px; height: 240px; background-color: grey">
-        600x240
-      </div>
+<!--      <div style="width: 600px; height: 240px; background-color: grey">-->
+<!--        600x240-->
+<!--      </div>-->
+      <client-only>
+        <Banner :place-id="600240"/>
+      </client-only>
     </div>
 
     <!-- 1.2. Под статьей перед блоком подписок ADV 300X250 -->
     <div class="adv_300x250 hide_desktop">
-      <div style="width: 300px; height: 250px; background-color: grey">
-        300x250
-      </div>
+<!--      <div style="width: 300px; height: 250px; background-color: grey">-->
+<!--        300x250-->
+<!--      </div>-->
+      <client-only>
+        <Banner :place-id="300300"/>
+      </client-only>
     </div>
 
     <DocFooter v-if="getFooterData" :footer-data="getFooterData" />

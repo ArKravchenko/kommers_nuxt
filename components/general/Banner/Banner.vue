@@ -1,9 +1,10 @@
 <template>
 
-  <div v-if="getRawHtml"
-       ref="scripts"
-       style="display: flex; justify-content: center"
-       v-html="getRawHtml">
+  <div ref="scripts">
+    <div v-if="getRawHtml && visible"
+         style="display: flex; justify-content: center"
+         v-html="getRawHtml">
+    </div>
   </div>
 
 </template>

@@ -19,7 +19,6 @@
           </div>
           <div class="adv_980x240">
             <div style="height: 250px; width: 970px; background-color: grey">
-              970x250
               <a href="/">
                 <h2>Main</h2>
               </a>
@@ -51,13 +50,16 @@
                 <h2>Док с потерявшейся ссылкой на выпуск в футере дока /doc/5154572</h2>
               </a>
             </div>
+<!--            <client-only>-->
+<!--              <Banner :place-id="970250"/>-->
+<!--            </client-only>-->
           </div>
         </div>
         <div class="adv_nest adv_nest--300x250_top hide_desktop">
-          <div class="adv_300x250_top" v-once>
+          <div class="adv_300x250_top" style="min-height: 300px">
             <!--/*            <div style="height: 300px; width: 300px; background-color: grey">300x250</div>*/-->
             <client-only>
-              <Banner/>
+              <Banner :place-id="300300"/>
             </client-only>
 
           </div>

@@ -59,6 +59,7 @@ const config: NuxtConfig = {
       {
         src: 'https://yandex.ru/ads/system/context.js',
         async: true,
+        body: true,
       }
     ],
     link: [

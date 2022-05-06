@@ -108,13 +108,15 @@
               <div class="adv_300x600">
 <!--                <div style="width: 300px; height: 600px;background-color: grey">300x600</div>-->
                 <client-only>
-                  <Banner/>
+                  <Banner :place-id="300600"/>
                 </client-only>
               </div>
               <div class="sticky adv_sticky">
                 <!-- banner 170 -->
                 <div class="adv_300x300">
-                  <Promo/>
+                  <client-only>
+                    <Banner :place-id="300300"/>
+                  </client-only>
                 </div>
                 <!-- banner 180 -->
                 <div class="adv_300x300">
@@ -129,7 +131,10 @@
             <div class="grid-col grid-col-s3">
               <!-- banner 168 -->
               <div class="adv_600x240 hide_mobile">
-                <div style="width: 600px; height: 250px;background-color: grey">600x250</div>
+<!--                <div style="width: 600px; height: 250px;background-color: grey">600x250</div>-->
+                <client-only>
+                  <Banner :place-id="600240"/>
+                </client-only>
               </div>
 
               <ListPageDocs v-if="listPageDocs"
@@ -186,7 +191,10 @@
       <div class="adv_section hide_mobile">
         <!-- перетяжка -->
         <div class="adv_980x240">
-          <div style="width: 970px; height: 250px;background-color: grey">970x250</div>
+<!--          <div style="width: 970px; height: 250px;background-color: grey">970x250</div>-->
+          <client-only>
+            <Banner :place-id="970250"/>
+          </client-only>
         </div>
       </div>
     </div>
