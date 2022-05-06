@@ -1,6 +1,6 @@
 const BASE_URL = process.env.BASE_API_URL;
 
-export function fetcher(requiredData: string, params?: { query: { [key: string]: string | number } }) {
+export function fetcher(requiredData: string, params?: { query: { [key: string]: string | number } }):Promise<Response> {
   const map: { [key: string]: string } = {
     actualno: '/main_page/Endpoint_1',
     mainPageWidgets: '/main_page/Endpoint_4',
@@ -21,6 +21,7 @@ export function fetcher(requiredData: string, params?: { query: { [key: string]:
 
   if (process.env.MOCK_DATA && process.env.MOCK_DATA === 'true') {
     // console.log(`Required data for ${requiredData} been taken from mock`)
+    //@ts-ignore
     return Promise.resolve(
       Promise.resolve(
         {
@@ -29,10 +30,12 @@ export function fetcher(requiredData: string, params?: { query: { [key: string]:
           json: () => import(/* webpackChunkName: "MockData." */'./../mockData/index').then(data=>data[requiredData])
         })
     )
+  } else {
+    if (process.env.NODE_ENV === 'development'){
+      console.log(BASE_URL + map[requiredData] + queryString)
+    }
+    return fetch(BASE_URL + map[requiredData] + queryString)
   }
 
-  if (process.env.NODE_ENV === 'development'){
-    console.log(BASE_URL + map[requiredData] + queryString)
-  }
-  return fetch(BASE_URL + map[requiredData] + queryString)
+
 }

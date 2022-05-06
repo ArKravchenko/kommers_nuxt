@@ -180,7 +180,20 @@ const config: NuxtConfig = {
         // We use it to calculate the time needed for rendering
         context.state.timings.ssrToClientSent = Date.now()
       },
-    },
+    // },
+    // //@ts-ignore
+    // 'vue-renderer': {
+    //   ssr: {
+    //     context: (context: any) => {
+    //       // timings, routeContext hook calls
+    //       // right before all rendered data is sent to the recipient, allows adding some data into
+    //       // window.__NUXT__
+    //       // We use it to calculate the time needed for rendering
+    //       console.log(context.nuxt)
+    //       // context.state.timings.ssrToClientSent = Date.now()
+    //     },
+    //   }
+    }
   },
 
   server: {

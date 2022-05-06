@@ -60,17 +60,30 @@ export default class MainPage extends Vue {
       ctx.store.commit('setSsrToApiSent', Date.now())
     }
 
-    const mainPageWidgets: MainPageAPI.Endpoint_4 = await fetcher('mainPageWidgets')
-      .then(res => {
-        if (res.ok) {
-          return res.json()
-        }
-      })
-      .catch(err => {
-        ctx.error({ statusCode: 404, message: err })
-      })
+    const mainPageWidgets: MainPageAPI.Endpoint_4 =
+      await fetcher('mainPageWidgets')
+        .then(res => {
+          if (res.ok) {
+            return res.json()
+          } else {
+            ctx.error({
+              statusCode: res.status,
+              message: JSON.stringify({
+                url: res.url,
+                statusText: res.statusText,
+              }),
 
-    if(process.server) {
+            })
+          }
+        })
+        .catch(err => {
+          ctx.error({
+            statusCode: 404,
+            message: JSON.stringify(err)
+          })
+        })
+
+    if (process.server) {
       ctx.store.commit('setApiToSsrReceived', Date.now())
     }
 
@@ -79,60 +92,60 @@ export default class MainPage extends Vue {
     }
   }
 
-  get getSaPrimary(){
+  get getSaPrimary() {
     return this.mainPageWidgets
       && this.mainPageWidgets.superAnnounce
       && this.mainPageWidgets.superAnnounce.data
       && this.mainPageWidgets.superAnnounce.data.primary
   }
 
-  get getSaSecondary(){
+  get getSaSecondary() {
     return this.mainPageWidgets
       && this.mainPageWidgets.superAnnounce
       && this.mainPageWidgets.superAnnounce.data
       && this.mainPageWidgets.superAnnounce.data.secondary
   }
 
-  get getLightSpot(){
+  get getLightSpot() {
     return this.mainPageWidgets
       && this.mainPageWidgets.lightSpot
   }
 
-  get getTop(){
+  get getTop() {
     return this.mainPageWidgets
       && this.mainPageWidgets.top
   }
 
-  get getMainToday(){
+  get getMainToday() {
     return this.mainPageWidgets
       && this.mainPageWidgets.mainToday
   }
 
-  get getOpinions(){
+  get getOpinions() {
     return this.mainPageWidgets
       && this.mainPageWidgets.opinions
   }
 
-  get getMultimedia(){
+  get getMultimedia() {
     return this.mainPageWidgets
       && this.mainPageWidgets.multimedia
   }
 
-  get getRubrics(){
+  get getRubrics() {
     return this.mainPageWidgets
       && this.mainPageWidgets.rubrics
       && this.mainPageWidgets.rubrics.data
       && this.mainPageWidgets.rubrics.data.rubrics
   }
 
-  get getSpendTime(){
+  get getSpendTime() {
     return this.mainPageWidgets
       && this.mainPageWidgets.spendTime
 
   }
 
-  mounted(){
-     console.log('this.mainPageWidgets',this.mainPageWidgets)
+  mounted() {
+    console.log('this.mainPageWidgets', this.mainPageWidgets)
   }
 
 }

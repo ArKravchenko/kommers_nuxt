@@ -18,10 +18,6 @@ import CompanyNews from '~/components/MainPage/CompanyNews/CompanyNews.vue'
 import ArticleLongContent from '~/components/DocumentPage/ArticleLongContent/ArticleLongContent.vue'
 
 
-
-
-
-
 @Component({
   components: {
     // Cols,
@@ -45,21 +41,34 @@ export default class DocumentPage extends Vue {
     }
 
     const docPageData: DocPageAPI.Endpoint_4
-      = await fetcher('docPageData',{
+      = await fetcher('docPageData', {
       query: {
         docId,
       }
-    }).then(res=>{
-      if (res.ok) {
-        return res.json()
-      }
-    }).catch(err=>{
-      ctx.error({ statusCode: 404, message: JSON.stringify(err,null,2) })
     })
+      .then(res => {
+        if (res.ok) {
+          return res.json()
+        } else {
+          ctx.error({
+            statusCode: res.status,
+            message: JSON.stringify({
+              url: res.url,
+              statusText: res.statusText,
+            }),
+
+          })
+        }
+      })
+      .catch(err => {
+        ctx.error({
+          statusCode: 404,
+          message: JSON.stringify(err)
+        })
+      })
 
 
-
-    if(process.server) {
+    if (process.server) {
       ctx.store.commit('setApiToSsrReceived', Date.now())
     }
     return {
@@ -95,8 +104,7 @@ export default class DocumentPage extends Vue {
     // } else {
     //   alert(this.$route.params.id)
     // }
-    // console.log('this.listPageWidgets', this.listPageWidgets)
-    // console.log('this.docPageData', this.docPageData)
+    console.log('this.docPageData', this.docPageData)
   }
 
 }

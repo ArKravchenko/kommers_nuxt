@@ -50,17 +50,31 @@ export default class ListPage extends Vue {
     }
 
     const listPageWidgetsPromise: Promise<ListPageAPI.Endpoint_4>
-      = fetcher('listPageWidgets',{
+      = fetcher('listPageWidgets', {
       query: {
         tagId,
       }
-    }).then(res=>{
-      if (res.ok) {
-        return res.json()
-      }
-    }).catch(err=>{
-      ctx.error({ statusCode: 404, message: JSON.stringify(err,null,2) })
     })
+      .then(res => {
+        if (res.ok) {
+          return res.json()
+        } else {
+          ctx.error({
+            statusCode: res.status,
+            message: JSON.stringify({
+              url: res.url,
+              statusText: res.statusText,
+            }),
+
+          })
+        }
+      })
+      .catch(err => {
+        ctx.error({
+          statusCode: 404,
+          message: JSON.stringify(err)
+        })
+      })
 
 
     const listPageDocsPromise: Promise<ListPageAPI.Endpoint_6>
@@ -69,20 +83,34 @@ export default class ListPage extends Vue {
         tagId,
         count: 20
       }
-    }).then(res=>{
-      if (res.ok) {
-        return res.json()
-      }
-    }).catch(err=>{
-      ctx.error({ statusCode: 404, message: JSON.stringify(err,null,2) })
     })
+      .then(res => {
+        if (res.ok) {
+          return res.json()
+        } else {
+          ctx.error({
+            statusCode: res.status,
+            message: JSON.stringify({
+              url: res.url,
+              statusText: res.statusText,
+            }),
+
+          })
+        }
+      })
+      .catch(err => {
+        ctx.error({
+          statusCode: 404,
+          message: JSON.stringify(err)
+        })
+      })
 
     const [
       listPageWidgets,
       listPageDocs
-    ] = await Promise.all([listPageWidgetsPromise,listPageDocsPromise])
+    ] = await Promise.all([listPageWidgetsPromise, listPageDocsPromise])
 
-    if(process.server) {
+    if (process.server) {
       ctx.store.commit('setApiToSsrReceived', Date.now())
     }
     return {
@@ -93,37 +121,37 @@ export default class ListPage extends Vue {
 
   cdnUrl: string = process.env.CDN_URL || '';
 
-  get getOpinions(){
+  get getOpinions() {
     return this.listPageWidgets
       && this.listPageWidgets.opinions
   }
 
-  get getTop(){
+  get getTop() {
     return this.listPageWidgets
       && this.listPageWidgets.top
   }
 
-  get getLightSpot(){
+  get getLightSpot() {
     return this.listPageWidgets
       && this.listPageWidgets.lightSpot
   }
 
-  get getMultimedia(){
+  get getMultimedia() {
     return this.listPageWidgets
       && this.listPageWidgets.multimedia
   }
 
-  get getTitle(){
+  get getTitle() {
     return this.listPageWidgets?.pageData?.title
       && this.listPageWidgets.pageData.title
   }
 
-  get getDescription(){
+  get getDescription() {
     return this.listPageWidgets?.pageData?.description
       && this.listPageWidgets.pageData.description
   }
 
-  get getMainPhoto(){
+  get getMainPhoto() {
     return this.listPageWidgets?.pageData?.mainPhoto
       && this.listPageWidgets.pageData.mainPhoto
   }
@@ -136,7 +164,7 @@ export default class ListPage extends Vue {
     // } else {
     //   alert(this.$route.params.id)
     // }
-    // console.log('this.listPageWidgets', this.listPageWidgets)
+    console.log('this.listPageWidgets', this.listPageWidgets)
     // console.log('this.listPageDocs', this.listPageDocs)
   }
 

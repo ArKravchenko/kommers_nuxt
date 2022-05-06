@@ -19,15 +19,24 @@ export default class Kommersant extends Vue {
 
     ctx.res.timing?.start('act', 'actualnoData fetch')
 
-    const actualnoData: IActualno.APIDataStructure = await fetcher('actualno')
-      .then(res => {
-        if (res.ok) {
-          return res.json()
-        }
-      })
-      .catch(err => {
-        ctx.error({ statusCode: 404, message: err })
-      })
+    const actualnoData: IActualno.APIDataStructure =
+      await fetcher('actualno')
+        .then(res => {
+          if (res.ok) {
+            return res.json()
+          } else {
+            ctx.error({
+              statusCode: res.status,
+              message: JSON.stringify({
+                url: res.url,
+                statusText: res.statusText,
+              }),
+            })
+          }
+        })
+        .catch(err => {
+          ctx.error({ statusCode: 404, message: JSON.stringify(err) })
+        })
 
     ctx.res.timing?.end('act')
 
@@ -35,7 +44,8 @@ export default class Kommersant extends Vue {
       actualnoData: actualnoData?.data || null,
     }
   }
-  mounted(){
+
+  mounted() {
     // console.log('this.actualnoData',this.actualnoData)
   }
 }

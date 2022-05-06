@@ -1,5 +1,5 @@
 <template>
-  <div style="min-height: 100vh; display: flex;flex-direction: column; justify-content: space-between">
+  <div class="container">
     <!--    <h1 class="envColor">-->
     <!--      Color of this text is injected directly from scssConfig.ts to nuxt.config-->
     <!--      with var $envColor-->
@@ -13,23 +13,35 @@
     <div>
       <h1>Error</h1>
       <h2>
-        <pre>{{JSON.stringify(error, null,'\t')}}</pre>
+        <pre>{{ JSON.stringify(getErrorParsed, null, '\t') }}</pre>
       </h2>
-
+      <h3><a href="/">На главную</a></h3>
     </div>
+
   </div>
 </template>
 
 <script lang="ts">
 import {Component, Prop, Vue} from 'nuxt-property-decorator'
+import {NuxtError} from "@nuxt/types";
 
-@Component({
-
-})
+@Component({})
 export default class Error extends Vue {
-  @Prop() error: any;
+  @Prop() error!: NuxtError;
 
-  mounted(){
+  get getErrorParsed(){
+    if (this.error) {
+      let parsedMessage = this.error.message
+      try {
+        parsedMessage = JSON.parse(this.error!.message!)
+      } catch {}
+      return { ...this.error, ...{ message: parsedMessage } }
+    } else {
+      return {}
+    }
+  }
+
+  mounted() {
     console.error(this.error)
     // console.log('this.$style',JSON.stringify(this.$style))
   }
@@ -39,7 +51,20 @@ export default class Error extends Vue {
 </script>
 
 <style scoped>
-  pre{
-    color: red;
-  }
+h1 {
+  color: red;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1, h3 {
+  text-align: center;
+}
+
 </style>
