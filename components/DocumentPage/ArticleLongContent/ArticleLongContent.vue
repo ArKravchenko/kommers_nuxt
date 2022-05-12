@@ -11,12 +11,17 @@
       </div>
 
 
-
-        <template v-if="getDocBodyElements">
-          <template v-for="(child, i) in getDocBodyElements">
-            <DocBodyElement :key="i" :doc-body-element="child" :para-wrapper-tag="'p'" :para-wrapper-class="'doc__text'"/>
-          </template>
+      <template v-if="!getIsRawHtml && getDocBodyElements">
+        <template v-for="(child, i) in getDocBodyElements">
+          <DocBodyElement :key="i" :doc-body-element="child" :para-wrapper-tag="'p'" :para-wrapper-class="'doc__text'"/>
         </template>
+      </template>
+
+      <template v-else-if="getIsRawHtml">
+        <div style="overflow-y: auto; overflow-x: visible; padding: 10px 0 0"
+             v-if="getRawHtml"
+             v-html="getRawHtml"/>
+      </template>
 
     </div>
 

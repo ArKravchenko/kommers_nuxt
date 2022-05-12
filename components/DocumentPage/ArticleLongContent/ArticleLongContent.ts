@@ -28,7 +28,7 @@ const Banner = () => import(
     DocHeader,
     DocFooter,
     ArticleSharing,
-    Banner
+    Banner,
   }
 })
 export default class ArticleLongContent extends Vue {
@@ -73,8 +73,17 @@ export default class ArticleLongContent extends Vue {
       && this.articleLongContent.data.content.docBodyElements
   }
 
+  get getIsRawHtml(){
+    return this.articleLongContent?.data?.content
+      && this.articleLongContent.data.content.isHtml
+  }
 
-
+  get getRawHtml(){
+    return this.articleLongContent?.data?.content
+      && this.articleLongContent?.data?.content?.htmlContent
+      && this.articleLongContent?.data?.content?.htmlContent?.rawHtml
+      && this.articleLongContent.data.content.htmlContent.rawHtml
+  }
 
   mounted(){
     // console.log('this.articleLongContent',this.articleLongContent)

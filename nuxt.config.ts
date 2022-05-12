@@ -51,16 +51,18 @@ const config: NuxtConfig = {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' },
+      // { name: 'robots', content: 'noindex' },
     ],
     script: [
       {
         innerHTML:'window.yaContextCb = window.yaContextCb || []',
+        hid:'yaContextCb'
       },
-      {
-        src: 'https://yandex.ru/ads/system/context.js',
-        async: true,
-        body: true,
-      }
+      // {
+      //   src: 'https://yandex.ru/ads/system/context.js',
+      //   async: true,
+      //   body: true,
+      // }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
@@ -142,17 +144,19 @@ const config: NuxtConfig = {
     // '@nuxtjs/pwa',
     // 'nuxt-ssr-cache',
     //@ts-ignore
-    ...(() => process.env.PAGE_CACHE_ENABLED === 'true'
+    ...(():NuxtConfig['modules'] => process.env.PAGE_CACHE_ENABLED === 'true'
       ? [
         'nuxt-ssr-cache'
       ] : [])(),
     //@ts-ignore
-    ...(() => process.env.COMPONENT_CACHE_ENABLED === 'true'
+    ...(():NuxtConfig['modules'] => process.env.COMPONENT_CACHE_ENABLED === 'true'
       ? [[
         // '@nuxtjs/component-cache',
         '@/modules/componentCache.ts',
         componentCacheConfig
-      ]] : [])()
+      ]] : [])(),
+
+    // ['@nuxtjs/localtunnel', { subdomain: 'kommersant' }],
   ],
 
   render: {

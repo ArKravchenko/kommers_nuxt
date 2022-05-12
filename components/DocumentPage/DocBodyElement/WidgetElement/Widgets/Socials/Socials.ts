@@ -69,11 +69,11 @@ export default class Socials extends Vue {
       threshold: 0
     };
 
-    this.observer = new IntersectionObserver((entry,obsesrver)=>{
+    this.observer = new IntersectionObserver((entry,observer)=>{
       entry.forEach(({ isIntersecting })=>{
         if (isIntersecting){
           this.visible = true;
-          obsesrver.disconnect()
+          observer.disconnect()
         }
       })
     }, options);

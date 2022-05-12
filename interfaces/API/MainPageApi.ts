@@ -678,6 +678,15 @@ export namespace ArticleLong {
     // }
   }
 
+  export type Table = { //врез таблица
+    widgetType: 'table';
+    expandable: boolean;
+    // content: {
+    bodyElements: DocBodyElement[]
+    // }
+  }
+
+
   export type Free = { //свободный врез
     widgetType: 'free'
     // content: {
@@ -741,6 +750,7 @@ export namespace ArticleLong {
     | Para
     | Gallery
     | List
+    | Table
     // | Photo
     | PoseidonWidget
     | Video

@@ -1,4 +1,5 @@
 import {Component, Prop, Vue} from 'nuxt-property-decorator'
+import type {MetaInfo} from 'vue-meta'
 
 
 @Component({})
@@ -45,6 +46,12 @@ export default class Banner extends Vue {
       default:
         return banner300x300(id)
     }
+  }
+
+  dynamicHead: MetaInfo = {}
+
+  head(){
+    return this.dynamicHead
   }
 
   runScripts() {
@@ -104,13 +111,23 @@ export default class Banner extends Vue {
       threshold: 0
     };
 
-    this.observer = new IntersectionObserver((entry,obsesrver)=>{
+    this.observer = new IntersectionObserver((entry,observer)=>{
       entry.forEach(({ isIntersecting })=>{
         if (isIntersecting){
           this.visible = true;
           this.runScripts();
+          this.dynamicHead = {
+            script: [
+              {
+                src: 'https://yandex.ru/ads/system/context.js',
+                async: true,
+                body: true,
+                hid: 'adFox',
+              }
+            ]
+          }
           // alert(this.placeId)
-          obsesrver.disconnect()
+          observer.disconnect()
         }
       })
     }, options);
