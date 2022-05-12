@@ -23,6 +23,7 @@
 </template>
 
 <script src="./Citation.ts" lang="ts"></script>
-<!--<style src="./WidgetElement.scss" lang="scss"></style>-->
+<!--<style src="./Citation.scss" lang="scss"></style>-->
+<!--<style src="@/components/DocumentPage/ArticleLongContent/allArticleStyles/doc_thought.scss" lang="scss"></style>-->
 
 

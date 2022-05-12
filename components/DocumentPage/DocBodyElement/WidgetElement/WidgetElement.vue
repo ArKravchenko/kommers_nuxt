@@ -69,6 +69,9 @@
   <Audio v-else-if="widgetElement && widgetElement.widgetType === 'audio'"
          :audio-widget-data="widgetElement"/>
 
+  <Table v-else-if="widgetElement && widgetElement.widgetType === 'table'"
+         :table-widget-data="widgetElement"/>
+
 
   <h2 v-else-if="widgetElement" style="margin-top: 30px; margin-bottom: 30px; color: red">
     WidgetElement {{ widgetElement.widgetType }}
@@ -79,5 +82,8 @@
 
 <script src="./WidgetElement.ts" lang="ts"></script>
 <!--<style src="./WidgetElement.scss" lang="scss"></style>-->
+<!--<style src="@/components/DocumentPage/ArticleLongContent/allArticleStyles/doc_media.scss" lang="scss"></style>-->
+<!--<style src="@/components/DocumentPage/ArticleLongContent/allArticleStyles/article_incuts.scss" lang="scss"></style>-->
+<!--<style src="@/components/DocumentPage/ArticleLongContent/allArticleStyles/doc_widget.scss" lang="scss"></style>-->
 
 

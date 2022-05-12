@@ -1,0 +1,56 @@
+.innertable {
+  text-align: left;
+  font-size: 1.8rem;
+  line-height: 2rem;
+  & :not(thead) tr:nth-child(odd) {
+    background-color: rgba(0, 0, 0, .08);
+  }
+  & th,
+  & td {
+    padding: 1rem;
+    color: $gray-1;
+    min-width: 13rem;
+  }
+  & th {
+    color: $gray-6;
+  }
+  & .subtitle {
+    background-color: $gray-c;
+  }
+  & .firstcolumn,
+  & .f {
+    text-align: left;
+  }
+  & .fi {
+    vertical-align: middle;
+    text-align: center;
+    white-space: nowrap;
+  }
+  & .i {
+    vertical-align: middle;
+    text-align: right;
+    white-space: nowrap;
+  }
+  & .s {
+    vertical-align: top;
+    text-align: left;
+  }
+  & .d,
+  & .df {
+    vertical-align: middle;
+    text-align: center;
+    white-space: nowrap;
+  }
+  & tr.bg_bdc6ce td {
+    background-color: #bdc6ce;
+  }
+  & tr.bg_bdc6ce .firstcolumn,
+  & tr.bg_bdc6ce .f {
+    background-color: #303e50;
+  }
+  & thead {
+    background-color: $white;
+    position: sticky;
+    top: 0;
+  }
+}

@@ -83,5 +83,7 @@
 
 <script src="./Illustration.ts" lang="ts"></script>
 <!--<style src="./WidgetElement.scss" lang="scss"></style>-->
+<!--<style src="@/components/DocumentPage/ArticleLongContent/allArticleStyles/illustration.scss" lang="scss"></style>-->
+
 
 

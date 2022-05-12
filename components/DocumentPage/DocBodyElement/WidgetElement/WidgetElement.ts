@@ -17,6 +17,7 @@ import type {ArticleLong} from "~/interfaces/API/MainPageApi";
 // import Free from "./Widgets/Free/Free.vue";
 // import Author from "./Widgets/Author/Author.vue";
 // import Audio from "./Widgets/Audio/Audio.vue";
+// import Table from "./Widgets/Table/Table.vue";
 // import LazyHydrate from 'vue-lazy-hydration'
 
 
@@ -77,6 +78,10 @@ const Audio = () => import(
   /* webpackChunkName: "Audio." */
   /* webpackMode: "lazy" */
   "./Widgets/Audio/Audio.vue");
+const Table = () => import(
+  /* webpackChunkName: "Table." */
+  /* webpackMode: "lazy" */
+  "./Widgets/Table/Table.vue");
 
 
 
@@ -101,7 +106,8 @@ const Audio = () => import(
     Collapse,
     Free,
     Author,
-    Audio
+    Audio,
+    Table
     // LazyHydrate
   }
 })
