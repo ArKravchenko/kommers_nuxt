@@ -20,12 +20,12 @@
       <ArticleSharing/>
     </div>
 
-    <h1 v-if="getTitle" class="doc_header__name">
+    <h1 v-if="getTitle && !hideTitles" class="doc_header__name">
       <template v-for="(child ,i) in getTitle">
         <DocBodyElement :key="i" :doc-body-element="child"/>
       </template>
     </h1>
-    <h2 v-if="getSubtitle"
+    <h2 v-if="getSubtitle && !hideTitles"
         class="doc_header__subheader"
     >
       <template v-for="(child ,i) in getSubtitle">

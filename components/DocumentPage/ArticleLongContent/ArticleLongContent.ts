@@ -51,6 +51,11 @@ export default class ArticleLongContent extends Vue {
       && this.articleLongContent.data.subtitle
   }
 
+  get getHideTitles(){
+    return this.articleLongContent?.data?.hideTitles
+      && this.articleLongContent.data.hideTitles
+  }
+
   get getPubDate(){
     return this.articleLongContent?.data?.pubDate
       && this.articleLongContent.data.pubDate

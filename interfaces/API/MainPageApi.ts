@@ -811,6 +811,7 @@ export namespace ArticleLong {
       titlePhoto: (PlainTextElement | HTMLTagElement)[]; // title для показа на странице /gallery/{docId}
       subtitle: (PlainTextElement | HTMLTagElement)[];
       subtitlePhoto: (PlainTextElement | HTMLTagElement)[]; // subtitle для показа на странице /gallery/{docId}
+      hideTitles: boolean;
       vvodka: DocBodyElement[];
       centralIllustration: WidgetElement;
       readingTime: string; // время на прочтение в формате готовом для отображения "1 мин."

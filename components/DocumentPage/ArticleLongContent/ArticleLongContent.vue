@@ -3,7 +3,7 @@
 
   <article class="doc">
 
-    <DocHeader :title="getTitle" :subtitle="getSubtitle" :pub-date="getPubDate" :breadcrumb="getBreadcrumb" />
+    <DocHeader :hide-titles="getHideTitles" :title="getTitle" :subtitle="getSubtitle" :pub-date="getPubDate" :breadcrumb="getBreadcrumb" />
 
     <div class="doc__body">
       <div class="hide_mobile">

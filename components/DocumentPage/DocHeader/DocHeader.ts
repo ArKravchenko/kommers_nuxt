@@ -40,6 +40,12 @@ export default class DocHeader extends Vue {
     default: null,
   }) breadcrumb!: ArticleLong.IArticleLong['data']['breadcrumb'] | null;
 
+  @Prop({
+    // type: Object,
+    required: false,
+    default: false,
+  }) hideTitles!: ArticleLong.IArticleLong['data']['hideTitles'] | null;
+
 
   get getTitle(){
     return this.title?.length
