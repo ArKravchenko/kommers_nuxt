@@ -53,7 +53,7 @@ const modal_outer_vertical_gap = 3;
 const modal_scroll_width = 1;
 
 
-const scssConfig: { [key: string]: string | number } = {
+const scssConfig = {
   // $envColor: 'yellow',
   // $platform: process.env.PLATFORM_NAME || 'platform2',
   mobile_width,

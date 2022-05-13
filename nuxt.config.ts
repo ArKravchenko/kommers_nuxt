@@ -115,7 +115,8 @@ const config: NuxtConfig = {
     '@/plugins/filters.ts',
     '@/plugins/errorCatcher.ts',
     { src: '@/plugins/vueLazyLoad.ts', ssr: false },
-    '@/plugins/imgPlaceholder.ts'
+    '@/plugins/imgPlaceholder.ts',
+    '@/plugins/scssVars.ts'
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
