@@ -21,6 +21,12 @@
            :alt="videoOfTheDayData.content.img.alt"
            :src="$imgPlaceholder"
       >
+      <noscript>
+        <img class="slider-img"
+             :src="cdnUrl+videoOfTheDayData.content.img.src"
+             :alt="videoOfTheDayData.content.img.alt"
+        >
+      </noscript>
 
     </div>
     <h2 class="photd__name">

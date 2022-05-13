@@ -14,6 +14,12 @@
            :src="$imgPlaceholder"
            v-lazy="cdnUrl+graphOfTheDayData.content.img.src"
            :alt="graphOfTheDayData.content.img.alt">
+      <noscript>
+        <img class="photd__img slider-img"
+             :src="cdnUrl+graphOfTheDayData.content.img.src"
+             :alt="graphOfTheDayData.content.img.alt"
+        >
+      </noscript>
 
     </div>
     <h2 class="photd__name photd__name--wide">

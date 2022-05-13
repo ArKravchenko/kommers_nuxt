@@ -17,7 +17,16 @@
       </a>
     </h2>
 
-    <Gallery :gallery-widget-data="galleryWrapperWidgetData"/>
+<!--    <Gallery :gallery-widget-data="galleryWrapperWidgetData"/>-->
+    <GallerySwiperTest  v-once :gallery-widget-data="galleryWrapperWidgetData"/>
+
+<!--    <client-only>-->
+<!--      <GallerySwiperTest :gallery-widget-data="galleryWrapperWidgetData"/>-->
+
+<!--      <template #placeholder>-->
+<!--        <Gallery :gallery-widget-data="galleryWrapperWidgetData"/>-->
+<!--      </template>-->
+<!--    </client-only>-->
 
     <p class="incut__more incut__more--media">
       <a :href="getIsExternalHref" class="link">
@@ -29,9 +38,16 @@
     </p>
   </div>
 
-  <Gallery v-else :gallery-widget-data="galleryWrapperWidgetData"/>
+<!--    <Gallery v-else :gallery-widget-data="galleryWrapperWidgetData"/>-->
+    <GallerySwiperTest v-once v-else :gallery-widget-data="galleryWrapperWidgetData"/>
 
+<!--  <client-only v-else>-->
+<!--    <GallerySwiperTest :gallery-widget-data="galleryWrapperWidgetData"/>-->
 
+<!--    <template #placeholder>-->
+<!--      <Gallery :gallery-widget-data="galleryWrapperWidgetData"/>-->
+<!--    </template>-->
+<!--  </client-only>-->
 
 
 </template>

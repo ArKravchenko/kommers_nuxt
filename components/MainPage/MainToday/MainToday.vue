@@ -24,6 +24,12 @@
                    v-lazy="cdnUrl+getFlag.img.src"
                    :src="$imgPlaceholder"
                    :alt="getFlag.img.alt"/>
+              <noscript>
+                <img class="uho__img"
+                     :src="cdnUrl+getFlag.img.src"
+                     :alt="getFlag.img.alt"
+                >
+              </noscript>
             </div>
             <div class="uho__text">
               <h4 class="title_12 uho__tag uho__tag--main">{{ getFlag.tag }}</h4>
@@ -48,6 +54,12 @@
                        v-lazy="cdnUrl+item.img.src"
                        :src="$imgPlaceholder"
                        :alt="item.img.alt"/>
+                  <noscript>
+                    <img class="uho__img"
+                         :src="cdnUrl+item.img.src"
+                         :alt="item.img.alt"
+                    >
+                  </noscript>
                 </div>
                 <div class="uho__text">
                   <h4 class="title_12 uho__tag">{{ item.tag }}</h4>

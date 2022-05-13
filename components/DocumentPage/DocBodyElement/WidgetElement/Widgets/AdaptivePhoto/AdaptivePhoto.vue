@@ -12,6 +12,12 @@
              :alt="getAdaptivePhotoMobileImg.alt"
              v-lazy="getAdaptivePhotoMobileImg.src"
         >
+        <noscript>
+          <img class="doc_media__media_free"
+               :src="getAdaptivePhotoMobileImg.src"
+               :alt="getAdaptivePhotoMobileImg.alt"
+          >
+        </noscript>
 
       </div>
       <!-- mobile infographics end -->
@@ -26,6 +32,12 @@
              :alt="getAdaptivePhotoDesktopImg.alt"
              v-lazy="getAdaptivePhotoDesktopImg.src"
         >
+        <noscript>
+          <img class="doc_media__media_free"
+               :src="getAdaptivePhotoMobileImg.src"
+               :alt="getAdaptivePhotoMobileImg.alt"
+          >
+        </noscript>
       </div>
       <!-- desktop infographics end -->
 

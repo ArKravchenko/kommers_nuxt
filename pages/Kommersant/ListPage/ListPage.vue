@@ -47,6 +47,11 @@
                        :alt="getMainPhoto.alt"
                        v-lazy="cdnUrl+getMainPhoto.src"
                   >
+                  <noscript>
+                    <img :src="cdnUrl+getMainPhoto.src"
+                         :alt="getMainPhoto.alt"
+                    >
+                  </noscript>
                 </div>
               </div>
 

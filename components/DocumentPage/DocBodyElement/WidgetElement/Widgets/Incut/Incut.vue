@@ -26,6 +26,12 @@
              :alt="getIncutImg.alt"
              v-lazy="getIncutImg.src"
         >
+        <noscript>
+          <img class="incut__img"
+               :src="getIncutImg.src"
+               :alt="getIncutImg.alt"
+          >
+        </noscript>
       </a>
     </div>
 

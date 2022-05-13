@@ -51,7 +51,7 @@ const Illustration = () => import(
   /* webpackMode: "lazy" */
   "./Widgets/Illustration/Illustration.vue");
 const GalleryWrapper = () => import(
-  /* webpackChunkName: "Gallery." */
+  /* webpackChunkName: "GalleryWrapper." */
   /* webpackMode: "lazy" */
   "./Widgets/GalleryWrapper/GalleryWrapper.vue");
 const Socials = () => import(

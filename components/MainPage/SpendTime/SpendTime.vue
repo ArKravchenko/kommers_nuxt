@@ -37,6 +37,12 @@
                  v-lazy="cdnUrl+item.img.src"
                  :alt="item.img.alt"
             />
+            <noscript>
+              <img class="spend__img"
+                   :src="cdnUrl+item.img.src"
+                   :alt="item.img.alt"
+              >
+            </noscript>
           </div>
           <div class="spend__text">
             <h4 class="spend__tag">{{ item.tag }}</h4>

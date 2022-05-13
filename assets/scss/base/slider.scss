@@ -47,9 +47,15 @@
 	position: relative;
 	overflow: hidden;
   overflow-x: scroll;
+  //&::-webkit-scrollbar {
+  //  display: none;
+  //}
+  //-ms-overflow-style: none;  /* IE and Edge */
+  //scrollbar-width: none;  /* Firefox */
 }
 
 .slider-nav_button {
+  cursor: pointer;
 	position: absolute;
 	top: 0;
 	z-index: 1;

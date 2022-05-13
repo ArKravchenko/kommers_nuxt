@@ -1,14 +1,25 @@
 import {Component, Prop, Vue} from 'nuxt-property-decorator'
 import type {ArticleLong} from "~/interfaces/API/MainPageApi";
-import Gallery from './Gallery/Gallery.vue'
+import GallerySwiperTest from './GallerySwiperTest/GallerySwiperTest.vue'
+// import Gallery from './Gallery/Gallery.vue'
 import DocBodyElement from '@/components/DocumentPage/DocBodyElement/DocBodyElement.vue'
+
+// const GallerySwiperTest = () => import(
+//   /* webpackChunkName: "GallerySwiperTest." */
+//   /* webpackMode: "lazy" */
+//   './GallerySwiperTest/GallerySwiperTest.vue')
+// const Gallery = () => import(
+//   /* webpackChunkName: "Gallery." */
+//   /* webpackMode: "eager" */
+//   './Gallery/Gallery.vue')
 
 
 @Component({
   // name is required for recursive components as GalleryWrapper uses DocBodyElement and vice versa
   name: 'GalleryWrapper',
   components: {
-    Gallery,
+    // Gallery,
+    GallerySwiperTest,
     DocBodyElement
   }
 })

@@ -8,6 +8,12 @@
              :src="$imgPlaceholder"
              v-lazy="getIllustrationImg.src"
              :alt="getIllustrationImg.alt">
+        <noscript>
+          <img class="doc_media__media"
+               :src="getIllustrationImg.src"
+               :alt="getIllustrationImg.alt"
+          >
+        </noscript>
 
       </div>
       <figcaption class="doc_media__caption">

@@ -1,0 +1,9 @@
+@import 'swiper/swiper.scss';
+
+.swiper{
+  margin: 0 -#{$mobile_gap} 4.6rem -#{$mobile_gap};
+  @include media('desktop') {
+    clear: both;
+    margin: 0 0 35px 0;
+  }
+}
