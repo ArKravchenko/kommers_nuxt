@@ -3,11 +3,19 @@
 
   <article class="doc">
 
-    <DocHeader :hide-titles="getHideTitles" :title="getTitle" :subtitle="getSubtitle" :pub-date="getPubDate" :breadcrumb="getBreadcrumb" />
+    <DocHeader
+      :hide-titles="getHideTitles"
+      :title="getTitle"
+      :subtitle="getSubtitle"
+      :pub-date="getPubDate"
+      :breadcrumb="getBreadcrumb"
+      :reading-time="getReadingTime"
+      :sharing-href="getSharingHref"
+    />
 
     <div class="doc__body">
       <div class="hide_mobile">
-        <ArticleSharing/>
+        <ArticleSharing :reading-time="getReadingTime" :sharing-href="getSharingHref"/>
       </div>
 
 

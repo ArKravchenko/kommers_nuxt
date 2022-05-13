@@ -41,6 +41,16 @@ export default class ArticleLongContent extends Vue {
     // }
   }) articleLongContent!: ArticleLong.IArticleLong | null;
 
+  get getSharingHref(){
+    return this.articleLongContent?.data?.docId
+      && `/doc/${this.articleLongContent.data.docId}`
+  }
+
+  get getReadingTime(){
+    return this.articleLongContent?.data?.readingTime
+      && this.articleLongContent.data.readingTime
+  }
+
   get getTitle(){
     return this.articleLongContent?.data?.title?.length
     && this.articleLongContent.data.title

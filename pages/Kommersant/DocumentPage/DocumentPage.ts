@@ -81,6 +81,20 @@ export default class DocumentPage extends Vue {
     }
   }
 
+  head() {
+    return this.getNoIndex ? {
+      meta: [
+        { hid: 'robots', name: 'robots', content: 'noindex' }
+      ]
+    } : {}
+
+  }
+
+  get getNoIndex() {
+    return this.docPageData?.data?.meta?.noIndex
+      && this.docPageData.data.meta.noIndex
+  }
+
   // get getOpinions(){
   //   return this.listPageWidgets
   //     && this.listPageWidgets.opinions

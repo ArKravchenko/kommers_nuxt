@@ -17,8 +17,14 @@ export default class SharingList extends Vue {
 
   isSharingOpen: boolean = false;
 
-  isSharingOpenToggle(){
+  isSharingOpenToggle() {
     this.isSharingOpen = !this.isSharingOpen
+  }
+
+  isFavAdded: boolean = false;
+
+  isFavAddedToggle() {
+    this.isFavAdded = !this.isFavAdded
   }
 
 }

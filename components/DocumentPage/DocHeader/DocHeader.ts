@@ -46,6 +46,20 @@ export default class DocHeader extends Vue {
     default: false,
   }) hideTitles!: ArticleLong.IArticleLong['data']['hideTitles'] | null;
 
+  @Prop({
+    type: String,
+    required: true,
+    default: null,
+    // validator(value: MainPageAPI.Endpoint_4): boolean {
+    //   return !!value.rates && !!value.items
+    // }
+  }) readingTime!: string | null;
+  @Prop({
+    type: String,
+    required: false,
+    default: null,
+  }) sharingHref!: string | null;
+
 
   get getTitle(){
     return this.title?.length

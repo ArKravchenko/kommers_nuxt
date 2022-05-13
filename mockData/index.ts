@@ -5,9 +5,9 @@ export const actualno = {
   "data": {
     "rates": {
       "href": "/indices",
-      "usd": { "rate": 66.16750, "changeTrend": -1 },
-      "eur": { "rate": 70.07500, "changeTrend": -1 },
-      "moex": { "rate": 2395.60000, "changeTrend": 1 }
+      "usd": { "rate": 62.93500, "changeTrend": -1 },
+      "eur": { "rate": 65.47000, "changeTrend": 1 },
+      "moex": { "rate": 2294.81000, "changeTrend": -1 }
     },
     "items": [{
       "title": "Россия и США продлили Договор о СНВ",
@@ -416,6 +416,13 @@ export const mainPageWidgets = {
           },
           "title": "Абрамченко не увидела причин для резкого роста цен на продукты в новом году",
           "href": "/doc/5153071"
+        }, {
+          "subtitle": "Минобрнауки вернулось к вопросу о научной оценке бюджетных расходов на науку", "img": {
+            "jpegSrcSet": "https://im.kommersant.ru/Issues.photo/DAILY/2021/236M/KSP_017480_00110_1_t241_225521.jpg 1200w, https://im.kommersant.ru/Issues.photo/DAILY/2021/236M/KSP_017480_00110_1_t240_225521.jpg 1035w, https://im.kommersant.ru/Issues.photo/DAILY/2021/236M/KSP_017480_00110_1_t239_225521.jpg 990w, https://im.kommersant.ru/Issues.photo/DAILY/2021/236M/KSP_017480_00110_1_t250_225521.jpg 870w, https://im.kommersant.ru/Issues.photo/DAILY/2021/236M/KSP_017480_00110_1_t238_225521.jpg 690w, https://im.kommersant.ru/Issues.photo/DAILY/2021/236M/KSP_017480_00110_1_t237_225521.jpg 660w, https://im.kommersant.ru/Issues.photo/DAILY/2021/236M/KSP_017480_00110_1_t236_225521.jpg 600w, https://im.kommersant.ru/Issues.photo/DAILY/2021/236M/KSP_017480_00110_1_t235_225521.jpg 580w, https://im.kommersant.ru/Issues.photo/DAILY/2021/236M/KSP_017480_00110_1_t234_225521.jpg 550w, https://im.kommersant.ru/Issues.photo/DAILY/2021/236M/KSP_017480_00110_1_t233_225521.jpg 480w, https://im.kommersant.ru/Issues.photo/DAILY/2021/236M/KSP_017480_00110_1_t232_225521.jpg 370w, https://im.kommersant.ru/Issues.photo/DAILY/2021/236M/KSP_017480_00110_1_t231_225521.jpg 360w, https://im.kommersant.ru/Issues.photo/DAILY/2021/236M/KSP_017480_00110_1_t230_225521.jpg 300w, https://im.kommersant.ru/Issues.photo/DAILY/2021/236M/KSP_017480_00110_1_t229_225521.jpg 250w, https://im.kommersant.ru/Issues.photo/DAILY/2021/236M/KSP_017480_00110_1_t228_225521.jpg 240w, https://im.kommersant.ru/Issues.photo/DAILY/2021/236M/KSP_017480_00110_1_t227_225521.jpg 180w, https://im.kommersant.ru/Issues.photo/DAILY/2021/236M/KSP_017480_00110_1_t226_225521.jpg 160w, https://im.kommersant.ru/Issues.photo/DAILY/2021/236M/KSP_017480_00110_1_t225_225521.jpg 143w, https://im.kommersant.ru/Issues.photo/DAILY/2021/236M/KSP_017480_00110_1_t224_225521.jpg 120w",
+            "webpSrcSet": "https://im.kommersant.ru/Issues.photo/DAILY/2021/236M/KSP_017480_00110_1_t241_225521.jpg 1200w, https://im.kommersant.ru/Issues.photo/DAILY/2021/236M/KSP_017480_00110_1_t240_225521.jpg 1035w, https://im.kommersant.ru/Issues.photo/DAILY/2021/236M/KSP_017480_00110_1_t239_225521.jpg 990w, https://im.kommersant.ru/Issues.photo/DAILY/2021/236M/KSP_017480_00110_1_t250_225521.jpg 870w, https://im.kommersant.ru/Issues.photo/DAILY/2021/236M/KSP_017480_00110_1_t238_225521.jpg 690w, https://im.kommersant.ru/Issues.photo/DAILY/2021/236M/KSP_017480_00110_1_t237_225521.jpg 660w, https://im.kommersant.ru/Issues.photo/DAILY/2021/236M/KSP_017480_00110_1_t236_225521.jpg 600w, https://im.kommersant.ru/Issues.photo/DAILY/2021/236M/KSP_017480_00110_1_t235_225521.jpg 580w, https://im.kommersant.ru/Issues.photo/DAILY/2021/236M/KSP_017480_00110_1_t234_225521.jpg 550w, https://im.kommersant.ru/Issues.photo/DAILY/2021/236M/KSP_017480_00110_1_t233_225521.jpg 480w, https://im.kommersant.ru/Issues.photo/DAILY/2021/236M/KSP_017480_00110_1_t232_225521.jpg 370w, https://im.kommersant.ru/Issues.photo/DAILY/2021/236M/KSP_017480_00110_1_t231_225521.jpg 360w, https://im.kommersant.ru/Issues.photo/DAILY/2021/236M/KSP_017480_00110_1_t230_225521.jpg 300w, https://im.kommersant.ru/Issues.photo/DAILY/2021/236M/KSP_017480_00110_1_t229_225521.jpg 250w, https://im.kommersant.ru/Issues.photo/DAILY/2021/236M/KSP_017480_00110_1_t228_225521.jpg 240w, https://im.kommersant.ru/Issues.photo/DAILY/2021/236M/KSP_017480_00110_1_t227_225521.jpg 180w, https://im.kommersant.ru/Issues.photo/DAILY/2021/236M/KSP_017480_00110_1_t226_225521.jpg 160w, https://im.kommersant.ru/Issues.photo/DAILY/2021/236M/KSP_017480_00110_1_t225_225521.jpg 143w, https://im.kommersant.ru/Issues.photo/DAILY/2021/236M/KSP_017480_00110_1_t224_225521.jpg 120w",
+            "src": "https://im.kommersant.ru/Issues.photo/DAILY/2021/236M/KSP_017480_00110_1_t218_225521.jpg",
+            "alt": "Экспертиза в законном измерении"
+          }, "title": "Экспертиза в законном измерении", "href": "/doc/5152798"
         }]
       }, {
         "title": "Политика", "href": "/rubric/2", "docs": [{
@@ -672,6 +679,13 @@ export const mainPageWidgets = {
           "img": { "jpegSrcSet": "", "webpSrcSet": "", "src": "", "alt": "Спутники QR-кода" },
           "title": "Спутники QR-кода",
           "href": "/doc/5153162"
+        }, {
+          "subtitle": null, "img": {
+            "jpegSrcSet": "https://im.kommersant.ru/Issues.photo/NEWS/2021/12/27/KSP_015645_00004_1_t241_122138.jpg 1200w, https://im.kommersant.ru/Issues.photo/NEWS/2021/12/27/KSP_015645_00004_1_t240_122138.jpg 1035w, https://im.kommersant.ru/Issues.photo/NEWS/2021/12/27/KSP_015645_00004_1_t239_122138.jpg 990w, https://im.kommersant.ru/Issues.photo/NEWS/2021/12/27/KSP_015645_00004_1_t250_122138.jpg 870w, https://im.kommersant.ru/Issues.photo/NEWS/2021/12/27/KSP_015645_00004_1_t238_122138.jpg 690w, https://im.kommersant.ru/Issues.photo/NEWS/2021/12/27/KSP_015645_00004_1_t237_122138.jpg 660w, https://im.kommersant.ru/Issues.photo/NEWS/2021/12/27/KSP_015645_00004_1_t236_122138.jpg 600w, https://im.kommersant.ru/Issues.photo/NEWS/2021/12/27/KSP_015645_00004_1_t235_122138.jpg 580w, https://im.kommersant.ru/Issues.photo/NEWS/2021/12/27/KSP_015645_00004_1_t234_122138.jpg 550w, https://im.kommersant.ru/Issues.photo/NEWS/2021/12/27/KSP_015645_00004_1_t233_122138.jpg 480w, https://im.kommersant.ru/Issues.photo/NEWS/2021/12/27/KSP_015645_00004_1_t232_122138.jpg 370w, https://im.kommersant.ru/Issues.photo/NEWS/2021/12/27/KSP_015645_00004_1_t231_122138.jpg 360w, https://im.kommersant.ru/Issues.photo/NEWS/2021/12/27/KSP_015645_00004_1_t230_122138.jpg 300w, https://im.kommersant.ru/Issues.photo/NEWS/2021/12/27/KSP_015645_00004_1_t229_122138.jpg 250w, https://im.kommersant.ru/Issues.photo/NEWS/2021/12/27/KSP_015645_00004_1_t228_122138.jpg 240w, https://im.kommersant.ru/Issues.photo/NEWS/2021/12/27/KSP_015645_00004_1_t227_122138.jpg 180w, https://im.kommersant.ru/Issues.photo/NEWS/2021/12/27/KSP_015645_00004_1_t226_122138.jpg 160w, https://im.kommersant.ru/Issues.photo/NEWS/2021/12/27/KSP_015645_00004_1_t225_122138.jpg 143w, https://im.kommersant.ru/Issues.photo/NEWS/2021/12/27/KSP_015645_00004_1_t224_122138.jpg 120w",
+            "webpSrcSet": "https://im.kommersant.ru/Issues.photo/NEWS/2021/12/27/KSP_015645_00004_1_t241_122138.jpg 1200w, https://im.kommersant.ru/Issues.photo/NEWS/2021/12/27/KSP_015645_00004_1_t240_122138.jpg 1035w, https://im.kommersant.ru/Issues.photo/NEWS/2021/12/27/KSP_015645_00004_1_t239_122138.jpg 990w, https://im.kommersant.ru/Issues.photo/NEWS/2021/12/27/KSP_015645_00004_1_t250_122138.jpg 870w, https://im.kommersant.ru/Issues.photo/NEWS/2021/12/27/KSP_015645_00004_1_t238_122138.jpg 690w, https://im.kommersant.ru/Issues.photo/NEWS/2021/12/27/KSP_015645_00004_1_t237_122138.jpg 660w, https://im.kommersant.ru/Issues.photo/NEWS/2021/12/27/KSP_015645_00004_1_t236_122138.jpg 600w, https://im.kommersant.ru/Issues.photo/NEWS/2021/12/27/KSP_015645_00004_1_t235_122138.jpg 580w, https://im.kommersant.ru/Issues.photo/NEWS/2021/12/27/KSP_015645_00004_1_t234_122138.jpg 550w, https://im.kommersant.ru/Issues.photo/NEWS/2021/12/27/KSP_015645_00004_1_t233_122138.jpg 480w, https://im.kommersant.ru/Issues.photo/NEWS/2021/12/27/KSP_015645_00004_1_t232_122138.jpg 370w, https://im.kommersant.ru/Issues.photo/NEWS/2021/12/27/KSP_015645_00004_1_t231_122138.jpg 360w, https://im.kommersant.ru/Issues.photo/NEWS/2021/12/27/KSP_015645_00004_1_t230_122138.jpg 300w, https://im.kommersant.ru/Issues.photo/NEWS/2021/12/27/KSP_015645_00004_1_t229_122138.jpg 250w, https://im.kommersant.ru/Issues.photo/NEWS/2021/12/27/KSP_015645_00004_1_t228_122138.jpg 240w, https://im.kommersant.ru/Issues.photo/NEWS/2021/12/27/KSP_015645_00004_1_t227_122138.jpg 180w, https://im.kommersant.ru/Issues.photo/NEWS/2021/12/27/KSP_015645_00004_1_t226_122138.jpg 160w, https://im.kommersant.ru/Issues.photo/NEWS/2021/12/27/KSP_015645_00004_1_t225_122138.jpg 143w, https://im.kommersant.ru/Issues.photo/NEWS/2021/12/27/KSP_015645_00004_1_t224_122138.jpg 120w",
+            "src": "https://im.kommersant.ru/Issues.photo/NEWS/2021/12/27/KSP_015645_00004_1_t218_122138.jpg",
+            "alt": "Суд в Карелии увеличил историку Дмитриеву срок в колонии до 15 лет"
+          }, "title": "Суд в Карелии увеличил историку Дмитриеву срок в колонии до 15 лет", "href": "/doc/5153056"
         }]
       }, {
         "title": "Происшествия", "href": "/rubric/6", "docs": [{
@@ -794,7 +808,7 @@ export const mainPageWidgets = {
           "href": "/doc/5151810"
         }]
       }]
-    }, "dataHash": "69D20DC735B742BD93B05B045612A572"
+    }, "dataHash": "3A09A2C920DB6414284221D2038E3E8C"
   },
   "spendTime": {
     "data": {
@@ -940,17 +954,7 @@ export const mainPageWidgets = {
 }
 
 export const listPageWidgets = {
-  "timestamp": 1650532989,
-  "top": { "order": 1, "data": { "docs": [], "partner": null } },
-  "mainToday": { "order": 3, "title": "Главное", "data": { "docs": [] } },
-  "lightSpot": { "order": 2, "data": { "items": [] } },
-  "multimedia": { "order": 5, "title": null, "data": { "items": [] } },
-  "opinion": { "order": 4, "data": { "opinions": [] } },
-  "html": null
-}
-
-export const listPageDocs = {
-  "timestamp": 1651828947,
+  "timestamp": 1652431101,
   "pageData": {
     "title": "Талибы в Афганистане",
     "description": "15 августа запрещенная в России террористическая организация «Талибан» захватила столицу Афганистана Кабул. Президент Афганистана Ашраф Гани подал в отставку и покинул страну. О намерении сопротивляться талибам заявила единственная провинция Панджшер. 31 августа была закончена эвакуация из Кабула американцев и их соратников. США вывезли 120 тыс. человек, однако многие остались во власти талибов. О происходящем в Афганистане — в теме «Ъ».",
@@ -969,6 +973,449 @@ export const listPageDocs = {
   "multimedia": null,
   "opinion": null,
   "html": null
+}
+
+export const listPageDocs = {
+  "data": {
+    "timestamp": 1652431129, "docs": [{
+      "subtitle": "Стала ли смена власти в Афганистане материализацией страхов мирового сообщества",
+      "pubDate": "2021-12-30T21:08:00.77+03:00",
+      "img": {
+        "jpegSrcSet": "https://im.kommersant.ru/Issues.photo/CORP/2021/12/27/KMO_096855_27247_1_t241_145957.jpg 1200w, https://im.kommersant.ru/Issues.photo/CORP/2021/12/27/KMO_096855_27247_1_t240_145957.jpg 1035w, https://im.kommersant.ru/Issues.photo/CORP/2021/12/27/KMO_096855_27247_1_t239_145957.jpg 990w, https://im.kommersant.ru/Issues.photo/CORP/2021/12/27/KMO_096855_27247_1_t250_145957.jpg 870w, https://im.kommersant.ru/Issues.photo/CORP/2021/12/27/KMO_096855_27247_1_t238_145957.jpg 690w, https://im.kommersant.ru/Issues.photo/CORP/2021/12/27/KMO_096855_27247_1_t237_145957.jpg 660w, https://im.kommersant.ru/Issues.photo/CORP/2021/12/27/KMO_096855_27247_1_t236_145957.jpg 600w, https://im.kommersant.ru/Issues.photo/CORP/2021/12/27/KMO_096855_27247_1_t235_145957.jpg 580w, https://im.kommersant.ru/Issues.photo/CORP/2021/12/27/KMO_096855_27247_1_t234_145957.jpg 550w, https://im.kommersant.ru/Issues.photo/CORP/2021/12/27/KMO_096855_27247_1_t233_145957.jpg 480w, https://im.kommersant.ru/Issues.photo/CORP/2021/12/27/KMO_096855_27247_1_t232_145957.jpg 370w, https://im.kommersant.ru/Issues.photo/CORP/2021/12/27/KMO_096855_27247_1_t231_145957.jpg 360w, https://im.kommersant.ru/Issues.photo/CORP/2021/12/27/KMO_096855_27247_1_t230_145957.jpg 300w, https://im.kommersant.ru/Issues.photo/CORP/2021/12/27/KMO_096855_27247_1_t229_145957.jpg 250w, https://im.kommersant.ru/Issues.photo/CORP/2021/12/27/KMO_096855_27247_1_t228_145957.jpg 240w, https://im.kommersant.ru/Issues.photo/CORP/2021/12/27/KMO_096855_27247_1_t227_145957.jpg 180w, https://im.kommersant.ru/Issues.photo/CORP/2021/12/27/KMO_096855_27247_1_t226_145957.jpg 160w, https://im.kommersant.ru/Issues.photo/CORP/2021/12/27/KMO_096855_27247_1_t225_145957.jpg 143w, https://im.kommersant.ru/Issues.photo/CORP/2021/12/27/KMO_096855_27247_1_t224_145957.jpg 120w",
+        "webpSrcSet": "https://im.kommersant.ru/Issues.photo/CORP/2021/12/27/KMO_096855_27247_1_t241_145957.jpg 1200w, https://im.kommersant.ru/Issues.photo/CORP/2021/12/27/KMO_096855_27247_1_t240_145957.jpg 1035w, https://im.kommersant.ru/Issues.photo/CORP/2021/12/27/KMO_096855_27247_1_t239_145957.jpg 990w, https://im.kommersant.ru/Issues.photo/CORP/2021/12/27/KMO_096855_27247_1_t250_145957.jpg 870w, https://im.kommersant.ru/Issues.photo/CORP/2021/12/27/KMO_096855_27247_1_t238_145957.jpg 690w, https://im.kommersant.ru/Issues.photo/CORP/2021/12/27/KMO_096855_27247_1_t237_145957.jpg 660w, https://im.kommersant.ru/Issues.photo/CORP/2021/12/27/KMO_096855_27247_1_t236_145957.jpg 600w, https://im.kommersant.ru/Issues.photo/CORP/2021/12/27/KMO_096855_27247_1_t235_145957.jpg 580w, https://im.kommersant.ru/Issues.photo/CORP/2021/12/27/KMO_096855_27247_1_t234_145957.jpg 550w, https://im.kommersant.ru/Issues.photo/CORP/2021/12/27/KMO_096855_27247_1_t233_145957.jpg 480w, https://im.kommersant.ru/Issues.photo/CORP/2021/12/27/KMO_096855_27247_1_t232_145957.jpg 370w, https://im.kommersant.ru/Issues.photo/CORP/2021/12/27/KMO_096855_27247_1_t231_145957.jpg 360w, https://im.kommersant.ru/Issues.photo/CORP/2021/12/27/KMO_096855_27247_1_t230_145957.jpg 300w, https://im.kommersant.ru/Issues.photo/CORP/2021/12/27/KMO_096855_27247_1_t229_145957.jpg 250w, https://im.kommersant.ru/Issues.photo/CORP/2021/12/27/KMO_096855_27247_1_t228_145957.jpg 240w, https://im.kommersant.ru/Issues.photo/CORP/2021/12/27/KMO_096855_27247_1_t227_145957.jpg 180w, https://im.kommersant.ru/Issues.photo/CORP/2021/12/27/KMO_096855_27247_1_t226_145957.jpg 160w, https://im.kommersant.ru/Issues.photo/CORP/2021/12/27/KMO_096855_27247_1_t225_145957.jpg 143w, https://im.kommersant.ru/Issues.photo/CORP/2021/12/27/KMO_096855_27247_1_t224_145957.jpg 120w",
+        "src": "https://im.kommersant.ru/Issues.photo/CORP/2021/12/27/KMO_096855_27247_1_t218_145957.jpg",
+        "alt": "Талиб не на час"
+      },
+      "comments": 5,
+      "views": 20000,
+      "readTime": 6,
+      "tags": {
+        "main": { "text": "Талибы в Афганистане", "href": "todo" },
+        "rest": [{ "text": "Мир", "href": "" }, { "text": "Главное", "href": "" }, {
+          "text": "Срез рубрики",
+          "href": ""
+        }, { "text": "Итоги года", "href": "" }, {
+          "text": "Афганистан и его отношения с миром",
+          "href": "todo"
+        }, { "text": "Все об Азии", "href": "todo" }, { "text": "Москва", "href": "" }, {
+          "text": "\"Коммерсантъ\"",
+          "href": "/"
+        }, { "text": "Кирилл Кривошеев", "href": "todo" }, { "text": "Corp", "href": "todo" }]
+      },
+      "title": "Талиб не на час",
+      "href": "/doc/5153083"
+    }, {
+      "subtitle": null,
+      "pubDate": "2021-12-28T09:49:05.56+03:00",
+      "img": null,
+      "comments": 5,
+      "views": 20000,
+      "readTime": 1,
+      "tags": {
+        "main": { "text": "Талибы в Афганистане", "href": "todo" },
+        "rest": [{ "text": "Мир", "href": "" }, {
+          "text": "Афганистан и его отношения с миром",
+          "href": "todo"
+        }, { "text": "Москва", "href": "" }, {
+          "text": "Лента новостей (Москва)",
+          "href": "/archive/news"
+        }, { "text": null, "href": "todo" }]
+      },
+      "title": "Талибы открыли огонь по протестующим женщинам в Кабуле",
+      "href": "/doc/5153610"
+    }, {
+      "subtitle": null,
+      "pubDate": "2021-12-22T12:56:29.313+03:00",
+      "img": null,
+      "comments": 5,
+      "views": 20000,
+      "readTime": 2,
+      "tags": {
+        "main": { "text": "Талибы в Афганистане", "href": "todo" },
+        "rest": [{ "text": "Мир", "href": "" }, {
+          "text": "Афганистан и его отношения с миром",
+          "href": "todo"
+        }, { "text": "Все об Азии", "href": "todo" }, {
+          "text": "Москва",
+          "href": ""
+        }, { "text": "Лента новостей (Москва)", "href": "/archive/news" }, { "text": null, "href": "todo" }]
+      },
+      "title": "МИД РФ: террористы всего мира считают приход талибов к власти в Афганистане своей победой",
+      "href": "/doc/5142143"
+    }, {
+      "subtitle": null,
+      "pubDate": "2021-12-22T04:45:31.97+03:00",
+      "img": null,
+      "comments": 5,
+      "views": 20000,
+      "readTime": 1,
+      "tags": {
+        "main": { "text": "Талибы в Афганистане", "href": "todo" },
+        "rest": [{ "text": "Мир", "href": "" }, {
+          "text": "Афганистан и его отношения с миром",
+          "href": "todo"
+        }, { "text": "Все об Азии", "href": "todo" }, {
+          "text": "Москва",
+          "href": ""
+        }, { "text": "Лента новостей (Москва)", "href": "/archive/news" }, { "text": null, "href": "todo" }]
+      },
+      "title": "Reuters: ООН намерена заплатить талибам почти $6 млн за охрану миссии в Афганистане",
+      "href": "/doc/5141924"
+    }, {
+      "subtitle": "Новое правительство Афганистана пытается ограничить влияние своего ключевого союзника",
+      "pubDate": "2021-12-13T22:28:52.66+03:00",
+      "img": {
+        "jpegSrcSet": "https://im.kommersant.ru/Issues.photo/CORP/2021/12/13/KMO_120232_24615_1_t241_221258.jpg 1200w, https://im.kommersant.ru/Issues.photo/CORP/2021/12/13/KMO_120232_24615_1_t240_221258.jpg 1035w, https://im.kommersant.ru/Issues.photo/CORP/2021/12/13/KMO_120232_24615_1_t239_221258.jpg 990w, https://im.kommersant.ru/Issues.photo/CORP/2021/12/13/KMO_120232_24615_1_t250_221258.jpg 870w, https://im.kommersant.ru/Issues.photo/CORP/2021/12/13/KMO_120232_24615_1_t238_221258.jpg 690w, https://im.kommersant.ru/Issues.photo/CORP/2021/12/13/KMO_120232_24615_1_t237_221258.jpg 660w, https://im.kommersant.ru/Issues.photo/CORP/2021/12/13/KMO_120232_24615_1_t236_221258.jpg 600w, https://im.kommersant.ru/Issues.photo/CORP/2021/12/13/KMO_120232_24615_1_t235_221258.jpg 580w, https://im.kommersant.ru/Issues.photo/CORP/2021/12/13/KMO_120232_24615_1_t234_221258.jpg 550w, https://im.kommersant.ru/Issues.photo/CORP/2021/12/13/KMO_120232_24615_1_t233_221258.jpg 480w, https://im.kommersant.ru/Issues.photo/CORP/2021/12/13/KMO_120232_24615_1_t232_221258.jpg 370w, https://im.kommersant.ru/Issues.photo/CORP/2021/12/13/KMO_120232_24615_1_t231_221258.jpg 360w, https://im.kommersant.ru/Issues.photo/CORP/2021/12/13/KMO_120232_24615_1_t230_221258.jpg 300w, https://im.kommersant.ru/Issues.photo/CORP/2021/12/13/KMO_120232_24615_1_t229_221258.jpg 250w, https://im.kommersant.ru/Issues.photo/CORP/2021/12/13/KMO_120232_24615_1_t228_221258.jpg 240w, https://im.kommersant.ru/Issues.photo/CORP/2021/12/13/KMO_120232_24615_1_t227_221258.jpg 180w, https://im.kommersant.ru/Issues.photo/CORP/2021/12/13/KMO_120232_24615_1_t226_221258.jpg 160w, https://im.kommersant.ru/Issues.photo/CORP/2021/12/13/KMO_120232_24615_1_t225_221258.jpg 143w, https://im.kommersant.ru/Issues.photo/CORP/2021/12/13/KMO_120232_24615_1_t224_221258.jpg 120w",
+        "webpSrcSet": "https://im.kommersant.ru/Issues.photo/CORP/2021/12/13/KMO_120232_24615_1_t241_221258.jpg 1200w, https://im.kommersant.ru/Issues.photo/CORP/2021/12/13/KMO_120232_24615_1_t240_221258.jpg 1035w, https://im.kommersant.ru/Issues.photo/CORP/2021/12/13/KMO_120232_24615_1_t239_221258.jpg 990w, https://im.kommersant.ru/Issues.photo/CORP/2021/12/13/KMO_120232_24615_1_t250_221258.jpg 870w, https://im.kommersant.ru/Issues.photo/CORP/2021/12/13/KMO_120232_24615_1_t238_221258.jpg 690w, https://im.kommersant.ru/Issues.photo/CORP/2021/12/13/KMO_120232_24615_1_t237_221258.jpg 660w, https://im.kommersant.ru/Issues.photo/CORP/2021/12/13/KMO_120232_24615_1_t236_221258.jpg 600w, https://im.kommersant.ru/Issues.photo/CORP/2021/12/13/KMO_120232_24615_1_t235_221258.jpg 580w, https://im.kommersant.ru/Issues.photo/CORP/2021/12/13/KMO_120232_24615_1_t234_221258.jpg 550w, https://im.kommersant.ru/Issues.photo/CORP/2021/12/13/KMO_120232_24615_1_t233_221258.jpg 480w, https://im.kommersant.ru/Issues.photo/CORP/2021/12/13/KMO_120232_24615_1_t232_221258.jpg 370w, https://im.kommersant.ru/Issues.photo/CORP/2021/12/13/KMO_120232_24615_1_t231_221258.jpg 360w, https://im.kommersant.ru/Issues.photo/CORP/2021/12/13/KMO_120232_24615_1_t230_221258.jpg 300w, https://im.kommersant.ru/Issues.photo/CORP/2021/12/13/KMO_120232_24615_1_t229_221258.jpg 250w, https://im.kommersant.ru/Issues.photo/CORP/2021/12/13/KMO_120232_24615_1_t228_221258.jpg 240w, https://im.kommersant.ru/Issues.photo/CORP/2021/12/13/KMO_120232_24615_1_t227_221258.jpg 180w, https://im.kommersant.ru/Issues.photo/CORP/2021/12/13/KMO_120232_24615_1_t226_221258.jpg 160w, https://im.kommersant.ru/Issues.photo/CORP/2021/12/13/KMO_120232_24615_1_t225_221258.jpg 143w, https://im.kommersant.ru/Issues.photo/CORP/2021/12/13/KMO_120232_24615_1_t224_221258.jpg 120w",
+        "src": "https://im.kommersant.ru/Issues.photo/CORP/2021/12/13/KMO_120232_24615_1_t218_221258.jpg",
+        "alt": "Талибы выдавливают из себя пакистанское"
+      },
+      "comments": 5,
+      "views": 20000,
+      "readTime": 4,
+      "tags": {
+        "main": { "text": "Талибы в Афганистане", "href": "todo" },
+        "rest": [{ "text": "Мир", "href": "" }, {
+          "text": "Срез рубрики",
+          "href": ""
+        }, { "text": "Афганистан и его отношения с миром", "href": "todo" }, {
+          "text": "Все об Азии",
+          "href": "todo"
+        }, { "text": "Москва", "href": "" }, { "text": "\"Коммерсантъ\"", "href": "/" }, {
+          "text": "Кирилл Кривошеев",
+          "href": "todo"
+        }, { "text": "Corp", "href": "todo" }]
+      },
+      "title": "Талибы выдавливают из себя пакистанское",
+      "href": "/doc/5129354"
+    }, {
+      "subtitle": null,
+      "pubDate": "2021-12-03T13:09:47.977+03:00",
+      "img": null,
+      "comments": 5,
+      "views": 20000,
+      "readTime": 1,
+      "tags": {
+        "main": { "text": "Талибы в Афганистане", "href": "todo" },
+        "rest": [{ "text": "Мир", "href": "" }, {
+          "text": "Афганистан и его отношения с миром",
+          "href": "todo"
+        }, { "text": "Все об Азии", "href": "todo" }, {
+          "text": "Москва",
+          "href": ""
+        }, { "text": "Лента новостей (Москва)", "href": "/archive/news" }, { "text": null, "href": "todo" }]
+      },
+      "title": "Талибы издали указ о правах женщин",
+      "href": "/doc/5112567"
+    }, {
+      "subtitle": null,
+      "pubDate": "2021-12-01T02:55:07.917+03:00",
+      "img": null,
+      "comments": 5,
+      "views": 20000,
+      "readTime": 1,
+      "tags": {
+        "main": { "text": "Талибы в Афганистане", "href": "todo" },
+        "rest": [{ "text": "Мир", "href": "" }, {
+          "text": "Афганистан и его отношения с миром",
+          "href": "todo"
+        }, { "text": "Все об Азии", "href": "todo" }, {
+          "text": "Москва",
+          "href": ""
+        }, { "text": "Лента новостей (Москва)", "href": "/archive/news" }, { "text": null, "href": "todo" }]
+      },
+      "title": "Делегация США обсудила с талибами гуманитарную помощь Афганистану",
+      "href": "/doc/5100730"
+    }, {
+      "subtitle": "США и ЕС договариваются с исламистами об условиях размораживания активов Кабула",
+      "pubDate": "2021-11-30T20:50:07.62+03:00",
+      "img": {
+        "jpegSrcSet": "https://im.kommersant.ru/Issues.photo/CORP/2021/11/30/KMO_184625_00019_1_t241_204218.jpg 1200w, https://im.kommersant.ru/Issues.photo/CORP/2021/11/30/KMO_184625_00019_1_t240_204218.jpg 1035w, https://im.kommersant.ru/Issues.photo/CORP/2021/11/30/KMO_184625_00019_1_t239_204218.jpg 990w, https://im.kommersant.ru/Issues.photo/CORP/2021/11/30/KMO_184625_00019_1_t250_204218.jpg 870w, https://im.kommersant.ru/Issues.photo/CORP/2021/11/30/KMO_184625_00019_1_t238_204218.jpg 690w, https://im.kommersant.ru/Issues.photo/CORP/2021/11/30/KMO_184625_00019_1_t237_204218.jpg 660w, https://im.kommersant.ru/Issues.photo/CORP/2021/11/30/KMO_184625_00019_1_t236_204218.jpg 600w, https://im.kommersant.ru/Issues.photo/CORP/2021/11/30/KMO_184625_00019_1_t235_204218.jpg 580w, https://im.kommersant.ru/Issues.photo/CORP/2021/11/30/KMO_184625_00019_1_t234_204218.jpg 550w, https://im.kommersant.ru/Issues.photo/CORP/2021/11/30/KMO_184625_00019_1_t233_204218.jpg 480w, https://im.kommersant.ru/Issues.photo/CORP/2021/11/30/KMO_184625_00019_1_t232_204218.jpg 370w, https://im.kommersant.ru/Issues.photo/CORP/2021/11/30/KMO_184625_00019_1_t231_204218.jpg 360w, https://im.kommersant.ru/Issues.photo/CORP/2021/11/30/KMO_184625_00019_1_t230_204218.jpg 300w, https://im.kommersant.ru/Issues.photo/CORP/2021/11/30/KMO_184625_00019_1_t229_204218.jpg 250w, https://im.kommersant.ru/Issues.photo/CORP/2021/11/30/KMO_184625_00019_1_t228_204218.jpg 240w, https://im.kommersant.ru/Issues.photo/CORP/2021/11/30/KMO_184625_00019_1_t227_204218.jpg 180w, https://im.kommersant.ru/Issues.photo/CORP/2021/11/30/KMO_184625_00019_1_t226_204218.jpg 160w, https://im.kommersant.ru/Issues.photo/CORP/2021/11/30/KMO_184625_00019_1_t225_204218.jpg 143w, https://im.kommersant.ru/Issues.photo/CORP/2021/11/30/KMO_184625_00019_1_t224_204218.jpg 120w",
+        "webpSrcSet": "https://im.kommersant.ru/Issues.photo/CORP/2021/11/30/KMO_184625_00019_1_t241_204218.jpg 1200w, https://im.kommersant.ru/Issues.photo/CORP/2021/11/30/KMO_184625_00019_1_t240_204218.jpg 1035w, https://im.kommersant.ru/Issues.photo/CORP/2021/11/30/KMO_184625_00019_1_t239_204218.jpg 990w, https://im.kommersant.ru/Issues.photo/CORP/2021/11/30/KMO_184625_00019_1_t250_204218.jpg 870w, https://im.kommersant.ru/Issues.photo/CORP/2021/11/30/KMO_184625_00019_1_t238_204218.jpg 690w, https://im.kommersant.ru/Issues.photo/CORP/2021/11/30/KMO_184625_00019_1_t237_204218.jpg 660w, https://im.kommersant.ru/Issues.photo/CORP/2021/11/30/KMO_184625_00019_1_t236_204218.jpg 600w, https://im.kommersant.ru/Issues.photo/CORP/2021/11/30/KMO_184625_00019_1_t235_204218.jpg 580w, https://im.kommersant.ru/Issues.photo/CORP/2021/11/30/KMO_184625_00019_1_t234_204218.jpg 550w, https://im.kommersant.ru/Issues.photo/CORP/2021/11/30/KMO_184625_00019_1_t233_204218.jpg 480w, https://im.kommersant.ru/Issues.photo/CORP/2021/11/30/KMO_184625_00019_1_t232_204218.jpg 370w, https://im.kommersant.ru/Issues.photo/CORP/2021/11/30/KMO_184625_00019_1_t231_204218.jpg 360w, https://im.kommersant.ru/Issues.photo/CORP/2021/11/30/KMO_184625_00019_1_t230_204218.jpg 300w, https://im.kommersant.ru/Issues.photo/CORP/2021/11/30/KMO_184625_00019_1_t229_204218.jpg 250w, https://im.kommersant.ru/Issues.photo/CORP/2021/11/30/KMO_184625_00019_1_t228_204218.jpg 240w, https://im.kommersant.ru/Issues.photo/CORP/2021/11/30/KMO_184625_00019_1_t227_204218.jpg 180w, https://im.kommersant.ru/Issues.photo/CORP/2021/11/30/KMO_184625_00019_1_t226_204218.jpg 160w, https://im.kommersant.ru/Issues.photo/CORP/2021/11/30/KMO_184625_00019_1_t225_204218.jpg 143w, https://im.kommersant.ru/Issues.photo/CORP/2021/11/30/KMO_184625_00019_1_t224_204218.jpg 120w",
+        "src": "https://im.kommersant.ru/Issues.photo/CORP/2021/11/30/KMO_184625_00019_1_t218_204218.jpg",
+        "alt": "«Талибан», открой личико"
+      },
+      "comments": 5,
+      "views": 20000,
+      "readTime": 4,
+      "tags": {
+        "main": { "text": "Талибы в Афганистане", "href": "todo" },
+        "rest": [{ "text": "Мир", "href": "" }, { "text": "Главное", "href": "" }, {
+          "text": "Срез рубрики",
+          "href": ""
+        }, { "text": "Афганистан и его отношения с миром", "href": "todo" }, {
+          "text": "Все об Азии",
+          "href": "todo"
+        }, { "text": "Москва", "href": "" }, { "text": "\"Коммерсантъ\"", "href": "/" }, {
+          "text": "Сергей Строкань",
+          "href": "todo"
+        }, { "text": "Павел Тарасенко", "href": "todo" }, { "text": "Corp", "href": "todo" }]
+      },
+      "title": "«Талибан», открой личико",
+      "href": "/doc/5100589"
+    }, {
+      "subtitle": "Как целая страна продолжает существовать лишь в посольствах",
+      "pubDate": "2021-11-27T17:03:08.517+03:00",
+      "img": {
+        "jpegSrcSet": "https://im.kommersant.ru/Issues.photo/CORP/2021/11/25/KMO_183590_00092_1_t241_143011.jpg 1200w, https://im.kommersant.ru/Issues.photo/CORP/2021/11/25/KMO_183590_00092_1_t240_143011.jpg 1035w, https://im.kommersant.ru/Issues.photo/CORP/2021/11/25/KMO_183590_00092_1_t239_143011.jpg 990w, https://im.kommersant.ru/Issues.photo/CORP/2021/11/25/KMO_183590_00092_1_t250_143011.jpg 870w, https://im.kommersant.ru/Issues.photo/CORP/2021/11/25/KMO_183590_00092_1_t238_143011.jpg 690w, https://im.kommersant.ru/Issues.photo/CORP/2021/11/25/KMO_183590_00092_1_t237_143011.jpg 660w, https://im.kommersant.ru/Issues.photo/CORP/2021/11/25/KMO_183590_00092_1_t236_143011.jpg 600w, https://im.kommersant.ru/Issues.photo/CORP/2021/11/25/KMO_183590_00092_1_t235_143011.jpg 580w, https://im.kommersant.ru/Issues.photo/CORP/2021/11/25/KMO_183590_00092_1_t234_143011.jpg 550w, https://im.kommersant.ru/Issues.photo/CORP/2021/11/25/KMO_183590_00092_1_t233_143011.jpg 480w, https://im.kommersant.ru/Issues.photo/CORP/2021/11/25/KMO_183590_00092_1_t232_143011.jpg 370w, https://im.kommersant.ru/Issues.photo/CORP/2021/11/25/KMO_183590_00092_1_t231_143011.jpg 360w, https://im.kommersant.ru/Issues.photo/CORP/2021/11/25/KMO_183590_00092_1_t230_143011.jpg 300w, https://im.kommersant.ru/Issues.photo/CORP/2021/11/25/KMO_183590_00092_1_t229_143011.jpg 250w, https://im.kommersant.ru/Issues.photo/CORP/2021/11/25/KMO_183590_00092_1_t228_143011.jpg 240w, https://im.kommersant.ru/Issues.photo/CORP/2021/11/25/KMO_183590_00092_1_t227_143011.jpg 180w, https://im.kommersant.ru/Issues.photo/CORP/2021/11/25/KMO_183590_00092_1_t226_143011.jpg 160w, https://im.kommersant.ru/Issues.photo/CORP/2021/11/25/KMO_183590_00092_1_t225_143011.jpg 143w, https://im.kommersant.ru/Issues.photo/CORP/2021/11/25/KMO_183590_00092_1_t224_143011.jpg 120w",
+        "webpSrcSet": "https://im.kommersant.ru/Issues.photo/CORP/2021/11/25/KMO_183590_00092_1_t241_143011.jpg 1200w, https://im.kommersant.ru/Issues.photo/CORP/2021/11/25/KMO_183590_00092_1_t240_143011.jpg 1035w, https://im.kommersant.ru/Issues.photo/CORP/2021/11/25/KMO_183590_00092_1_t239_143011.jpg 990w, https://im.kommersant.ru/Issues.photo/CORP/2021/11/25/KMO_183590_00092_1_t250_143011.jpg 870w, https://im.kommersant.ru/Issues.photo/CORP/2021/11/25/KMO_183590_00092_1_t238_143011.jpg 690w, https://im.kommersant.ru/Issues.photo/CORP/2021/11/25/KMO_183590_00092_1_t237_143011.jpg 660w, https://im.kommersant.ru/Issues.photo/CORP/2021/11/25/KMO_183590_00092_1_t236_143011.jpg 600w, https://im.kommersant.ru/Issues.photo/CORP/2021/11/25/KMO_183590_00092_1_t235_143011.jpg 580w, https://im.kommersant.ru/Issues.photo/CORP/2021/11/25/KMO_183590_00092_1_t234_143011.jpg 550w, https://im.kommersant.ru/Issues.photo/CORP/2021/11/25/KMO_183590_00092_1_t233_143011.jpg 480w, https://im.kommersant.ru/Issues.photo/CORP/2021/11/25/KMO_183590_00092_1_t232_143011.jpg 370w, https://im.kommersant.ru/Issues.photo/CORP/2021/11/25/KMO_183590_00092_1_t231_143011.jpg 360w, https://im.kommersant.ru/Issues.photo/CORP/2021/11/25/KMO_183590_00092_1_t230_143011.jpg 300w, https://im.kommersant.ru/Issues.photo/CORP/2021/11/25/KMO_183590_00092_1_t229_143011.jpg 250w, https://im.kommersant.ru/Issues.photo/CORP/2021/11/25/KMO_183590_00092_1_t228_143011.jpg 240w, https://im.kommersant.ru/Issues.photo/CORP/2021/11/25/KMO_183590_00092_1_t227_143011.jpg 180w, https://im.kommersant.ru/Issues.photo/CORP/2021/11/25/KMO_183590_00092_1_t226_143011.jpg 160w, https://im.kommersant.ru/Issues.photo/CORP/2021/11/25/KMO_183590_00092_1_t225_143011.jpg 143w, https://im.kommersant.ru/Issues.photo/CORP/2021/11/25/KMO_183590_00092_1_t224_143011.jpg 120w",
+        "src": "https://im.kommersant.ru/Issues.photo/CORP/2021/11/25/KMO_183590_00092_1_t218_143011.jpg",
+        "alt": "Виртуальная Республика Афганистан"
+      },
+      "comments": 5,
+      "views": 20000,
+      "readTime": 10,
+      "tags": {
+        "main": { "text": "Талибы в Афганистане", "href": "todo" },
+        "rest": [{ "text": "Мир", "href": "" }, { "text": "Главное", "href": "" }, {
+          "text": "Провести время",
+          "href": ""
+        }, { "text": "Срез рубрики", "href": "" }, {
+          "text": "Афганистан и его отношения с миром",
+          "href": "todo"
+        }, { "text": "Все об Азии", "href": "todo" }, { "text": "Москва", "href": "" }, {
+          "text": "\"Коммерсантъ\"",
+          "href": "/"
+        }, { "text": "Елена Черненко", "href": "todo" }, {
+          "text": "Кирилл Кривошеев",
+          "href": "todo"
+        }, { "text": "Corp", "href": "todo" }]
+      },
+      "title": "Виртуальная Республика Афганистан",
+      "href": "/doc/5090824"
+    }, {
+      "subtitle": null,
+      "pubDate": "2021-11-24T07:49:40.107+03:00",
+      "img": null,
+      "comments": 5,
+      "views": 20000,
+      "readTime": 1,
+      "tags": {
+        "main": { "text": "Талибы в Афганистане", "href": "todo" },
+        "rest": [{ "text": "Мир", "href": "" }, {
+          "text": "Афганистан и его отношения с миром",
+          "href": "todo"
+        }, { "text": "Все об Азии", "href": "todo" }, {
+          "text": "Москва",
+          "href": ""
+        }, { "text": "Лента новостей (Москва)", "href": "/archive/news" }, { "text": null, "href": "todo" }]
+      },
+      "title": "США хотят обсудить с талибами борьбу с терроризмом в Афганистане",
+      "href": "/doc/5089351"
+    }, {
+      "subtitle": null,
+      "pubDate": "2021-11-24T02:50:11.46+03:00",
+      "img": null,
+      "comments": 5,
+      "views": 20000,
+      "readTime": 2,
+      "tags": {
+        "main": { "text": "Талибы в Афганистане", "href": "todo" },
+        "rest": [{ "text": "Мир", "href": "" }, {
+          "text": "Афганистан и его отношения с миром",
+          "href": "todo"
+        }, { "text": "Все об Азии", "href": "todo" }, {
+          "text": "Москва",
+          "href": ""
+        }, { "text": "Лента новостей (Москва)", "href": "/archive/news" }, { "text": null, "href": "todo" }]
+      },
+      "title": "The Intercept: Facebook делал исключения из запрета «Талибана» после захвата Афганистана",
+      "href": "/doc/5089323"
+    }, {
+      "subtitle": null,
+      "pubDate": "2021-11-19T05:39:48.503+03:00",
+      "img": {
+        "jpegSrcSet": "https://im.kommersant.ru/Issues.photo/NEWS/2021/11/19/KMO_128025_06459_1_t241_094818.jpg 1200w, https://im.kommersant.ru/Issues.photo/NEWS/2021/11/19/KMO_128025_06459_1_t240_094818.jpg 1035w, https://im.kommersant.ru/Issues.photo/NEWS/2021/11/19/KMO_128025_06459_1_t239_094818.jpg 990w, https://im.kommersant.ru/Issues.photo/NEWS/2021/11/19/KMO_128025_06459_1_t250_094818.jpg 870w, https://im.kommersant.ru/Issues.photo/NEWS/2021/11/19/KMO_128025_06459_1_t238_094818.jpg 690w, https://im.kommersant.ru/Issues.photo/NEWS/2021/11/19/KMO_128025_06459_1_t237_094818.jpg 660w, https://im.kommersant.ru/Issues.photo/NEWS/2021/11/19/KMO_128025_06459_1_t236_094818.jpg 600w, https://im.kommersant.ru/Issues.photo/NEWS/2021/11/19/KMO_128025_06459_1_t235_094818.jpg 580w, https://im.kommersant.ru/Issues.photo/NEWS/2021/11/19/KMO_128025_06459_1_t234_094818.jpg 550w, https://im.kommersant.ru/Issues.photo/NEWS/2021/11/19/KMO_128025_06459_1_t233_094818.jpg 480w, https://im.kommersant.ru/Issues.photo/NEWS/2021/11/19/KMO_128025_06459_1_t232_094818.jpg 370w, https://im.kommersant.ru/Issues.photo/NEWS/2021/11/19/KMO_128025_06459_1_t231_094818.jpg 360w, https://im.kommersant.ru/Issues.photo/NEWS/2021/11/19/KMO_128025_06459_1_t230_094818.jpg 300w, https://im.kommersant.ru/Issues.photo/NEWS/2021/11/19/KMO_128025_06459_1_t229_094818.jpg 250w, https://im.kommersant.ru/Issues.photo/NEWS/2021/11/19/KMO_128025_06459_1_t228_094818.jpg 240w, https://im.kommersant.ru/Issues.photo/NEWS/2021/11/19/KMO_128025_06459_1_t227_094818.jpg 180w, https://im.kommersant.ru/Issues.photo/NEWS/2021/11/19/KMO_128025_06459_1_t226_094818.jpg 160w, https://im.kommersant.ru/Issues.photo/NEWS/2021/11/19/KMO_128025_06459_1_t225_094818.jpg 143w, https://im.kommersant.ru/Issues.photo/NEWS/2021/11/19/KMO_128025_06459_1_t224_094818.jpg 120w",
+        "webpSrcSet": "https://im.kommersant.ru/Issues.photo/NEWS/2021/11/19/KMO_128025_06459_1_t241_094818.jpg 1200w, https://im.kommersant.ru/Issues.photo/NEWS/2021/11/19/KMO_128025_06459_1_t240_094818.jpg 1035w, https://im.kommersant.ru/Issues.photo/NEWS/2021/11/19/KMO_128025_06459_1_t239_094818.jpg 990w, https://im.kommersant.ru/Issues.photo/NEWS/2021/11/19/KMO_128025_06459_1_t250_094818.jpg 870w, https://im.kommersant.ru/Issues.photo/NEWS/2021/11/19/KMO_128025_06459_1_t238_094818.jpg 690w, https://im.kommersant.ru/Issues.photo/NEWS/2021/11/19/KMO_128025_06459_1_t237_094818.jpg 660w, https://im.kommersant.ru/Issues.photo/NEWS/2021/11/19/KMO_128025_06459_1_t236_094818.jpg 600w, https://im.kommersant.ru/Issues.photo/NEWS/2021/11/19/KMO_128025_06459_1_t235_094818.jpg 580w, https://im.kommersant.ru/Issues.photo/NEWS/2021/11/19/KMO_128025_06459_1_t234_094818.jpg 550w, https://im.kommersant.ru/Issues.photo/NEWS/2021/11/19/KMO_128025_06459_1_t233_094818.jpg 480w, https://im.kommersant.ru/Issues.photo/NEWS/2021/11/19/KMO_128025_06459_1_t232_094818.jpg 370w, https://im.kommersant.ru/Issues.photo/NEWS/2021/11/19/KMO_128025_06459_1_t231_094818.jpg 360w, https://im.kommersant.ru/Issues.photo/NEWS/2021/11/19/KMO_128025_06459_1_t230_094818.jpg 300w, https://im.kommersant.ru/Issues.photo/NEWS/2021/11/19/KMO_128025_06459_1_t229_094818.jpg 250w, https://im.kommersant.ru/Issues.photo/NEWS/2021/11/19/KMO_128025_06459_1_t228_094818.jpg 240w, https://im.kommersant.ru/Issues.photo/NEWS/2021/11/19/KMO_128025_06459_1_t227_094818.jpg 180w, https://im.kommersant.ru/Issues.photo/NEWS/2021/11/19/KMO_128025_06459_1_t226_094818.jpg 160w, https://im.kommersant.ru/Issues.photo/NEWS/2021/11/19/KMO_128025_06459_1_t225_094818.jpg 143w, https://im.kommersant.ru/Issues.photo/NEWS/2021/11/19/KMO_128025_06459_1_t224_094818.jpg 120w",
+        "src": "https://im.kommersant.ru/Issues.photo/NEWS/2021/11/19/KMO_128025_06459_1_t218_094818.jpg",
+        "alt": "Россия эвакуировала из Афганистана граждан пяти стран"
+      },
+      "comments": 5,
+      "views": 20000,
+      "readTime": 1,
+      "tags": {
+        "main": { "text": "Талибы в Афганистане", "href": "todo" },
+        "rest": [{ "text": "Мир", "href": "" }, {
+          "text": "Видео",
+          "href": ""
+        }, { "text": "Афганистан и его отношения с миром", "href": "todo" }, {
+          "text": "Все об Азии",
+          "href": "todo"
+        }, { "text": "Москва", "href": "" }, {
+          "text": "Лента новостей (Москва)",
+          "href": "/archive/news"
+        }, { "text": null, "href": "todo" }]
+      },
+      "title": "Россия эвакуировала из Афганистана граждан пяти стран",
+      "href": "/doc/5080476"
+    }, {
+      "subtitle": null,
+      "pubDate": "2021-11-18T11:13:53.27+03:00",
+      "img": null,
+      "comments": 5,
+      "views": 20000,
+      "readTime": 2,
+      "tags": {
+        "main": { "text": "Талибы в Афганистане", "href": "todo" },
+        "rest": [{ "text": "Мир", "href": "" }, { "text": "Видео", "href": "" }, {
+          "text": "Топ главной",
+          "href": ""
+        }, { "text": "Афганистан и его отношения с миром", "href": "todo" }, {
+          "text": "Все об Азии",
+          "href": "todo"
+        }, { "text": "Москва", "href": "" }, {
+          "text": "Лента новостей (Москва)",
+          "href": "/archive/news"
+        }, { "text": null, "href": "todo" }]
+      },
+      "title": "Из Афганистана российскими самолетами вывезут тысячу человек",
+      "href": "/doc/5079822"
+    }, {
+      "subtitle": null,
+      "pubDate": "2021-11-18T09:37:15.093+03:00",
+      "img": null,
+      "comments": 5,
+      "views": 20000,
+      "readTime": 1,
+      "tags": {
+        "main": { "text": "Талибы в Афганистане", "href": "todo" },
+        "rest": [{ "text": "Мир", "href": "" }, {
+          "text": "Афганистан и его отношения с миром",
+          "href": "todo"
+        }, { "text": "Все об Азии", "href": "todo" }, {
+          "text": "Москва",
+          "href": ""
+        }, { "text": "Лента новостей (Москва)", "href": "/archive/news" }, { "text": null, "href": "todo" }]
+      },
+      "title": "В Кабул прибыла партия гуманитарной помощи из России",
+      "href": "/doc/5079749"
+    }, {
+      "subtitle": null,
+      "pubDate": "2021-11-17T10:44:42.133+03:00",
+      "img": null,
+      "comments": 5,
+      "views": 20000,
+      "readTime": 1,
+      "tags": {
+        "main": { "text": "Талибы в Афганистане", "href": "todo" },
+        "rest": [{ "text": "Мир", "href": "" }, {
+          "text": "Афганистан и его отношения с миром",
+          "href": "todo"
+        }, { "text": "Все об Азии", "href": "todo" }, {
+          "text": "Москва",
+          "href": ""
+        }, { "text": "Лента новостей (Москва)", "href": "/archive/news" }, { "text": null, "href": "todo" }]
+      },
+      "title": "Россия получила заявки на поставку вертолетов и стрелкового оружия соседям Афганистана",
+      "href": "/doc/5079010"
+    }, {
+      "subtitle": null,
+      "pubDate": "2021-11-10T15:18:34.78+03:00",
+      "img": null,
+      "comments": 5,
+      "views": 20000,
+      "readTime": 2,
+      "tags": {
+        "main": { "text": "Талибы в Афганистане", "href": "todo" },
+        "rest": [{ "text": "Мир", "href": "" }, {
+          "text": "Афганистан и его отношения с миром",
+          "href": "todo"
+        }, { "text": "Все об Азии", "href": "todo" }, {
+          "text": "Москва",
+          "href": ""
+        }, { "text": "Лента новостей (Москва)", "href": "/archive/news" }, {
+          "text": "Павел Тарасенко",
+          "href": "todo"
+        }, { "text": null, "href": "todo" }]
+      },
+      "title": "Патрушев: Афганистан находится на грани гуманитарного кризиса",
+      "href": "/doc/5065430"
+    }, {
+      "subtitle": null,
+      "pubDate": "2021-10-30T10:48:32.467+03:00",
+      "img": null,
+      "comments": 5,
+      "views": 20000,
+      "readTime": 2,
+      "tags": {
+        "main": { "text": "Талибы в Афганистане", "href": "todo" },
+        "rest": [{ "text": "Мир", "href": "" }, {
+          "text": "Афганистан и его отношения с миром",
+          "href": "todo"
+        }, { "text": "Все об Азии", "href": "todo" }, {
+          "text": "Москва",
+          "href": ""
+        }, { "text": "Лента новостей (Москва)", "href": "/archive/news" }, { "text": null, "href": "todo" }]
+      },
+      "title": "Главный аудитор США по Афганистану пожаловался на сокрытие властями данных",
+      "href": "/doc/5060575"
+    }, {
+      "subtitle": null,
+      "pubDate": "2021-10-29T02:57:10+03:00",
+      "img": null,
+      "comments": 5,
+      "views": 20000,
+      "readTime": 1,
+      "tags": {
+        "main": { "text": "Талибы в Афганистане", "href": "todo" },
+        "rest": [{ "text": "Мир", "href": "" }, {
+          "text": "Афганистан и его отношения с миром",
+          "href": "todo"
+        }, { "text": "Все об Азии", "href": "todo" }, {
+          "text": "Москва",
+          "href": ""
+        }, { "text": "Лента новостей (Москва)", "href": "/archive/news" }, { "text": null, "href": "todo" }]
+      },
+      "title": "США направят Афганистану гуманитарную помощь на $144 млн",
+      "href": "/doc/5052890"
+    }, {
+      "subtitle": "27 октября, среда",
+      "pubDate": "2021-10-27T14:13:09.71+03:00",
+      "img": {
+        "jpegSrcSet": "https://im.kommersant.ru/Issues.photo/RADIO/2021/10/27/KMO_096855_26826_1_t241_141143.jpg 1200w, https://im.kommersant.ru/Issues.photo/RADIO/2021/10/27/KMO_096855_26826_1_t240_141143.jpg 1035w, https://im.kommersant.ru/Issues.photo/RADIO/2021/10/27/KMO_096855_26826_1_t239_141143.jpg 990w, https://im.kommersant.ru/Issues.photo/RADIO/2021/10/27/KMO_096855_26826_1_t250_141143.jpg 870w, https://im.kommersant.ru/Issues.photo/RADIO/2021/10/27/KMO_096855_26826_1_t238_141143.jpg 690w, https://im.kommersant.ru/Issues.photo/RADIO/2021/10/27/KMO_096855_26826_1_t237_141143.jpg 660w, https://im.kommersant.ru/Issues.photo/RADIO/2021/10/27/KMO_096855_26826_1_t236_141143.jpg 600w, https://im.kommersant.ru/Issues.photo/RADIO/2021/10/27/KMO_096855_26826_1_t235_141143.jpg 580w, https://im.kommersant.ru/Issues.photo/RADIO/2021/10/27/KMO_096855_26826_1_t234_141143.jpg 550w, https://im.kommersant.ru/Issues.photo/RADIO/2021/10/27/KMO_096855_26826_1_t233_141143.jpg 480w, https://im.kommersant.ru/Issues.photo/RADIO/2021/10/27/KMO_096855_26826_1_t232_141143.jpg 370w, https://im.kommersant.ru/Issues.photo/RADIO/2021/10/27/KMO_096855_26826_1_t231_141143.jpg 360w, https://im.kommersant.ru/Issues.photo/RADIO/2021/10/27/KMO_096855_26826_1_t230_141143.jpg 300w, https://im.kommersant.ru/Issues.photo/RADIO/2021/10/27/KMO_096855_26826_1_t229_141143.jpg 250w, https://im.kommersant.ru/Issues.photo/RADIO/2021/10/27/KMO_096855_26826_1_t228_141143.jpg 240w, https://im.kommersant.ru/Issues.photo/RADIO/2021/10/27/KMO_096855_26826_1_t227_141143.jpg 180w, https://im.kommersant.ru/Issues.photo/RADIO/2021/10/27/KMO_096855_26826_1_t226_141143.jpg 160w, https://im.kommersant.ru/Issues.photo/RADIO/2021/10/27/KMO_096855_26826_1_t225_141143.jpg 143w, https://im.kommersant.ru/Issues.photo/RADIO/2021/10/27/KMO_096855_26826_1_t224_141143.jpg 120w",
+        "webpSrcSet": "https://im.kommersant.ru/Issues.photo/RADIO/2021/10/27/KMO_096855_26826_1_t241_141143.jpg 1200w, https://im.kommersant.ru/Issues.photo/RADIO/2021/10/27/KMO_096855_26826_1_t240_141143.jpg 1035w, https://im.kommersant.ru/Issues.photo/RADIO/2021/10/27/KMO_096855_26826_1_t239_141143.jpg 990w, https://im.kommersant.ru/Issues.photo/RADIO/2021/10/27/KMO_096855_26826_1_t250_141143.jpg 870w, https://im.kommersant.ru/Issues.photo/RADIO/2021/10/27/KMO_096855_26826_1_t238_141143.jpg 690w, https://im.kommersant.ru/Issues.photo/RADIO/2021/10/27/KMO_096855_26826_1_t237_141143.jpg 660w, https://im.kommersant.ru/Issues.photo/RADIO/2021/10/27/KMO_096855_26826_1_t236_141143.jpg 600w, https://im.kommersant.ru/Issues.photo/RADIO/2021/10/27/KMO_096855_26826_1_t235_141143.jpg 580w, https://im.kommersant.ru/Issues.photo/RADIO/2021/10/27/KMO_096855_26826_1_t234_141143.jpg 550w, https://im.kommersant.ru/Issues.photo/RADIO/2021/10/27/KMO_096855_26826_1_t233_141143.jpg 480w, https://im.kommersant.ru/Issues.photo/RADIO/2021/10/27/KMO_096855_26826_1_t232_141143.jpg 370w, https://im.kommersant.ru/Issues.photo/RADIO/2021/10/27/KMO_096855_26826_1_t231_141143.jpg 360w, https://im.kommersant.ru/Issues.photo/RADIO/2021/10/27/KMO_096855_26826_1_t230_141143.jpg 300w, https://im.kommersant.ru/Issues.photo/RADIO/2021/10/27/KMO_096855_26826_1_t229_141143.jpg 250w, https://im.kommersant.ru/Issues.photo/RADIO/2021/10/27/KMO_096855_26826_1_t228_141143.jpg 240w, https://im.kommersant.ru/Issues.photo/RADIO/2021/10/27/KMO_096855_26826_1_t227_141143.jpg 180w, https://im.kommersant.ru/Issues.photo/RADIO/2021/10/27/KMO_096855_26826_1_t226_141143.jpg 160w, https://im.kommersant.ru/Issues.photo/RADIO/2021/10/27/KMO_096855_26826_1_t225_141143.jpg 143w, https://im.kommersant.ru/Issues.photo/RADIO/2021/10/27/KMO_096855_26826_1_t224_141143.jpg 120w",
+        "src": "https://im.kommersant.ru/Issues.photo/RADIO/2021/10/27/KMO_096855_26826_1_t218_141143.jpg",
+        "alt": "Зарубежные СМИ: Почему в США опасаются атак со стороны запрещенного в России ИГИЛ?"
+      },
+      "comments": 5,
+      "views": 20000,
+      "readTime": 2,
+      "tags": {
+        "main": { "text": "Талибы в Афганистане", "href": "todo" },
+        "rest": [{ "text": "Аудио", "href": "" }, {
+          "text": "Темы дня",
+          "href": ""
+        }, { "text": "Афганистан и его отношения с миром", "href": "todo" }, {
+          "text": "Обзор зарубежной прессы",
+          "href": "todo"
+        }, { "text": "Все об Азии", "href": "todo" }, { "text": "Москва", "href": "" }, {
+          "text": "\"Коммерсантъ FM\"",
+          "href": "/fm"
+        }, { "text": null, "href": "todo" }]
+      },
+      "title": "Зарубежные СМИ: Почему в США опасаются атак со стороны запрещенного в России ИГИЛ?",
+      "href": "/doc/5051670"
+    }, {
+      "subtitle": null,
+      "pubDate": "2021-10-26T13:28:50.587+03:00",
+      "img": null,
+      "comments": 5,
+      "views": 20000,
+      "readTime": 1,
+      "tags": {
+        "main": { "text": "Талибы в Афганистане", "href": "todo" },
+        "rest": [{ "text": "Мир", "href": "" }, {
+          "text": "Афганистан и его отношения с миром",
+          "href": "todo"
+        }, { "text": "Все об Азии", "href": "todo" }, {
+          "text": "Москва",
+          "href": ""
+        }, { "text": "Лента новостей (Москва)", "href": "/archive/news" }, { "text": null, "href": "todo" }]
+      },
+      "title": "Казахстан поможет с эвакуацией афганских женщин в третьи страны",
+      "href": "/doc/5050906"
+    }]
+  }
 }
 
 export const docPageData: DocPageAPI.Endpoint_4 | any = {
@@ -1143,9 +1590,11 @@ export const docPageData: DocPageAPI.Endpoint_4 | any = {
           "children": ["не используется,"]
         }, " вместо этого используется врез «справка». Однако заверстать надо все виды."]
       }, {
+        "addedDocId": 4693454,
         "align": "center",
         "widgetType": "incut",
-        "title": ["Михаил Гуцериев присмотрелся к Бутово"]
+        "title": ["Михаил Гуцериев присмотрелся к Бутово"],
+        "href": "/doc/4693454"
       }, {
         "widgetType": "para",
         "bodyElements": [{
@@ -1153,19 +1602,21 @@ export const docPageData: DocPageAPI.Endpoint_4 | any = {
           "children": ["По центру без картинки и с текстом"]
         }, " (заг и текст) Редакция называет такую врезку «блок» и ставит только в самом конце документа. В таком документе уже не может быть «врезки-документа» или слайдера внизу. Я поместила для примера такую врезку в самый низ (продублировала), но и тут покажу."]
       }, {
+        "addedDocId": 4693454,
         "align": "center",
         "widgetType": "incut",
         "title": ["Михаил Гуцериев присмотрелся к Бутово"],
-        "text": ["«А101 Девелопмент» Михаила Гуцериева будет застраивать в Южном Бутово на юго-западе Москвы площадку, принадлежащую ФСБ и управляемую группой «Трансстройинвест». Эту структуру участники рынка недвижимости называют генподрядчиком резиденции президента РФ под Ялтой. Но у нее нет опыта работы в сегменте массового жилья, поэтому, как считают эксперты, ей и понадобилось привлечь А101, застраивающую в Новой Москве целые микрорайоны."]
+        "text": ["«А101 Девелопмент» Михаила Гуцериева будет застраивать в Южном Бутово на юго-западе Москвы площадку, принадлежащую ФСБ и управляемую группой «Трансстройинвест». Эту структуру участники рынка недвижимости называют генподрядчиком резиденции президента РФ под Ялтой. Но у нее нет опыта работы в сегменте массового жилья, поэтому, как считают эксперты, ей и понадобилось привлечь А101, застраивающую в Новой Москве целые микрорайоны."],
+        "href": "/doc/4693454"
       }, {
         "widgetType": "para",
         "bodyElements": [{ "tagName": "b", "children": ["По центру с картинкой и без текста"] }]
       }, {
-        "align": "center", "img": {
+        "addedDocId": 4693454, "align": "center", "img": {
           "src": "https://im.kommersant.ru//Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t218_220908.jpg",
           "jpegSrcSet": "https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t241_220908.jpg 1200w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t240_220908.jpg 1035w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t239_220908.jpg 990w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t250_220908.jpg 870w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t238_220908.jpg 690w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t237_220908.jpg 660w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t236_220908.jpg 600w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t235_220908.jpg 580w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t234_220908.jpg 550w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t233_220908.jpg 480w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t232_220908.jpg 370w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t231_220908.jpg 360w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t230_220908.jpg 300w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t229_220908.jpg 250w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t228_220908.jpg 240w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t227_220908.jpg 180w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t226_220908.jpg 160w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t225_220908.jpg 143w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t224_220908.jpg 120w",
           "webpSrcSet": "https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t241_220908.webp 1200w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t240_220908.webp 1035w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t239_220908.webp 990w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t250_220908.webp 870w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t238_220908.webp 690w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t237_220908.webp 660w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t236_220908.webp 600w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t235_220908.webp 580w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t234_220908.webp 550w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t233_220908.webp 480w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t232_220908.webp 370w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t231_220908.webp 360w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t230_220908.webp 300w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t229_220908.webp 250w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t228_220908.webp 240w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t227_220908.webp 180w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t226_220908.webp 160w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t225_220908.webp 143w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t224_220908.webp 120w"
-        }, "widgetType": "incut", "title": ["Михаил Гуцериев присмотрелся к Бутово"]
+        }, "widgetType": "incut", "title": ["Михаил Гуцериев присмотрелся к Бутово"], "href": "/doc/4693454"
       }, {
         "widgetType": "para",
         "bodyElements": [{
@@ -1176,6 +1627,7 @@ export const docPageData: DocPageAPI.Endpoint_4 | any = {
         "widgetType": "para",
         "bodyElements": ["Спецоперацию провели у всех на виду. В разных форматах в ней поучаствовали ЕС, США и Россия. Сейчас все государственные институты полностью захвачены: Молдавия стала непредсказуемой территорией без прав, правил и законов. Это не диктатура, не демократия, а часто кажется, что и не государство."]
       }, {
+        "addedDocId": 4693454,
         "align": "center",
         "img": {
           "src": "https://im.kommersant.ru//Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t218_220908.jpg",
@@ -1184,7 +1636,8 @@ export const docPageData: DocPageAPI.Endpoint_4 | any = {
         },
         "widgetType": "incut",
         "title": ["Михаил Гуцериев присмотрелся к Бутово"],
-        "text": ["Текст в теле врезки типа подзаголовок"]
+        "text": ["Текст в теле врезки типа подзаголовок"],
+        "href": "/doc/4693454"
       }, {
         "widgetType": "para",
         "bodyElements": [{
@@ -1192,9 +1645,11 @@ export const docPageData: DocPageAPI.Endpoint_4 | any = {
           "children": ["Справа только заг."]
         }, " Тут мне придется добавить текста в абзац, потому что врезки справа-слева требуют отступов. И им нужен текст. Итак, эта врезка на новом сайте называется «также по теме», это врез-отсыл. У нее обязательно есть бордер (вертикальная полоса) синего цвета, показывающая нам, что за буквами - ссылка, на которую можно кликнуть."]
       }, {
+        "addedDocId": 4693454,
         "align": "right",
         "widgetType": "incut",
-        "title": ["Михаил Гуцериев присмотрелся к Бутово"]
+        "title": ["Михаил Гуцериев присмотрелся к Бутово"],
+        "href": "/doc/4693454"
       }, {
         "widgetType": "para",
         "bodyElements": ["Здесь стало страшно весело жить. Правда, скорее страшно, чем весело. Политики, которые критикуют власть, бегут из страны из-за уголовного преследования, за журналистами следят, про оппозицию снимают компрометирующие фильмы, которые крутят в прайм-тайм популярные каналы. Несогласных с режимом объявляют иностранными агентами или сотрудниками зарубежных спецслужб. Телефоны прослушивают, почту и мессенджеры взламывают. Если не взламывают, то подделывают переписку, например, в Viber, а потом арестовывают реального человека, за приписываемые ему экстремистские высказывания. Задержанные полицией из изолятора попадают прямиком в морг, а тех, кто, боясь преследования на родине, попросил в стране политического убежища, выдворяют туда, откуда они уехали."]
@@ -1208,11 +1663,11 @@ export const docPageData: DocPageAPI.Endpoint_4 | any = {
           "children": ["Справа с картинкой без текста (заг и картинка)"]
         }, " Тут мне придется добавить текста в абзац, потому что врезки справа-слева требуют отступов. И им нужен текст. Итак, эта врезка на новом сайте называется «также по теме», это врез-отсыл. У нее обязательно есть бордер (вертикальная полоса) синего цвета, показывающая нам, что за буквами - ссылка, на которую можно кликнуть. "]
       }, {
-        "align": "right", "img": {
+        "addedDocId": 4693454, "align": "right", "img": {
           "src": "https://im.kommersant.ru//Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t218_220908.jpg",
           "jpegSrcSet": "https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t241_220908.jpg 1200w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t240_220908.jpg 1035w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t239_220908.jpg 990w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t250_220908.jpg 870w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t238_220908.jpg 690w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t237_220908.jpg 660w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t236_220908.jpg 600w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t235_220908.jpg 580w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t234_220908.jpg 550w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t233_220908.jpg 480w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t232_220908.jpg 370w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t231_220908.jpg 360w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t230_220908.jpg 300w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t229_220908.jpg 250w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t228_220908.jpg 240w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t227_220908.jpg 180w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t226_220908.jpg 160w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t225_220908.jpg 143w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t224_220908.jpg 120w",
           "webpSrcSet": "https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t241_220908.webp 1200w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t240_220908.webp 1035w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t239_220908.webp 990w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t250_220908.webp 870w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t238_220908.webp 690w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t237_220908.webp 660w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t236_220908.webp 600w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t235_220908.webp 580w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t234_220908.webp 550w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t233_220908.webp 480w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t232_220908.webp 370w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t231_220908.webp 360w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t230_220908.webp 300w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t229_220908.webp 250w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t228_220908.webp 240w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t227_220908.webp 180w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t226_220908.webp 160w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t225_220908.webp 143w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t224_220908.webp 120w"
-        }, "widgetType": "incut", "title": ["Михаил Гуцериев присмотрелся к Бутово"]
+        }, "widgetType": "incut", "title": ["Михаил Гуцериев присмотрелся к Бутово"], "href": "/doc/4693454"
       }, {
         "widgetType": "para",
         "bodyElements": ["Бунт случился после объявления итогов парламентских выборов, состоявшихся 5 апреля. В очередной раз победила Партия коммунистов во главе с президентом Владимиром Ворониным, который правил страной уже девятый год. Изрядной части населения эта несменяемость надоела. Отдельно многих раздражало то, что сын Воронина Олег стал богатейшим человеком в бедной стране."]
@@ -1223,6 +1678,7 @@ export const docPageData: DocPageAPI.Endpoint_4 | any = {
           "children": ["Справа с картинкой и текстом – текст не показывается (а он есть!)"]
         }, " Тут мне придется добавить текста в абзац, потому что врезки справа-слева требуют отступов. И им нужен текст. Итак, эта врезка на новом сайте называется «также по теме», это врез-отсыл. У нее обязательно есть бордер (вертикальная полоса) синего цвета, показывающая нам, что за буквами - ссылка, на которую можно кликнуть."]
       }, {
+        "addedDocId": 4693454,
         "align": "right",
         "img": {
           "src": "https://im.kommersant.ru//Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t218_220908.jpg",
@@ -1231,7 +1687,8 @@ export const docPageData: DocPageAPI.Endpoint_4 | any = {
         },
         "widgetType": "incut",
         "title": ["Михаил Гуцериев присмотрелся к Бутово"],
-        "text": ["«А101 Девелопмент» Михаила Гуцериева будет застраивать в Южном Бутово на юго-западе Москвы площадку, принадлежащую ФСБ и управляемую группой «Трансстройинвест». Эту структуру участники рынка недвижимости называют генподрядчиком резиденции президента РФ под Ялтой. Но у нее нет опыта работы в сегменте массового жилья, поэтому, как считают эксперты, ей и понадобилось привлечь А101, застраивающую в Новой Москве целые микрорайоны."]
+        "text": ["«А101 Девелопмент» Михаила Гуцериева будет застраивать в Южном Бутово на юго-западе Москвы площадку, принадлежащую ФСБ и управляемую группой «Трансстройинвест». Эту структуру участники рынка недвижимости называют генподрядчиком резиденции президента РФ под Ялтой. Но у нее нет опыта работы в сегменте массового жилья, поэтому, как считают эксперты, ей и понадобилось привлечь А101, застраивающую в Новой Москве целые микрорайоны."],
+        "href": "/doc/4693454"
       }, {
         "widgetType": "para",
         "bodyElements": ["Хотя выборы были признаны демократическими и Советом Европы, и ОБСЕ, чье слово для Молдавии тогда было все равно что закон, оппозиция, называвшая себя проевропейской, вывела людей в центр Кишинева. Протест выглядел странно: коммунисты тогда ориентировались на ЕС, и получалось, что прозападные партии боролись с теми, кто начал процесс сближения Молдавии с Евросоюзом."]
@@ -1239,9 +1696,11 @@ export const docPageData: DocPageAPI.Endpoint_4 | any = {
         "widgetType": "para",
         "bodyElements": ["В толпе выделялись организованные группы агрессивных, бритоголовых молодых людей. Они первыми пошли на штурм парламента и президентской администрации, увлекая остальных. Свергнуть коммунистов тогда не удалось, но события 7 апреля запустили процесс смены власти. Либерал-демократы, демократы и либералы, которые вскоре победят «тоталитарный режим», провозгласят 7 апреля Днем свободы. Вопросы о том, откуда взялись погромщики и кто за ними стоял (пришедшая к власти оппозиция от них до сих пор открещивается), останутся без ответа. Начатое расследование растянется на годы, потом забуксует и будет сдано в архив."]
       }, {
+        "addedDocId": 4693454,
         "align": "left",
         "widgetType": "incut",
-        "title": ["Михаил Гуцериев присмотрелся к Бутово"]
+        "title": ["Михаил Гуцериев присмотрелся к Бутово"],
+        "href": "/doc/4693454"
       }, {
         "widgetType": "para",
         "bodyElements": [{
@@ -1261,10 +1720,12 @@ export const docPageData: DocPageAPI.Endpoint_4 | any = {
           "children": ["Слева заг и текст – текст не показывается (а он есть!)"]
         }, " Тут мне придется добавить текста в абзац, потому что врезки справа-слева требуют отступов. И им нужен текст. Итак, эта врезка на новом сайте называется «также по теме», это врез-отсыл. У нее обязательно есть бордер (вертикальная полоса) синего цвета, показывающая нам, что за буквами - ссылка, на которую можно кликнуть."]
       }, {
+        "addedDocId": 4693454,
         "align": "left",
         "widgetType": "incut",
         "title": ["Михаил Гуцериев присмотрелся к Бутово"],
-        "text": ["«А101 Девелопмент» Михаила Гуцериева будет застраивать в Южном Бутово на юго-западе Москвы площадку, принадлежащую ФСБ и управляемую группой «Трансстройинвест». Эту структуру участники рынка недвижимости называют генподрядчиком резиденции президента РФ под Ялтой. Но у нее нет опыта работы в сегменте массового жилья, поэтому, как считают эксперты, ей и понадобилось привлечь А101, застраивающую в Новой Москве целые микрорайоны."]
+        "text": ["«А101 Девелопмент» Михаила Гуцериева будет застраивать в Южном Бутово на юго-западе Москвы площадку, принадлежащую ФСБ и управляемую группой «Трансстройинвест». Эту структуру участники рынка недвижимости называют генподрядчиком резиденции президента РФ под Ялтой. Но у нее нет опыта работы в сегменте массового жилья, поэтому, как считают эксперты, ей и понадобилось привлечь А101, застраивающую в Новой Москве целые микрорайоны."],
+        "href": "/doc/4693454"
       }, {
         "widgetType": "para",
         "bodyElements": ["После беспорядков коммунисты инициировали пересчет голосов, подтвердивший их победу. Партия власти получила 60 мест в парламенте из 101. Чтобы выбрать своего президента и продолжать править, этого не хватало. Глава государства тогда избирался депутатами большинством в 61 голос. После двух неудачных попыток голосования, парламент, как того требовала конституция, был распущен."]
@@ -1281,11 +1742,11 @@ export const docPageData: DocPageAPI.Endpoint_4 | any = {
           "children": ["Слева с картинкой без текста (заг и картинка)"]
         }, " Тут мне придется добавить текста в абзац, потому что врезки справа-слева требуют отступов. И им нужен текст. Итак, эта врезка на новом сайте называется «также по теме», это врез-отсыл. У нее обязательно есть бордер (вертикальная полоса) синего цвета, показывающая нам, что за буквами - ссылка, на которую можно кликнуть."]
       }, {
-        "align": "left", "img": {
+        "addedDocId": 4693454, "align": "left", "img": {
           "src": "https://im.kommersant.ru//Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t218_220908.jpg",
           "jpegSrcSet": "https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t241_220908.jpg 1200w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t240_220908.jpg 1035w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t239_220908.jpg 990w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t250_220908.jpg 870w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t238_220908.jpg 690w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t237_220908.jpg 660w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t236_220908.jpg 600w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t235_220908.jpg 580w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t234_220908.jpg 550w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t233_220908.jpg 480w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t232_220908.jpg 370w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t231_220908.jpg 360w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t230_220908.jpg 300w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t229_220908.jpg 250w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t228_220908.jpg 240w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t227_220908.jpg 180w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t226_220908.jpg 160w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t225_220908.jpg 143w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t224_220908.jpg 120w",
           "webpSrcSet": "https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t241_220908.webp 1200w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t240_220908.webp 1035w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t239_220908.webp 990w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t250_220908.webp 870w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t238_220908.webp 690w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t237_220908.webp 660w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t236_220908.webp 600w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t235_220908.webp 580w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t234_220908.webp 550w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t233_220908.webp 480w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t232_220908.webp 370w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t231_220908.webp 360w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t230_220908.webp 300w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t229_220908.webp 250w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t228_220908.webp 240w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t227_220908.webp 180w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t226_220908.webp 160w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t225_220908.webp 143w, https://im.kommersant.ru/Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t224_220908.webp 120w"
-        }, "widgetType": "incut", "title": ["Михаил Гуцериев присмотрелся к Бутово"]
+        }, "widgetType": "incut", "title": ["Михаил Гуцериев присмотрелся к Бутово"], "href": "/doc/4693454"
       }, {
         "widgetType": "para",
         "bodyElements": ["Забыть придется и характеристики «прозападный» и «пророссийский». Привычный смысл этих слов введет в заблуждение и создаст ложное ощущение того, что Молдавия ничем не отличается от других стран."]
@@ -1302,6 +1763,7 @@ export const docPageData: DocPageAPI.Endpoint_4 | any = {
           "children": ["Слева с картинкой и текстом – текст не показывается (а он есть!)"]
         }, " Тут мне придется добавить текста в абзац, потому что врезки справа-слева требуют отступов. И им нужен текст. Итак, эта врезка на новом сайте называется «также по теме», это врез-отсыл. У нее обязательно есть бордер (вертикальная полоса) синего цвета, показывающая нам, что за буквами - ссылка, на которую можно кликнуть."]
       }, {
+        "addedDocId": 4693454,
         "align": "left",
         "img": {
           "src": "https://im.kommersant.ru//Issues.photo/DAILY/2021/028/KMO_162020_00037_1_t218_220908.jpg",
@@ -1310,7 +1772,8 @@ export const docPageData: DocPageAPI.Endpoint_4 | any = {
         },
         "widgetType": "incut",
         "title": ["Михаил Гуцериев присмотрелся к Бутово"],
-        "text": ["Текст в теле врезки типа подзаголовок"]
+        "text": ["Текст в теле врезки типа подзаголовок"],
+        "href": "/doc/4693454"
       }, {
         "widgetType": "para",
         "bodyElements": ["Над страной как будто ставят эксперимент. И нужно постоянно держать в голове: здесь все игра, и все не то, чем кажется. Законы и конституция страны больше не имеют значения и сделались эластичными — с помощью манипуляций общественным мнением и здравым смыслом их натягивают на самые невообразимые ситуации и решения."]
@@ -1399,7 +1862,13 @@ export const docPageData: DocPageAPI.Endpoint_4 | any = {
         "widgetType": "citation",
         "text": [{
           "widgetType": "para",
-          "bodyElements": ["На платформах more.tv, Wink и «Кинопоиск HD» стартовал сериал Игоря Зайцева «За час до рассвета», действие которого разворачивается в Москве 1946 года. Одну из главных ролей (начальника уголовного розыска Сергея Шумейко по прозвищу Сатана) сыграл <B>Константин Хабенский,</B> который накануне премьеры сериала ответил на вопросы <B>Юлии Шагельман.</B>"]
+          "bodyElements": ["На платформах more.tv, Wink и «Кинопоиск HD» стартовал сериал Игоря Зайцева «За час до рассвета», действие которого разворачивается в Москве 1946 года. Одну из главных ролей (начальника уголовного розыска Сергея Шумейко по прозвищу Сатана) сыграл ", {
+            "tagName": "b",
+            "children": ["Константин Хабенский,"]
+          }, " который накануне премьеры сериала ответил на вопросы ", {
+            "tagName": "b",
+            "children": ["Юлии Шагельман."]
+          }]
         }],
         "title": ["«Мячик зрительских симпатий должен постоянно перескакивать»"]
       }, {
@@ -1991,10 +2460,12 @@ export const docPageData: DocPageAPI.Endpoint_4 | any = {
         "widgetType": "para",
         "bodyElements": ["Весь первый этаж был занят отделом Линейного Счастья. Здесь было царство Федора Симеоновича, здесь пахло яблоками и хвойными лесами, здесь работали самые хорошенькие девушки и самые славные ребята. Здесь не было мрачных изуверов, знатоков и адептов черной магии, здесь никто не рвал, шипя и кривясь от боли, из себя волос, никто не бормотал заклинаний, похожих на неприличные скороговорки, не варил заживо жаб и ворон в полночь, в полнолуние, на Ивана Купала, по несчастливым числам. Здесь работали на оптимизм. "]
       }, {
+        "addedDocId": 4694312,
         "align": "center",
         "widgetType": "incut",
         "title": ["Аптеки заработали на пандемии"],
-        "text": ["Стандартный по центру, называется \"блок\" - стандартная врезка, в которой нет картинки, но в поле текста обязательно что-то есть. Блок всегда в конце заметки, он не может быть в середине. Или он, или врезка-документ"]
+        "text": ["Стандартный по центру, называется \"блок\" - стандартная врезка, в которой нет картинки, но в поле текста обязательно что-то есть. Блок всегда в конце заметки, он не может быть в середине. Или он, или врезка-документ"],
+        "href": "/doc/4694312"
       }, {
         "widgetType": "para",
         "bodyElements": ["Здесь делали все возможное в рамках белой, субмолекулярной и инфранейронной магии, чтобы повысить душевный тонус каждого отдельного человека и целых человеческих коллективов. Здесь конденсировали и распространяли по всему свету веселый, беззлобный смех; разрабатывали, испытывали и внедряли модели поведений и отношений, укрепляющих дружбу и разрушающих рознь; возгоняли и сублимировали экстракты гореутолителей, не содержащих ни единой молекулы алкоголя и иных наркотиков. Сейчас здесь готовили к полевым испытаниям портативный универсальный злободробитель и разрабатывали новые марки редчайших сплавов ума и доброты."]
@@ -2052,1486 +2523,11 @@ export const docPageData: DocPageAPI.Endpoint_4 | any = {
       }],
       "htmlContent": null
     },
-    "footer": null
+    "footer": null,
+    "hideTitles": false
   }
 }
 
-export const recursion = {
-  "tagName": "section",
-  "attributes": {
-    "style": "color:red",
-  },
-  "children": [
-    {
-      "tagName": "span",
-      "attributes": {
-        "style": "color:green",
-      },
-      "children": [
-        {
-          "tagName": "span",
-          "children": [
-            "Повседневной работы а. Позволяет поэтапного создание модели. За эксперимент курс качественно участия играет гражданского массового нашей. Финансовых эксперимент требует насущным административных.",
-            "Систему материально-технической формировании уровня. Разработке воздействия воздействия качественно влечёт рамки социально-экономическое важную целесообразности актуальность. Отношении кадров создание формированию разработке нас ресурсосберегающих важную интересный. Разработке правительством направлений место условий организационной разработке а воздействия. Влечёт новая всего форм постоянное процесс качества обуславливает собой системы.",
-            "Структура различных поставленных сущности процесс качественно рост различных развития. Форм важные отношении в для значительной последовательного технологий современного. Соответствующих путь забывать плановых прогресса нас управление соображения актуальность."
-          ]
-        },
-        {
-          "tagName": "span",
-          "attributes": {
-            "style": "color: purple"
-          },
-          "children": [
-            {
-              "tagName": "div",
-              "attributes": {
-                "style": "margin-top:30px"
-              },
-              "children": [
-                "технологий широким инновационный сфера равным сфера модель обществом",
-                "количественный значительной сознания этих формированию кругу формированию влечёт общественной степени забывать требует соображения другой",
-                "уточнения актуальность модель финансовых создание собой социально-ориентированный следует"
-              ]
-            },
-            {
-              "tagName": "b",
-              "attributes": {
-                "class": "testClass"
-              },
-              "children": [
-                "Значение модернизации формированию высокотехнологичная шагов консультация кадров идейные также образом. Экономической массового новых показывает прежде работы создание сложившаяся в. Условий формированию другой формированию показывает общественной повседневная значительной формированию. По кадров организационной однако таким повышение актуальность уровня. Обеспечивает сложившаяся сфера. Управление современного развития богатый позиции."
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "tagName": "span",
-      "children": [
-        "Инновационный потребностям значительной выполнять настолько систему формированию проект. Системы предложений а. Материально-технической целесообразности модель поставленных формированию. Гражданского настолько массового задача задача от высокотехнологичная технологий. Шагов активом принципов."
-      ]
-    },
-    {
-      "tagName": "a",
-      "attributes": {
-        "href": "http://every-influx.org"
-      },
-      "children": [
-        {
-          "tagName": "span",
-          "attributes": {
-            "class": "testClass"
-          },
-          "children": [
-            "В отношении представляет требует. Систему соображения нашей поставленных сущности. Дальнейших роль направлений модернизации работы разнообразный прогресса внедрения. Управление обеспечивает сознания в специалистов экономической с. Гражданского обществом принципов специалистов важные соответствующей особенности базы системы.",
-            "Значительной намеченных организационной шагов. Качественно выполнять соответствующих степени значимость создаёт вызывает. Проблем модели предпосылки повышение информационно-пропогандистское оценить. Прогрессивного проект модернизации демократической воздействия организации специалистов направлений условий кадровой."
-          ]
-        },
-        {
-          "tagName": "span",
-          "children": [
-            "Формирования структура начало воздействия. Прогрессивного и последовательного развития. Сложившаяся формировании важные показывает.",
-            "Технологий напрямую внедрения всего повышению сфера информационно-пропогандистское. Для широким проект актуальность играет новых поставленных намеченных а значение. Вызывает позиции новых высокотехнологичная следует на целесообразности оценить напрямую. Новых технологий демократической широким демократической консультация. Зависит ресурсосберегающих практика обучения активности организационной активности различных реализация. Развития напрямую прогресса практика прежде повседневной разработке повышению поставленных активности."
-          ]
-        }
-      ]
-    }
-  ]
-};
-
-export const deepRecursion: any = {
-  "tagName": "section",
-  "attributes": {
-    "style": "color:red",
-  },
-  "children": [
-    {
-      "tagName": "span",
-      "attributes": {
-        "style": "color:green",
-      },
-      "children": [
-        {
-          "tagName": "span",
-          "children": [
-            "Повседневной работы а. Позволяет поэтапного создание модели. За эксперимент курс качественно участия играет гражданского массового нашей. Финансовых эксперимент требует насущным административных.",
-            "&nbsp;&nbsp;&nbsp;&nbsp;&#xA0;&#xA0;&#160;&#160;&#160;Систему материально-технической формировании уровня. Разработке воздействия воздействия качественно влечёт рамки социально-экономическое важную целесообразности актуальность. Отношении кадров создание формированию разработке нас ресурсосберегающих важную интересный. Разработке правительством направлений место условий организационной разработке а воздействия. Влечёт новая всего форм постоянное процесс качества обуславливает собой системы.",
-            "Структура различных поставленных сущности процесс качественно рост различных развития. Форм важные отношении в для значительной последовательного технологий современного. Соответствующих путь забывать плановых прогресса нас управление соображения актуальность."
-          ]
-        },
-        {
-          "tagName": "span",
-          "attributes": {
-            "style": "color: purple"
-          },
-          "children": [
-            {
-              "tagName": "div",
-              "attributes": {
-                "style": "margin-top:30px"
-              },
-              "children": [
-                "технологий широким инновационный сфера равным сфера модель обществом",
-                "количественный значительной сознания этих формированию кругу формированию влечёт общественной степени забывать требует соображения другой",
-                "уточнения актуальность модель финансовых создание собой социально-ориентированный следует",
-                {
-                  "tagName": "section",
-                  "attributes": {
-                    "style": "color:red",
-                  },
-                  "children": [
-                    {
-                      "tagName": "span",
-                      "attributes": {
-                        "class": "testClass"
-                      },
-                      "children": [
-                        {
-                          "tagName": "span",
-                          "children": [
-                            "Повседневной работы а. Позволяет поэтапного создание модели. За эксперимент курс качественно участия играет гражданского массового нашей. Финансовых эксперимент требует насущным административных.",
-                            "Систему материально-технической формировании уровня. Разработке воздействия воздействия качественно влечёт рамки социально-экономическое важную целесообразности актуальность. Отношении кадров создание формированию разработке нас ресурсосберегающих важную интересный. Разработке правительством направлений место условий организационной разработке а воздействия. Влечёт новая всего форм постоянное процесс качества обуславливает собой системы.",
-                            "Структура различных поставленных сущности процесс качественно рост различных развития. Форм важные отношении в для значительной последовательного технологий современного. Соответствующих путь забывать плановых прогресса нас управление соображения актуальность."
-                          ]
-                        },
-                        {
-                          "tagName": "span",
-                          "attributes": {
-                            "class": "testClass"
-                          },
-                          "children": [
-                            {
-                              "tagName": "div",
-                              "attributes": {
-                                "class": "testClass"
-                              },
-                              "children": [
-                                "технологий широким инновационный сфера равным сфера модель обществом",
-                                "количественный значительной сознания этих формированию кругу формированию влечёт общественной степени забывать требует соображения другой",
-                                "уточнения актуальность модель финансовых создание собой социально-ориентированный следует",
-                                {
-                                  "tagName": "section",
-                                  "attributes": {
-                                    "style": "color:red",
-                                  },
-                                  "children": [
-                                    {
-                                      "tagName": "span",
-                                      "attributes": {
-                                        "class": "testClass"
-                                      },
-                                      "children": [
-                                        {
-                                          "tagName": "span",
-                                          "children": [
-                                            "Повседневной работы а. Позволяет поэтапного создание модели. За эксперимент курс качественно участия играет гражданского массового нашей. Финансовых эксперимент требует насущным административных.",
-                                            "Систему материально-технической формировании уровня. Разработке воздействия воздействия качественно влечёт рамки социально-экономическое важную целесообразности актуальность. Отношении кадров создание формированию разработке нас ресурсосберегающих важную интересный. Разработке правительством направлений место условий организационной разработке а воздействия. Влечёт новая всего форм постоянное процесс качества обуславливает собой системы.",
-                                            "Структура различных поставленных сущности процесс качественно рост различных развития. Форм важные отношении в для значительной последовательного технологий современного. Соответствующих путь забывать плановых прогресса нас управление соображения актуальность."
-                                          ]
-                                        },
-                                        {
-                                          "tagName": "span",
-                                          "attributes": {
-                                            "class": "testClass"
-                                          },
-                                          "children": [
-                                            {
-                                              "tagName": "div",
-                                              "attributes": {
-                                                "class": "testClass"
-                                              },
-                                              "children": [
-                                                "технологий широким инновационный сфера равным сфера модель обществом",
-                                                "количественный значительной сознания этих формированию кругу формированию влечёт общественной степени забывать требует соображения другой",
-                                                "уточнения актуальность модель финансовых создание собой социально-ориентированный следует",
-                                                {
-                                                  "tagName": "section",
-                                                  "attributes": {
-                                                    "style": "color:red",
-                                                  },
-                                                  "children": [
-                                                    {
-                                                      "tagName": "span",
-                                                      "attributes": {
-                                                        "class": "testClass"
-                                                      },
-                                                      "children": [
-                                                        {
-                                                          "tagName": "span",
-                                                          "children": [
-                                                            "Повседневной работы а. Позволяет поэтапного создание модели. За эксперимент курс качественно участия играет гражданского массового нашей. Финансовых эксперимент требует насущным административных.",
-                                                            "Систему материально-технической формировании уровня. Разработке воздействия воздействия качественно влечёт рамки социально-экономическое важную целесообразности актуальность. Отношении кадров создание формированию разработке нас ресурсосберегающих важную интересный. Разработке правительством направлений место условий организационной разработке а воздействия. Влечёт новая всего форм постоянное процесс качества обуславливает собой системы.",
-                                                            "Структура различных поставленных сущности процесс качественно рост различных развития. Форм важные отношении в для значительной последовательного технологий современного. Соответствующих путь забывать плановых прогресса нас управление соображения актуальность."
-                                                          ]
-                                                        },
-                                                        {
-                                                          "tagName": "span",
-                                                          "attributes": {
-                                                            "class": "testClass"
-                                                          },
-                                                          "children": [
-                                                            {
-                                                              "tagName": "div",
-                                                              "attributes": {
-                                                                "class": "testClass"
-                                                              },
-                                                              "children": [
-                                                                "технологий широким инновационный сфера равным сфера модель обществом",
-                                                                "количественный значительной сознания этих формированию кругу формированию влечёт общественной степени забывать требует соображения другой",
-                                                                "уточнения актуальность модель финансовых создание собой социально-ориентированный следует",
-                                                                {
-                                                                  "tagName": "section",
-                                                                  "attributes": {
-                                                                    "style": "color:red",
-                                                                  },
-                                                                  "children": [
-                                                                    {
-                                                                      "tagName": "span",
-                                                                      "attributes": {
-                                                                        "style": "color:green",
-                                                                      },
-                                                                      "children": [
-                                                                        {
-                                                                          "tagName": "span",
-                                                                          "children": [
-                                                                            "Повседневной работы а. Позволяет поэтапного создание модели. За эксперимент курс качественно участия играет гражданского массового нашей. Финансовых эксперимент требует насущным административных.",
-                                                                            "Систему материально-технической формировании уровня. Разработке воздействия воздействия качественно влечёт рамки социально-экономическое важную целесообразности актуальность. Отношении кадров создание формированию разработке нас ресурсосберегающих важную интересный. Разработке правительством направлений место условий организационной разработке а воздействия. Влечёт новая всего форм постоянное процесс качества обуславливает собой системы.",
-                                                                            "Структура различных поставленных сущности процесс качественно рост различных развития. Форм важные отношении в для значительной последовательного технологий современного. Соответствующих путь забывать плановых прогресса нас управление соображения актуальность."
-                                                                          ]
-                                                                        },
-                                                                        {
-                                                                          "tagName": "span",
-                                                                          "attributes": {
-                                                                            "class": "testClass"
-                                                                          },
-                                                                          "children": [
-                                                                            {
-                                                                              "tagName": "div",
-                                                                              "attributes": {
-                                                                                "style": "margin-top:30px"
-                                                                              },
-                                                                              "children": [
-                                                                                "технологий широким инновационный сфера равным сфера модель обществом",
-                                                                                "количественный значительной сознания этих формированию кругу формированию влечёт общественной степени забывать требует соображения другой",
-                                                                                "уточнения актуальность модель финансовых создание собой социально-ориентированный следует",
-                                                                                {
-                                                                                  "tagName": "section",
-                                                                                  "attributes": {
-                                                                                    "style": "color:red",
-                                                                                  },
-                                                                                  "children": [
-                                                                                    {
-                                                                                      "tagName": "span",
-                                                                                      "attributes": {
-                                                                                        "class": "testClass"
-                                                                                      },
-                                                                                      "children": [
-                                                                                        {
-                                                                                          "tagName": "span",
-                                                                                          "children": [
-                                                                                            "Повседневной работы а. Позволяет поэтапного создание модели. За эксперимент курс качественно участия играет гражданского массового нашей. Финансовых эксперимент требует насущным административных.",
-                                                                                            "Систему материально-технической формировании уровня. Разработке воздействия воздействия качественно влечёт рамки социально-экономическое важную целесообразности актуальность. Отношении кадров создание формированию разработке нас ресурсосберегающих важную интересный. Разработке правительством направлений место условий организационной разработке а воздействия. Влечёт новая всего форм постоянное процесс качества обуславливает собой системы.",
-                                                                                            "Структура различных поставленных сущности процесс качественно рост различных развития. Форм важные отношении в для значительной последовательного технологий современного. Соответствующих путь забывать плановых прогресса нас управление соображения актуальность."
-                                                                                          ]
-                                                                                        },
-                                                                                        {
-                                                                                          "tagName": "span",
-                                                                                          "attributes": {
-                                                                                            "class": "testClass"
-                                                                                          },
-                                                                                          "children": [
-                                                                                            {
-                                                                                              "tagName": "div",
-                                                                                              "attributes": {
-                                                                                                "class": "testClass"
-                                                                                              },
-                                                                                              "children": [
-                                                                                                "технологий широким инновационный сфера равным сфера модель обществом",
-                                                                                                "количественный значительной сознания этих формированию кругу формированию влечёт общественной степени забывать требует соображения другой",
-                                                                                                "уточнения актуальность модель финансовых создание собой социально-ориентированный следует",
-                                                                                                {
-                                                                                                  "tagName": "section",
-                                                                                                  "attributes": {
-                                                                                                    "style": "color:red",
-                                                                                                  },
-                                                                                                  "children": [
-                                                                                                    {
-                                                                                                      "tagName": "span",
-                                                                                                      "attributes": {
-                                                                                                        "class": "testClass"
-                                                                                                      },
-                                                                                                      "children": [
-                                                                                                        {
-                                                                                                          "tagName": "span",
-                                                                                                          "children": [
-                                                                                                            "Повседневной работы а. Позволяет поэтапного создание модели. За эксперимент курс качественно участия играет гражданского массового нашей. Финансовых эксперимент требует насущным административных.",
-                                                                                                            "Систему материально-технической формировании уровня. Разработке воздействия воздействия качественно влечёт рамки социально-экономическое важную целесообразности актуальность. Отношении кадров создание формированию разработке нас ресурсосберегающих важную интересный. Разработке правительством направлений место условий организационной разработке а воздействия. Влечёт новая всего форм постоянное процесс качества обуславливает собой системы.",
-                                                                                                            "Структура различных поставленных сущности процесс качественно рост различных развития. Форм важные отношении в для значительной последовательного технологий современного. Соответствующих путь забывать плановых прогресса нас управление соображения актуальность."
-                                                                                                          ]
-                                                                                                        },
-                                                                                                        {
-                                                                                                          "tagName": "span",
-                                                                                                          "attributes": {
-                                                                                                            "class": "testClass"
-                                                                                                          },
-                                                                                                          "children": [
-                                                                                                            {
-                                                                                                              "tagName": "div",
-                                                                                                              "attributes": {
-                                                                                                                "class": "testClass"
-                                                                                                              },
-                                                                                                              "children": [
-                                                                                                                "технологий широким инновационный сфера равным сфера модель обществом",
-                                                                                                                "количественный значительной сознания этих формированию кругу формированию влечёт общественной степени забывать требует соображения другой",
-                                                                                                                "уточнения актуальность модель финансовых создание собой социально-ориентированный следует",
-                                                                                                                {
-                                                                                                                  "tagName": "section",
-                                                                                                                  "attributes": {
-                                                                                                                    "style": "color:red",
-                                                                                                                  },
-                                                                                                                  "children": [
-                                                                                                                    {
-                                                                                                                      "tagName": "span",
-                                                                                                                      "attributes": {
-                                                                                                                        "class": "testClass"
-                                                                                                                      },
-                                                                                                                      "children": [
-                                                                                                                        {
-                                                                                                                          "tagName": "span",
-                                                                                                                          "children": [
-                                                                                                                            "Повседневной работы а. Позволяет поэтапного создание модели. За эксперимент курс качественно участия играет гражданского массового нашей. Финансовых эксперимент требует насущным административных.",
-                                                                                                                            "Систему материально-технической формировании уровня. Разработке воздействия воздействия качественно влечёт рамки социально-экономическое важную целесообразности актуальность. Отношении кадров создание формированию разработке нас ресурсосберегающих важную интересный. Разработке правительством направлений место условий организационной разработке а воздействия. Влечёт новая всего форм постоянное процесс качества обуславливает собой системы.",
-                                                                                                                            "Структура различных поставленных сущности процесс качественно рост различных развития. Форм важные отношении в для значительной последовательного технологий современного. Соответствующих путь забывать плановых прогресса нас управление соображения актуальность."
-                                                                                                                          ]
-                                                                                                                        },
-                                                                                                                        {
-                                                                                                                          "tagName": "span",
-                                                                                                                          "attributes": {
-                                                                                                                            "class": "testClass"
-                                                                                                                          },
-                                                                                                                          "children": [
-                                                                                                                            {
-                                                                                                                              "tagName": "div",
-                                                                                                                              "attributes": {
-                                                                                                                                "class": "testClass"
-                                                                                                                              },
-                                                                                                                              "children": [
-                                                                                                                                "технологий широким инновационный сфера равным сфера модель обществом",
-                                                                                                                                "количественный значительной сознания этих формированию кругу формированию влечёт общественной степени забывать требует соображения другой",
-                                                                                                                                "уточнения актуальность модель финансовых создание собой социально-ориентированный следует",
-                                                                                                                                {
-                                                                                                                                  "tagName": "section",
-                                                                                                                                  "attributes": {
-                                                                                                                                    "style": "color:red",
-                                                                                                                                  },
-                                                                                                                                  "children": [
-                                                                                                                                    {
-                                                                                                                                      "tagName": "span",
-                                                                                                                                      "attributes": {
-                                                                                                                                        "style": "color:green",
-                                                                                                                                      },
-                                                                                                                                      "children": [
-                                                                                                                                        {
-                                                                                                                                          "tagName": "span",
-                                                                                                                                          "children": [
-                                                                                                                                            "Повседневной работы а. Позволяет поэтапного создание модели. За эксперимент курс качественно участия играет гражданского массового нашей. Финансовых эксперимент требует насущным административных.",
-                                                                                                                                            "Систему материально-технической формировании уровня. Разработке воздействия воздействия качественно влечёт рамки социально-экономическое важную целесообразности актуальность. Отношении кадров создание формированию разработке нас ресурсосберегающих важную интересный. Разработке правительством направлений место условий организационной разработке а воздействия. Влечёт новая всего форм постоянное процесс качества обуславливает собой системы.",
-                                                                                                                                            "Структура различных поставленных сущности процесс качественно рост различных развития. Форм важные отношении в для значительной последовательного технологий современного. Соответствующих путь забывать плановых прогресса нас управление соображения актуальность."
-                                                                                                                                          ]
-                                                                                                                                        },
-                                                                                                                                        {
-                                                                                                                                          "tagName": "span",
-                                                                                                                                          "attributes": {
-                                                                                                                                            "class": "testClass"
-                                                                                                                                          },
-                                                                                                                                          "children": [
-                                                                                                                                            {
-                                                                                                                                              "tagName": "div",
-                                                                                                                                              "attributes": {
-                                                                                                                                                "style": "margin-top:30px"
-                                                                                                                                              },
-                                                                                                                                              "children": [
-                                                                                                                                                "технологий широким инновационный сфера равным сфера модель обществом",
-                                                                                                                                                "количественный значительной сознания этих формированию кругу формированию влечёт общественной степени забывать требует соображения другой",
-                                                                                                                                                "уточнения актуальность модель финансовых создание собой социально-ориентированный следует",
-                                                                                                                                                {
-                                                                                                                                                  "tagName": "section",
-                                                                                                                                                  "attributes": {
-                                                                                                                                                    "style": "color:red",
-                                                                                                                                                  },
-                                                                                                                                                  "children": [
-                                                                                                                                                    {
-                                                                                                                                                      "tagName": "span",
-                                                                                                                                                      "attributes": {
-                                                                                                                                                        "class": "testClass"
-                                                                                                                                                      },
-                                                                                                                                                      "children": [
-                                                                                                                                                        {
-                                                                                                                                                          "tagName": "span",
-                                                                                                                                                          "children": [
-                                                                                                                                                            "Повседневной работы а. Позволяет поэтапного создание модели. За эксперимент курс качественно участия играет гражданского массового нашей. Финансовых эксперимент требует насущным административных.",
-                                                                                                                                                            "Систему материально-технической формировании уровня. Разработке воздействия воздействия качественно влечёт рамки социально-экономическое важную целесообразности актуальность. Отношении кадров создание формированию разработке нас ресурсосберегающих важную интересный. Разработке правительством направлений место условий организационной разработке а воздействия. Влечёт новая всего форм постоянное процесс качества обуславливает собой системы.",
-                                                                                                                                                            "Структура различных поставленных сущности процесс качественно рост различных развития. Форм важные отношении в для значительной последовательного технологий современного. Соответствующих путь забывать плановых прогресса нас управление соображения актуальность."
-                                                                                                                                                          ]
-                                                                                                                                                        },
-                                                                                                                                                        {
-                                                                                                                                                          "tagName": "span",
-                                                                                                                                                          "attributes": {
-                                                                                                                                                            "class": "testClass"
-                                                                                                                                                          },
-                                                                                                                                                          "children": [
-                                                                                                                                                            {
-                                                                                                                                                              "tagName": "div",
-                                                                                                                                                              "attributes": {
-                                                                                                                                                                "class": "testClass"
-                                                                                                                                                              },
-                                                                                                                                                              "children": [
-                                                                                                                                                                "технологий широким инновационный сфера равным сфера модель обществом",
-                                                                                                                                                                "количественный значительной сознания этих формированию кругу формированию влечёт общественной степени забывать требует соображения другой",
-                                                                                                                                                                "уточнения актуальность модель финансовых создание собой социально-ориентированный следует",
-                                                                                                                                                                {
-                                                                                                                                                                  "tagName": "section",
-                                                                                                                                                                  "attributes": {
-                                                                                                                                                                    "style": "color:red",
-                                                                                                                                                                  },
-                                                                                                                                                                  "children": [
-                                                                                                                                                                    {
-                                                                                                                                                                      "tagName": "span",
-                                                                                                                                                                      "attributes": {
-                                                                                                                                                                        "class": "testClass"
-                                                                                                                                                                      },
-                                                                                                                                                                      "children": [
-                                                                                                                                                                        {
-                                                                                                                                                                          "tagName": "span",
-                                                                                                                                                                          "children": [
-                                                                                                                                                                            "Повседневной работы а. Позволяет поэтапного создание модели. За эксперимент курс качественно участия играет гражданского массового нашей. Финансовых эксперимент требует насущным административных.",
-                                                                                                                                                                            "Систему материально-технической формировании уровня. Разработке воздействия воздействия качественно влечёт рамки социально-экономическое важную целесообразности актуальность. Отношении кадров создание формированию разработке нас ресурсосберегающих важную интересный. Разработке правительством направлений место условий организационной разработке а воздействия. Влечёт новая всего форм постоянное процесс качества обуславливает собой системы.",
-                                                                                                                                                                            "Структура различных поставленных сущности процесс качественно рост различных развития. Форм важные отношении в для значительной последовательного технологий современного. Соответствующих путь забывать плановых прогресса нас управление соображения актуальность."
-                                                                                                                                                                          ]
-                                                                                                                                                                        },
-                                                                                                                                                                        {
-                                                                                                                                                                          "tagName": "span",
-                                                                                                                                                                          "attributes": {
-                                                                                                                                                                            "class": "testClass"
-                                                                                                                                                                          },
-                                                                                                                                                                          "children": [
-                                                                                                                                                                            {
-                                                                                                                                                                              "tagName": "div",
-                                                                                                                                                                              "attributes": {
-                                                                                                                                                                                "class": "testClass"
-                                                                                                                                                                              },
-                                                                                                                                                                              "children": [
-                                                                                                                                                                                "технологий широким инновационный сфера равным сфера модель обществом",
-                                                                                                                                                                                "количественный значительной сознания этих формированию кругу формированию влечёт общественной степени забывать требует соображения другой",
-                                                                                                                                                                                "уточнения актуальность модель финансовых создание собой социально-ориентированный следует",
-                                                                                                                                                                                {
-                                                                                                                                                                                  "tagName": "section",
-                                                                                                                                                                                  "attributes": {
-                                                                                                                                                                                    "style": "color:red",
-                                                                                                                                                                                  },
-                                                                                                                                                                                  "children": [
-                                                                                                                                                                                    {
-                                                                                                                                                                                      "tagName": "span",
-                                                                                                                                                                                      "attributes": {
-                                                                                                                                                                                        "class": "testClass"
-                                                                                                                                                                                      },
-                                                                                                                                                                                      "children": [
-                                                                                                                                                                                        {
-                                                                                                                                                                                          "tagName": "span",
-                                                                                                                                                                                          "children": [
-                                                                                                                                                                                            "Повседневной работы а. Позволяет поэтапного создание модели. За эксперимент курс качественно участия играет гражданского массового нашей. Финансовых эксперимент требует насущным административных.",
-                                                                                                                                                                                            "Систему материально-технической формировании уровня. Разработке воздействия воздействия качественно влечёт рамки социально-экономическое важную целесообразности актуальность. Отношении кадров создание формированию разработке нас ресурсосберегающих важную интересный. Разработке правительством направлений место условий организационной разработке а воздействия. Влечёт новая всего форм постоянное процесс качества обуславливает собой системы.",
-                                                                                                                                                                                            "Структура различных поставленных сущности процесс качественно рост различных развития. Форм важные отношении в для значительной последовательного технологий современного. Соответствующих путь забывать плановых прогресса нас управление соображения актуальность."
-                                                                                                                                                                                          ]
-                                                                                                                                                                                        },
-                                                                                                                                                                                        {
-                                                                                                                                                                                          "tagName": "span",
-                                                                                                                                                                                          "attributes": {
-                                                                                                                                                                                            "class": "testClass"
-                                                                                                                                                                                          },
-                                                                                                                                                                                          "children": [
-                                                                                                                                                                                            {
-                                                                                                                                                                                              "tagName": "div",
-                                                                                                                                                                                              "attributes": {
-                                                                                                                                                                                                "class": "testClass"
-                                                                                                                                                                                              },
-                                                                                                                                                                                              "children": [
-                                                                                                                                                                                                "технологий широким инновационный сфера равным сфера модель обществом",
-                                                                                                                                                                                                "количественный значительной сознания этих формированию кругу формированию влечёт общественной степени забывать требует соображения другой",
-                                                                                                                                                                                                "уточнения актуальность модель финансовых создание собой социально-ориентированный следует",
-                                                                                                                                                                                                {
-                                                                                                                                                                                                  "tagName": "section",
-                                                                                                                                                                                                  "attributes": {
-                                                                                                                                                                                                    "style": "color:red",
-                                                                                                                                                                                                  },
-                                                                                                                                                                                                  "children": [
-                                                                                                                                                                                                    {
-                                                                                                                                                                                                      "tagName": "span",
-                                                                                                                                                                                                      "attributes": {
-                                                                                                                                                                                                        "style": "color:green",
-                                                                                                                                                                                                      },
-                                                                                                                                                                                                      "children": [
-                                                                                                                                                                                                        {
-                                                                                                                                                                                                          "tagName": "span",
-                                                                                                                                                                                                          "children": [
-                                                                                                                                                                                                            "Повседневной работы а. Позволяет поэтапного создание модели. За эксперимент курс качественно участия играет гражданского массового нашей. Финансовых эксперимент требует насущным административных.",
-                                                                                                                                                                                                            "Систему материально-технической формировании уровня. Разработке воздействия воздействия качественно влечёт рамки социально-экономическое важную целесообразности актуальность. Отношении кадров создание формированию разработке нас ресурсосберегающих важную интересный. Разработке правительством направлений место условий организационной разработке а воздействия. Влечёт новая всего форм постоянное процесс качества обуславливает собой системы.",
-                                                                                                                                                                                                            "Структура различных поставленных сущности процесс качественно рост различных развития. Форм важные отношении в для значительной последовательного технологий современного. Соответствующих путь забывать плановых прогресса нас управление соображения актуальность."
-                                                                                                                                                                                                          ]
-                                                                                                                                                                                                        },
-                                                                                                                                                                                                        {
-                                                                                                                                                                                                          "tagName": "span",
-                                                                                                                                                                                                          "attributes": {
-                                                                                                                                                                                                            "class": "testClass"
-                                                                                                                                                                                                          },
-                                                                                                                                                                                                          "children": [
-                                                                                                                                                                                                            {
-                                                                                                                                                                                                              "tagName": "div",
-                                                                                                                                                                                                              "attributes": {
-                                                                                                                                                                                                                "style": "margin-top:30px"
-                                                                                                                                                                                                              },
-                                                                                                                                                                                                              "children": [
-                                                                                                                                                                                                                "технологий широким инновационный сфера равным сфера модель обществом",
-                                                                                                                                                                                                                "количественный значительной сознания этих формированию кругу формированию влечёт общественной степени забывать требует соображения другой",
-                                                                                                                                                                                                                "уточнения актуальность модель финансовых создание собой социально-ориентированный следует",
-                                                                                                                                                                                                                {
-                                                                                                                                                                                                                  "tagName": "section",
-                                                                                                                                                                                                                  "attributes": {
-                                                                                                                                                                                                                    "style": "color:red",
-                                                                                                                                                                                                                  },
-                                                                                                                                                                                                                  "children": [
-                                                                                                                                                                                                                    {
-                                                                                                                                                                                                                      "tagName": "span",
-                                                                                                                                                                                                                      "attributes": {
-                                                                                                                                                                                                                        "class": "testClass"
-                                                                                                                                                                                                                      },
-                                                                                                                                                                                                                      "children": [
-                                                                                                                                                                                                                        {
-                                                                                                                                                                                                                          "tagName": "span",
-                                                                                                                                                                                                                          "children": [
-                                                                                                                                                                                                                            "Повседневной работы а. Позволяет поэтапного создание модели. За эксперимент курс качественно участия играет гражданского массового нашей. Финансовых эксперимент требует насущным административных.",
-                                                                                                                                                                                                                            "Систему материально-технической формировании уровня. Разработке воздействия воздействия качественно влечёт рамки социально-экономическое важную целесообразности актуальность. Отношении кадров создание формированию разработке нас ресурсосберегающих важную интересный. Разработке правительством направлений место условий организационной разработке а воздействия. Влечёт новая всего форм постоянное процесс качества обуславливает собой системы.",
-                                                                                                                                                                                                                            "Структура различных поставленных сущности процесс качественно рост различных развития. Форм важные отношении в для значительной последовательного технологий современного. Соответствующих путь забывать плановых прогресса нас управление соображения актуальность."
-                                                                                                                                                                                                                          ]
-                                                                                                                                                                                                                        },
-                                                                                                                                                                                                                        {
-                                                                                                                                                                                                                          "tagName": "span",
-                                                                                                                                                                                                                          "attributes": {
-                                                                                                                                                                                                                            "class": "testClass"
-                                                                                                                                                                                                                          },
-                                                                                                                                                                                                                          "children": [
-                                                                                                                                                                                                                            {
-                                                                                                                                                                                                                              "tagName": "div",
-                                                                                                                                                                                                                              "attributes": {
-                                                                                                                                                                                                                                "class": "testClass"
-                                                                                                                                                                                                                              },
-                                                                                                                                                                                                                              "children": [
-                                                                                                                                                                                                                                "технологий широким инновационный сфера равным сфера модель обществом",
-                                                                                                                                                                                                                                "количественный значительной сознания этих формированию кругу формированию влечёт общественной степени забывать требует соображения другой",
-                                                                                                                                                                                                                                "уточнения актуальность модель финансовых создание собой социально-ориентированный следует",
-                                                                                                                                                                                                                                {
-                                                                                                                                                                                                                                  "tagName": "section",
-                                                                                                                                                                                                                                  "attributes": {
-                                                                                                                                                                                                                                    "style": "color:red",
-                                                                                                                                                                                                                                  },
-                                                                                                                                                                                                                                  "children": [
-                                                                                                                                                                                                                                    {
-                                                                                                                                                                                                                                      "tagName": "span",
-                                                                                                                                                                                                                                      "attributes": {
-                                                                                                                                                                                                                                        "class": "testClass"
-                                                                                                                                                                                                                                      },
-                                                                                                                                                                                                                                      "children": [
-                                                                                                                                                                                                                                        {
-                                                                                                                                                                                                                                          "tagName": "span",
-                                                                                                                                                                                                                                          "children": [
-                                                                                                                                                                                                                                            "Повседневной работы а. Позволяет поэтапного создание модели. За эксперимент курс качественно участия играет гражданского массового нашей. Финансовых эксперимент требует насущным административных.",
-                                                                                                                                                                                                                                            "Систему материально-технической формировании уровня. Разработке воздействия воздействия качественно влечёт рамки социально-экономическое важную целесообразности актуальность. Отношении кадров создание формированию разработке нас ресурсосберегающих важную интересный. Разработке правительством направлений место условий организационной разработке а воздействия. Влечёт новая всего форм постоянное процесс качества обуславливает собой системы.",
-                                                                                                                                                                                                                                            "Структура различных поставленных сущности процесс качественно рост различных развития. Форм важные отношении в для значительной последовательного технологий современного. Соответствующих путь забывать плановых прогресса нас управление соображения актуальность."
-                                                                                                                                                                                                                                          ]
-                                                                                                                                                                                                                                        },
-                                                                                                                                                                                                                                        {
-                                                                                                                                                                                                                                          "tagName": "span",
-                                                                                                                                                                                                                                          "attributes": {
-                                                                                                                                                                                                                                            "class": "testClass"
-                                                                                                                                                                                                                                          },
-                                                                                                                                                                                                                                          "children": [
-                                                                                                                                                                                                                                            {
-                                                                                                                                                                                                                                              "tagName": "div",
-                                                                                                                                                                                                                                              "attributes": {
-                                                                                                                                                                                                                                                "class": "testClass"
-                                                                                                                                                                                                                                              },
-                                                                                                                                                                                                                                              "children": [
-                                                                                                                                                                                                                                                "технологий широким инновационный сфера равным сфера модель обществом",
-                                                                                                                                                                                                                                                "количественный значительной сознания этих формированию кругу формированию влечёт общественной степени забывать требует соображения другой",
-                                                                                                                                                                                                                                                "уточнения актуальность модель финансовых создание собой социально-ориентированный следует",
-                                                                                                                                                                                                                                                {
-                                                                                                                                                                                                                                                  "tagName": "section",
-                                                                                                                                                                                                                                                  "attributes": {
-                                                                                                                                                                                                                                                    "style": "color:red",
-                                                                                                                                                                                                                                                  },
-                                                                                                                                                                                                                                                  "children": [
-                                                                                                                                                                                                                                                    {
-                                                                                                                                                                                                                                                      "tagName": "span",
-                                                                                                                                                                                                                                                      "attributes": {
-                                                                                                                                                                                                                                                        "class": "testClass"
-                                                                                                                                                                                                                                                      },
-                                                                                                                                                                                                                                                      "children": [
-                                                                                                                                                                                                                                                        {
-                                                                                                                                                                                                                                                          "tagName": "span",
-                                                                                                                                                                                                                                                          "children": [
-                                                                                                                                                                                                                                                            "Повседневной работы а. Позволяет поэтапного создание модели. За эксперимент курс качественно участия играет гражданского массового нашей. Финансовых эксперимент требует насущным административных.",
-                                                                                                                                                                                                                                                            "Систему материально-технической формировании уровня. Разработке воздействия воздействия качественно влечёт рамки социально-экономическое важную целесообразности актуальность. Отношении кадров создание формированию разработке нас ресурсосберегающих важную интересный. Разработке правительством направлений место условий организационной разработке а воздействия. Влечёт новая всего форм постоянное процесс качества обуславливает собой системы.",
-                                                                                                                                                                                                                                                            "Структура различных поставленных сущности процесс качественно рост различных развития. Форм важные отношении в для значительной последовательного технологий современного. Соответствующих путь забывать плановых прогресса нас управление соображения актуальность."
-                                                                                                                                                                                                                                                          ]
-                                                                                                                                                                                                                                                        },
-                                                                                                                                                                                                                                                        {
-                                                                                                                                                                                                                                                          "tagName": "span",
-                                                                                                                                                                                                                                                          "attributes": {
-                                                                                                                                                                                                                                                            "class": "testClass"
-                                                                                                                                                                                                                                                          },
-                                                                                                                                                                                                                                                          "children": [
-                                                                                                                                                                                                                                                            {
-                                                                                                                                                                                                                                                              "tagName": "div",
-                                                                                                                                                                                                                                                              "attributes": {
-                                                                                                                                                                                                                                                                "class": "testClass"
-                                                                                                                                                                                                                                                              },
-                                                                                                                                                                                                                                                              "children": [
-                                                                                                                                                                                                                                                                "технологий широким инновационный сфера равным сфера модель обществом",
-                                                                                                                                                                                                                                                                "количественный значительной сознания этих формированию кругу формированию влечёт общественной степени забывать требует соображения другой",
-                                                                                                                                                                                                                                                                "уточнения актуальность модель финансовых создание собой социально-ориентированный следует",
-                                                                                                                                                                                                                                                                {
-                                                                                                                                                                                                                                                                  "tagName": "section",
-                                                                                                                                                                                                                                                                  "attributes": {
-                                                                                                                                                                                                                                                                    "style": "color:red",
-                                                                                                                                                                                                                                                                  },
-                                                                                                                                                                                                                                                                  "children": [
-                                                                                                                                                                                                                                                                    {
-                                                                                                                                                                                                                                                                      "tagName": "span",
-                                                                                                                                                                                                                                                                      "attributes": {
-                                                                                                                                                                                                                                                                        "style": "color:green",
-                                                                                                                                                                                                                                                                      },
-                                                                                                                                                                                                                                                                      "children": [
-                                                                                                                                                                                                                                                                        {
-                                                                                                                                                                                                                                                                          "tagName": "span",
-                                                                                                                                                                                                                                                                          "children": [
-                                                                                                                                                                                                                                                                            "Повседневной работы а. Позволяет поэтапного создание модели. За эксперимент курс качественно участия играет гражданского массового нашей. Финансовых эксперимент требует насущным административных.",
-                                                                                                                                                                                                                                                                            "Систему материально-технической формировании уровня. Разработке воздействия воздействия качественно влечёт рамки социально-экономическое важную целесообразности актуальность. Отношении кадров создание формированию разработке нас ресурсосберегающих важную интересный. Разработке правительством направлений место условий организационной разработке а воздействия. Влечёт новая всего форм постоянное процесс качества обуславливает собой системы.",
-                                                                                                                                                                                                                                                                            "Структура различных поставленных сущности процесс качественно рост различных развития. Форм важные отношении в для значительной последовательного технологий современного. Соответствующих путь забывать плановых прогресса нас управление соображения актуальность."
-                                                                                                                                                                                                                                                                          ]
-                                                                                                                                                                                                                                                                        },
-                                                                                                                                                                                                                                                                        {
-                                                                                                                                                                                                                                                                          "tagName": "span",
-                                                                                                                                                                                                                                                                          "attributes": {
-                                                                                                                                                                                                                                                                            "class": "testClass"
-                                                                                                                                                                                                                                                                          },
-                                                                                                                                                                                                                                                                          "children": [
-                                                                                                                                                                                                                                                                            {
-                                                                                                                                                                                                                                                                              "tagName": "div",
-                                                                                                                                                                                                                                                                              "attributes": {
-                                                                                                                                                                                                                                                                                "style": "margin-top:30px"
-                                                                                                                                                                                                                                                                              },
-                                                                                                                                                                                                                                                                              "children": [
-                                                                                                                                                                                                                                                                                "технологий широким инновационный сфера равным сфера модель обществом",
-                                                                                                                                                                                                                                                                                "количественный значительной сознания этих формированию кругу формированию влечёт общественной степени забывать требует соображения другой",
-                                                                                                                                                                                                                                                                                "уточнения актуальность модель финансовых создание собой социально-ориентированный следует",
-                                                                                                                                                                                                                                                                                {
-                                                                                                                                                                                                                                                                                  "tagName": "section",
-                                                                                                                                                                                                                                                                                  "attributes": {
-                                                                                                                                                                                                                                                                                    "style": "color:red",
-                                                                                                                                                                                                                                                                                  },
-                                                                                                                                                                                                                                                                                  "children": [
-                                                                                                                                                                                                                                                                                    {
-                                                                                                                                                                                                                                                                                      "tagName": "span",
-                                                                                                                                                                                                                                                                                      "attributes": {
-                                                                                                                                                                                                                                                                                        "class": "testClass"
-                                                                                                                                                                                                                                                                                      },
-                                                                                                                                                                                                                                                                                      "children": [
-                                                                                                                                                                                                                                                                                        {
-                                                                                                                                                                                                                                                                                          "tagName": "span",
-                                                                                                                                                                                                                                                                                          "children": [
-                                                                                                                                                                                                                                                                                            "Повседневной работы а. Позволяет поэтапного создание модели. За эксперимент курс качественно участия играет гражданского массового нашей. Финансовых эксперимент требует насущным административных.",
-                                                                                                                                                                                                                                                                                            "Систему материально-технической формировании уровня. Разработке воздействия воздействия качественно влечёт рамки социально-экономическое важную целесообразности актуальность. Отношении кадров создание формированию разработке нас ресурсосберегающих важную интересный. Разработке правительством направлений место условий организационной разработке а воздействия. Влечёт новая всего форм постоянное процесс качества обуславливает собой системы.",
-                                                                                                                                                                                                                                                                                            "Структура различных поставленных сущности процесс качественно рост различных развития. Форм важные отношении в для значительной последовательного технологий современного. Соответствующих путь забывать плановых прогресса нас управление соображения актуальность."
-                                                                                                                                                                                                                                                                                          ]
-                                                                                                                                                                                                                                                                                        },
-                                                                                                                                                                                                                                                                                        {
-                                                                                                                                                                                                                                                                                          "tagName": "span",
-                                                                                                                                                                                                                                                                                          "attributes": {
-                                                                                                                                                                                                                                                                                            "class": "testClass"
-                                                                                                                                                                                                                                                                                          },
-                                                                                                                                                                                                                                                                                          "children": [
-                                                                                                                                                                                                                                                                                            {
-                                                                                                                                                                                                                                                                                              "tagName": "div",
-                                                                                                                                                                                                                                                                                              "attributes": {
-                                                                                                                                                                                                                                                                                                "class": "testClass"
-                                                                                                                                                                                                                                                                                              },
-                                                                                                                                                                                                                                                                                              "children": [
-                                                                                                                                                                                                                                                                                                "технологий широким инновационный сфера равным сфера модель обществом",
-                                                                                                                                                                                                                                                                                                "количественный значительной сознания этих формированию кругу формированию влечёт общественной степени забывать требует соображения другой",
-                                                                                                                                                                                                                                                                                                "уточнения актуальность модель финансовых создание собой социально-ориентированный следует",
-                                                                                                                                                                                                                                                                                                {
-                                                                                                                                                                                                                                                                                                  "tagName": "section",
-                                                                                                                                                                                                                                                                                                  "attributes": {
-                                                                                                                                                                                                                                                                                                    "style": "color:red",
-                                                                                                                                                                                                                                                                                                  },
-                                                                                                                                                                                                                                                                                                  "children": [
-                                                                                                                                                                                                                                                                                                    {
-                                                                                                                                                                                                                                                                                                      "tagName": "span",
-                                                                                                                                                                                                                                                                                                      "attributes": {
-                                                                                                                                                                                                                                                                                                        "class": "testClass"
-                                                                                                                                                                                                                                                                                                      },
-                                                                                                                                                                                                                                                                                                      "children": [
-                                                                                                                                                                                                                                                                                                        {
-                                                                                                                                                                                                                                                                                                          "tagName": "span",
-                                                                                                                                                                                                                                                                                                          "children": [
-                                                                                                                                                                                                                                                                                                            "Повседневной работы а. Позволяет поэтапного создание модели. За эксперимент курс качественно участия играет гражданского массового нашей. Финансовых эксперимент требует насущным административных.",
-                                                                                                                                                                                                                                                                                                            "Систему материально-технической формировании уровня. Разработке воздействия воздействия качественно влечёт рамки социально-экономическое важную целесообразности актуальность. Отношении кадров создание формированию разработке нас ресурсосберегающих важную интересный. Разработке правительством направлений место условий организационной разработке а воздействия. Влечёт новая всего форм постоянное процесс качества обуславливает собой системы.",
-                                                                                                                                                                                                                                                                                                            "Структура различных поставленных сущности процесс качественно рост различных развития. Форм важные отношении в для значительной последовательного технологий современного. Соответствующих путь забывать плановых прогресса нас управление соображения актуальность."
-                                                                                                                                                                                                                                                                                                          ]
-                                                                                                                                                                                                                                                                                                        },
-                                                                                                                                                                                                                                                                                                        {
-                                                                                                                                                                                                                                                                                                          "tagName": "span",
-                                                                                                                                                                                                                                                                                                          "attributes": {
-                                                                                                                                                                                                                                                                                                            "class": "testClass"
-                                                                                                                                                                                                                                                                                                          },
-                                                                                                                                                                                                                                                                                                          "children": [
-                                                                                                                                                                                                                                                                                                            {
-                                                                                                                                                                                                                                                                                                              "tagName": "div",
-                                                                                                                                                                                                                                                                                                              "attributes": {
-                                                                                                                                                                                                                                                                                                                "class": "testClass"
-                                                                                                                                                                                                                                                                                                              },
-                                                                                                                                                                                                                                                                                                              "children": [
-                                                                                                                                                                                                                                                                                                                "технологий широким инновационный сфера равным сфера модель обществом",
-                                                                                                                                                                                                                                                                                                                "количественный значительной сознания этих формированию кругу формированию влечёт общественной степени забывать требует соображения другой",
-                                                                                                                                                                                                                                                                                                                "уточнения актуальность модель финансовых создание собой социально-ориентированный следует",
-                                                                                                                                                                                                                                                                                                                {
-                                                                                                                                                                                                                                                                                                                  "tagName": "section",
-                                                                                                                                                                                                                                                                                                                  "attributes": {
-                                                                                                                                                                                                                                                                                                                    "style": "color:red",
-                                                                                                                                                                                                                                                                                                                  },
-                                                                                                                                                                                                                                                                                                                  "children": [
-                                                                                                                                                                                                                                                                                                                    {
-                                                                                                                                                                                                                                                                                                                      "tagName": "span",
-                                                                                                                                                                                                                                                                                                                      "attributes": {
-                                                                                                                                                                                                                                                                                                                        "class": "testClass"
-                                                                                                                                                                                                                                                                                                                      },
-                                                                                                                                                                                                                                                                                                                      "children": [
-                                                                                                                                                                                                                                                                                                                        {
-                                                                                                                                                                                                                                                                                                                          "tagName": "span",
-                                                                                                                                                                                                                                                                                                                          "children": [
-                                                                                                                                                                                                                                                                                                                            "Повседневной работы а. Позволяет поэтапного создание модели. За эксперимент курс качественно участия играет гражданского массового нашей. Финансовых эксперимент требует насущным административных.",
-                                                                                                                                                                                                                                                                                                                            "Систему материально-технической формировании уровня. Разработке воздействия воздействия качественно влечёт рамки социально-экономическое важную целесообразности актуальность. Отношении кадров создание формированию разработке нас ресурсосберегающих важную интересный. Разработке правительством направлений место условий организационной разработке а воздействия. Влечёт новая всего форм постоянное процесс качества обуславливает собой системы.",
-                                                                                                                                                                                                                                                                                                                            "Структура различных поставленных сущности процесс качественно рост различных развития. Форм важные отношении в для значительной последовательного технологий современного. Соответствующих путь забывать плановых прогресса нас управление соображения актуальность."
-                                                                                                                                                                                                                                                                                                                          ]
-                                                                                                                                                                                                                                                                                                                        },
-                                                                                                                                                                                                                                                                                                                        {
-                                                                                                                                                                                                                                                                                                                          "tagName": "span",
-                                                                                                                                                                                                                                                                                                                          "attributes": {
-                                                                                                                                                                                                                                                                                                                            "class": "testClass"
-                                                                                                                                                                                                                                                                                                                          },
-                                                                                                                                                                                                                                                                                                                          "children": [
-                                                                                                                                                                                                                                                                                                                            {
-                                                                                                                                                                                                                                                                                                                              "tagName": "div",
-                                                                                                                                                                                                                                                                                                                              "attributes": {
-                                                                                                                                                                                                                                                                                                                                "class": "testClass"
-                                                                                                                                                                                                                                                                                                                              },
-                                                                                                                                                                                                                                                                                                                              "children": [
-                                                                                                                                                                                                                                                                                                                                "технологий широким инновационный сфера равным сфера модель обществом",
-                                                                                                                                                                                                                                                                                                                                "количественный значительной сознания этих формированию кругу формированию влечёт общественной степени забывать требует соображения другой",
-                                                                                                                                                                                                                                                                                                                                "уточнения актуальность модель финансовых создание собой социально-ориентированный следует",
-                                                                                                                                                                                                                                                                                                                                {
-                                                                                                                                                                                                                                                                                                                                  "tagName": "section",
-                                                                                                                                                                                                                                                                                                                                  "attributes": {
-                                                                                                                                                                                                                                                                                                                                    "style": "color:red",
-                                                                                                                                                                                                                                                                                                                                  },
-                                                                                                                                                                                                                                                                                                                                  "children": [
-                                                                                                                                                                                                                                                                                                                                    {
-                                                                                                                                                                                                                                                                                                                                      "tagName": "span",
-                                                                                                                                                                                                                                                                                                                                      "attributes": {
-                                                                                                                                                                                                                                                                                                                                        "style": "color:green",
-                                                                                                                                                                                                                                                                                                                                      },
-                                                                                                                                                                                                                                                                                                                                      "children": [
-                                                                                                                                                                                                                                                                                                                                        {
-                                                                                                                                                                                                                                                                                                                                          "tagName": "span",
-                                                                                                                                                                                                                                                                                                                                          "children": [
-                                                                                                                                                                                                                                                                                                                                            "Повседневной работы а. Позволяет поэтапного создание модели. За эксперимент курс качественно участия играет гражданского массового нашей. Финансовых эксперимент требует насущным административных.",
-                                                                                                                                                                                                                                                                                                                                            "Систему материально-технической формировании уровня. Разработке воздействия воздействия качественно влечёт рамки социально-экономическое важную целесообразности актуальность. Отношении кадров создание формированию разработке нас ресурсосберегающих важную интересный. Разработке правительством направлений место условий организационной разработке а воздействия. Влечёт новая всего форм постоянное процесс качества обуславливает собой системы.",
-                                                                                                                                                                                                                                                                                                                                            "Структура различных поставленных сущности процесс качественно рост различных развития. Форм важные отношении в для значительной последовательного технологий современного. Соответствующих путь забывать плановых прогресса нас управление соображения актуальность."
-                                                                                                                                                                                                                                                                                                                                          ]
-                                                                                                                                                                                                                                                                                                                                        },
-                                                                                                                                                                                                                                                                                                                                        {
-                                                                                                                                                                                                                                                                                                                                          "tagName": "span",
-                                                                                                                                                                                                                                                                                                                                          "attributes": {
-                                                                                                                                                                                                                                                                                                                                            "class": "testClass"
-                                                                                                                                                                                                                                                                                                                                          },
-                                                                                                                                                                                                                                                                                                                                          "children": [
-                                                                                                                                                                                                                                                                                                                                            {
-                                                                                                                                                                                                                                                                                                                                              "tagName": "div",
-                                                                                                                                                                                                                                                                                                                                              "attributes": {
-                                                                                                                                                                                                                                                                                                                                                "style": "margin-top:30px"
-                                                                                                                                                                                                                                                                                                                                              },
-                                                                                                                                                                                                                                                                                                                                              "children": [
-                                                                                                                                                                                                                                                                                                                                                "технологий широким инновационный сфера равным сфера модель обществом",
-                                                                                                                                                                                                                                                                                                                                                "количественный значительной сознания этих формированию кругу формированию влечёт общественной степени забывать требует соображения другой",
-                                                                                                                                                                                                                                                                                                                                                "уточнения актуальность модель финансовых создание собой социально-ориентированный следует",
-                                                                                                                                                                                                                                                                                                                                                {
-                                                                                                                                                                                                                                                                                                                                                  "tagName": "section",
-                                                                                                                                                                                                                                                                                                                                                  "attributes": {
-                                                                                                                                                                                                                                                                                                                                                    "style": "color:red",
-                                                                                                                                                                                                                                                                                                                                                  },
-                                                                                                                                                                                                                                                                                                                                                  "children": [
-                                                                                                                                                                                                                                                                                                                                                    {
-                                                                                                                                                                                                                                                                                                                                                      "tagName": "span",
-                                                                                                                                                                                                                                                                                                                                                      "attributes": {
-                                                                                                                                                                                                                                                                                                                                                        "class": "testClass"
-                                                                                                                                                                                                                                                                                                                                                      },
-                                                                                                                                                                                                                                                                                                                                                      "children": [
-                                                                                                                                                                                                                                                                                                                                                        {
-                                                                                                                                                                                                                                                                                                                                                          "tagName": "span",
-                                                                                                                                                                                                                                                                                                                                                          "children": [
-                                                                                                                                                                                                                                                                                                                                                            "Повседневной работы а. Позволяет поэтапного создание модели. За эксперимент курс качественно участия играет гражданского массового нашей. Финансовых эксперимент требует насущным административных.",
-                                                                                                                                                                                                                                                                                                                                                            "Систему материально-технической формировании уровня. Разработке воздействия воздействия качественно влечёт рамки социально-экономическое важную целесообразности актуальность. Отношении кадров создание формированию разработке нас ресурсосберегающих важную интересный. Разработке правительством направлений место условий организационной разработке а воздействия. Влечёт новая всего форм постоянное процесс качества обуславливает собой системы.",
-                                                                                                                                                                                                                                                                                                                                                            "Структура различных поставленных сущности процесс качественно рост различных развития. Форм важные отношении в для значительной последовательного технологий современного. Соответствующих путь забывать плановых прогресса нас управление соображения актуальность."
-                                                                                                                                                                                                                                                                                                                                                          ]
-                                                                                                                                                                                                                                                                                                                                                        },
-                                                                                                                                                                                                                                                                                                                                                        {
-                                                                                                                                                                                                                                                                                                                                                          "tagName": "span",
-                                                                                                                                                                                                                                                                                                                                                          "attributes": {
-                                                                                                                                                                                                                                                                                                                                                            "class": "testClass"
-                                                                                                                                                                                                                                                                                                                                                          },
-                                                                                                                                                                                                                                                                                                                                                          "children": [
-                                                                                                                                                                                                                                                                                                                                                            {
-                                                                                                                                                                                                                                                                                                                                                              "tagName": "div",
-                                                                                                                                                                                                                                                                                                                                                              "attributes": {
-                                                                                                                                                                                                                                                                                                                                                                "class": "testClass"
-                                                                                                                                                                                                                                                                                                                                                              },
-                                                                                                                                                                                                                                                                                                                                                              "children": [
-                                                                                                                                                                                                                                                                                                                                                                "технологий широким инновационный сфера равным сфера модель обществом",
-                                                                                                                                                                                                                                                                                                                                                                "количественный значительной сознания этих формированию кругу формированию влечёт общественной степени забывать требует соображения другой",
-                                                                                                                                                                                                                                                                                                                                                                "уточнения актуальность модель финансовых создание собой социально-ориентированный следует",
-                                                                                                                                                                                                                                                                                                                                                                {
-                                                                                                                                                                                                                                                                                                                                                                  "tagName": "section",
-                                                                                                                                                                                                                                                                                                                                                                  "attributes": {
-                                                                                                                                                                                                                                                                                                                                                                    "style": "color:red",
-                                                                                                                                                                                                                                                                                                                                                                  },
-                                                                                                                                                                                                                                                                                                                                                                  "children": [
-                                                                                                                                                                                                                                                                                                                                                                    {
-                                                                                                                                                                                                                                                                                                                                                                      "tagName": "span",
-                                                                                                                                                                                                                                                                                                                                                                      "attributes": {
-                                                                                                                                                                                                                                                                                                                                                                        "class": "testClass"
-                                                                                                                                                                                                                                                                                                                                                                      },
-                                                                                                                                                                                                                                                                                                                                                                      "children": [
-                                                                                                                                                                                                                                                                                                                                                                        {
-                                                                                                                                                                                                                                                                                                                                                                          "tagName": "span",
-                                                                                                                                                                                                                                                                                                                                                                          "children": [
-                                                                                                                                                                                                                                                                                                                                                                            "Повседневной работы а. Позволяет поэтапного создание модели. За эксперимент курс качественно участия играет гражданского массового нашей. Финансовых эксперимент требует насущным административных.",
-                                                                                                                                                                                                                                                                                                                                                                            "Систему материально-технической формировании уровня. Разработке воздействия воздействия качественно влечёт рамки социально-экономическое важную целесообразности актуальность. Отношении кадров создание формированию разработке нас ресурсосберегающих важную интересный. Разработке правительством направлений место условий организационной разработке а воздействия. Влечёт новая всего форм постоянное процесс качества обуславливает собой системы.",
-                                                                                                                                                                                                                                                                                                                                                                            "Структура различных поставленных сущности процесс качественно рост различных развития. Форм важные отношении в для значительной последовательного технологий современного. Соответствующих путь забывать плановых прогресса нас управление соображения актуальность."
-                                                                                                                                                                                                                                                                                                                                                                          ]
-                                                                                                                                                                                                                                                                                                                                                                        },
-                                                                                                                                                                                                                                                                                                                                                                        {
-                                                                                                                                                                                                                                                                                                                                                                          "tagName": "span",
-                                                                                                                                                                                                                                                                                                                                                                          "attributes": {
-                                                                                                                                                                                                                                                                                                                                                                            "class": "testClass"
-                                                                                                                                                                                                                                                                                                                                                                          },
-                                                                                                                                                                                                                                                                                                                                                                          "children": [
-                                                                                                                                                                                                                                                                                                                                                                            {
-                                                                                                                                                                                                                                                                                                                                                                              "tagName": "div",
-                                                                                                                                                                                                                                                                                                                                                                              "attributes": {
-                                                                                                                                                                                                                                                                                                                                                                                "class": "testClass"
-                                                                                                                                                                                                                                                                                                                                                                              },
-                                                                                                                                                                                                                                                                                                                                                                              "children": [
-                                                                                                                                                                                                                                                                                                                                                                                "технологий широким инновационный сфера равным сфера модель обществом",
-                                                                                                                                                                                                                                                                                                                                                                                "количественный значительной сознания этих формированию кругу формированию влечёт общественной степени забывать требует соображения другой",
-                                                                                                                                                                                                                                                                                                                                                                                "уточнения актуальность модель финансовых создание собой социально-ориентированный следует",
-                                                                                                                                                                                                                                                                                                                                                                                {
-                                                                                                                                                                                                                                                                                                                                                                                  "tagName": "section",
-                                                                                                                                                                                                                                                                                                                                                                                  "attributes": {
-                                                                                                                                                                                                                                                                                                                                                                                    "style": "color:red",
-                                                                                                                                                                                                                                                                                                                                                                                  },
-                                                                                                                                                                                                                                                                                                                                                                                  "children": [
-                                                                                                                                                                                                                                                                                                                                                                                    {
-                                                                                                                                                                                                                                                                                                                                                                                      "tagName": "span",
-                                                                                                                                                                                                                                                                                                                                                                                      "attributes": {
-                                                                                                                                                                                                                                                                                                                                                                                        "class": "testClass"
-                                                                                                                                                                                                                                                                                                                                                                                      },
-                                                                                                                                                                                                                                                                                                                                                                                      "children": [
-                                                                                                                                                                                                                                                                                                                                                                                        {
-                                                                                                                                                                                                                                                                                                                                                                                          "tagName": "span",
-                                                                                                                                                                                                                                                                                                                                                                                          "children": [
-                                                                                                                                                                                                                                                                                                                                                                                            "Повседневной работы а. Позволяет поэтапного создание модели. За эксперимент курс качественно участия играет гражданского массового нашей. Финансовых эксперимент требует насущным административных.",
-                                                                                                                                                                                                                                                                                                                                                                                            "Систему материально-технической формировании уровня. Разработке воздействия воздействия качественно влечёт рамки социально-экономическое важную целесообразности актуальность. Отношении кадров создание формированию разработке нас ресурсосберегающих важную интересный. Разработке правительством направлений место условий организационной разработке а воздействия. Влечёт новая всего форм постоянное процесс качества обуславливает собой системы.",
-                                                                                                                                                                                                                                                                                                                                                                                            "Структура различных поставленных сущности процесс качественно рост различных развития. Форм важные отношении в для значительной последовательного технологий современного. Соответствующих путь забывать плановых прогресса нас управление соображения актуальность."
-                                                                                                                                                                                                                                                                                                                                                                                          ]
-                                                                                                                                                                                                                                                                                                                                                                                        },
-                                                                                                                                                                                                                                                                                                                                                                                        {
-                                                                                                                                                                                                                                                                                                                                                                                          "tagName": "span",
-                                                                                                                                                                                                                                                                                                                                                                                          "attributes": {
-                                                                                                                                                                                                                                                                                                                                                                                            "class": "testClass"
-                                                                                                                                                                                                                                                                                                                                                                                          },
-                                                                                                                                                                                                                                                                                                                                                                                          "children": [
-                                                                                                                                                                                                                                                                                                                                                                                            {
-                                                                                                                                                                                                                                                                                                                                                                                              "tagName": "div",
-                                                                                                                                                                                                                                                                                                                                                                                              "attributes": {
-                                                                                                                                                                                                                                                                                                                                                                                                "class": "testClass"
-                                                                                                                                                                                                                                                                                                                                                                                              },
-                                                                                                                                                                                                                                                                                                                                                                                              "children": [
-                                                                                                                                                                                                                                                                                                                                                                                                "технологий широким инновационный сфера равным сфера модель обществом",
-                                                                                                                                                                                                                                                                                                                                                                                                "количественный значительной сознания этих формированию кругу формированию влечёт общественной степени забывать требует соображения другой",
-                                                                                                                                                                                                                                                                                                                                                                                                "уточнения актуальность модель финансовых создание собой социально-ориентированный следует"
-                                                                                                                                                                                                                                                                                                                                                                                              ]
-                                                                                                                                                                                                                                                                                                                                                                                            },
-                                                                                                                                                                                                                                                                                                                                                                                            {
-                                                                                                                                                                                                                                                                                                                                                                                              "tagName": "b",
-                                                                                                                                                                                                                                                                                                                                                                                              "attributes": {
-                                                                                                                                                                                                                                                                                                                                                                                                "class": "testClass"
-                                                                                                                                                                                                                                                                                                                                                                                              },
-                                                                                                                                                                                                                                                                                                                                                                                              "children": [
-                                                                                                                                                                                                                                                                                                                                                                                                "Значение модернизации формированию высокотехнологичная шагов консультация кадров идейные также образом. Экономической массового новых показывает прежде работы создание сложившаяся в. Условий формированию другой формированию показывает общественной повседневная значительной формированию. По кадров организационной однако таким повышение актуальность уровня. Обеспечивает сложившаяся сфера. Управление современного развития богатый позиции."
-                                                                                                                                                                                                                                                                                                                                                                                              ]
-                                                                                                                                                                                                                                                                                                                                                                                            }
-                                                                                                                                                                                                                                                                                                                                                                                          ]
-                                                                                                                                                                                                                                                                                                                                                                                        }
-                                                                                                                                                                                                                                                                                                                                                                                      ]
-                                                                                                                                                                                                                                                                                                                                                                                    },
-                                                                                                                                                                                                                                                                                                                                                                                    {
-                                                                                                                                                                                                                                                                                                                                                                                      "tagName": "span",
-                                                                                                                                                                                                                                                                                                                                                                                      "children": [
-                                                                                                                                                                                                                                                                                                                                                                                        "Инновационный потребностям значительной выполнять настолько систему формированию проект. Системы предложений а. Материально-технической целесообразности модель поставленных формированию. Гражданского настолько массового задача задача от высокотехнологичная технологий. Шагов активом принципов."
-                                                                                                                                                                                                                                                                                                                                                                                      ]
-                                                                                                                                                                                                                                                                                                                                                                                    },
-                                                                                                                                                                                                                                                                                                                                                                                  ]
-                                                                                                                                                                                                                                                                                                                                                                                }
-                                                                                                                                                                                                                                                                                                                                                                              ]
-                                                                                                                                                                                                                                                                                                                                                                            },
-                                                                                                                                                                                                                                                                                                                                                                            {
-                                                                                                                                                                                                                                                                                                                                                                              "tagName": "b",
-                                                                                                                                                                                                                                                                                                                                                                              "attributes": {
-                                                                                                                                                                                                                                                                                                                                                                                "class": "testClass"
-                                                                                                                                                                                                                                                                                                                                                                              },
-                                                                                                                                                                                                                                                                                                                                                                              "children": [
-                                                                                                                                                                                                                                                                                                                                                                                "Значение модернизации формированию высокотехнологичная шагов консультация кадров идейные также образом. Экономической массового новых показывает прежде работы создание сложившаяся в. Условий формированию другой формированию показывает общественной повседневная значительной формированию. По кадров организационной однако таким повышение актуальность уровня. Обеспечивает сложившаяся сфера. Управление современного развития богатый позиции."
-                                                                                                                                                                                                                                                                                                                                                                              ]
-                                                                                                                                                                                                                                                                                                                                                                            }
-                                                                                                                                                                                                                                                                                                                                                                          ]
-                                                                                                                                                                                                                                                                                                                                                                        }
-                                                                                                                                                                                                                                                                                                                                                                      ]
-                                                                                                                                                                                                                                                                                                                                                                    },
-                                                                                                                                                                                                                                                                                                                                                                    {
-                                                                                                                                                                                                                                                                                                                                                                      "tagName": "span",
-                                                                                                                                                                                                                                                                                                                                                                      "children": [
-                                                                                                                                                                                                                                                                                                                                                                        "Инновационный потребностям значительной выполнять настолько систему формированию проект. Системы предложений а. Материально-технической целесообразности модель поставленных формированию. Гражданского настолько массового задача задача от высокотехнологичная технологий. Шагов активом принципов."
-                                                                                                                                                                                                                                                                                                                                                                      ]
-                                                                                                                                                                                                                                                                                                                                                                    },
-                                                                                                                                                                                                                                                                                                                                                                  ]
-                                                                                                                                                                                                                                                                                                                                                                }
-                                                                                                                                                                                                                                                                                                                                                              ]
-                                                                                                                                                                                                                                                                                                                                                            },
-                                                                                                                                                                                                                                                                                                                                                            {
-                                                                                                                                                                                                                                                                                                                                                              "tagName": "b",
-                                                                                                                                                                                                                                                                                                                                                              "attributes": {
-                                                                                                                                                                                                                                                                                                                                                                "class": "testClass"
-                                                                                                                                                                                                                                                                                                                                                              },
-                                                                                                                                                                                                                                                                                                                                                              "children": [
-                                                                                                                                                                                                                                                                                                                                                                "Значение модернизации формированию высокотехнологичная шагов консультация кадров идейные также образом. Экономической массового новых показывает прежде работы создание сложившаяся в. Условий формированию другой формированию показывает общественной повседневная значительной формированию. По кадров организационной однако таким повышение актуальность уровня. Обеспечивает сложившаяся сфера. Управление современного развития богатый позиции."
-                                                                                                                                                                                                                                                                                                                                                              ]
-                                                                                                                                                                                                                                                                                                                                                            }
-                                                                                                                                                                                                                                                                                                                                                          ]
-                                                                                                                                                                                                                                                                                                                                                        }
-                                                                                                                                                                                                                                                                                                                                                      ]
-                                                                                                                                                                                                                                                                                                                                                    },
-                                                                                                                                                                                                                                                                                                                                                    {
-                                                                                                                                                                                                                                                                                                                                                      "tagName": "span",
-                                                                                                                                                                                                                                                                                                                                                      "children": [
-                                                                                                                                                                                                                                                                                                                                                        "Инновационный потребностям значительной выполнять настолько систему формированию проект. Системы предложений а. Материально-технической целесообразности модель поставленных формированию. Гражданского настолько массового задача задача от высокотехнологичная технологий. Шагов активом принципов."
-                                                                                                                                                                                                                                                                                                                                                      ]
-                                                                                                                                                                                                                                                                                                                                                    },
-                                                                                                                                                                                                                                                                                                                                                  ]
-                                                                                                                                                                                                                                                                                                                                                }
-                                                                                                                                                                                                                                                                                                                                              ]
-                                                                                                                                                                                                                                                                                                                                            },
-                                                                                                                                                                                                                                                                                                                                            {
-                                                                                                                                                                                                                                                                                                                                              "tagName": "b",
-                                                                                                                                                                                                                                                                                                                                              "attributes": {
-                                                                                                                                                                                                                                                                                                                                                "class": "testClass"
-                                                                                                                                                                                                                                                                                                                                              },
-                                                                                                                                                                                                                                                                                                                                              "children": [
-                                                                                                                                                                                                                                                                                                                                                "Значение модернизации формированию высокотехнологичная шагов консультация кадров идейные также образом. Экономической массового новых показывает прежде работы создание сложившаяся в. Условий формированию другой формированию показывает общественной повседневная значительной формированию. По кадров организационной однако таким повышение актуальность уровня. Обеспечивает сложившаяся сфера. Управление современного развития богатый позиции."
-                                                                                                                                                                                                                                                                                                                                              ]
-                                                                                                                                                                                                                                                                                                                                            }
-                                                                                                                                                                                                                                                                                                                                          ]
-                                                                                                                                                                                                                                                                                                                                        }
-                                                                                                                                                                                                                                                                                                                                      ]
-                                                                                                                                                                                                                                                                                                                                    },
-                                                                                                                                                                                                                                                                                                                                    {
-                                                                                                                                                                                                                                                                                                                                      "tagName": "span",
-                                                                                                                                                                                                                                                                                                                                      "children": [
-                                                                                                                                                                                                                                                                                                                                        "Инновационный потребностям значительной выполнять настолько систему формированию проект. Системы предложений а. Материально-технической целесообразности модель поставленных формированию. Гражданского настолько массового задача задача от высокотехнологичная технологий. Шагов активом принципов."
-                                                                                                                                                                                                                                                                                                                                      ]
-                                                                                                                                                                                                                                                                                                                                    },
-                                                                                                                                                                                                                                                                                                                                  ]
-                                                                                                                                                                                                                                                                                                                                }
-                                                                                                                                                                                                                                                                                                                              ]
-                                                                                                                                                                                                                                                                                                                            },
-                                                                                                                                                                                                                                                                                                                            {
-                                                                                                                                                                                                                                                                                                                              "tagName": "b",
-                                                                                                                                                                                                                                                                                                                              "attributes": {
-                                                                                                                                                                                                                                                                                                                                "class": "testClass"
-                                                                                                                                                                                                                                                                                                                              },
-                                                                                                                                                                                                                                                                                                                              "children": [
-                                                                                                                                                                                                                                                                                                                                "Значение модернизации формированию высокотехнологичная шагов консультация кадров идейные также образом. Экономической массового новых показывает прежде работы создание сложившаяся в. Условий формированию другой формированию показывает общественной повседневная значительной формированию. По кадров организационной однако таким повышение актуальность уровня. Обеспечивает сложившаяся сфера. Управление современного развития богатый позиции."
-                                                                                                                                                                                                                                                                                                                              ]
-                                                                                                                                                                                                                                                                                                                            }
-                                                                                                                                                                                                                                                                                                                          ]
-                                                                                                                                                                                                                                                                                                                        }
-                                                                                                                                                                                                                                                                                                                      ]
-                                                                                                                                                                                                                                                                                                                    },
-                                                                                                                                                                                                                                                                                                                    {
-                                                                                                                                                                                                                                                                                                                      "tagName": "span",
-                                                                                                                                                                                                                                                                                                                      "children": [
-                                                                                                                                                                                                                                                                                                                        "Инновационный потребностям значительной выполнять настолько систему формированию проект. Системы предложений а. Материально-технической целесообразности модель поставленных формированию. Гражданского настолько массового задача задача от высокотехнологичная технологий. Шагов активом принципов."
-                                                                                                                                                                                                                                                                                                                      ]
-                                                                                                                                                                                                                                                                                                                    },
-                                                                                                                                                                                                                                                                                                                  ]
-                                                                                                                                                                                                                                                                                                                }
-                                                                                                                                                                                                                                                                                                              ]
-                                                                                                                                                                                                                                                                                                            },
-                                                                                                                                                                                                                                                                                                            {
-                                                                                                                                                                                                                                                                                                              "tagName": "b",
-                                                                                                                                                                                                                                                                                                              "attributes": {
-                                                                                                                                                                                                                                                                                                                "class": "testClass"
-                                                                                                                                                                                                                                                                                                              },
-                                                                                                                                                                                                                                                                                                              "children": [
-                                                                                                                                                                                                                                                                                                                "Значение модернизации формированию высокотехнологичная шагов консультация кадров идейные также образом. Экономической массового новых показывает прежде работы создание сложившаяся в. Условий формированию другой формированию показывает общественной повседневная значительной формированию. По кадров организационной однако таким повышение актуальность уровня. Обеспечивает сложившаяся сфера. Управление современного развития богатый позиции."
-                                                                                                                                                                                                                                                                                                              ]
-                                                                                                                                                                                                                                                                                                            }
-                                                                                                                                                                                                                                                                                                          ]
-                                                                                                                                                                                                                                                                                                        }
-                                                                                                                                                                                                                                                                                                      ]
-                                                                                                                                                                                                                                                                                                    },
-                                                                                                                                                                                                                                                                                                    {
-                                                                                                                                                                                                                                                                                                      "tagName": "span",
-                                                                                                                                                                                                                                                                                                      "children": [
-                                                                                                                                                                                                                                                                                                        "Инновационный потребностям значительной выполнять настолько систему формированию проект. Системы предложений а. Материально-технической целесообразности модель поставленных формированию. Гражданского настолько массового задача задача от высокотехнологичная технологий. Шагов активом принципов."
-                                                                                                                                                                                                                                                                                                      ]
-                                                                                                                                                                                                                                                                                                    },
-                                                                                                                                                                                                                                                                                                  ]
-                                                                                                                                                                                                                                                                                                }
-                                                                                                                                                                                                                                                                                              ]
-                                                                                                                                                                                                                                                                                            },
-                                                                                                                                                                                                                                                                                            {
-                                                                                                                                                                                                                                                                                              "tagName": "b",
-                                                                                                                                                                                                                                                                                              "attributes": {
-                                                                                                                                                                                                                                                                                                "class": "testClass"
-                                                                                                                                                                                                                                                                                              },
-                                                                                                                                                                                                                                                                                              "children": [
-                                                                                                                                                                                                                                                                                                "Значение модернизации формированию высокотехнологичная шагов консультация кадров идейные также образом. Экономической массового новых показывает прежде работы создание сложившаяся в. Условий формированию другой формированию показывает общественной повседневная значительной формированию. По кадров организационной однако таким повышение актуальность уровня. Обеспечивает сложившаяся сфера. Управление современного развития богатый позиции."
-                                                                                                                                                                                                                                                                                              ]
-                                                                                                                                                                                                                                                                                            }
-                                                                                                                                                                                                                                                                                          ]
-                                                                                                                                                                                                                                                                                        }
-                                                                                                                                                                                                                                                                                      ]
-                                                                                                                                                                                                                                                                                    },
-                                                                                                                                                                                                                                                                                    {
-                                                                                                                                                                                                                                                                                      "tagName": "span",
-                                                                                                                                                                                                                                                                                      "children": [
-                                                                                                                                                                                                                                                                                        "Инновационный потребностям значительной выполнять настолько систему формированию проект. Системы предложений а. Материально-технической целесообразности модель поставленных формированию. Гражданского настолько массового задача задача от высокотехнологичная технологий. Шагов активом принципов."
-                                                                                                                                                                                                                                                                                      ]
-                                                                                                                                                                                                                                                                                    },
-                                                                                                                                                                                                                                                                                  ]
-                                                                                                                                                                                                                                                                                }
-                                                                                                                                                                                                                                                                              ]
-                                                                                                                                                                                                                                                                            },
-                                                                                                                                                                                                                                                                            {
-                                                                                                                                                                                                                                                                              "tagName": "b",
-                                                                                                                                                                                                                                                                              "attributes": {
-                                                                                                                                                                                                                                                                                "class": "testClass"
-                                                                                                                                                                                                                                                                              },
-                                                                                                                                                                                                                                                                              "children": [
-                                                                                                                                                                                                                                                                                "Значение модернизации формированию высокотехнологичная шагов консультация кадров идейные также образом. Экономической массового новых показывает прежде работы создание сложившаяся в. Условий формированию другой формированию показывает общественной повседневная значительной формированию. По кадров организационной однако таким повышение актуальность уровня. Обеспечивает сложившаяся сфера. Управление современного развития богатый позиции."
-                                                                                                                                                                                                                                                                              ]
-                                                                                                                                                                                                                                                                            }
-                                                                                                                                                                                                                                                                          ]
-                                                                                                                                                                                                                                                                        }
-                                                                                                                                                                                                                                                                      ]
-                                                                                                                                                                                                                                                                    },
-                                                                                                                                                                                                                                                                    {
-                                                                                                                                                                                                                                                                      "tagName": "span",
-                                                                                                                                                                                                                                                                      "children": [
-                                                                                                                                                                                                                                                                        "Инновационный потребностям значительной выполнять настолько систему формированию проект. Системы предложений а. Материально-технической целесообразности модель поставленных формированию. Гражданского настолько массового задача задача от высокотехнологичная технологий. Шагов активом принципов."
-                                                                                                                                                                                                                                                                      ]
-                                                                                                                                                                                                                                                                    },
-                                                                                                                                                                                                                                                                  ]
-                                                                                                                                                                                                                                                                }
-                                                                                                                                                                                                                                                              ]
-                                                                                                                                                                                                                                                            },
-                                                                                                                                                                                                                                                            {
-                                                                                                                                                                                                                                                              "tagName": "b",
-                                                                                                                                                                                                                                                              "attributes": {
-                                                                                                                                                                                                                                                                "class": "testClass"
-                                                                                                                                                                                                                                                              },
-                                                                                                                                                                                                                                                              "children": [
-                                                                                                                                                                                                                                                                "Значение модернизации формированию высокотехнологичная шагов консультация кадров идейные также образом. Экономической массового новых показывает прежде работы создание сложившаяся в. Условий формированию другой формированию показывает общественной повседневная значительной формированию. По кадров организационной однако таким повышение актуальность уровня. Обеспечивает сложившаяся сфера. Управление современного развития богатый позиции."
-                                                                                                                                                                                                                                                              ]
-                                                                                                                                                                                                                                                            }
-                                                                                                                                                                                                                                                          ]
-                                                                                                                                                                                                                                                        }
-                                                                                                                                                                                                                                                      ]
-                                                                                                                                                                                                                                                    },
-                                                                                                                                                                                                                                                    {
-                                                                                                                                                                                                                                                      "tagName": "span",
-                                                                                                                                                                                                                                                      "children": [
-                                                                                                                                                                                                                                                        "Инновационный потребностям значительной выполнять настолько систему формированию проект. Системы предложений а. Материально-технической целесообразности модель поставленных формированию. Гражданского настолько массового задача задача от высокотехнологичная технологий. Шагов активом принципов."
-                                                                                                                                                                                                                                                      ]
-                                                                                                                                                                                                                                                    },
-                                                                                                                                                                                                                                                  ]
-                                                                                                                                                                                                                                                }
-                                                                                                                                                                                                                                              ]
-                                                                                                                                                                                                                                            },
-                                                                                                                                                                                                                                            {
-                                                                                                                                                                                                                                              "tagName": "b",
-                                                                                                                                                                                                                                              "attributes": {
-                                                                                                                                                                                                                                                "class": "testClass"
-                                                                                                                                                                                                                                              },
-                                                                                                                                                                                                                                              "children": [
-                                                                                                                                                                                                                                                "Значение модернизации формированию высокотехнологичная шагов консультация кадров идейные также образом. Экономической массового новых показывает прежде работы создание сложившаяся в. Условий формированию другой формированию показывает общественной повседневная значительной формированию. По кадров организационной однако таким повышение актуальность уровня. Обеспечивает сложившаяся сфера. Управление современного развития богатый позиции."
-                                                                                                                                                                                                                                              ]
-                                                                                                                                                                                                                                            }
-                                                                                                                                                                                                                                          ]
-                                                                                                                                                                                                                                        }
-                                                                                                                                                                                                                                      ]
-                                                                                                                                                                                                                                    },
-                                                                                                                                                                                                                                    {
-                                                                                                                                                                                                                                      "tagName": "span",
-                                                                                                                                                                                                                                      "children": [
-                                                                                                                                                                                                                                        "Инновационный потребностям значительной выполнять настолько систему формированию проект. Системы предложений а. Материально-технической целесообразности модель поставленных формированию. Гражданского настолько массового задача задача от высокотехнологичная технологий. Шагов активом принципов."
-                                                                                                                                                                                                                                      ]
-                                                                                                                                                                                                                                    },
-                                                                                                                                                                                                                                  ]
-                                                                                                                                                                                                                                }
-                                                                                                                                                                                                                              ]
-                                                                                                                                                                                                                            },
-                                                                                                                                                                                                                            {
-                                                                                                                                                                                                                              "tagName": "b",
-                                                                                                                                                                                                                              "attributes": {
-                                                                                                                                                                                                                                "class": "testClass"
-                                                                                                                                                                                                                              },
-                                                                                                                                                                                                                              "children": [
-                                                                                                                                                                                                                                "Значение модернизации формированию высокотехнологичная шагов консультация кадров идейные также образом. Экономической массового новых показывает прежде работы создание сложившаяся в. Условий формированию другой формированию показывает общественной повседневная значительной формированию. По кадров организационной однако таким повышение актуальность уровня. Обеспечивает сложившаяся сфера. Управление современного развития богатый позиции."
-                                                                                                                                                                                                                              ]
-                                                                                                                                                                                                                            }
-                                                                                                                                                                                                                          ]
-                                                                                                                                                                                                                        }
-                                                                                                                                                                                                                      ]
-                                                                                                                                                                                                                    },
-                                                                                                                                                                                                                    {
-                                                                                                                                                                                                                      "tagName": "span",
-                                                                                                                                                                                                                      "children": [
-                                                                                                                                                                                                                        "Инновационный потребностям значительной выполнять настолько систему формированию проект. Системы предложений а. Материально-технической целесообразности модель поставленных формированию. Гражданского настолько массового задача задача от высокотехнологичная технологий. Шагов активом принципов."
-                                                                                                                                                                                                                      ]
-                                                                                                                                                                                                                    },
-                                                                                                                                                                                                                  ]
-                                                                                                                                                                                                                }
-                                                                                                                                                                                                              ]
-                                                                                                                                                                                                            },
-                                                                                                                                                                                                            {
-                                                                                                                                                                                                              "tagName": "b",
-                                                                                                                                                                                                              "attributes": {
-                                                                                                                                                                                                                "class": "testClass"
-                                                                                                                                                                                                              },
-                                                                                                                                                                                                              "children": [
-                                                                                                                                                                                                                "Значение модернизации формированию высокотехнологичная шагов консультация кадров идейные также образом. Экономической массового новых показывает прежде работы создание сложившаяся в. Условий формированию другой формированию показывает общественной повседневная значительной формированию. По кадров организационной однако таким повышение актуальность уровня. Обеспечивает сложившаяся сфера. Управление современного развития богатый позиции."
-                                                                                                                                                                                                              ]
-                                                                                                                                                                                                            }
-                                                                                                                                                                                                          ]
-                                                                                                                                                                                                        }
-                                                                                                                                                                                                      ]
-                                                                                                                                                                                                    },
-                                                                                                                                                                                                    {
-                                                                                                                                                                                                      "tagName": "span",
-                                                                                                                                                                                                      "children": [
-                                                                                                                                                                                                        "Инновационный потребностям значительной выполнять настолько систему формированию проект. Системы предложений а. Материально-технической целесообразности модель поставленных формированию. Гражданского настолько массового задача задача от высокотехнологичная технологий. Шагов активом принципов."
-                                                                                                                                                                                                      ]
-                                                                                                                                                                                                    },
-                                                                                                                                                                                                  ]
-                                                                                                                                                                                                }
-                                                                                                                                                                                              ]
-                                                                                                                                                                                            },
-                                                                                                                                                                                            {
-                                                                                                                                                                                              "tagName": "b",
-                                                                                                                                                                                              "attributes": {
-                                                                                                                                                                                                "class": "testClass"
-                                                                                                                                                                                              },
-                                                                                                                                                                                              "children": [
-                                                                                                                                                                                                "Значение модернизации формированию высокотехнологичная шагов консультация кадров идейные также образом. Экономической массового новых показывает прежде работы создание сложившаяся в. Условий формированию другой формированию показывает общественной повседневная значительной формированию. По кадров организационной однако таким повышение актуальность уровня. Обеспечивает сложившаяся сфера. Управление современного развития богатый позиции."
-                                                                                                                                                                                              ]
-                                                                                                                                                                                            }
-                                                                                                                                                                                          ]
-                                                                                                                                                                                        }
-                                                                                                                                                                                      ]
-                                                                                                                                                                                    },
-                                                                                                                                                                                    {
-                                                                                                                                                                                      "tagName": "span",
-                                                                                                                                                                                      "children": [
-                                                                                                                                                                                        "Инновационный потребностям значительной выполнять настолько систему формированию проект. Системы предложений а. Материально-технической целесообразности модель поставленных формированию. Гражданского настолько массового задача задача от высокотехнологичная технологий. Шагов активом принципов."
-                                                                                                                                                                                      ]
-                                                                                                                                                                                    },
-                                                                                                                                                                                  ]
-                                                                                                                                                                                }
-                                                                                                                                                                              ]
-                                                                                                                                                                            },
-                                                                                                                                                                            {
-                                                                                                                                                                              "tagName": "b",
-                                                                                                                                                                              "attributes": {
-                                                                                                                                                                                "class": "testClass"
-                                                                                                                                                                              },
-                                                                                                                                                                              "children": [
-                                                                                                                                                                                "Значение модернизации формированию высокотехнологичная шагов консультация кадров идейные также образом. Экономической массового новых показывает прежде работы создание сложившаяся в. Условий формированию другой формированию показывает общественной повседневная значительной формированию. По кадров организационной однако таким повышение актуальность уровня. Обеспечивает сложившаяся сфера. Управление современного развития богатый позиции."
-                                                                                                                                                                              ]
-                                                                                                                                                                            }
-                                                                                                                                                                          ]
-                                                                                                                                                                        }
-                                                                                                                                                                      ]
-                                                                                                                                                                    },
-                                                                                                                                                                    {
-                                                                                                                                                                      "tagName": "span",
-                                                                                                                                                                      "children": [
-                                                                                                                                                                        "Инновационный потребностям значительной выполнять настолько систему формированию проект. Системы предложений а. Материально-технической целесообразности модель поставленных формированию. Гражданского настолько массового задача задача от высокотехнологичная технологий. Шагов активом принципов."
-                                                                                                                                                                      ]
-                                                                                                                                                                    },
-                                                                                                                                                                  ]
-                                                                                                                                                                }
-                                                                                                                                                              ]
-                                                                                                                                                            },
-                                                                                                                                                            {
-                                                                                                                                                              "tagName": "b",
-                                                                                                                                                              "attributes": {
-                                                                                                                                                                "class": "testClass"
-                                                                                                                                                              },
-                                                                                                                                                              "children": [
-                                                                                                                                                                "Значение модернизации формированию высокотехнологичная шагов консультация кадров идейные также образом. Экономической массового новых показывает прежде работы создание сложившаяся в. Условий формированию другой формированию показывает общественной повседневная значительной формированию. По кадров организационной однако таким повышение актуальность уровня. Обеспечивает сложившаяся сфера. Управление современного развития богатый позиции."
-                                                                                                                                                              ]
-                                                                                                                                                            }
-                                                                                                                                                          ]
-                                                                                                                                                        }
-                                                                                                                                                      ]
-                                                                                                                                                    },
-                                                                                                                                                    {
-                                                                                                                                                      "tagName": "span",
-                                                                                                                                                      "children": [
-                                                                                                                                                        "Инновационный потребностям значительной выполнять настолько систему формированию проект. Системы предложений а. Материально-технической целесообразности модель поставленных формированию. Гражданского настолько массового задача задача от высокотехнологичная технологий. Шагов активом принципов."
-                                                                                                                                                      ]
-                                                                                                                                                    },
-                                                                                                                                                  ]
-                                                                                                                                                }
-                                                                                                                                              ]
-                                                                                                                                            },
-                                                                                                                                            {
-                                                                                                                                              "tagName": "b",
-                                                                                                                                              "attributes": {
-                                                                                                                                                "class": "testClass"
-                                                                                                                                              },
-                                                                                                                                              "children": [
-                                                                                                                                                "Значение модернизации формированию высокотехнологичная шагов консультация кадров идейные также образом. Экономической массового новых показывает прежде работы создание сложившаяся в. Условий формированию другой формированию показывает общественной повседневная значительной формированию. По кадров организационной однако таким повышение актуальность уровня. Обеспечивает сложившаяся сфера. Управление современного развития богатый позиции."
-                                                                                                                                              ]
-                                                                                                                                            }
-                                                                                                                                          ]
-                                                                                                                                        }
-                                                                                                                                      ]
-                                                                                                                                    },
-                                                                                                                                    {
-                                                                                                                                      "tagName": "span",
-                                                                                                                                      "children": [
-                                                                                                                                        "Инновационный потребностям значительной выполнять настолько систему формированию проект. Системы предложений а. Материально-технической целесообразности модель поставленных формированию. Гражданского настолько массового задача задача от высокотехнологичная технологий. Шагов активом принципов."
-                                                                                                                                      ]
-                                                                                                                                    },
-                                                                                                                                  ]
-                                                                                                                                }
-                                                                                                                              ]
-                                                                                                                            },
-                                                                                                                            {
-                                                                                                                              "tagName": "b",
-                                                                                                                              "attributes": {
-                                                                                                                                "class": "testClass"
-                                                                                                                              },
-                                                                                                                              "children": [
-                                                                                                                                "Значение модернизации формированию высокотехнологичная шагов консультация кадров идейные также образом. Экономической массового новых показывает прежде работы создание сложившаяся в. Условий формированию другой формированию показывает общественной повседневная значительной формированию. По кадров организационной однако таким повышение актуальность уровня. Обеспечивает сложившаяся сфера. Управление современного развития богатый позиции."
-                                                                                                                              ]
-                                                                                                                            }
-                                                                                                                          ]
-                                                                                                                        }
-                                                                                                                      ]
-                                                                                                                    },
-                                                                                                                    {
-                                                                                                                      "tagName": "span",
-                                                                                                                      "children": [
-                                                                                                                        "Инновационный потребностям значительной выполнять настолько систему формированию проект. Системы предложений а. Материально-технической целесообразности модель поставленных формированию. Гражданского настолько массового задача задача от высокотехнологичная технологий. Шагов активом принципов."
-                                                                                                                      ]
-                                                                                                                    },
-                                                                                                                  ]
-                                                                                                                }
-                                                                                                              ]
-                                                                                                            },
-                                                                                                            {
-                                                                                                              "tagName": "b",
-                                                                                                              "attributes": {
-                                                                                                                "class": "testClass"
-                                                                                                              },
-                                                                                                              "children": [
-                                                                                                                "Значение модернизации формированию высокотехнологичная шагов консультация кадров идейные также образом. Экономической массового новых показывает прежде работы создание сложившаяся в. Условий формированию другой формированию показывает общественной повседневная значительной формированию. По кадров организационной однако таким повышение актуальность уровня. Обеспечивает сложившаяся сфера. Управление современного развития богатый позиции."
-                                                                                                              ]
-                                                                                                            }
-                                                                                                          ]
-                                                                                                        }
-                                                                                                      ]
-                                                                                                    },
-                                                                                                    {
-                                                                                                      "tagName": "span",
-                                                                                                      "children": [
-                                                                                                        "Инновационный потребностям значительной выполнять настолько систему формированию проект. Системы предложений а. Материально-технической целесообразности модель поставленных формированию. Гражданского настолько массового задача задача от высокотехнологичная технологий. Шагов активом принципов."
-                                                                                                      ]
-                                                                                                    },
-                                                                                                  ]
-                                                                                                }
-                                                                                              ]
-                                                                                            },
-                                                                                            {
-                                                                                              "tagName": "b",
-                                                                                              "attributes": {
-                                                                                                "class": "testClass"
-                                                                                              },
-                                                                                              "children": [
-                                                                                                "Значение модернизации формированию высокотехнологичная шагов консультация кадров идейные также образом. Экономической массового новых показывает прежде работы создание сложившаяся в. Условий формированию другой формированию показывает общественной повседневная значительной формированию. По кадров организационной однако таким повышение актуальность уровня. Обеспечивает сложившаяся сфера. Управление современного развития богатый позиции."
-                                                                                              ]
-                                                                                            }
-                                                                                          ]
-                                                                                        }
-                                                                                      ]
-                                                                                    },
-                                                                                    {
-                                                                                      "tagName": "span",
-                                                                                      "children": [
-                                                                                        "Инновационный потребностям значительной выполнять настолько систему формированию проект. Системы предложений а. Материально-технической целесообразности модель поставленных формированию. Гражданского настолько массового задача задача от высокотехнологичная технологий. Шагов активом принципов."
-                                                                                      ]
-                                                                                    },
-                                                                                  ]
-                                                                                }
-                                                                              ]
-                                                                            },
-                                                                            {
-                                                                              "tagName": "b",
-                                                                              "attributes": {
-                                                                                "class": "testClass"
-                                                                              },
-                                                                              "children": [
-                                                                                "Значение модернизации формированию высокотехнологичная шагов консультация кадров идейные также образом. Экономической массового новых показывает прежде работы создание сложившаяся в. Условий формированию другой формированию показывает общественной повседневная значительной формированию. По кадров организационной однако таким повышение актуальность уровня. Обеспечивает сложившаяся сфера. Управление современного развития богатый позиции."
-                                                                              ]
-                                                                            }
-                                                                          ]
-                                                                        }
-                                                                      ]
-                                                                    },
-                                                                    {
-                                                                      "tagName": "span",
-                                                                      "children": [
-                                                                        "Инновационный потребностям значительной выполнять настолько систему формированию проект. Системы предложений а. Материально-технической целесообразности модель поставленных формированию. Гражданского настолько массового задача задача от высокотехнологичная технологий. Шагов активом принципов."
-                                                                      ]
-                                                                    },
-                                                                  ]
-                                                                }
-                                                              ]
-                                                            },
-                                                            {
-                                                              "tagName": "b",
-                                                              "attributes": {
-                                                                "class": "testClass"
-                                                              },
-                                                              "children": [
-                                                                "Значение модернизации формированию высокотехнологичная шагов консультация кадров идейные также образом. Экономической массового новых показывает прежде работы создание сложившаяся в. Условий формированию другой формированию показывает общественной повседневная значительной формированию. По кадров организационной однако таким повышение актуальность уровня. Обеспечивает сложившаяся сфера. Управление современного развития богатый позиции."
-                                                              ]
-                                                            }
-                                                          ]
-                                                        }
-                                                      ]
-                                                    },
-                                                    {
-                                                      "tagName": "span",
-                                                      "children": [
-                                                        "Инновационный потребностям значительной выполнять настолько систему формированию проект. Системы предложений а. Материально-технической целесообразности модель поставленных формированию. Гражданского настолько массового задача задача от высокотехнологичная технологий. Шагов активом принципов."
-                                                      ]
-                                                    },
-                                                  ]
-                                                }
-                                              ]
-                                            },
-                                            {
-                                              "tagName": "b",
-                                              "attributes": {
-                                                "class": "testClass"
-                                              },
-                                              "children": [
-                                                "Значение модернизации формированию высокотехнологичная шагов консультация кадров идейные также образом. Экономической массового новых показывает прежде работы создание сложившаяся в. Условий формированию другой формированию показывает общественной повседневная значительной формированию. По кадров организационной однако таким повышение актуальность уровня. Обеспечивает сложившаяся сфера. Управление современного развития богатый позиции."
-                                              ]
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "tagName": "span",
-                                      "children": [
-                                        "Инновационный потребностям значительной выполнять настолько систему формированию проект. Системы предложений а. Материально-технической целесообразности модель поставленных формированию. Гражданского настолько массового задача задача от высокотехнологичная технологий. Шагов активом принципов."
-                                      ]
-                                    },
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "tagName": "b",
-                              "attributes": {
-                                "class": "testClass"
-                              },
-                              "children": [
-                                "Значение модернизации формированию высокотехнологичная шагов консультация кадров идейные также образом. Экономической массового новых показывает прежде работы создание сложившаяся в. Условий формированию другой формированию показывает общественной повседневная значительной формированию. По кадров организационной однако таким повышение актуальность уровня. Обеспечивает сложившаяся сфера. Управление современного развития богатый позиции."
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "tagName": "span",
-                      "children": [
-                        "Инновационный потребностям значительной выполнять настолько систему формированию проект. Системы предложений а. Материально-технической целесообразности модель поставленных формированию. Гражданского настолько массового задача задача от высокотехнологичная технологий. Шагов активом принципов."
-                      ]
-                    },
-                  ]
-                }
-              ]
-            },
-            {
-              "tagName": "b",
-              "attributes": {
-                "class": "testClass"
-              },
-              "children": [
-                "Значение модернизации формированию высокотехнологичная шагов консультация кадров идейные также образом. Экономической массового новых показывает прежде работы создание сложившаяся в. Условий формированию другой формированию показывает общественной повседневная значительной формированию. По кадров организационной однако таким повышение актуальность уровня. Обеспечивает сложившаяся сфера. Управление современного развития богатый позиции."
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "tagName": "span",
-      "children": [
-        "Инновационный потребностям значительной выполнять настолько систему формированию проект. Системы предложений а. Материально-технической целесообразности модель поставленных формированию. Гражданского настолько массового задача задача от высокотехнологичная технологий. Шагов активом принципов."
-      ]
-    },
-  ]
-};
 
 
 

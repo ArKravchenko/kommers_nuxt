@@ -17,7 +17,7 @@
     </div>
 
     <div class="hide_desktop">
-      <ArticleSharing/>
+      <ArticleSharing :reading-time="readingTime" :sharing-href="sharingHref"/>
     </div>
 
     <h1 v-if="getTitle && !hideTitles" class="doc_header__name">
