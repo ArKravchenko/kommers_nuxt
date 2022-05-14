@@ -9,6 +9,8 @@ const SwiperImport = () => import(
   './SwiperTreeShaked');
 import type Swiper from 'swiper'
 
+type ArrayElement<ArrayType extends readonly unknown[]> = ArrayType[number];
+
 
 @Component({
   // name is required for recursive components as GallerySwiperTest uses DocBodyElement and vice versa
@@ -36,6 +38,13 @@ export default class GallerySwiperTest extends Vue {
   isCredentialsOpenToggle(e: Event){
     this.isCredentialsOpen = !this.isCredentialsOpen
     e.preventDefault();
+  }
+
+  getNoscriptString(item: ArrayElement<ArticleLong.Gallery['images']>): string {
+    return `<img class="doc_media__media fallback_image"
+                     src="${item.img.src}"
+                     alt="${item.img.alt}"
+                >`
   }
 
 

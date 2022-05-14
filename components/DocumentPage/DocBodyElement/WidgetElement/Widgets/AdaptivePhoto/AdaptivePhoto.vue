@@ -12,12 +12,12 @@
              :alt="getAdaptivePhotoMobileImg.alt"
              v-lazy="getAdaptivePhotoMobileImg.src"
         >
-        <noscript>
-          <img class="doc_media__media_free"
-               :src="getAdaptivePhotoMobileImg.src"
-               :alt="getAdaptivePhotoMobileImg.alt"
-          >
-        </noscript>
+<!--        <component v-if="$isServer" is="noscript">-->
+<!--          <img class="doc_media__media_free"-->
+<!--               :src="getAdaptivePhotoMobileImg.src"-->
+<!--               :alt="getAdaptivePhotoMobileImg.alt"-->
+<!--          >-->
+<!--        </component>-->
 
       </div>
       <!-- mobile infographics end -->
@@ -32,12 +32,12 @@
              :alt="getAdaptivePhotoDesktopImg.alt"
              v-lazy="getAdaptivePhotoDesktopImg.src"
         >
-        <noscript>
-          <img class="doc_media__media_free"
-               :src="getAdaptivePhotoMobileImg.src"
-               :alt="getAdaptivePhotoMobileImg.alt"
-          >
-        </noscript>
+<!--        <component v-if="$isServer" is="noscript">-->
+<!--          <img class="doc_media__media_free"-->
+<!--               :src="getAdaptivePhotoMobileImg.src"-->
+<!--               :alt="getAdaptivePhotoMobileImg.alt"-->
+<!--          >-->
+<!--        </component>-->
       </div>
       <!-- desktop infographics end -->
 

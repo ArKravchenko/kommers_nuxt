@@ -41,12 +41,12 @@
                      v-lazy="cdnUrl+item.img.src"
                      :src="$imgPlaceholder"
                      :alt="item.img.alt">
-                <noscript>
-                  <img class="uho__img fallback_image"
-                       :src="cdnUrl+item.img.src"
-                       :alt="item.img.alt"
-                  >
-                </noscript>
+<!--                <component v-if="$isServer" is="noscript">-->
+<!--                  <img class="uho__img fallback_image"-->
+<!--                       :src="cdnUrl+item.img.src"-->
+<!--                       :alt="item.img.alt"-->
+<!--                  >-->
+<!--                </component>-->
               </div>
               <div class="uho__text">
                 <p class="title_12 uho__tag">{{ item.tag }}</p>

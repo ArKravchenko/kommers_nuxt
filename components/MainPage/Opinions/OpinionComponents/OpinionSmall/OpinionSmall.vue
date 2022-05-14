@@ -14,12 +14,12 @@
            v-lazy="cdnUrl+opinionData.img.src"
            :src="$imgPlaceholder"
            :alt="opinionData.img.alt">
-      <noscript>
-        <img class="opinion__img fallback_image"
-             :src="cdnUrl+opinionData.img.src"
-             :alt="opinionData.img.alt"
-        >
-      </noscript>
+<!--      <component v-if="$isServer" is="noscript">-->
+<!--        <img class="opinion__img fallback_image"-->
+<!--             :src="cdnUrl+opinionData.img.src"-->
+<!--             :alt="opinionData.img.alt"-->
+<!--        >-->
+<!--      </component>-->
     </div>
   </article>
 

@@ -13,12 +13,12 @@
              v-lazy="cdnUrl+photoOfTheDayData.content.img.src"
              :src="$imgPlaceholder"
              :alt="photoOfTheDayData.content.img.alt">
-      <noscript>
-        <img class="slider-img"
-             :src="cdnUrl+photoOfTheDayData.content.img.src"
-             :alt="photoOfTheDayData.content.img.alt"
-        >
-      </noscript>
+<!--      <component v-if="$isServer" is="noscript">-->
+<!--        <img class="slider-img"-->
+<!--             :src="cdnUrl+photoOfTheDayData.content.img.src"-->
+<!--             :alt="photoOfTheDayData.content.img.alt"-->
+<!--        >-->
+<!--      </component>-->
     </div>
     <h2 class="photd__name">
       <a :href="photoOfTheDayData.content.href" class="link link_overlay">

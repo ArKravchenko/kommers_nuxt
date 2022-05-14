@@ -22,12 +22,12 @@
              v-lazy="cdnUrl+blockquoteOfTheDayData.content.person.img.src"
              :src="$imgPlaceholder"
              :alt="blockquoteOfTheDayData.content.person.img.alt">
-        <noscript>
-          <img class="stretch"
-               :src="cdnUrl+blockquoteOfTheDayData.content.person.img.src"
-               :alt="blockquoteOfTheDayData.content.person.img.alt"
-          >
-        </noscript>
+<!--        <component v-if="$isServer" is="noscript">-->
+<!--          <img class="stretch"-->
+<!--               :src="cdnUrl+blockquoteOfTheDayData.content.person.img.src"-->
+<!--               :alt="blockquoteOfTheDayData.content.person.img.alt"-->
+<!--          >-->
+<!--        </component>-->
       </a>
     </div>
   </article>

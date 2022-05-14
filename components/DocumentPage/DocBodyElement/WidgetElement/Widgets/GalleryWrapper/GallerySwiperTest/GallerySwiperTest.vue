@@ -33,11 +33,12 @@
 <!--                :sizes="`(min-width: ${$scssVars.desktop1}px) ${$scssVars.main_width - $scssVars.cell_size_large - $scssVars.desktop_gap - 10}px, (min-width: ${$scssVars.mobile_width + $scssVars.mobile_gap*2}px) ${$scssVars.mobile_width + $scssVars.mobile_gap  * 2}px`"-->
 
               </picture>
-              <noscript>
-                <img class="doc_media__media fallback_image"
-                     :src="item.img.src"
-                     :alt="item.img.alt"
-                >
+              <noscript v-html="getNoscriptString(item)">
+
+<!--                <img class="doc_media__media fallback_image"-->
+<!--                     :src="item.img.src"-->
+<!--                     :alt="item.img.alt"-->
+<!--                >-->
               </noscript>
             </div>
             <figcaption

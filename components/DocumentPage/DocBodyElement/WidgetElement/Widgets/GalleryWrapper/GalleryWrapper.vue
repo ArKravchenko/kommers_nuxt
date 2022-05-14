@@ -18,7 +18,7 @@
     </h2>
 
 <!--    <Gallery :gallery-widget-data="galleryWrapperWidgetData"/>-->
-    <GallerySwiperTest  v-once :gallery-widget-data="galleryWrapperWidgetData"/>
+    <GallerySwiperTest :gallery-widget-data="galleryWrapperWidgetData"/>
 
 <!--    <client-only>-->
 <!--      <GallerySwiperTest :gallery-widget-data="galleryWrapperWidgetData"/>-->
@@ -39,7 +39,7 @@
   </div>
 
 <!--    <Gallery v-else :gallery-widget-data="galleryWrapperWidgetData"/>-->
-    <GallerySwiperTest v-once v-else :gallery-widget-data="galleryWrapperWidgetData"/>
+    <GallerySwiperTest v-else :gallery-widget-data="galleryWrapperWidgetData"/>
 
 <!--  <client-only v-else>-->
 <!--    <GallerySwiperTest :gallery-widget-data="galleryWrapperWidgetData"/>-->

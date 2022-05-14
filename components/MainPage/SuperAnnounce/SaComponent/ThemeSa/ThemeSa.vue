@@ -8,12 +8,12 @@
            :src="$imgPlaceholder"
            :alt="themeSaData.content.img.alt"
       >
-      <noscript>
-          <img class="sa__img"
-               :src="cdnUrl+themeSaData.content.img.src"
-               :alt="themeSaData.content.img.alt"
-          >
-        </noscript>
+<!--      <component v-if="$isServer" is="noscript">-->
+<!--          <img class="sa__img"-->
+<!--               :src="cdnUrl+themeSaData.content.img.src"-->
+<!--               :alt="themeSaData.content.img.alt"-->
+<!--          >-->
+<!--        </component>-->
 		</span>
       <div class="sa__content">
         <p class="sa__tag hide_desktop"><a :href="themeSaData.content.theme.href" class="link">{{ themeSaData.content.plashka }}</a></p>

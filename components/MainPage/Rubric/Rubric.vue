@@ -25,12 +25,12 @@
                    v-lazy="cdnUrl+getFirst.img.src"
                    :src="$imgPlaceholder"
                    alt="">
-              <noscript>
-                <img class="uho__img"
-                     :src="cdnUrl+getFirst.img.src"
-                     :alt="getFirst.img.alt"
-                >
-              </noscript>
+<!--              <component v-if="$isServer" is="noscript">-->
+<!--                <img class="uho__img"-->
+<!--                     :src="cdnUrl+getFirst.img.src"-->
+<!--                     :alt="getFirst.img.alt"-->
+<!--                >-->
+<!--              </component>-->
             </div>
             <div class="uho__text">
               <h2 class="title_20 uho__name m-title_24">

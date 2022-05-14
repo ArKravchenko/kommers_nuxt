@@ -8,12 +8,12 @@
              v-lazy="cdnUrl+docSaData.content.img.src"
              :src="$imgPlaceholder"
              :alt="docSaData.content.img.alt">
-        <noscript>
-          <img class="sa__img"
-               :src="cdnUrl+docSaData.content.img.src"
-               :alt="docSaData.content.img.alt"
-          >
-        </noscript>
+<!--        <component v-if="$isServer" is="noscript">-->
+<!--          <img class="sa__img"-->
+<!--               :src="cdnUrl+docSaData.content.img.src"-->
+<!--               :alt="docSaData.content.img.alt"-->
+<!--          >-->
+<!--        </component>-->
       </div>
       <div class="sa__content">
         <p class="sa__tag hide_desktop">

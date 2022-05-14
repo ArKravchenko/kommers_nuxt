@@ -21,12 +21,12 @@
            :alt="videoOfTheDayData.content.img.alt"
            :src="$imgPlaceholder"
       >
-      <noscript>
-        <img class="slider-img"
-             :src="cdnUrl+videoOfTheDayData.content.img.src"
-             :alt="videoOfTheDayData.content.img.alt"
-        >
-      </noscript>
+<!--      <component v-if="$isServer" is="noscript">-->
+<!--        <img class="slider-img"-->
+<!--             :src="cdnUrl+videoOfTheDayData.content.img.src"-->
+<!--             :alt="videoOfTheDayData.content.img.alt"-->
+<!--        >-->
+<!--      </component>-->
 
     </div>
     <h2 class="photd__name">

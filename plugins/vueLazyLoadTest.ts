@@ -36,7 +36,7 @@ const observer = new IntersectionObserver((entry, observer) => {
         checkSrcSrcset(target);
       }
       observer.unobserve(target);
-      console.log('Intersecting', target)
+      // console.log('Intersecting', target)
     }
   })
 }, options);

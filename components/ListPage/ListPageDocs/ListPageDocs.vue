@@ -14,12 +14,12 @@
                    v-lazy="cdnUrl+doc.img.src"
                    :src="$imgPlaceholder"
                    :alt="doc.img.alt">
-              <noscript>
-                <img class="fallback_image"
-                     :src="doc.img.src"
-                     :alt="doc.img.alt"
-                >
-              </noscript>
+<!--              <component v-if="$isServer" is="noscript">-->
+<!--                <img class="fallback_image"-->
+<!--                     :src="doc.img.src"-->
+<!--                     :alt="doc.img.alt"-->
+<!--                >-->
+<!--              </component>-->
             </a>
           </div>
 
