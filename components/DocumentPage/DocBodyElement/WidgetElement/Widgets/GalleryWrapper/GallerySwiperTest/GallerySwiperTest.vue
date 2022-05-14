@@ -13,13 +13,26 @@
              data-slider-id="id2083689">
           <figure class="doc_media__figure">
             <div class="photo">
-              <img class="doc_media__media slider-img"
-                   :src="$imgPlaceholder"
-                   :alt="item.img.alt"
-                   v-lazy="item.img.src"
-                   :data-srcset="item.img.jpegSrcSet"
-                   :sizes="`(min-width: ${$scssVars.desktop1}px) ${$scssVars.main_width - $scssVars.cell_size_large - $scssVars.desktop_gap - 10}px, (min-width: ${$scssVars.mobile_width + $scssVars.mobile_gap*2}px) ${$scssVars.mobile_width + $scssVars.mobile_gap  * 2}px`"
-              >
+              <picture>
+                <source class="slider-img" type="image/webp"
+                        :data-srcset="item.img.webpSrcSet"
+                        :sizes="`(min-width: ${$scssVars.desktop1}px) ${$scssVars.main_width - $scssVars.cell_size_large - $scssVars.desktop_gap - 10}px, (min-width: ${$scssVars.mobile_width + $scssVars.mobile_gap*2}px) ${$scssVars.mobile_width + $scssVars.mobile_gap  * 2}px`"
+                >
+                <source class="slider-img"
+                        :data-srcset="item.img.jpegSrcSet"
+                        :sizes="`(min-width: ${$scssVars.desktop1}px) ${$scssVars.main_width - $scssVars.cell_size_large - $scssVars.desktop_gap - 10}px, (min-width: ${$scssVars.mobile_width + $scssVars.mobile_gap*2}px) ${$scssVars.mobile_width + $scssVars.mobile_gap  * 2}px`"
+                >
+                <img class="doc_media__media slider-img"
+                     :src="$imgPlaceholder"
+                     :alt="item.img.alt"
+                     :data-src="item.img.src"
+                     v-lazytest
+                >
+
+<!--                :data-srcset="item.img.jpegSrcSet"-->
+<!--                :sizes="`(min-width: ${$scssVars.desktop1}px) ${$scssVars.main_width - $scssVars.cell_size_large - $scssVars.desktop_gap - 10}px, (min-width: ${$scssVars.mobile_width + $scssVars.mobile_gap*2}px) ${$scssVars.mobile_width + $scssVars.mobile_gap  * 2}px`"-->
+
+              </picture>
               <noscript>
                 <img class="doc_media__media fallback_image"
                      :src="item.img.src"

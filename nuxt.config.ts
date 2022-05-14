@@ -110,11 +110,16 @@ const config: NuxtConfig = {
     // hoistUseStatements: 'true'
   },
 
+  //TODO replace v-lazy with v-lazytest self-written directive
+  //TODO add picture tags with proper sizes and srcsets
+  //TODO integrate swrv for server fetch requests
+
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
     '@/plugins/filters.ts',
     '@/plugins/errorCatcher.ts',
     { src: '@/plugins/vueLazyLoad.ts', ssr: false },
+    { src: '@/plugins/vueLazyLoadTest.ts', ssr: false },
     '@/plugins/imgPlaceholder.ts',
     '@/plugins/scssVars.ts'
   ],
@@ -140,7 +145,7 @@ const config: NuxtConfig = {
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
     // https://go.nuxtjs.dev/axios
-    '@nuxtjs/axios',
+    // '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
     // '@nuxtjs/pwa',
     // 'nuxt-ssr-cache',
