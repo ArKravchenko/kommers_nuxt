@@ -10,8 +10,11 @@
         <img class="doc_media__media_free"
              :src="$imgPlaceholder"
              :alt="getAdaptivePhotoMobileImg.alt"
-             v-lazy="getAdaptivePhotoMobileImg.src"
+             :data-src="getAdaptivePhotoMobileImg.src"
+             v-lazytest
         >
+        <noscript v-if="getNoscriptStringMobile" v-html="getNoscriptStringMobile">
+        </noscript>
 <!--        <component v-if="$isServer" is="noscript">-->
 <!--          <img class="doc_media__media_free"-->
 <!--               :src="getAdaptivePhotoMobileImg.src"-->
@@ -30,8 +33,11 @@
         <img class="doc_media__media_free"
              :src="$imgPlaceholder"
              :alt="getAdaptivePhotoDesktopImg.alt"
-             v-lazy="getAdaptivePhotoDesktopImg.src"
+             :data-src="getAdaptivePhotoDesktopImg.src"
+             v-lazytest
         >
+        <noscript v-if="getNoscriptStringDesktop" v-html="getNoscriptStringDesktop">
+        </noscript>
 <!--        <component v-if="$isServer" is="noscript">-->
 <!--          <img class="doc_media__media_free"-->
 <!--               :src="getAdaptivePhotoMobileImg.src"-->

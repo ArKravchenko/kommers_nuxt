@@ -140,7 +140,7 @@ export default class GallerySwiperTest extends Vue {
     })
 
 
-    console.log('this.galleryWidgetData',this.galleryWidgetData)
+    // console.log('this.galleryWidgetData',this.galleryWidgetData)
   }
 
 

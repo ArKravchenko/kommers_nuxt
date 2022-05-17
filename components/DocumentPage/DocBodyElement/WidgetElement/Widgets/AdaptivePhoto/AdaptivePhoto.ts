@@ -22,6 +22,22 @@ export default class AdaptivePhoto extends Vue {
 
   cdnUrl: string = process.env.CDN_URL || '';
 
+  get getNoscriptStringMobile() {
+    return this.getAdaptivePhotoMobileImg
+      && `<img class="doc_media__media_free fallback_image"
+                     src="${this.getAdaptivePhotoMobileImg.src}"
+                     alt="${this.getAdaptivePhotoMobileImg.alt}"
+                >`
+  }
+
+  get getNoscriptStringDesktop() {
+    return this.getAdaptivePhotoDesktopImg
+      && `<img class="doc_media__media_free fallback_image"
+                     src="${this.getAdaptivePhotoDesktopImg.src}"
+                     alt="${this.getAdaptivePhotoDesktopImg.alt}"
+                >`
+  }
+
   get getAdaptivePhotoMobileImg(){
     return this.adaptivePhotoWidgetData?.imgMobile
     && this.adaptivePhotoWidgetData.imgMobile

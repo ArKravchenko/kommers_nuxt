@@ -3,17 +3,26 @@
   <div :class="['doc_media',getIllustrationAlignClassName]">
     <figure class="doc_media__figure">
       <div class="photo">
-        <img class="doc_media__media"
-             v-if="getIllustrationImg"
-             :src="$imgPlaceholder"
-             v-lazy="getIllustrationImg.src"
-             :alt="getIllustrationImg.alt">
-<!--        <component v-if="$isServer" is="noscript">-->
-<!--          <img class="doc_media__media"-->
-<!--               :src="getIllustrationImg.src"-->
-<!--               :alt="getIllustrationImg.alt"-->
-<!--          >-->
-<!--        </component>-->
+        <picture>
+          <source v-if="getIllustrationImg.webpSrcSet"
+                  type="image/webp"
+                  :data-srcset="getIllustrationImg.webpSrcSet"
+                  :sizes="getSizes"
+          >
+          <source v-if="getIllustrationImg.jpegSrcSet"
+                  :data-srcset="getIllustrationImg.jpegSrcSet"
+                  :sizes="getSizes"
+          >
+          <img class="doc_media__media"
+               v-if="getIllustrationImg"
+               :src="$imgPlaceholder"
+               :data-src="getIllustrationImg.src"
+               :alt="getIllustrationImg.alt"
+               v-lazytest
+          >
+        </picture>
+        <noscript v-if="getNoscriptString" v-html="getNoscriptString">
+        </noscript>
 
       </div>
       <figcaption class="doc_media__caption">

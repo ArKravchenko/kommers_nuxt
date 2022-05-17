@@ -1,6 +1,8 @@
 import {Component, Prop, Vue} from 'nuxt-property-decorator'
-import type {ArticleLong} from "~/interfaces/API/MainPageApi";
+import type {ArticleLong, ImageFull, ImageSimple} from "~/interfaces/API/MainPageApi";
 import HtmlTagElement from '@/components/DocumentPage/DocBodyElement/HtmlTagElement/HtmlTagElement.vue'
+
+type ArrayElement<ArrayType extends readonly (ImageFull | ImageSimple)[]> = ArrayType[number];
 
 @Component({
   // name is required for recursive components as Illustration uses DocBodyElement and vice versa
@@ -20,6 +22,24 @@ export default class Illustration extends Vue {
   }) illustrationWidgetData!: ArticleLong.Illustration | null;
 
   cdnUrl: string = process.env.CDN_URL || '';
+
+  get getNoscriptString() {
+    return this.getIllustrationImg
+      && `<img class="doc_media__media fallback_image"
+                     src="${this.getIllustrationImg.src}"
+                     alt="${this.getIllustrationImg.alt}"
+                >`
+  }
+
+  get getSizes() {
+    if (this.illustrationWidgetData?.align === 'left'
+      || this.illustrationWidgetData?.align === 'right') {
+      return `(min-width: ${this.$scssVars.desktop1}px) 240px, (min-width: ${this.$scssVars.mobile_width + this.$scssVars.mobile_gap*2}px) ${this.$scssVars.mobile_width + this.$scssVars.mobile_gap*2}px`
+    } else {
+      return `(min-width: ${this.$scssVars.desktop1}px) ${this.$scssVars.main_width - this.$scssVars.cell_size_large - this.$scssVars.desktop_gap - 10}px, (min-width: ${this.$scssVars.mobile_width + this.$scssVars.mobile_gap * 2}px) ${this.$scssVars.mobile_width + this.$scssVars.mobile_gap * 2}px`
+
+    }
+  }
 
   //TODO не у всех справок есть поле align, а оно обязательное по типам
   get getIllustrationAlignClassName() {

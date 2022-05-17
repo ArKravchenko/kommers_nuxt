@@ -21,11 +21,26 @@
     <div v-if="getIncutImg"
          :class="['incut__photo',{'incut__photo--wide': getIncutAlign === 'center'}]">
       <a :href="getIncutHref">
-        <img class="incut__img"
-             :src="$imgPlaceholder"
-             :alt="getIncutImg.alt"
-             v-lazy="getIncutImg.src"
-        >
+        <picture >
+
+          <source v-if="getIncutImg.webpSrcSet"
+            :data-srcset="getIncutImg.webpSrcSet"
+            type="image/webp"
+            :sizes="getSizes"
+            >
+          <source v-if="getIncutImg.jpegSrcSet"
+            :data-srcset="getIncutImg.jpegSrcSet"
+            :sizes="getSizes"
+          >
+          <img class="incut__img"
+               :src="$imgPlaceholder"
+               :data-src="getIncutImg.src"
+               :alt="getIncutImg.alt"
+               v-lazytest
+          >
+        </picture>
+        <noscript v-if="getNoscriptString" v-html="getNoscriptString">
+        </noscript>
 <!--        <component v-if="$isServer" is="noscript">-->
 <!--          <img class="incut__img"-->
 <!--               :src="getIncutImg.src"-->

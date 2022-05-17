@@ -24,6 +24,28 @@ export default class Incut extends Vue {
 
   cdnUrl: string = process.env.CDN_URL || '';
 
+  get getNoscriptString() {
+    return this.getIncutImg
+      && `<img class="incut__img fallback_image"
+                     src="${this.getIncutImg.src}"
+                     alt="${this.getIncutImg.alt}"
+                >`
+  }
+
+  get getSizes() {
+    if (this.incutWidgetData?.align === 'left'
+      || this.incutWidgetData?.align === 'right') {
+      return `(min-width: ${this.$scssVars.desktop1}px) 240px,
+      (min-width: ${this.$scssVars.mobile_width + this.$scssVars.mobile_gap * 2}px) ${this.$scssVars.mobile_width + this.$scssVars.mobile_gap * 2 - 20}px,
+      calc(100vw - ${this.$scssVars.mobile_gap * 2 + 20}px)`
+    } else {
+      return `(min-width: ${this.$scssVars.desktop1}px) ${this.$scssVars.desktop1 - 300 - this.$scssVars.desktop_gap * 3 - 10}px,
+			(min-width: ${this.$scssVars.mobile_width + this.$scssVars.mobile_gap * 2}px) ${this.$scssVars.mobile_width + this.$scssVars.mobile_gap * 2}${this.$scssVars.mobile_width + this.$scssVars.mobile_gap * 2}px,
+			calc(100vw -  ${this.$scssVars.mobile_gap * 2}px)
+      `
+    }
+  }
+
   get getIncutAlignClassName(){
     return this.incutWidgetData?.align === 'center'
     ? 'incut--center'
