@@ -21,7 +21,12 @@
 
       <template v-if="!getIsRawHtml && getDocBodyElements">
         <template v-for="(child, i) in getDocBodyElements">
-          <DocBodyElement :key="i" :doc-body-element="child" :para-wrapper-tag="'p'" :para-wrapper-class="'doc__text'"/>
+<!--          <div>-->
+          <ErrorBoundary :key="i">
+            <DocBodyElement :doc-body-element="child" :para-wrapper-tag="'p'"
+                            :para-wrapper-class="'doc__text'"/>
+          </ErrorBoundary>
+<!--          </div>-->
         </template>
       </template>
 
