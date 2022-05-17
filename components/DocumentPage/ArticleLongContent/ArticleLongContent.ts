@@ -44,6 +44,13 @@ export default class ArticleLongContent extends Vue {
     // }
   }) articleLongContent!: ArticleLong.IArticleLong | null;
 
+  head() {
+    return this.getTitle ? {
+        title: this.extractText(this.getTitle)
+      }
+      : {}
+  }
+
   get getSharingHref(){
     return this.articleLongContent?.data?.docId
       && `/doc/${this.articleLongContent.data.docId}`
@@ -52,6 +59,18 @@ export default class ArticleLongContent extends Vue {
   get getReadingTime(){
     return this.articleLongContent?.data?.readingTime
       && this.articleLongContent.data.readingTime
+  }
+
+  extractText(obj: (string | ArticleLong.HTMLTagElement)[], acc = ''){
+    obj.forEach(el=>{
+      if (!!el && typeof el == "string" ){
+        acc+=obj;
+      } else if (!!(<ArticleLong.HTMLTagElement>el).tagName
+        && (<ArticleLong.HTMLTagElement>el).children?.length){
+          this.extractText((<ArticleLong.HTMLTagElement>el).children, acc )
+      }
+    })
+    return acc
   }
 
   get getTitle(){
