@@ -34,9 +34,17 @@ export default class Collapse extends Vue {
       && this.collapseWidgetData.bodyElements
   }
 
+
+  get getCollapseRawHtml(){
+    return this.collapseWidgetData?.rawHtml
+      && this.collapseWidgetData.rawHtml
+  }
+
   isExpanded: boolean = false;
 
-  clickIsExpandedToggle() {
+  clickIsExpandedToggle(e: Event) {
+    e.stopPropagation();
+    e.preventDefault();
     this.isExpanded = !this.isExpanded
   }
 

@@ -672,6 +672,7 @@ export namespace ArticleLong {
     widgetType: 'collapse'
     // content: {
     defaultExpanded: boolean; // раскрыт ли по-умолчанию
+    rawHtml?: string
     title: (PlainTextElement | HTMLTagElement)[];
     subtitle: (PlainTextElement | HTMLTagElement)[];
     bodyElements: DocBodyElement[]
