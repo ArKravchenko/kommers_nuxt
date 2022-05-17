@@ -18,7 +18,7 @@
             <a href="/ad" target="_blank">Реклама в «Ъ» www.kommersant.ru/ad</a>
           </div>
           <div class="adv_980x240">
-            <div style="height: 250px; width: 970px; background-color: grey">
+            <div style="height: 250px; width: 970px; background-color: grey; overflow-y: scroll">
               <a href="/">
                 <h2>Main</h2>
               </a>
@@ -51,6 +51,10 @@
               </a>
               <a href="/doc/5006884">
                 <h2>Док с таблицами /doc/5006884</h2>
+              </a>
+              <a href="/doc/4977066">
+                <h2>Док с кастомными стилями и невалидным HTML в первом параграфе <br>
+                  (на нем проверять лейзи гидратацию и все изменения в рендеринге DocBodyElement) /doc/4977066</h2>
               </a>
             </div>
 <!--            <client-only>-->

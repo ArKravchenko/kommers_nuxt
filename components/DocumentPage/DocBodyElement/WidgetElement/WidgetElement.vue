@@ -1,55 +1,89 @@
 <template>
 
 
+<!--  Похоже что Para элемент нельзя гидратировать ленивым образом,
+    это вызывает поднятие ошибки вверх на всех элементах где есть невалидный HTML,
+    и как следтствие краш ассоциированного корневого <DocBodyElement/>,
+    то есть потерю всего контента соответствующего абзаца
+    -->
   <Para v-if="widgetElement && widgetElement.widgetType === 'para'"
         :para-widget-data="widgetElement"
         :para-wrapper-tag="paraWrapperTag"
         :para-wrapper-class="paraWrapperClass"
   />
 
-  <!--  TODO Vvodka has PARA inside that causes differences between browser dom and SSR dom-->
-  <Vvodka v-else-if="widgetElement && widgetElement.widgetType === 'vvodka'"
-          :vvodka-widget-data="widgetElement"/>
 
-  <!--  TODO Title2 has PARA inside that causes differences between browser dom and SSR dom-->
-  <Title2 v-else-if="widgetElement && widgetElement.widgetType === 'title2'"
-          :title2-widget-data="widgetElement"/>
+  <LazyHydrate when-idle v-else-if="widgetElement && widgetElement.widgetType === 'vvodka'">
+    <!--  TODO Vvodka has PARA inside that causes differences between browser dom and SSR dom-->
+    <Vvodka
+      :vvodka-widget-data="widgetElement"/>
+  </LazyHydrate>
 
+  <LazyHydrate :when-visible="lazyHydrateWhenVisibleParams"
+               v-else-if="widgetElement && widgetElement.widgetType === 'title2'">
+    <!--  TODO Title2 has PARA inside that causes differences between browser dom and SSR dom-->
+    <Title2
+      :title2-widget-data="widgetElement"/>
+  </LazyHydrate>
 
-  <Incut v-else-if="widgetElement && widgetElement.widgetType === 'incut'"
-         :incut-widget-data="widgetElement"/>
+  <LazyHydrate :when-visible="lazyHydrateWhenVisibleParams"
+               v-else-if="widgetElement && widgetElement.widgetType === 'incut'">
+    <Incut
+      :incut-widget-data="widgetElement"/>
+  </LazyHydrate>
 
-
-  <List v-else-if="widgetElement && widgetElement.widgetType === 'list'"
-        :list-widget-data="widgetElement"/>
-
-
-  <!--  TODO Spravka has PARA inside that causes differences between browser dom and SSR dom-->
-  <Spravka v-else-if="widgetElement && widgetElement.widgetType === 'spravka'"
-           :spravka-widget-data="widgetElement"/>
-
-  <AdaptivePhoto v-else-if="widgetElement && widgetElement.widgetType === 'adaptive_photo'"
-                 :adaptive-photo-widget-data="widgetElement"/>
-
-  <!--  TODO Citation has PARA inside that causes differences between browser dom and SSR dom-->
-  <Citation v-else-if="widgetElement && widgetElement.widgetType === 'citation'"
-            :citation-widget-data="widgetElement"/>
+  <LazyHydrate :when-visible="lazyHydrateWhenVisibleParams"
+               v-else-if="widgetElement && widgetElement.widgetType === 'list'">
+    <List
+      :list-widget-data="widgetElement"/>
+  </LazyHydrate>
 
 
-  <Illustration v-else-if="widgetElement && widgetElement.widgetType === 'illustration'"
-                :illustration-widget-data="widgetElement"/>
+  <LazyHydrate :when-visible="lazyHydrateWhenVisibleParams"
+               v-else-if="widgetElement && widgetElement.widgetType === 'spravka'">
+    <!--  TODO Spravka has PARA inside that causes differences between browser dom and SSR dom-->
+    <Spravka
+      :spravka-widget-data="widgetElement"/>
+  </LazyHydrate>
 
-  <!--  TODO been made client-only to avoid collision with Title2 and Vvodka-->
-  <GalleryWrapper v-else-if="widgetElement && widgetElement.widgetType === 'gallery'"
-                  :gallery-wrapper-widget-data="widgetElement"/>
+  <LazyHydrate :when-visible="lazyHydrateWhenVisibleParams"
+               v-else-if="widgetElement && widgetElement.widgetType === 'adaptive_photo'">
+    <AdaptivePhoto
+      :adaptive-photo-widget-data="widgetElement"/>
+  </LazyHydrate>
+
+  <LazyHydrate :when-visible="lazyHydrateWhenVisibleParams"
+               v-else-if="widgetElement && widgetElement.widgetType === 'citation'">
+    <!--  TODO Citation has PARA inside that causes differences between browser dom and SSR dom-->
+    <Citation
+      :citation-widget-data="widgetElement"/>
+  </LazyHydrate>
+
+  <LazyHydrate :when-visible="lazyHydrateWhenVisibleParams"
+               v-else-if="widgetElement && widgetElement.widgetType === 'illustration'">
+    <Illustration
+      :illustration-widget-data="widgetElement"/>
+  </LazyHydrate>
+
+  <LazyHydrate :when-visible="lazyHydrateWhenVisibleParams"
+               v-else-if="widgetElement && widgetElement.widgetType === 'gallery'">
+    <!--  TODO been made client-only to avoid collision with Title2 and Vvodka-->
+    <GalleryWrapper
+      :gallery-wrapper-widget-data="widgetElement"/>
+  </LazyHydrate>
 
 
-  <Collapse v-else-if="widgetElement && widgetElement.widgetType === 'collapse'"
-            :collapse-widget-data="widgetElement"/>
+  <LazyHydrate :when-visible="lazyHydrateWhenVisibleParams"
+               v-else-if="widgetElement && widgetElement.widgetType === 'collapse'">
+    <Collapse
+      :collapse-widget-data="widgetElement"/>
+  </LazyHydrate>
 
-
-  <Author v-else-if="widgetElement && widgetElement.widgetType === 'author'"
-          :author-widget-data="widgetElement"/>
+  <LazyHydrate :when-visible="lazyHydrateWhenVisibleParams"
+               v-else-if="widgetElement && widgetElement.widgetType === 'author'">
+    <Author
+      :author-widget-data="widgetElement"/>
+  </LazyHydrate>
 
   <client-only v-else-if="widgetElement && widgetElement.widgetType === 'free'">
     <Free
@@ -66,11 +100,17 @@
       :socials-widget-data="widgetElement"/>
   </client-only>
 
-  <Audio v-else-if="widgetElement && widgetElement.widgetType === 'audio'"
-         :audio-widget-data="widgetElement"/>
+  <LazyHydrate :when-visible="lazyHydrateWhenVisibleParams"
+               v-else-if="widgetElement && widgetElement.widgetType === 'audio'">
+    <Audio
+      :audio-widget-data="widgetElement"/>
+  </LazyHydrate>
 
-  <Table v-else-if="widgetElement && widgetElement.widgetType === 'table'"
-         :table-widget-data="widgetElement"/>
+  <LazyHydrate :when-visible="lazyHydrateWhenVisibleParams"
+               v-else-if="widgetElement && widgetElement.widgetType === 'table'">
+    <Table
+      :table-widget-data="widgetElement"/>
+  </LazyHydrate>
 
 
   <h2 v-else-if="widgetElement" style="margin-top: 30px; margin-bottom: 30px; color: red">

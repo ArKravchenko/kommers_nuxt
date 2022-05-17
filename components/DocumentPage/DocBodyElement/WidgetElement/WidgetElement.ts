@@ -18,7 +18,8 @@ import type {ArticleLong} from "~/interfaces/API/MainPageApi";
 // import Author from "./Widgets/Author/Author.vue";
 // import Audio from "./Widgets/Audio/Audio.vue";
 // import Table from "./Widgets/Table/Table.vue";
-// import LazyHydrate from 'vue-lazy-hydration'
+import ErrorBoundary from "~/components/general/ErrorBoundary/ErrorBoundary.vue";
+import LazyHydrate from 'vue-lazy-hydration'
 
 
 // these imports MUST be lazy (promise wrapped) because it's needed to avoid cross-recursive components' conflicts
@@ -107,8 +108,9 @@ const Table = () => import(
     Free,
     Author,
     Audio,
-    Table
-    // LazyHydrate
+    Table,
+    ErrorBoundary,
+    LazyHydrate
   }
 })
 export default class WidgetElement extends Vue {
@@ -138,5 +140,9 @@ export default class WidgetElement extends Vue {
     //   return !!value.rates && !!value.items
     // }
   }) paraWrapperClass!: string | null;
+
+  get lazyHydrateWhenVisibleParams(){
+    return { rootMargin: '400px' }
+  }
 
 }
