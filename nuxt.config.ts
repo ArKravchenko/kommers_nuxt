@@ -230,7 +230,12 @@ const config: NuxtConfig = {
     publicPath: process.env.PUBLIC_PATH || '',
     extend(config, { isClient, isServer, loaders }) {
       // @ts-ignore
-      loaders!.scss!.additionalData = scssVars
+      loaders!.scss!.additionalData = scssVars;
+
+      // this is to prevent conflicting with injected side bundles on a page
+      if(config?.output){
+        config.output.jsonpFunction = 'kommersantWebpackJsonp'
+      }
     },
     extractCSS: true,
     analyze: false,
