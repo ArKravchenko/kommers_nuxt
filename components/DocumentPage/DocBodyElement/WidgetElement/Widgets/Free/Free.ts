@@ -57,19 +57,19 @@ export default class Free extends Vue {
               {
                 hid:'commonJs',
                 json: {},
-                src:'https://im.kommersant.ru/ContentFlex/Redesign2020/kom2021.commonJS.js?2204291421064306',
+                src:'//im.kommersant.ru/ContentFlex/Redesign2020/kom2021.commonJS.js?2204291421064306',
                 callback: () => {
                   this.headJson!.script!.splice(1,0,      {
                     hid: 'kommersant.antiCache',
                     innerHTML: `
-        kommersant.antiCache.jsMark = '/ContentFlex/js/jquery.mark.min.js?2109231134459908';
-        kommersant.antiCache.jsJqueryValidate = '/ContentFlex/js/jquery.validate.min.js?2109231134459908';
-        kommersant.antiCache.jsNanoScroller = '/ContentFlex/js/jquery.nanoscroller.min.js?2109231134459908';
-        kommersant.antiCache.jsScrollMagic = '/ContentFlex/js/scrollmagic/ScrollMagic.min.js?2109231134459908';
-        kommersant.antiCache.jsHighmapsCisDisputed = '/ContentFlex/js/highmaps/cis-disputed.js?2109231134459908';
-        kommersant.antiCache.jsCharts = '/ContentFlex/js/charts.new2021.js?2202141653190991';
-        kommersant.antiCache.jsWidgets = '/ContentFlex/js/widgets.new2021.js?2201111747301991';
-        kommersant.antiCache.jsHighmapsWorldDisputed = '/ContentFlex/js/highmaps/world-disputed.js?2109231134459908';
+        kommersant.antiCache.jsMark = '//im.kommersant.ru/ContentFlex/js/jquery.mark.min.js?2109231134459908';
+        kommersant.antiCache.jsJqueryValidate = '//im.kommersant.ru/ContentFlex/js/jquery.validate.min.js?2109231134459908';
+        kommersant.antiCache.jsNanoScroller = '//im.kommersant.ru/ContentFlex/js/jquery.nanoscroller.min.js?2109231134459908';
+        kommersant.antiCache.jsScrollMagic = '//im.kommersant.ru/ContentFlex/js/scrollmagic/ScrollMagic.min.js?2109231134459908';
+        kommersant.antiCache.jsHighmapsCisDisputed = '//im.kommersant.ru/ContentFlex/js/highmaps/cis-disputed.js?2109231134459908';
+        kommersant.antiCache.jsCharts = '//im.kommersant.ru/ContentFlex/js/charts.new2021.js?2202141653190991';
+        kommersant.antiCache.jsWidgets = '//im.kommersant.ru/ContentFlex/js/widgets.new2021.js?2201111747301991';
+        kommersant.antiCache.jsHighmapsWorldDisputed = '//im.kommersant.ru/ContentFlex/js/highmaps/world-disputed.js?2109231134459908';
 
 
         // var docsId = 5356567;
@@ -104,12 +104,12 @@ export default class Free extends Vue {
                   })
                   this.headJson!.script!.push({
                     hid:'kom2021.article',
-                    src:'/ContentFlex/Redesign2020/kom2021.article.js?2204291421064306',
+                    src:'//im.kommersant.ru/ContentFlex/Redesign2020/kom2021.article.js?2204291421064306',
                     async: true
                   });
                   this.headJson!.script!.push( {
                     hid:'kom2021.commonAsyncJs',
-                    src:'/ContentFlex/Redesign2020/kom2021.commonAsyncJS.js?2204291421064306',
+                    src:'//im.kommersant.ru/ContentFlex/Redesign2020/kom2021.commonAsyncJS.js?2204291421064306',
                     async: true
                   })
                   this.headJson = { ...this.headJson }
