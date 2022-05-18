@@ -1,8 +1,6 @@
 <template>
 
-  <span v-if="getType === 'string'">
-    {{ docBodyElement }}
-  </span>
+  <span v-if="getType === 'string'">{{ docBodyElement }}</span>
 
   <WidgetElement v-else-if="getType === 'widget'"
                  :widget-element="docBodyElement"
