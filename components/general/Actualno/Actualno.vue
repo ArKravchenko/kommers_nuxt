@@ -2,7 +2,7 @@
   <div v-if="actualnoData" class="actual">
     <div class="layout">
       <div class="main">
-        <div class="actual__body slider slider-actual">
+        <div class="actual__body slider">
           <div class="actual__nav_button actual__nav_button--prev slider-prev">
             <a href="#" class="actual__nav_button_link slider-link link">
 						<span class="vicon vicon--larrow">

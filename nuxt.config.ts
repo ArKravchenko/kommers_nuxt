@@ -163,6 +163,8 @@ const config: NuxtConfig = {
         componentCacheConfig
       ]] : [])(),
 
+    '@nuxtjs/proxy',
+
     // ['@nuxtjs/localtunnel', { subdomain: 'kommersant' }],
   ],
 
@@ -214,6 +216,13 @@ const config: NuxtConfig = {
       //     },
       //   }
     }
+  },
+
+  proxy: {
+    '/ContentFlex': {
+      target: "https://im.kommersant.ru/",
+      // pathRewrite: { "^/ContentFlex": "" }
+    },
   },
 
   server: {

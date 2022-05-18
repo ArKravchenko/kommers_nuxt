@@ -1,12 +1,12 @@
 <template>
 
 
-  <div class="incut incut--wide">
-    <div v-if="getRawHtml" style="height: 200px; background-color: gray">
-      <h3>Зашлушка свободного вреза,
-        свободный врез не будет работать без
-        скриптов со старого сайта</h3>
-      {{ getRawHtml }}
+  <div class="incut incut--wide" ref="visibilityTarget">
+    <div v-if="getRawHtml && visible" v-html="getRawHtml">
+<!--      <h3>Зашлушка свободного вреза,-->
+<!--        свободный врез не будет работать без-->
+<!--        скриптов со старого сайта</h3>-->
+<!--      {{ getRawHtml }}-->
     </div>
   </div>
 
