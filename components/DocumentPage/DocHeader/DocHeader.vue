@@ -12,7 +12,7 @@
       <span v-if="getArticleUpdatedDate"
             :datetime="getArticleUpdatedDate"
             class="doc_header__publish_update">
-        Обновлено {{ formatDate(getArticleUpdatedDate) }}
+        обновлено {{ formatDate(getArticleUpdatedDate, true) }}
       </span>
     </div>
 

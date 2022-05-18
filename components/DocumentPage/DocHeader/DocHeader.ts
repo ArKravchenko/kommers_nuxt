@@ -84,8 +84,20 @@ export default class DocHeader extends Vue {
   }
 
 
-  formatDate(date: Date | false){
-    return date && new Date(date).toLocaleDateString('ru-ru',
+
+  formatDate(date: Date | false, update = false){
+    return date
+      && update ? `${new Date(date).toLocaleTimeString('ru-ru',
+      {
+        hour: 'numeric',
+        minute:'numeric'
+      })}, ${new Date(date).toLocaleDateString('ru-ru',
+      {
+        month: 'numeric',
+        day: 'numeric',
+      })}`
+      : date
+      && new Date(date).toLocaleDateString('ru-ru',
       {
         year: 'numeric',
         month: 'numeric',
