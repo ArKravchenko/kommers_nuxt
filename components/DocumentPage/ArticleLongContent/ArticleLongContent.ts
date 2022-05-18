@@ -46,7 +46,7 @@ export default class ArticleLongContent extends Vue {
 
   head() {
     return this.getTitle ? {
-        title: this.extractText(this.getTitle)
+        title: this.$extractText(this.getTitle)
       }
       : {}
   }
@@ -61,17 +61,6 @@ export default class ArticleLongContent extends Vue {
       && this.articleLongContent.data.readingTime
   }
 
-  extractText(obj: (string | ArticleLong.HTMLTagElement)[], acc = ''){
-    obj.forEach(el=>{
-      if (!!el && typeof el == "string" ){
-        acc+=obj;
-      } else if (!!(<ArticleLong.HTMLTagElement>el).tagName
-        && (<ArticleLong.HTMLTagElement>el).children?.length){
-          this.extractText((<ArticleLong.HTMLTagElement>el).children, acc )
-      }
-    })
-    return acc
-  }
 
   get getTitle(){
     return this.articleLongContent?.data?.title?.length
