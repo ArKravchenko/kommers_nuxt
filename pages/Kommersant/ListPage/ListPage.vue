@@ -45,7 +45,8 @@
                 <div class="stretch_photo photo">
                   <img :src="$imgPlaceholder"
                        :alt="getMainPhoto.alt"
-                       v-lazy="cdnUrl+getMainPhoto.src"
+                       v-lazytest
+                       :data-src="cdnUrl+getMainPhoto.src"
                   >
 <!--                  <component v-if="$isServer" is="noscript">-->
 <!--                    <img :src="cdnUrl+getMainPhoto.src"-->

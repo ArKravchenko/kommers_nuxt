@@ -7,7 +7,8 @@
             <a href="#" class="footer_rusfond__link footer__link">
               <p class="footer__title footer__title--grey">Благотворительный фонд</p>
               <div class="footer_rusfond__logo stretch_photo stretch_photo--cover">
-                <img v-lazy="'/i/rusfond.png'"
+                <img :data-src="'/i/rusfond.png'"
+                     v-lazytest
                      :src="$imgPlaceholder"
                      alt="Русфонд"
                      class="footer_rusfond__img"

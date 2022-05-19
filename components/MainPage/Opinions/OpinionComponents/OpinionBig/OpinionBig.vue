@@ -10,7 +10,8 @@
     </div>
     <div class="opinion_big__photo stretch_photo stretch_photo--cover">
       <img class="opinion_big__img fallback_image"
-           v-lazy="cdnUrl+opinionData.img.src"
+           :data-src="cdnUrl+opinionData.img.src"
+           v-lazytest
            :src="$imgPlaceholder"
            :alt="opinionData.img.alt">
 <!--      <component v-if="$isServer" is="noscript">-->

@@ -31,6 +31,12 @@ $modal_inner_horizontal_gap: ${scssConfig.modal_inner_horizontal_gap}rem;
 $modal_scroll_width: ${scssConfig.modal_scroll_width}rem;
 $modal_outer_vertical_gap: ${scssConfig.modal_outer_vertical_gap}rem;`;
 
+//TODO make universal picture component
+//TODO remove v-lazy
+//TODO Make runScripts mixin
+//TODO make common intersectionObserver
+//TODO make $cdnUrl
+//TODO make safe property getters everywhere (MainToday for example)
 
 const config: NuxtConfig = {
   version,
@@ -118,7 +124,7 @@ const config: NuxtConfig = {
   plugins: [
     '@/plugins/filters.ts',
     '@/plugins/errorCatcher.ts',
-    { src: '@/plugins/vueLazyLoad.ts', ssr: false },
+    // { src: '@/plugins/vueLazyLoad.ts', ssr: false },
     { src: '@/plugins/vueLazyLoadTest.ts', ssr: false },
     '@/plugins/imgPlaceholder.ts',
     '@/plugins/scssVars.ts',

@@ -8,7 +8,8 @@
                width="300px"
                height="168.75px"
                :src="$imgPlaceholder"
-               v-lazy="'https://im.kommersant.ru/CorpImages/GBox/00846933.jpg'"
+               v-lazytest
+               :data-src="'https://im.kommersant.ru/CorpImages/GBox/00846933.jpg'"
                alt="">
         </a>
       </div>

@@ -20,7 +20,8 @@
           <div class="spend__photo">
             <img class="spend__img slider-img"
                  :src="$imgPlaceholder"
-                 v-lazy="'https://im.kommersant.ru/CorpImages/MainPage/20211215135313_budu_7_1280.jpg'"
+                 v-lazytest
+                 :data-src="'https://im.kommersant.ru/CorpImages/MainPage/20211215135313_budu_7_1280.jpg'"
                  alt="Как сделать офисное пространство безопаснее">
           </div>
           <div class="spend__text">
@@ -43,7 +44,8 @@
           <div class="spend__photo">
             <img class="spend__img slider-img"
                  :src="$imgPlaceholder"
-                 v-lazy="'https://im.kommersant.ru/CorpImages/MainPage/20211215135412_dyson_2_1280.jpg'"
+                 v-lazytest
+                 :data-src="'https://im.kommersant.ru/CorpImages/MainPage/20211215135412_dyson_2_1280.jpg'"
                  alt="Дышите глубже">
           </div>
           <div class="spend__text">
@@ -66,7 +68,8 @@
           <div class="spend__photo">
             <img class="spend__img slider-img"
                  :src="$imgPlaceholder"
-                 v-lazy="'https://im.kommersant.ru/Issues.photo/Partners_Projects/2021/12/09/KMO_111307_40780_1_t218_135607.jpg'"
+                 v-lazytest
+                 :data-src="'https://im.kommersant.ru/Issues.photo/Partners_Projects/2021/12/09/KMO_111307_40780_1_t218_135607.jpg'"
                  alt="Все как у людей">
           </div>
           <div class="spend__text">
@@ -86,7 +89,8 @@
           <div class="spend__photo">
             <img class="spend__img slider-img"
                  :src="$imgPlaceholder"
-                 v-lazy="'https://im.kommersant.ru/CorpImages/MainPage/20211207144638_1280_720 (1) (002).jpg'"
+                 v-lazytest
+                 :data-src="'https://im.kommersant.ru/CorpImages/MainPage/20211207144638_1280_720 (1) (002).jpg'"
                  alt="OpenRAN Russia 2021">
           </div>
           <div class="spend__text">

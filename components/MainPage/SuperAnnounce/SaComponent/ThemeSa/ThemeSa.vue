@@ -4,9 +4,10 @@
     <div class="sa__cover">
 		<span class="sa__photo">
 			<img class="sa__img"
-           v-lazy="cdnUrl+themeSaData.content.img.src"
+           :data-src="cdnUrl+themeSaData.content.img.src"
            :src="$imgPlaceholder"
            :alt="themeSaData.content.img.alt"
+           v-lazytest
       >
 <!--      <component v-if="$isServer" is="noscript">-->
 <!--          <img class="sa__img"-->

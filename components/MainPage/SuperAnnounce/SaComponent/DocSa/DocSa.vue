@@ -5,7 +5,8 @@
     <div class="sa__cover">
       <div class="sa__photo">
         <img class="sa__img"
-             v-lazy="cdnUrl+docSaData.content.img.src"
+             :data-src="cdnUrl+docSaData.content.img.src"
+             v-lazytest
              :src="$imgPlaceholder"
              :alt="docSaData.content.img.alt">
 <!--        <component v-if="$isServer" is="noscript">-->

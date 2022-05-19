@@ -22,7 +22,8 @@
           <article class="uho">
             <div class="uho__photo">
               <img class="uho__img"
-                   v-lazy="cdnUrl+getFirst.img.src"
+                   :data-src="cdnUrl+getFirst.img.src"
+                   v-lazytest
                    :src="$imgPlaceholder"
                    alt="">
 <!--              <component v-if="$isServer" is="noscript">-->

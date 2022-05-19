@@ -38,7 +38,8 @@
             <article class="uho">
               <div class="uho__photo">
                 <img class="uho__img fallback_image"
-                     v-lazy="cdnUrl+item.img.src"
+                     :data-src="cdnUrl+item.img.src"
+                     v-lazytest
                      :src="$imgPlaceholder"
                      :alt="item.img.alt">
 <!--                <component v-if="$isServer" is="noscript">-->

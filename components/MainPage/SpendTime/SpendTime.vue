@@ -34,7 +34,8 @@
           <div class="spend__photo">
             <img class="spend__img"
                  :src="$imgPlaceholder"
-                 v-lazy="cdnUrl+item.img.src"
+                 :data-src="cdnUrl+item.img.src"
+                 v-lazytest
                  :alt="item.img.alt"
             />
 <!--            <component v-if="$isServer" is="noscript">-->

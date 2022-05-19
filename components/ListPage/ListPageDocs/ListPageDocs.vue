@@ -11,8 +11,9 @@
           <div v-if="doc.img  && doc.img.src" class="rubric_lenta__thumbs">
             <a :href="doc.href" class="rubric_lenta__thumbs_photo stretch_photo">
               <img class="fallback_image"
-                   v-lazy="cdnUrl+doc.img.src"
+                   v-lazytest
                    :src="$imgPlaceholder"
+                   :data-src="cdnUrl+doc.img.src"
                    :alt="doc.img.alt">
 <!--              <component v-if="$isServer" is="noscript">-->
 <!--                <img class="fallback_image"-->

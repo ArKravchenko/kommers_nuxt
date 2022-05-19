@@ -17,7 +17,8 @@
 <!--        <img class="slider-img" src="data:image/gif;base64,R0lGODlhEAAJAIAAAO7u7gAAACwAAAAAEAAJAAACCoSPqcvtD6OclBUAOw==" data-slider-src="https://im.kommersant.ru/Issues.photo/CORP/2020/10/23/KMO_096855_23915_1_t218_105019.jpg" alt="">-->
 <!--      </picture>-->
       <img class="slider-img"
-           v-lazy="cdnUrl+videoOfTheDayData.content.img.src"
+           :data-src="cdnUrl+videoOfTheDayData.content.img.src"
+           v-lazytest
            :alt="videoOfTheDayData.content.img.alt"
            :src="$imgPlaceholder"
       >

@@ -12,7 +12,8 @@
 <!--      </picture>-->
       <img class="photd__img slider-img"
            :src="$imgPlaceholder"
-           v-lazy="cdnUrl+graphOfTheDayData.content.img.src"
+           :data-src="cdnUrl+graphOfTheDayData.content.img.src"
+           v-lazytest
            :alt="graphOfTheDayData.content.img.alt">
 <!--      <component v-if="$isServer" is="noscript">-->
 <!--        <img class="photd__img slider-img"-->

@@ -12,11 +12,13 @@ const observer = new IntersectionObserver((entry, observer) => {
       const checkSrcSrcset = (target: Element) => {
         if ((<HTMLElement>target).dataset.src) {
           (<HTMLImageElement>target).src = (<HTMLElement>target).dataset.src!
-          delete (<HTMLElement>target).dataset.src
+          delete (<HTMLElement>target).dataset.src;
+          (<HTMLElement>target).setAttribute('lazy-test','loaded')
         }
         if ((<HTMLElement>target).dataset.srcset) {
           (<HTMLSourceElement>target).srcset = (<HTMLElement>target).dataset.srcset!
-          delete (<HTMLElement>target).dataset.srcset
+          delete (<HTMLElement>target).dataset.srcset;
+          (<HTMLElement>target).setAttribute('lazy-test','loaded')
         }
       }
 

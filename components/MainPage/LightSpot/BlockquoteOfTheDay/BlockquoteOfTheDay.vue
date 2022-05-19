@@ -19,7 +19,8 @@
       </h3>
       <a :href="blockquoteOfTheDayData.content.href" class="bqotd__photo">
         <img class="stretch"
-             v-lazy="cdnUrl+blockquoteOfTheDayData.content.person.img.src"
+             :data-src="cdnUrl+blockquoteOfTheDayData.content.person.img.src"
+             v-lazytest
              :src="$imgPlaceholder"
              :alt="blockquoteOfTheDayData.content.person.img.alt">
 <!--        <component v-if="$isServer" is="noscript">-->

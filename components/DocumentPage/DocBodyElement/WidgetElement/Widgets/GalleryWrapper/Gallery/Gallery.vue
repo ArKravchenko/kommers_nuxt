@@ -42,7 +42,8 @@
               <img class="doc_media__media slider-img"
                    :src="$imgPlaceholder"
                    :alt="item.img.alt"
-                   v-lazy="item.img.src"
+                   :data-src="item.img.src"
+                   v-lazytest
               >
             </div>
             <figcaption
