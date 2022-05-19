@@ -37,6 +37,7 @@ $modal_outer_vertical_gap: ${scssConfig.modal_outer_vertical_gap}rem;`;
 //TODO make common intersectionObserver
 //TODO make $cdnUrl
 //TODO make safe property getters everywhere (MainToday for example)
+//TODO put DocBodyElement into separate lazy chunk everywhere it has cross references
 
 const config: NuxtConfig = {
   version,
