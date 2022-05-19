@@ -1,6 +1,13 @@
 import {Component, Prop, Vue} from 'nuxt-property-decorator'
 import type {ArticleLong} from "~/interfaces/API/MainPageApi";
-import DocBodyElement from '@/components/DocumentPage/DocBodyElement/DocBodyElement.vue'
+// import DocBodyElement from '@/components/DocumentPage/DocBodyElement/DocBodyElement.vue'
+
+//TODO lazy import required as DocBodyElement has cross references with Spravka
+const DocBodyElement = () => import(
+  /* webpackChunkName: "DocBodyElement." */
+  /* webpackMode: "lazy" */
+  '@/components/DocumentPage/DocBodyElement/DocBodyElement.vue'
+  );
 
 @Component({
   // name is required for recursive components as Collapse uses DocBodyElement and vice versa

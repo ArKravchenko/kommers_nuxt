@@ -130,6 +130,6 @@ export default class DocHeader extends Vue {
 
 
   mounted() {
-    alert(this.getIsSameDay)
+    // alert(this.getIsSameDay)
   }
 }
