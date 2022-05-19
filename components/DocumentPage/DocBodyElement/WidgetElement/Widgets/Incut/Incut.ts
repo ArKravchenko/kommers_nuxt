@@ -1,6 +1,7 @@
 import {Component, Prop, Vue} from 'nuxt-property-decorator'
 import type {ArticleLong} from "~/interfaces/API/MainPageApi";
 import HtmlTagElement from '@/components/DocumentPage/DocBodyElement/HtmlTagElement/HtmlTagElement.vue'
+// import Picture from "~/components/general/Picture/Picture";
 
 // todo incut title and incut text has wrong types
 // todo incut image is absolute
@@ -10,6 +11,7 @@ import HtmlTagElement from '@/components/DocumentPage/DocBodyElement/HtmlTagElem
   name: 'Incut',
   components: {
     HtmlTagElement,
+    // Picture
   }
 })
 export default class Incut extends Vue {

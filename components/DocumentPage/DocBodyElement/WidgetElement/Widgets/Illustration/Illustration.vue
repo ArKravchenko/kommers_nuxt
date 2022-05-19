@@ -3,26 +3,35 @@
   <div :class="['doc_media',getIllustrationAlignClassName]">
     <figure class="doc_media__figure">
       <div class="photo">
-        <picture>
-          <source v-if="getIllustrationImg.webpSrcSet"
-                  type="image/webp"
-                  :data-srcset="getIllustrationImg.webpSrcSet"
-                  :sizes="getSizes"
-          >
-          <source v-if="getIllustrationImg.jpegSrcSet"
-                  :data-srcset="getIllustrationImg.jpegSrcSet"
-                  :sizes="getSizes"
-          >
-          <img class="doc_media__media"
-               v-if="getIllustrationImg"
-               :src="$imgPlaceholder"
-               :data-src="getIllustrationImg.src"
-               :alt="getIllustrationImg.alt"
-               v-lazytest
-          >
-        </picture>
-        <noscript v-if="getNoscriptString" v-html="getNoscriptString">
-        </noscript>
+        <Picture
+          :src="getIllustrationImg.src"
+          :alt="getIllustrationImg.alt"
+          :img-class="'doc_media__media'"
+          :noscript-string="getNoscriptString"
+          :webp-src-set="getIllustrationImg.webpSrcSet"
+          :jpeg-src-set="getIllustrationImg.jpegSrcSet"
+          :sizes="getSizes"
+        />
+<!--        <picture>-->
+<!--          <source v-if="getIllustrationImg.webpSrcSet"-->
+<!--                  type="image/webp"-->
+<!--                  :data-srcset="getIllustrationImg.webpSrcSet"-->
+<!--                  :sizes="getSizes"-->
+<!--          >-->
+<!--          <source v-if="getIllustrationImg.jpegSrcSet"-->
+<!--                  :data-srcset="getIllustrationImg.jpegSrcSet"-->
+<!--                  :sizes="getSizes"-->
+<!--          >-->
+<!--          <img class="doc_media__media"-->
+<!--               v-if="getIllustrationImg"-->
+<!--               :src="$imgPlaceholder"-->
+<!--               :data-src="getIllustrationImg.src"-->
+<!--               :alt="getIllustrationImg.alt"-->
+<!--               v-lazytest-->
+<!--          >-->
+<!--        </picture>-->
+<!--        <noscript v-if="getNoscriptString" v-html="getNoscriptString">-->
+<!--        </noscript>-->
 
       </div>
       <figcaption class="doc_media__caption">

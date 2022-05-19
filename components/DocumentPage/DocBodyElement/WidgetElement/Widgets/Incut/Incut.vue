@@ -21,26 +21,35 @@
     <div v-if="getIncutImg"
          :class="['incut__photo',{'incut__photo--wide': getIncutAlign === 'center'}]">
       <a :href="getIncutHref">
-        <picture >
+        <Picture
+          :src="getIncutImg.src"
+          :sizes="getSizes"
+          :alt="getIncutImg.alt"
+          :jpeg-src-set="getIncutImg.jpegSrcSet"
+          :webp-src-set="getIncutImg.webpSrcSet"
+          :img-class="'incut__img'"
+          :noscript-string="getNoscriptString"
+        />
+<!--        <picture>-->
 
-          <source v-if="getIncutImg.webpSrcSet"
-            :data-srcset="getIncutImg.webpSrcSet"
-            type="image/webp"
-            :sizes="getSizes"
-            >
-          <source v-if="getIncutImg.jpegSrcSet"
-            :data-srcset="getIncutImg.jpegSrcSet"
-            :sizes="getSizes"
-          >
-          <img class="incut__img"
-               :src="$imgPlaceholder"
-               :data-src="getIncutImg.src"
-               :alt="getIncutImg.alt"
-               v-lazytest
-          >
-        </picture>
-        <noscript v-if="getNoscriptString" v-html="getNoscriptString">
-        </noscript>
+<!--          <source v-if="getIncutImg.webpSrcSet"-->
+<!--            :data-srcset="getIncutImg.webpSrcSet"-->
+<!--            type="image/webp"-->
+<!--            :sizes="getSizes"-->
+<!--            >-->
+<!--          <source v-if="getIncutImg.jpegSrcSet"-->
+<!--            :data-srcset="getIncutImg.jpegSrcSet"-->
+<!--            :sizes="getSizes"-->
+<!--          >-->
+<!--          <img class="incut__img"-->
+<!--               :src="$imgPlaceholder"-->
+<!--               :data-src="getIncutImg.src"-->
+<!--               :alt="getIncutImg.alt"-->
+<!--               v-lazytest-->
+<!--          >-->
+<!--        </picture>-->
+<!--        <noscript v-if="getNoscriptString" v-html="getNoscriptString">-->
+<!--        </noscript>-->
 <!--        <component v-if="$isServer" is="noscript">-->
 <!--          <img class="incut__img"-->
 <!--               :src="getIncutImg.src"-->

@@ -13,33 +13,40 @@
              data-slider-id="id2083689">
           <figure class="doc_media__figure">
             <div class="photo">
-              <picture>
-                <source class="slider-img" type="image/webp"
-                        :data-srcset="item.img.webpSrcSet"
-                        :sizes="`(min-width: ${$scssVars.desktop1}px) ${$scssVars.main_width - $scssVars.cell_size_large - $scssVars.desktop_gap - 10}px, (min-width: ${$scssVars.mobile_width + $scssVars.mobile_gap*2}px) ${$scssVars.mobile_width + $scssVars.mobile_gap  * 2}px`"
-                >
-                <source class="slider-img"
-                        :data-srcset="item.img.jpegSrcSet"
-                        :sizes="`(min-width: ${$scssVars.desktop1}px) ${$scssVars.main_width - $scssVars.cell_size_large - $scssVars.desktop_gap - 10}px, (min-width: ${$scssVars.mobile_width + $scssVars.mobile_gap*2}px) ${$scssVars.mobile_width + $scssVars.mobile_gap  * 2}px`"
-                >
-                <img class="doc_media__media slider-img"
-                     :src="$imgPlaceholder"
-                     :alt="item.img.alt"
-                     :data-src="item.img.src"
-                     v-lazytest
-                >
-
-<!--                :data-srcset="item.img.jpegSrcSet"-->
-<!--                :sizes="`(min-width: ${$scssVars.desktop1}px) ${$scssVars.main_width - $scssVars.cell_size_large - $scssVars.desktop_gap - 10}px, (min-width: ${$scssVars.mobile_width + $scssVars.mobile_gap*2}px) ${$scssVars.mobile_width + $scssVars.mobile_gap  * 2}px`"-->
-
-              </picture>
-              <noscript v-html="getNoscriptString(item)">
+              <Picture
+                :source-class="'slider-img'"
+                :sizes="getSizes"
+                :jpeg-src-set="item.img.jpegSrcSet"
+                :webp-src-set="item.img.webpSrcSet"
+                :noscript-string="getNoscriptString(item)"
+                :img-class="'doc_media__media slider-img'"
+                :alt="item.img.alt"
+                :src="item.img.src"
+              />
+<!--              <picture>-->
+<!--                <source class="slider-img" type="image/webp"-->
+<!--                        :data-srcset="item.img.webpSrcSet"-->
+<!--                        :sizes="getSizes"-->
+<!--                >-->
+<!--                <source class="slider-img"-->
+<!--                        :data-srcset="item.img.jpegSrcSet"-->
+<!--                        :sizes="getSizes"-->
+<!--                >-->
+<!--                <img class="doc_media__media slider-img"-->
+<!--                     :src="$imgPlaceholder"-->
+<!--                     :alt="item.img.alt"-->
+<!--                     :data-src="item.img.src"-->
+<!--                     v-lazytest-->
+<!--                >-->
+<!--                -->
+<!--              </picture>-->
+<!--              <noscript v-html="getNoscriptString(item)">-->
 
 <!--                <img class="doc_media__media fallback_image"-->
 <!--                     :src="item.img.src"-->
 <!--                     :alt="item.img.alt"-->
 <!--                >-->
-              </noscript>
+<!--              </noscript>-->
             </div>
             <figcaption
               :class="['doc_media__caption ui-modal__hide js-search-mark ui-collapse',{'doc_media__caption_limit':!isCredentialsOpen}]"

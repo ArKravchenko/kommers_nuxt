@@ -128,7 +128,8 @@ const config: NuxtConfig = {
     { src: '@/plugins/vueLazyLoadTest.ts', ssr: false },
     '@/plugins/imgPlaceholder.ts',
     '@/plugins/scssVars.ts',
-    '@/plugins/extractText.ts'
+    '@/plugins/extractText.ts',
+    '@/plugins/globalComponents.ts'
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)

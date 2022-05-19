@@ -11,10 +11,10 @@ import Vicons from '~/components/general/Vicons/Vicons.vue'
 // const Vicons:AsyncComponent = () => import('~/components/general/Vicons/Vicons.vue')
 // const Lenta:AsyncComponent = () => import('~/components/general/Lenta/Lenta.vue')
 // const Footer:AsyncComponent = () => import('~/components/general/Footer/Footer.vue')
-const Banner = () => import(
-  /* webpackChunkName: "Banner." */
-  /* webpackMode: "eager" */
-  "@/components/general/Banner/Banner.vue");
+// const Banner = () => import(
+//   /* webpackChunkName: "Banner." */
+//   /* webpackMode: "eager" */
+//   "@/components/general/Banner/Banner.vue");
 
 @Component({
   components: {
@@ -22,7 +22,7 @@ const Banner = () => import(
     Footer,
     Lenta,
     Header,
-    Banner,
+    // Banner,
   },
 })
 export default class Default extends mixins<LogTimings>(LogTimings) {

@@ -8,10 +8,10 @@ import DocFooter from '@/components/DocumentPage/DocFooter/DocFooter.vue';
 import ArticleSharing from '@/components/DocumentPage/ArticleSharing/ArticleSharing.vue';
 import ErrorBoundary from '@/components/general/ErrorBoundary/ErrorBoundary.vue';
 
-const Banner = () => import(
-  /* webpackChunkName: "Banner." */
-  /* webpackMode: "eager" */
-  "@/components/general/Banner/Banner.vue");
+// const Banner = () => import(
+//   /* webpackChunkName: "Banner." */
+//   /* webpackMode: "eager" */
+//   "@/components/general/Banner/Banner.vue");
 
 
 
@@ -30,7 +30,7 @@ const Banner = () => import(
     DocHeader,
     DocFooter,
     ArticleSharing,
-    Banner,
+    // Banner,
     ErrorBoundary,
   }
 })

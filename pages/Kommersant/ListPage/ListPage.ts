@@ -16,10 +16,10 @@ import Multimedia from '~/components/MainPage/Multimedia/Multimedia.vue'
 
 import ServiceMenu from '~/components/ListPage/ServiceMenu/ServiceMenu.vue'
 import ListPageDocs from '~/components/ListPage/ListPageDocs/ListPageDocs.vue'
-const Banner = () => import(
-  /* webpackChunkName: "Banner." */
-  /* webpackMode: "eager" */
-  "@/components/general/Banner/Banner.vue");
+// const Banner = () => import(
+//   /* webpackChunkName: "Banner." */
+//   /* webpackMode: "eager" */
+//   "@/components/general/Banner/Banner.vue");
 
 
 @Component({
@@ -33,7 +33,7 @@ const Banner = () => import(
     LightSpot,
     Multimedia,
     ListPageDocs,
-    Banner
+    // Banner
   },
 })
 export default class ListPage extends Vue {

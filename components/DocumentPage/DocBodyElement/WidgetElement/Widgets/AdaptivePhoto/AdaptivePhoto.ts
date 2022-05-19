@@ -1,6 +1,7 @@
 import {Component, Prop, Vue} from 'nuxt-property-decorator'
 import type {ArticleLong} from "~/interfaces/API/MainPageApi";
 import HtmlTagElement from '@/components/DocumentPage/DocBodyElement/HtmlTagElement/HtmlTagElement.vue'
+// import Picture from "~/components/general/Picture/Picture";
 
 // TODO в картинки прилетает абсолютный src
 @Component({
@@ -8,6 +9,7 @@ import HtmlTagElement from '@/components/DocumentPage/DocBodyElement/HtmlTagElem
   name: 'AdaptivePhoto',
   components: {
     HtmlTagElement,
+    // Picture
   }
 })
 export default class AdaptivePhoto extends Vue {

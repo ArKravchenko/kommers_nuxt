@@ -1,12 +1,13 @@
 import {Component, Prop, Vue} from 'nuxt-property-decorator'
 import type {ArticleLong} from "~/interfaces/API/MainPageApi";
-import HtmlTagElement from '@/components/DocumentPage/DocBodyElement/HtmlTagElement/HtmlTagElement.vue'
+import HtmlTagElement from '@/components/DocumentPage/DocBodyElement/HtmlTagElement/HtmlTagElement.vue';
+// import Picture from "~/components/general/Picture/Picture";
 
 // import Swiper JS
 const SwiperImport = () => import(
   /* webpackChunkName: "SwiperImport." */
   /* webpackMode: "eager" */
-  './SwiperTreeShaked');
+  './SwiperTreeShaken');
 import type Swiper from 'swiper'
 
 type ArrayElement<ArrayType extends readonly unknown[]> = ArrayType[number];
@@ -17,6 +18,7 @@ type ArrayElement<ArrayType extends readonly unknown[]> = ArrayType[number];
   name: 'GallerySwiperTest',
   components: {
     HtmlTagElement,
+    // Picture
   }
 })
 export default class GallerySwiperTest extends Vue {
@@ -45,6 +47,13 @@ export default class GallerySwiperTest extends Vue {
                      src="${item.img.src}"
                      alt="${item.img.alt}"
                 >`
+  }
+
+  get getSizes(){
+    return `(min-width: ${this.$scssVars.desktop1}px)
+    ${this.$scssVars.main_width - this.$scssVars.cell_size_large - this.$scssVars.desktop_gap - 10}px,
+    (min-width: ${this.$scssVars.mobile_width + this.$scssVars.mobile_gap*2}px)
+    ${this.$scssVars.mobile_width + this.$scssVars.mobile_gap  * 2}px`
   }
 
 

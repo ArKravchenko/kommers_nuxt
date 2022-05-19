@@ -6,21 +6,21 @@
       <div class="photo photo--free hide_desktop"
            v-if="getAdaptivePhotoMobileImg"
       >
+        <Picture
+          :img-class="'doc_media__media_free'"
+          :src="getAdaptivePhotoMobileImg.src"
+          :alt="getAdaptivePhotoMobileImg.alt"
+          :noscript-string="getNoscriptStringMobile"
+        />
 
-        <img class="doc_media__media_free"
-             :src="$imgPlaceholder"
-             :alt="getAdaptivePhotoMobileImg.alt"
-             :data-src="getAdaptivePhotoMobileImg.src"
-             v-lazytest
-        >
-        <noscript v-if="getNoscriptStringMobile" v-html="getNoscriptStringMobile">
-        </noscript>
-<!--        <component v-if="$isServer" is="noscript">-->
-<!--          <img class="doc_media__media_free"-->
-<!--               :src="getAdaptivePhotoMobileImg.src"-->
-<!--               :alt="getAdaptivePhotoMobileImg.alt"-->
-<!--          >-->
-<!--        </component>-->
+<!--        <img class="doc_media__media_free"-->
+<!--             :src="$imgPlaceholder"-->
+<!--             :alt="getAdaptivePhotoMobileImg.alt"-->
+<!--             :data-src="getAdaptivePhotoMobileImg.src"-->
+<!--             v-lazytest-->
+<!--        >-->
+<!--        <noscript v-if="getNoscriptStringMobile" v-html="getNoscriptStringMobile">-->
+<!--        </noscript>-->
 
       </div>
       <!-- mobile infographics end -->
@@ -30,20 +30,20 @@
            v-if="getAdaptivePhotoDesktopImg"
       >
         <!-- первой в списке идет большая фотка для modal'а с 1120w (увеличенная), второй идет обычная фотка с 720w. -->
-        <img class="doc_media__media_free"
-             :src="$imgPlaceholder"
-             :alt="getAdaptivePhotoDesktopImg.alt"
-             :data-src="getAdaptivePhotoDesktopImg.src"
-             v-lazytest
-        >
-        <noscript v-if="getNoscriptStringDesktop" v-html="getNoscriptStringDesktop">
-        </noscript>
-<!--        <component v-if="$isServer" is="noscript">-->
-<!--          <img class="doc_media__media_free"-->
-<!--               :src="getAdaptivePhotoMobileImg.src"-->
-<!--               :alt="getAdaptivePhotoMobileImg.alt"-->
-<!--          >-->
-<!--        </component>-->
+        <Picture
+          :img-class="'doc_media__media_free'"
+          :src="getAdaptivePhotoDesktopImg.src"
+          :alt="getAdaptivePhotoDesktopImg.alt"
+          :noscript-string="getNoscriptStringDesktop"
+        />
+<!--        <img class="doc_media__media_free"-->
+<!--             :src="$imgPlaceholder"-->
+<!--             :alt="getAdaptivePhotoDesktopImg.alt"-->
+<!--             :data-src="getAdaptivePhotoDesktopImg.src"-->
+<!--             v-lazytest-->
+<!--        >-->
+<!--        <noscript v-if="getNoscriptStringDesktop" v-html="getNoscriptStringDesktop">-->
+<!--        </noscript>-->
       </div>
       <!-- desktop infographics end -->
 

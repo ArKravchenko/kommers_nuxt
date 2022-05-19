@@ -1,6 +1,7 @@
 import {Component, Prop, Vue} from 'nuxt-property-decorator'
 import type {ArticleLong, ImageFull, ImageSimple} from "~/interfaces/API/MainPageApi";
 import HtmlTagElement from '@/components/DocumentPage/DocBodyElement/HtmlTagElement/HtmlTagElement.vue'
+// import Picture from "~/components/general/Picture/Picture";
 
 type ArrayElement<ArrayType extends readonly (ImageFull | ImageSimple)[]> = ArrayType[number];
 
@@ -9,6 +10,7 @@ type ArrayElement<ArrayType extends readonly (ImageFull | ImageSimple)[]> = Arra
   name: 'Illustration',
   components: {
     HtmlTagElement,
+    // Picture
   }
 })
 export default class Illustration extends Vue {
