@@ -77,10 +77,6 @@ export default class Picture extends Vue {
     // }
   }) sizes!: string | null;
 
-  alert(){
-    alert()
-  }
-
 
   mounted() {
     // console.log('this.src',this.src)
