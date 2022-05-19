@@ -83,28 +83,40 @@ export default class DocHeader extends Vue {
       && this.pubDate.dateUpdate
   }
 
+  get getIsSameDay(){
+    return this.getArticlePublishedDate
+    && this.getArticleUpdatedDate
+    && (new Date(this.getArticlePublishedDate)).getDate()
+      === (new Date(this.getArticleUpdatedDate)).getDate()
+    && (new Date(this.getArticlePublishedDate)).getMonth()
+      === (new Date(this.getArticleUpdatedDate)).getMonth()
+  }
 
 
-  formatDate(date: Date | false, update = false){
+  formatDate(date: Date | false, isUpdate = false) {
     return date
-      && update ? `${new Date(date).toLocaleTimeString('ru-ru',
+    && isUpdate
+      ? `${new Date(date).toLocaleTimeString('ru-ru',
       {
         hour: 'numeric',
-        minute:'numeric'
-      })}, ${new Date(date).toLocaleDateString('ru-ru',
-      {
-        month: 'numeric',
-        day: 'numeric',
+        minute: 'numeric'
       })}`
+      + (!this.getIsSameDay ?
+        `, ${new Date(date).toLocaleDateString('ru-ru',
+          {
+            month: 'numeric',
+            day: 'numeric',
+          })}`
+        : '')
       : date
       && new Date(date).toLocaleDateString('ru-ru',
-      {
-        year: 'numeric',
-        month: 'numeric',
-        day: 'numeric',
-        hour: 'numeric',
-        minute:'numeric'
-      })
+        {
+          year: 'numeric',
+          month: 'numeric',
+          day: 'numeric',
+          hour: 'numeric',
+          minute: 'numeric'
+        })
   }
 
 
@@ -117,7 +129,7 @@ export default class DocHeader extends Vue {
 
 
 
-  // mounted() {
-  //   console.log(this.actualnoData)
-  // }
+  mounted() {
+    alert(this.getIsSameDay)
+  }
 }
