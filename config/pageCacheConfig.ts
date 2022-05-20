@@ -1,5 +1,3 @@
-import componentCacheConfig from "~/config/componentCacheConfig";
-
 const pageCacheConfig = {
   // if you're serving multiple host names (with differing
   // results) from the same server, set this option to true.

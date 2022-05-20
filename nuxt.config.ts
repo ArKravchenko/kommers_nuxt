@@ -6,10 +6,8 @@ import type {NuxtConfig} from '@nuxt/types'
 // import shrinkRay from 'shrink-ray-current'
 import fs from 'fs';
 import path from 'path';
-// const scssVars = Object.keys(scssConfig).reduce(
-//   (acc, value) => `${acc} ${value}: ${scssConfig[value]};`,
-//   `@use "sass:string"; @use 'sass:math' as *; `
-// )
+import pwaRuntimeCacheConfig from "./config/pwaRuntimeCacheConfig";
+
 const scssVars = `
 @use "sass:string";
 @use 'sass:math' as *;
@@ -202,6 +200,26 @@ const config: NuxtConfig = {
   },
 
   hooks: {
+    //@ts-ignore
+    "vue-renderer": {
+      ssr: {
+        templateParams(templateParams:any, renderContext:any) {
+          /**
+           * IMPORTANT! THIS IS USED TOGETHER WITH STORE injectHeadModule
+           * TO INJECT CUSTOM STYLES AND SCRIPTS STRINGS FROM THE ADMIN PANEL INTO A DOCUMENT
+           */
+          if (renderContext?.nuxt?.state?.injectHeadModule
+            && renderContext?.nuxt?.state?.injectHeadModule.scripts) {
+            templateParams.HEAD += renderContext.nuxt.state.injectHeadModule.scripts
+          }
+
+          if (renderContext?.nuxt?.state?.injectHeadModule
+            && renderContext?.nuxt?.state?.injectHeadModule.styles) {
+            templateParams.HEAD += renderContext.nuxt.state.injectHeadModule.styles
+          }
+        }
+      }
+    },
     render: {
       routeContext: (context) => {
         // timings, routeContext hook calls
@@ -231,6 +249,10 @@ const config: NuxtConfig = {
       target: "https://im.kommersant.ru/",
       // pathRewrite: { "^/ContentFlex": "" }
     },
+    '/CorpImages': {
+      target: "https://im.kommersant.ru/",
+      // pathRewrite: { "^/ContentFlex": "" }
+    },
   },
 
   server: {
@@ -245,136 +267,7 @@ const config: NuxtConfig = {
   pwa: {
     workbox: {
       enabled: true,
-      runtimeCaching: [
-        {
-          // Should be a regex string. Compiles into new RegExp('https://my-cdn.com/.*')
-          urlPattern: 'https://im.kommersant.ru/.*',
-          // Defaults to `NetworkFirst` if omitted
-          handler: 'StaleWhileRevalidate',
-          // Defaults to `GET` if omitted
-          // method: 'GET'
-          strategyOptions: {
-            cacheName: 'imkommersantru-cache',
-          },
-          strategyPlugins: [{
-            use: 'Expiration',
-            config: {
-              maxEntries: 1000,
-              // maxAgeSeconds: 10
-            }
-          }]
-        },
-        {
-          // Should be a regex string. Compiles into new RegExp('https://my-cdn.com/.*')
-          urlPattern: 'https://wt.kommersant.ru/.*',
-          // Defaults to `NetworkFirst` if omitted
-          handler: 'StaleWhileRevalidate',
-          // Defaults to `GET` if omitted
-          // method: 'GET'
-          strategyOptions: {
-            cacheName: 'wtkommersantru-cache',
-          },
-          strategyPlugins: [{
-            use: 'Expiration',
-            config: {
-              maxEntries: 1000,
-              // maxAgeSeconds: 10
-            }
-          }]
-        },
-
-        {
-          // Should be a regex string. Compiles into new RegExp('https://my-cdn.com/.*')
-          urlPattern: 'https://www.youtube.com/embed/.*',
-          // Defaults to `NetworkFirst` if omitted
-          handler: 'StaleWhileRevalidate',
-          // Defaults to `GET` if omitted
-          // method: 'GET'
-          strategyOptions: {
-            cacheName: 'youtubeembed-cache',
-          },
-          strategyPlugins: [{
-            use: 'Expiration',
-            config: {
-              maxEntries: 1000,
-              // maxAgeSeconds: 10
-            }
-          }]
-        },
-        {
-          // Should be a regex string. Compiles into new RegExp('https://my-cdn.com/.*')
-          urlPattern: 'https://vk.com/widget_post.php.*',
-          // Defaults to `NetworkFirst` if omitted
-          handler: 'StaleWhileRevalidate',
-          // Defaults to `GET` if omitted
-          // method: 'GET'
-          strategyOptions: {
-            cacheName: 'vkwidgetpost-cache',
-          },
-          strategyPlugins: [{
-            use: 'Expiration',
-            config: {
-              maxEntries: 1000,
-              // maxAgeSeconds: 10
-            }
-          }]
-        },
-        {
-          // Should be a regex string. Compiles into new RegExp('https://my-cdn.com/.*')
-          urlPattern: 'https://telegram.org/js/.*',
-          // Defaults to `NetworkFirst` if omitted
-          handler: 'StaleWhileRevalidate',
-          // Defaults to `GET` if omitted
-          // method: 'GET'
-          strategyOptions: {
-            cacheName: 'telegramjs-cache',
-          },
-          strategyPlugins: [{
-            use: 'Expiration',
-            config: {
-              maxEntries: 10,
-              // maxAgeSeconds: 10
-            }
-          }]
-        },
-        {
-          // Should be a regex string. Compiles into new RegExp('https://my-cdn.com/.*')
-          urlPattern: 'https://t.me/kommersant/.*',
-          // Defaults to `NetworkFirst` if omitted
-          handler: 'StaleWhileRevalidate',
-          // Defaults to `GET` if omitted
-          // method: 'GET'
-          strategyOptions: {
-            cacheName: 'tmekommersant-cache',
-          },
-          strategyPlugins: [{
-            use: 'Expiration',
-            config: {
-              maxEntries: 1000,
-              // maxAgeSeconds: 10
-            }
-          }]
-        },
-        {
-          // Should be a regex string. Compiles into new RegExp('https://my-cdn.com/.*')
-          urlPattern: 'https://player.simplecast.com/.*',
-          // Defaults to `NetworkFirst` if omitted
-          handler: 'StaleWhileRevalidate',
-          // Defaults to `GET` if omitted
-          // method: 'GET'
-          strategyOptions: {
-            cacheName: 'playersimplecast-cache',
-          },
-          strategyPlugins: [{
-            use: 'Expiration',
-            config: {
-              maxEntries: 1000,
-              // maxAgeSeconds: 10
-            }
-          }]
-        },
-
-      ]
+      runtimeCaching: pwaRuntimeCacheConfig
     }
   },
 
