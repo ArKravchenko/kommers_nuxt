@@ -66,17 +66,12 @@
 
           <template v-if="getAdaptivePhotoCredentialsAuthor">
             <template v-for="(child ,i) in getAdaptivePhotoCredentialsAuthor">
-              <template v-if="typeof child === 'string'">
-                {{ child }}
-              </template>
+              <template v-if="typeof child === 'string'">{{ child }}</template>
               <HtmlTagElement v-else :key="i" :html-tag-element="child"/>
             </template>
-          </template>
-
-          <template v-if="getAdaptivePhotoCredentialsOwner">
-            <template v-if="getAdaptivePhotoCredentialsAuthor">
-              {{'&nbsp;/&nbsp;'}}
-            </template>
+          </template><!--
+       --><template v-if="getAdaptivePhotoCredentialsOwner">
+            <template v-if="getAdaptivePhotoCredentialsAuthor">{{',&nbsp;'}}</template>
             <a v-if="getAdaptivePhotoCredentialsOwnerHref"
                             :href="getAdaptivePhotoCredentialsOwnerHref"
                             target="_blank"

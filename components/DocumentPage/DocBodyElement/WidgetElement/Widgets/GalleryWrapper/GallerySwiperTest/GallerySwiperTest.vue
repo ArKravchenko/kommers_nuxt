@@ -72,17 +72,12 @@
 
                 <template v-if="getGalleryItemCredentialsAuthor(item)">
                   <template v-for="(child ,j) in getGalleryItemCredentialsAuthor(item)">
-                    <template v-if="typeof child === 'string'">
-                      {{ child }}
-                    </template>
+                    <template v-if="typeof child === 'string'">{{ child }}</template>
                     <HtmlTagElement v-else :key="'credentials'+j" :html-tag-element="child"/>
                   </template>
-                </template>
-
-                <template v-if="getGalleryItemCredentialsOwner(item)">
-                  <template v-if="getGalleryItemCredentialsAuthor(item)">
-                    {{ '&nbsp;/&nbsp;' }}
-                  </template>
+                </template><!--
+             --><template v-if="getGalleryItemCredentialsOwner(item)">
+                  <template v-if="getGalleryItemCredentialsAuthor(item)">{{ ',&nbsp;' }}</template>
                   <a v-if="getGalleryItemCredentialsOwnerHref(item)"
                      :href="getGalleryItemCredentialsOwnerHref(item)"
                      target="_blank"

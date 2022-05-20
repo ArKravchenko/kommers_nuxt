@@ -31,17 +31,13 @@
 
             <template v-if="getVideoCredentialsAuthor">
               <template v-for="(child ,i) in getVideoCredentialsAuthor">
-                <template v-if="typeof child === 'string'">
-                  {{ child }}
-                </template>
+                <template v-if="typeof child === 'string'">{{ child }}</template>
                 <HtmlTagElement v-else :key="i" :html-tag-element="child"/>
               </template>
-            </template>
+            </template><!--
 
-            <template v-if="getVideoCredentialsOwner">
-              <template v-if="getVideoCredentialsAuthor">
-                {{'&nbsp;/&nbsp;'}}
-              </template>
+         --><template v-if="getVideoCredentialsOwner">
+              <template v-if="getVideoCredentialsAuthor">{{',&nbsp;'}}</template>
               <a v-if="getVideoCredentialsOwnerHref"
                  :href="getVideoCredentialsOwnerHref"
                  target="_blank"
