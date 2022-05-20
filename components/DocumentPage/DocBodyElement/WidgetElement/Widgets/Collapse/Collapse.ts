@@ -2,7 +2,7 @@ import {Component, Prop, Vue} from 'nuxt-property-decorator'
 import type {ArticleLong} from "~/interfaces/API/MainPageApi";
 // import DocBodyElement from '@/components/DocumentPage/DocBodyElement/DocBodyElement.vue'
 
-//TODO lazy import required as DocBodyElement has cross references with Spravka
+//TODO lazy import required as DocBodyElement has cross references
 const DocBodyElement = () => import(
   /* webpackChunkName: "DocBodyElement." */
   /* webpackMode: "lazy" */
