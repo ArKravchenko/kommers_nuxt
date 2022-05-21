@@ -266,7 +266,7 @@ const config: NuxtConfig = {
 
   pwa: {
     workbox: {
-      enabled: true,
+      enabled: false,
       runtimeCaching: pwaRuntimeCacheConfig
     }
   },
