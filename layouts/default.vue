@@ -80,10 +80,23 @@
       <Nuxt/>
 
     </div>
-    <Lenta/>
+
+    <client-only>
+      <Lenta v-if="mountLenta"/>
+    </client-only>
+    <div v-if="!mountLenta">
+      <aside class="grid-col-lenta aside_column">
+        <LentaVerticalPlaceholder/>
+      </aside>
+      <lentaHorizontalPlaceholder/>
+    </div>
     <Footer/>
   </div>
 </template>
 
 <script src="./default.ts" lang="ts"></script>
 <style src="./default.scss" lang="scss"></style>
+<style src="@/components/Lenta/components/Lenta/InlinePlaceholder.scss" lang="scss"></style>
+<style src="@/components/Lenta/components/Lenta/LentaVertical/LentaVertical.scss" lang="scss"></style>
+<style src="@/components/general/Lenta/LentaHorizontal/LentaHorizontal.scss" lang="scss"></style>
+

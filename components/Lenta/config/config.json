@@ -1,0 +1,15 @@
+{
+  "apiUrl": "/news/newsline",
+  "apiUrlPersonal": "/news/SubscribedNewsline",
+  "apiUrlBusiness": "/news/BusinessNewsline",
+  "apiUrlDebug": "/news/newsline",
+  "longPollingEndpoint": "/server-push",
+  "adjustLentaHref": "/LK/SubscriptionSettings",
+  "lentaHref": "/lenta?from=all_lenta",
+  "docUrlPrefix":"http://kommersant.ru/",
+
+  "authorizedEvent":"kommersant:authorized",
+  "unauthorizedEvent":"kommersant:unauthorized",
+  "authorizedCookie":"kommersantUserIsAuthorized",
+  "pollingPeriod": 30
+}

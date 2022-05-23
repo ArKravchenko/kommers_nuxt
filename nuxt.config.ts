@@ -253,6 +253,11 @@ const config: NuxtConfig = {
       target: "https://im.kommersant.ru/",
       // pathRewrite: { "^/ContentFlex": "" }
     },
+    '/news': {
+      target: "https://kommersant.ru/",
+      secure: false
+      // pathRewrite: { "^/ContentFlex": "" }
+    },
   },
 
   server: {

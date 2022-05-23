@@ -27,7 +27,7 @@ export default class Illustration extends Vue {
 
   get getNoscriptString() {
     return this.getIllustrationImg
-      && `<img class="doc_media__media fallback_image"
+      && `<img class="fallback_image ${this.getIllustrationImgIsFree ? 'doc_media__media_free': 'doc_media__media'}"
                      src="${this.getIllustrationImg.src}"
                      alt="${this.getIllustrationImg.alt}"
                 >`
@@ -64,6 +64,11 @@ export default class Illustration extends Vue {
     && this.illustrationWidgetData.img
   }
 
+  get getIllustrationImgIsFree(){
+    return this.illustrationWidgetData?.isFree
+      && this.illustrationWidgetData.isFree
+  }
+
   get getIllustrationCaption(){
     return this.illustrationWidgetData?.caption?.length
       && this.illustrationWidgetData.caption
@@ -95,7 +100,7 @@ export default class Illustration extends Vue {
   }
 
   mounted(){
-    // console.log('this.illustrationWidgetData',this.illustrationWidgetData)
+    console.log('this.illustrationWidgetData',this.illustrationWidgetData)
   }
 
 

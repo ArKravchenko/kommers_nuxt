@@ -32,6 +32,7 @@
     "@nuxtjs/component-cache": "^1.1.6",
     "@nuxtjs/proxy": "^2.1.0",
     "@nuxtjs/pwa": "^3.0.2",
+    "@types/jest": "^27.5.1",
     "connect": "^3.7.0",
     "core-js": "^3.6.5",
     "dotenv": "^16.0.0",

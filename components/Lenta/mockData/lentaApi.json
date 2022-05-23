@@ -1,0 +1,554 @@
+{
+  "personal": {
+    "docs": [
+      {
+        "DocId": 5270784,
+        "SubtitleFirst": false,
+        "Title": "Personal",
+        "Subtitle": "",
+        "DateDoc": 1647958070,
+        "IsPhotogallery": false,
+        "CrumbName": "Мир"
+      },
+      {
+        "DocId": 5270809,
+        "SubtitleFirst": false,
+        "Title": "Халатность и подлог оценили в полмиллиона рублей",
+        "Subtitle": "Завершился процесс над судмедэкспертом по делу погибшего в Крыму чиновника московской мэрии",
+        "DateDoc": 1647957797,
+        "IsPhotogallery": false,
+        "CrumbName": "Происшествия"
+      },
+      {
+        "DocId": 5270804,
+        "SubtitleFirst": false,
+        "Title": "Нуланд: США не просили Европу и Индию прекратить закупки энергоносителей в России",
+        "Subtitle": "",
+        "DateDoc": 1647957446,
+        "IsPhotogallery": false,
+        "CrumbName": "Санкции против России"
+      },
+      {
+        "DocId": 5270792,
+        "SubtitleFirst": false,
+        "Title": "«Алмаз-Антей» сообщил о зависшем $1 млрд за экспортные поставки",
+        "Subtitle": "",
+        "DateDoc": 1647957303,
+        "IsPhotogallery": false,
+        "CrumbName": "Бизнес"
+      },
+      {
+        "DocId": 5270785,
+        "SubtitleFirst": false,
+        "Title": "Тихий гений",
+        "Subtitle": "Умер Виталий Мельников",
+        "DateDoc": 1647957119,
+        "IsPhotogallery": false,
+        "CrumbName": "Некрологи"
+      },
+      {
+        "DocId": 5270796,
+        "SubtitleFirst": false,
+        "Title": "Мантуров: России, возможно, придется попрощаться с кем-то из иностранных автопроизводителей",
+        "Subtitle": "",
+        "DateDoc": 1647957020,
+        "IsPhotogallery": false,
+        "CrumbName": "Военная операция на Украине"
+      },
+      {
+        "DocId": 5270814,
+        "SubtitleFirst": false,
+        "Title": "МИД России потребовал освободить задержанного в Латвии эксперта Федорова",
+        "Subtitle": "",
+        "DateDoc": 1647956947,
+        "IsPhotogallery": false,
+        "CrumbName": "Военная операция на Украине"
+      },
+      {
+        "DocId": 5270806,
+        "SubtitleFirst": false,
+        "Title": "Прибыль Xiaomi выросла по итогам года на 70%",
+        "Subtitle": "",
+        "DateDoc": 1647956929,
+        "IsPhotogallery": false,
+        "CrumbName": "Телекоммуникации"
+      },
+      {
+        "DocId": 5270793,
+        "SubtitleFirst": false,
+        "Title": "АЦБК подвел итоги работы по корпоративной климатической политике в 2021 году",
+        "Subtitle": "",
+        "DateDoc": 1647956764,
+        "IsPhotogallery": false,
+        "CrumbName": "Новости компаний"
+      },
+      {
+        "DocId": 5270774,
+        "SubtitleFirst": false,
+        "Title": "Рынок труда обменяется кадрами",
+        "Subtitle": "Какую программу занятости разработали в SuperJob",
+        "DateDoc": 1647956364,
+        "IsPhotogallery": false,
+        "CrumbName": "Радио «Ъ FM»"
+      },
+      {
+        "DocId": 5270746,
+        "SubtitleFirst": false,
+        "Title": "Трое волгоградцев приговорены к реальным срокам за убийство из-за ссоры в чате",
+        "Subtitle": "",
+        "DateDoc": 1647956033,
+        "IsPhotogallery": false,
+        "CrumbName": "Происшествия"
+      },
+      {
+        "DocId": 5270741,
+        "SubtitleFirst": false,
+        "Title": "Великобритания хочет получать от АЭС четверть необходимой стране электроэнергии",
+        "Subtitle": "",
+        "DateDoc": 1647955982,
+        "IsPhotogallery": false,
+        "CrumbName": "Атомная энергетика"
+      },
+      {
+        "DocId": 5270780,
+        "SubtitleFirst": false,
+        "Title": "Мантуров: России отказали в поставках деталей для МС-21 даже по предоплаченным заказам",
+        "Subtitle": "",
+        "DateDoc": 1647955101,
+        "IsPhotogallery": false,
+        "CrumbName": "Санкции против России"
+      },
+      {
+        "DocId": 5270790,
+        "SubtitleFirst": false,
+        "Title": "Адвокатов Навального задержали после оглашения приговора",
+        "Subtitle": "",
+        "DateDoc": 1647954889,
+        "IsPhotogallery": false,
+        "CrumbName": "Происшествия"
+      },
+      {
+        "DocId": 5270779,
+        "SubtitleFirst": false,
+        "Title": "Минпромторг и металлурги договорились рассчитывать внутренние цены на металл в рублях",
+        "Subtitle": "",
+        "DateDoc": 1647954618,
+        "IsPhotogallery": false,
+        "CrumbName": "Бизнес"
+      },
+      {
+        "DocId": 5270783,
+        "SubtitleFirst": false,
+        "Title": "BMW 7 Series впервые может получить M-версию",
+        "Subtitle": "",
+        "DateDoc": 1647954176,
+        "IsPhotogallery": false,
+        "CrumbName": "Автопилот"
+      },
+      {
+        "DocId": 5270754,
+        "SubtitleFirst": false,
+        "Title": "Gazprom Energy отрицает информацию о национализации властями Великобритании",
+        "Subtitle": "",
+        "DateDoc": 1647953988,
+        "IsPhotogallery": false,
+        "CrumbName": "Санкции против России"
+      },
+      {
+        "DocId": 5270759,
+        "SubtitleFirst": false,
+        "Title": "Отчет правительства перед Госдумой перенесен на 7 апреля",
+        "Subtitle": "",
+        "DateDoc": 1647953218,
+        "IsPhotogallery": false,
+        "CrumbName": "Экономика"
+      },
+      {
+        "DocId": 5270751,
+        "SubtitleFirst": false,
+        "Title": "Российский союз туриндустрии сообщил об ажиотажном спросе на санатории",
+        "Subtitle": "",
+        "DateDoc": 1647953046,
+        "IsPhotogallery": false,
+        "CrumbName": "Потребительский рынок"
+      },
+      {
+        "DocId": 5270747,
+        "SubtitleFirst": false,
+        "Title": "Медведев: рост криминала в России удается сдерживать",
+        "Subtitle": "",
+        "DateDoc": 1647952488,
+        "IsPhotogallery": false,
+        "CrumbName": "Военная операция на Украине"
+      }
+    ]
+  },
+  "business": {
+    "docs": [
+      {
+        "DocId": 5270784,
+        "SubtitleFirst": false,
+        "Title": "business",
+        "Subtitle": "",
+        "DateDoc": 1647958070,
+        "IsPhotogallery": false,
+        "CrumbName": "Мир"
+      },
+      {
+        "DocId": 5270809,
+        "SubtitleFirst": false,
+        "Title": "Халатность и подлог оценили в полмиллиона рублей",
+        "Subtitle": "Завершился процесс над судмедэкспертом по делу погибшего в Крыму чиновника московской мэрии",
+        "DateDoc": 1647957797,
+        "IsPhotogallery": false,
+        "CrumbName": "Происшествия"
+      },
+      {
+        "DocId": 5270804,
+        "SubtitleFirst": false,
+        "Title": "Нуланд: США не просили Европу и Индию прекратить закупки энергоносителей в России",
+        "Subtitle": "",
+        "DateDoc": 1647957446,
+        "IsPhotogallery": false,
+        "CrumbName": "Санкции против России"
+      },
+      {
+        "DocId": 5270792,
+        "SubtitleFirst": false,
+        "Title": "«Алмаз-Антей» сообщил о зависшем $1 млрд за экспортные поставки",
+        "Subtitle": "",
+        "DateDoc": 1647957303,
+        "IsPhotogallery": false,
+        "CrumbName": "Бизнес"
+      },
+      {
+        "DocId": 5270785,
+        "SubtitleFirst": false,
+        "Title": "Тихий гений",
+        "Subtitle": "Умер Виталий Мельников",
+        "DateDoc": 1647957119,
+        "IsPhotogallery": false,
+        "CrumbName": "Некрологи"
+      },
+      {
+        "DocId": 5270796,
+        "SubtitleFirst": false,
+        "Title": "Мантуров: России, возможно, придется попрощаться с кем-то из иностранных автопроизводителей",
+        "Subtitle": "",
+        "DateDoc": 1647957020,
+        "IsPhotogallery": false,
+        "CrumbName": "Военная операция на Украине"
+      },
+      {
+        "DocId": 5270814,
+        "SubtitleFirst": false,
+        "Title": "МИД России потребовал освободить задержанного в Латвии эксперта Федорова",
+        "Subtitle": "",
+        "DateDoc": 1647956947,
+        "IsPhotogallery": false,
+        "CrumbName": "Военная операция на Украине"
+      },
+      {
+        "DocId": 5270806,
+        "SubtitleFirst": false,
+        "Title": "Прибыль Xiaomi выросла по итогам года на 70%",
+        "Subtitle": "",
+        "DateDoc": 1647956929,
+        "IsPhotogallery": false,
+        "CrumbName": "Телекоммуникации"
+      },
+      {
+        "DocId": 5270793,
+        "SubtitleFirst": false,
+        "Title": "АЦБК подвел итоги работы по корпоративной климатической политике в 2021 году",
+        "Subtitle": "",
+        "DateDoc": 1647956764,
+        "IsPhotogallery": false,
+        "CrumbName": "Новости компаний"
+      },
+      {
+        "DocId": 5270774,
+        "SubtitleFirst": false,
+        "Title": "Рынок труда обменяется кадрами",
+        "Subtitle": "Какую программу занятости разработали в SuperJob",
+        "DateDoc": 1647956364,
+        "IsPhotogallery": false,
+        "CrumbName": "Радио «Ъ FM»"
+      },
+      {
+        "DocId": 5270746,
+        "SubtitleFirst": false,
+        "Title": "Трое волгоградцев приговорены к реальным срокам за убийство из-за ссоры в чате",
+        "Subtitle": "",
+        "DateDoc": 1647956033,
+        "IsPhotogallery": false,
+        "CrumbName": "Происшествия"
+      },
+      {
+        "DocId": 5270741,
+        "SubtitleFirst": false,
+        "Title": "Великобритания хочет получать от АЭС четверть необходимой стране электроэнергии",
+        "Subtitle": "",
+        "DateDoc": 1647955982,
+        "IsPhotogallery": false,
+        "CrumbName": "Атомная энергетика"
+      },
+      {
+        "DocId": 5270780,
+        "SubtitleFirst": false,
+        "Title": "Мантуров: России отказали в поставках деталей для МС-21 даже по предоплаченным заказам",
+        "Subtitle": "",
+        "DateDoc": 1647955101,
+        "IsPhotogallery": false,
+        "CrumbName": "Санкции против России"
+      },
+      {
+        "DocId": 5270790,
+        "SubtitleFirst": false,
+        "Title": "Адвокатов Навального задержали после оглашения приговора",
+        "Subtitle": "",
+        "DateDoc": 1647954889,
+        "IsPhotogallery": false,
+        "CrumbName": "Происшествия"
+      },
+      {
+        "DocId": 5270779,
+        "SubtitleFirst": false,
+        "Title": "Минпромторг и металлурги договорились рассчитывать внутренние цены на металл в рублях",
+        "Subtitle": "",
+        "DateDoc": 1647954618,
+        "IsPhotogallery": false,
+        "CrumbName": "Бизнес"
+      },
+      {
+        "DocId": 5270783,
+        "SubtitleFirst": false,
+        "Title": "BMW 7 Series впервые может получить M-версию",
+        "Subtitle": "",
+        "DateDoc": 1647954176,
+        "IsPhotogallery": false,
+        "CrumbName": "Автопилот"
+      },
+      {
+        "DocId": 5270754,
+        "SubtitleFirst": false,
+        "Title": "Gazprom Energy отрицает информацию о национализации властями Великобритании",
+        "Subtitle": "",
+        "DateDoc": 1647953988,
+        "IsPhotogallery": false,
+        "CrumbName": "Санкции против России"
+      },
+      {
+        "DocId": 5270759,
+        "SubtitleFirst": false,
+        "Title": "Отчет правительства перед Госдумой перенесен на 7 апреля",
+        "Subtitle": "",
+        "DateDoc": 1647953218,
+        "IsPhotogallery": false,
+        "CrumbName": "Экономика"
+      },
+      {
+        "DocId": 5270751,
+        "SubtitleFirst": false,
+        "Title": "Российский союз туриндустрии сообщил об ажиотажном спросе на санатории",
+        "Subtitle": "",
+        "DateDoc": 1647953046,
+        "IsPhotogallery": false,
+        "CrumbName": "Потребительский рынок"
+      },
+      {
+        "DocId": 5270747,
+        "SubtitleFirst": false,
+        "Title": "Медведев: рост криминала в России удается сдерживать",
+        "Subtitle": "",
+        "DateDoc": 1647952488,
+        "IsPhotogallery": false,
+        "CrumbName": "Военная операция на Украине"
+      }
+    ]
+  },
+  "common": {
+    "docs": [
+      {
+        "DocId": 5270784,
+        "SubtitleFirst": false,
+        "Title": "common",
+        "Subtitle": "",
+        "DateDoc": 1647958070,
+        "IsPhotogallery": false,
+        "CrumbName": "Мир"
+      },
+      {
+        "DocId": 5270809,
+        "SubtitleFirst": false,
+        "Title": "Халатность и подлог оценили в полмиллиона рублей",
+        "Subtitle": "Завершился процесс над судмедэкспертом по делу погибшего в Крыму чиновника московской мэрии",
+        "DateDoc": 1647957797,
+        "IsPhotogallery": false,
+        "CrumbName": "Происшествия"
+      },
+      {
+        "DocId": 5270804,
+        "SubtitleFirst": false,
+        "Title": "Нуланд: США не просили Европу и Индию прекратить закупки энергоносителей в России",
+        "Subtitle": "",
+        "DateDoc": 1647957446,
+        "IsPhotogallery": false,
+        "CrumbName": "Санкции против России"
+      },
+      {
+        "DocId": 5270792,
+        "SubtitleFirst": false,
+        "Title": "«Алмаз-Антей» сообщил о зависшем $1 млрд за экспортные поставки",
+        "Subtitle": "",
+        "DateDoc": 1647957303,
+        "IsPhotogallery": false,
+        "CrumbName": "Бизнес"
+      },
+      {
+        "DocId": 5270785,
+        "SubtitleFirst": false,
+        "Title": "Тихий гений",
+        "Subtitle": "Умер Виталий Мельников",
+        "DateDoc": 1647957119,
+        "IsPhotogallery": false,
+        "CrumbName": "Некрологи"
+      },
+      {
+        "DocId": 5270796,
+        "SubtitleFirst": false,
+        "Title": "Мантуров: России, возможно, придется попрощаться с кем-то из иностранных автопроизводителей",
+        "Subtitle": "",
+        "DateDoc": 1647957020,
+        "IsPhotogallery": false,
+        "CrumbName": "Военная операция на Украине"
+      },
+      {
+        "DocId": 5270814,
+        "SubtitleFirst": false,
+        "Title": "МИД России потребовал освободить задержанного в Латвии эксперта Федорова",
+        "Subtitle": "",
+        "DateDoc": 1647956947,
+        "IsPhotogallery": false,
+        "CrumbName": "Военная операция на Украине"
+      },
+      {
+        "DocId": 5270806,
+        "SubtitleFirst": false,
+        "Title": "Прибыль Xiaomi выросла по итогам года на 70%",
+        "Subtitle": "",
+        "DateDoc": 1647956929,
+        "IsPhotogallery": false,
+        "CrumbName": "Телекоммуникации"
+      },
+      {
+        "DocId": 5270793,
+        "SubtitleFirst": false,
+        "Title": "АЦБК подвел итоги работы по корпоративной климатической политике в 2021 году",
+        "Subtitle": "",
+        "DateDoc": 1647956764,
+        "IsPhotogallery": false,
+        "CrumbName": "Новости компаний"
+      },
+      {
+        "DocId": 5270774,
+        "SubtitleFirst": false,
+        "Title": "Рынок труда обменяется кадрами",
+        "Subtitle": "Какую программу занятости разработали в SuperJob",
+        "DateDoc": 1647956364,
+        "IsPhotogallery": false,
+        "CrumbName": "Радио «Ъ FM»"
+      },
+      {
+        "DocId": 5270746,
+        "SubtitleFirst": false,
+        "Title": "Трое волгоградцев приговорены к реальным срокам за убийство из-за ссоры в чате",
+        "Subtitle": "",
+        "DateDoc": 1647956033,
+        "IsPhotogallery": false,
+        "CrumbName": "Происшествия"
+      },
+      {
+        "DocId": 5270741,
+        "SubtitleFirst": false,
+        "Title": "Великобритания хочет получать от АЭС четверть необходимой стране электроэнергии",
+        "Subtitle": "",
+        "DateDoc": 1647955982,
+        "IsPhotogallery": false,
+        "CrumbName": "Атомная энергетика"
+      },
+      {
+        "DocId": 5270780,
+        "SubtitleFirst": false,
+        "Title": "Мантуров: России отказали в поставках деталей для МС-21 даже по предоплаченным заказам",
+        "Subtitle": "",
+        "DateDoc": 1647955101,
+        "IsPhotogallery": false,
+        "CrumbName": "Санкции против России"
+      },
+      {
+        "DocId": 5270790,
+        "SubtitleFirst": false,
+        "Title": "Адвокатов Навального задержали после оглашения приговора",
+        "Subtitle": "",
+        "DateDoc": 1647954889,
+        "IsPhotogallery": false,
+        "CrumbName": "Происшествия"
+      },
+      {
+        "DocId": 5270779,
+        "SubtitleFirst": false,
+        "Title": "Минпромторг и металлурги договорились рассчитывать внутренние цены на металл в рублях",
+        "Subtitle": "",
+        "DateDoc": 1647954618,
+        "IsPhotogallery": false,
+        "CrumbName": "Бизнес"
+      },
+      {
+        "DocId": 5270783,
+        "SubtitleFirst": false,
+        "Title": "BMW 7 Series впервые может получить M-версию",
+        "Subtitle": "",
+        "DateDoc": 1647954176,
+        "IsPhotogallery": false,
+        "CrumbName": "Автопилот"
+      },
+      {
+        "DocId": 5270754,
+        "SubtitleFirst": false,
+        "Title": "Gazprom Energy отрицает информацию о национализации властями Великобритании",
+        "Subtitle": "",
+        "DateDoc": 1647953988,
+        "IsPhotogallery": false,
+        "CrumbName": "Санкции против России"
+      },
+      {
+        "DocId": 5270759,
+        "SubtitleFirst": false,
+        "Title": "Отчет правительства перед Госдумой перенесен на 7 апреля",
+        "Subtitle": "",
+        "DateDoc": 1647953218,
+        "IsPhotogallery": false,
+        "CrumbName": "Экономика"
+      },
+      {
+        "DocId": 5270751,
+        "SubtitleFirst": false,
+        "Title": "Российский союз туриндустрии сообщил об ажиотажном спросе на санатории",
+        "Subtitle": "",
+        "DateDoc": 1647953046,
+        "IsPhotogallery": false,
+        "CrumbName": "Потребительский рынок"
+      },
+      {
+        "DocId": 5270747,
+        "SubtitleFirst": false,
+        "Title": "Медведев: рост криминала в России удается сдерживать",
+        "Subtitle": "",
+        "DateDoc": 1647952488,
+        "IsPhotogallery": false,
+        "CrumbName": "Военная операция на Украине"
+      }
+    ]
+  }
+}

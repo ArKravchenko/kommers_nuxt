@@ -2,11 +2,11 @@
 
   <div :class="['doc_media',getIllustrationAlignClassName]">
     <figure class="doc_media__figure">
-      <div class="photo">
+      <div :class="['photo',{'photo--free':getIllustrationImgIsFree}]">
         <Picture
           :src="getIllustrationImg.src"
           :alt="getIllustrationImg.alt"
-          :img-class="'doc_media__media'"
+          :img-class="getIllustrationImgIsFree ? 'doc_media__media_free' : 'doc_media__media'"
           :noscript-string="getNoscriptString"
           :webp-src-set="getIllustrationImg.webpSrcSet"
           :jpeg-src-set="getIllustrationImg.jpegSrcSet"

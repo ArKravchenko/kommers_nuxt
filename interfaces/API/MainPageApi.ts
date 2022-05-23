@@ -588,6 +588,7 @@ export namespace ArticleLong {
     align: Alignment
     expandable: boolean; //может быть true только для широкой, это параметр указывающий можно ли открыть фото в darkGallery
     // content: {
+    isFree: boolean,// указывает  что фото не 16на9
     img: ImageFull | ImageSimple;
     caption: (PlainTextElement | HTMLTagElement)[];
     credentials: {

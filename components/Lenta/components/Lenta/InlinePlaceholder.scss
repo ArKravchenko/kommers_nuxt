@@ -1,0 +1,32 @@
+.inline_placeholder {
+  position: relative;
+  overflow: hidden;
+  background-image: linear-gradient(90deg, $gray-c, transparent); /* default gray gradiant */
+  opacity: .3;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    transform: translateX(100%);
+    width: 100%;
+    background:
+      linear-gradient(to right,
+        transparent 0%,
+        rgba(255,255,255,.8) 50%,
+        transparent 99%,
+        transparent 100%);
+    animation: inline_placeholder_motion 1.5s infinite;
+    will-change: transform;
+  }
+}
+
+@keyframes inline_placeholder_motion {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
