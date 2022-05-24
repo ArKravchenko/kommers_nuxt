@@ -4,9 +4,27 @@ import componentCacheConfig from './config/componentCacheConfig'
 import {version} from './package.json'
 import type {NuxtConfig} from '@nuxt/types'
 // import shrinkRay from 'shrink-ray-current'
-import fs from 'fs';
+import fs from 'fs-extra';
 import path from 'path';
 import pwaRuntimeCacheConfig from "./config/pwaRuntimeCacheConfig";
+
+const log: any = [];
+let interval = setInterval(() => {
+  if (log.length > 0) {
+    fs.ensureDir(path.resolve(__dirname, './logs/'))
+    const preparedLog = log.reduce((acc: string, el: any) => {
+      el.timings.ssrToApiSentStr = `${el.timings.ssrToApiSent - el.timings.browserToSsrReceived}`
+      el.timings.apiToSsrReceivedStr = `${el.timings.apiToSsrReceived - el.timings.ssrToApiSent}`
+      el.timings.ssrToClientSentStr = `${el.timings.ssrToClientSent - el.timings.apiToSsrReceived}`
+      el[el.url] = `${el.url},  ${el.timings.ssrToApiSentStr}, ${el.timings.apiToSsrReceivedStr}, ${el.timings.ssrToClientSentStr}\n`
+      return acc += el[el.url]
+    }, '')
+    fs.writeFileSync(path.resolve(__dirname, './logs/logs.csv'), preparedLog, { flag: 'a' })
+    log.length = 0
+    console.log('logs been written', path.resolve(__dirname, './logs/logs.csv'))
+    // console.log(log)
+  }
+}, 2000)
 
 const scssVars = `
 @use "sass:string";
@@ -60,8 +78,8 @@ const config: NuxtConfig = {
     ],
     script: [
       {
-        innerHTML:'window.yaContextCb = window.yaContextCb || []',
-        hid:'yaContextCb'
+        innerHTML: 'window.yaContextCb = window.yaContextCb || []',
+        hid: 'yaContextCb'
       },
       // {
       //   src: 'https://yandex.ru/ads/system/context.js',
@@ -157,12 +175,12 @@ const config: NuxtConfig = {
     '@nuxtjs/pwa',
     // 'nuxt-ssr-cache',
     //@ts-ignore
-    ...(():NuxtConfig['modules'] => process.env.PAGE_CACHE_ENABLED === 'true'
+    ...((): NuxtConfig['modules'] => process.env.PAGE_CACHE_ENABLED === 'true'
       ? [
         'nuxt-ssr-cache'
       ] : [])(),
     //@ts-ignore
-    ...(():NuxtConfig['modules'] => process.env.COMPONENT_CACHE_ENABLED === 'true'
+    ...((): NuxtConfig['modules'] => process.env.COMPONENT_CACHE_ENABLED === 'true'
       ? [[
         // '@nuxtjs/component-cache',
         '@/modules/componentCache.ts',
@@ -203,7 +221,7 @@ const config: NuxtConfig = {
     //@ts-ignore
     "vue-renderer": {
       ssr: {
-        templateParams(templateParams:any, renderContext:any) {
+        templateParams(templateParams: any, renderContext: any) {
           /**
            * IMPORTANT! THIS IS USED TOGETHER WITH STORE injectHeadModule
            * TO INJECT CUSTOM STYLES AND SCRIPTS STRINGS FROM THE ADMIN PANEL INTO A DOCUMENT
@@ -228,6 +246,15 @@ const config: NuxtConfig = {
         // We use it to calculate the time needed for rendering
         context.state.timings.ssrToClientSent = Date.now()
       },
+      beforeResponse(url: string, result: any, context: any) {
+
+        // console.log(Object.keys(context.nuxt))
+
+        if (context?.nuxt?.state?.timings) {
+          log.push({ url, timings: context.nuxt.state.timings })
+        }
+
+      }
       // },
       // //@ts-ignore
       // 'vue-renderer': {
@@ -241,6 +268,13 @@ const config: NuxtConfig = {
       //       // context.state.timings.ssrToClientSent = Date.now()
       //     },
       //   }
+    },
+    build: {
+      done() {
+        clearInterval(interval);
+        fs.ensureDir(path.resolve(__dirname, './logs/'));
+        fs.writeFileSync(path.resolve(__dirname, './logs/logs.csv'), 'url, ssrToApiSent [+ms], apiToSsrReceived [+ms], ssrToClientSent [+ms] \n', { flag: 'w' })
+      }
     }
   },
 
@@ -284,7 +318,7 @@ const config: NuxtConfig = {
       loaders!.scss!.additionalData = scssVars;
 
       // this is to prevent conflicting with injected side bundles on a page
-      if(config?.output){
+      if (config?.output) {
         config.output.jsonpFunction = 'kommersantWebpackJsonp'
       }
     },
