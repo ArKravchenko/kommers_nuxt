@@ -278,7 +278,7 @@ export default class Lenta extends Vue {
 
 
   mounted() {
-    this.fetchArticlesData()
+    // this.fetchArticlesData()
     // TODO remove
     // this is needed for demo purposes
     // const newNewsArticle = () => {

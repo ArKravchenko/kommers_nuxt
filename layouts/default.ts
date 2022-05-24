@@ -41,13 +41,9 @@ export default class Default extends mixins<LogTimings>(LogTimings) {
   mountLenta: boolean = false;
 
   mounted() {
-    if (window.innerWidth >= 1198) {
-      this.fetchArticlesData().then(() => {
-        this.mountLenta = true;
-      })
-        .catch((err: any) => {
-          console.error(err)
-        })
+    if (window.innerWidth >= this.$scssVars.desktop1) {
+      this.mountLenta = true;
+      this.fetchArticlesData()
     }
     // console.log('this.$style',JSON.stringify(this.$style))
   }

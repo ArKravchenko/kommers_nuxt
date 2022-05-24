@@ -146,7 +146,9 @@ const config: NuxtConfig = {
     '@/plugins/imgPlaceholder.ts',
     '@/plugins/scssVars.ts',
     '@/plugins/extractText.ts',
-    '@/plugins/globalComponents.ts'
+    '@/plugins/globalComponents.ts',
+    { src: '@/plugins/vuexPersist.ts', ssr: false }
+
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
