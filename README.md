@@ -94,3 +94,6 @@ And I use it instead v-html in main component:
 [nuxt-multi-cache](https://nuxt-multi-cache.netlify.app/caches/data)
 
 https://blog.vuestorefront.io/vue-and-nuxt-performance-optimization-checklist/
+
+
+siege -f 1000-space.txt --no-parser -t 50s -v -b -c 10  -d 0

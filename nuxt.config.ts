@@ -24,7 +24,7 @@ let interval = setInterval(() => {
     console.log('logs been written', path.resolve(__dirname, './logs/logs.csv'))
     // console.log(log)
   }
-}, 2000)
+}, 5000)
 
 const scssVars = `
 @use "sass:string";
