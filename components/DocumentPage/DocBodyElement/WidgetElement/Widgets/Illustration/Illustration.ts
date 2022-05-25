@@ -100,7 +100,7 @@ export default class Illustration extends Vue {
   }
 
   mounted(){
-    console.log('this.illustrationWidgetData',this.illustrationWidgetData)
+    // console.log('this.illustrationWidgetData',this.illustrationWidgetData)
   }
 
 
