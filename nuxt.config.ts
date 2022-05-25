@@ -19,12 +19,16 @@ let interval = setInterval(() => {
       el[el.url] = `${el.url},  ${el.timings.ssrToApiSentStr}, ${el.timings.apiToSsrReceivedStr}, ${el.timings.ssrToClientSentStr}\n`
       return acc += el[el.url]
     }, '')
-    fs.writeFileSync(path.resolve(__dirname, './logs/logs.csv'), preparedLog, { flag: 'a' })
-    log.length = 0
-    console.log('logs been written', path.resolve(__dirname, './logs/logs.csv'))
+    try {
+      fs.writeFileSync(path.resolve(__dirname, './logs/logs.csv'), preparedLog, {flag: 'a'})
+      log.length = 0
+      console.log('logs been written', path.resolve(__dirname, './logs/logs.csv'))
+    } catch (e) {
+      console.error('Error during log writing', path.resolve(__dirname, './logs/logs.csv'))
+    }
     // console.log(log)
   }
-}, 5000)
+}, 10_000)
 
 const scssVars = `
 @use "sass:string";
