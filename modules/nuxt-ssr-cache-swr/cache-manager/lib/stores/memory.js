@@ -5,190 +5,209 @@ var utils = require('../utils');
 var isObject = utils.isObject;
 
 function clone(object) {
-    if (typeof object === 'object' && object !== null) {
-        return cloneDeep(object);
-    }
-    return object;
+  if (typeof object === 'object' && object !== null) {
+    return cloneDeep(object);
+  }
+  return object;
 }
 
-var memoryStore = function(args) {
-    args = args || {};
-    var self = {};
-    self.name = 'memory';
-    var Promise = args.promiseDependency || global.Promise;
-    self.usePromises = !((typeof Promise === 'undefined' || args.noPromises));
+var memoryStore = function (args) {
+  args = args || {};
+  var self = {};
+  self.name = 'memory';
+  var Promise = args.promiseDependency || global.Promise;
+  self.usePromises = !((typeof Promise === 'undefined' || args.noPromises));
 
-    var ttl = args.ttl;
-    var lruOpts = {
-        max: args.max || 500,
-        maxAge: (ttl || ttl === 0) ? ttl * 1000 : null,
-        maxSize: (8192_000_000/8)/2, //(8192_000_000/64)/2 is ~730 docs
-        sizeCalculation: (v,k) => {
-          // console.log (v.length + k.length)
-          return v.length + k.length
-        },
-        dispose: args.dispose,
-        // length: args.length,
-        allowStale: args.stale || args.allowStale
-    };
+  var ttl = args.ttl;
+  var lruOpts = {
+    max: args.max || 500,
+    maxAge: (ttl || ttl === 0) ? ttl * 1000 : null,
+    maxSize: (8192_000_000 / 8) / 2, //(8192_000_000/64)/2 is ~730 docs
+    sizeCalculation: (v, k) => {
+      // console.log (v.length + k.length)
+      return v.length + k.length
+    },
+    dispose: args.dispose,
+    // length: args.length,
+    allowStale: args.stale || args.allowStale
+  };
 
-    var lruCache = new Lru(lruOpts);
+  var lruCache = new Lru(lruOpts);
 
-    // setInterval(()=>{
-    //   console.log(lruCache.size)
-    // },2000)
+  // setInterval(() => {
+  //   console.log(lruCache.size)
+  // }, 2000)
 
-    var setMultipleKeys = function setMultipleKeys(keysValues, maxAge) {
-        var length = keysValues.length;
-        var values = [];
-        for (var i = 0; i < length; i += 2) {
-            lruCache.set(keysValues[i], keysValues[i + 1], maxAge);
-            values.push(keysValues[i + 1]);
-        }
-        return values;
-    };
+  var setMultipleKeys = function setMultipleKeys(keysValues, maxAge) {
+    var length = keysValues.length;
+    var values = [];
+    for (var i = 0; i < length; i += 2) {
+      lruCache.set(keysValues[i], keysValues[i + 1], maxAge);
+      values.push(keysValues[i + 1]);
+    }
+    return values;
+  };
 
-    self.set = function(key, value, options, cb) {
-        value = clone(value);
+  self.set = function (key, value, options, cb) {
+    value = clone(value);
 
-        if (typeof options === 'function') {
-            cb = options;
-            options = {};
-        }
-        options = options || {};
+    if (typeof options === 'function') {
+      cb = options;
+      options = {};
+    }
+    options = options || {};
 
-        var maxAge = (options.ttl || options.ttl === 0) ? options.ttl * 1000 : lruOpts.maxAge;
+    var maxAge = (options.ttl || options.ttl === 0) ? options.ttl * 1000 : lruOpts.maxAge;
 
-        lruCache.set(key, value, maxAge);
-        if (cb) {
-            process.nextTick(cb.bind(null, null));
-        } else if (self.usePromises) {
-            return Promise.resolve(value);
-        }
-    };
+    lruCache.set(key, value, maxAge);
+    if (cb) {
+      process.nextTick(cb.bind(null, null));
+    } else if (self.usePromises) {
+      return Promise.resolve(value);
+    }
+  };
 
-    self.mset = function() {
-        var args = Array.prototype.slice.apply(arguments);
-        var cb;
-        var options = {};
+  self.mset = function () {
+    var args = Array.prototype.slice.apply(arguments);
+    var cb;
+    var options = {};
 
-        if (typeof args[args.length - 1] === 'function') {
-            cb = args.pop();
-        }
+    if (typeof args[args.length - 1] === 'function') {
+      cb = args.pop();
+    }
 
-        if (args.length % 2 > 0 && isObject(args[args.length - 1])) {
-            options = args.pop();
-        }
+    if (args.length % 2 > 0 && isObject(args[args.length - 1])) {
+      options = args.pop();
+    }
 
-        var maxAge = (options.ttl || options.ttl === 0) ? options.ttl * 1000 : lruOpts.maxAge;
+    var maxAge = (options.ttl || options.ttl === 0) ? options.ttl * 1000 : lruOpts.maxAge;
 
-        var values = setMultipleKeys(args, maxAge);
+    var values = setMultipleKeys(args, maxAge);
 
-        if (cb) {
-            process.nextTick(cb.bind(null, null));
-        } else if (self.usePromises) {
-            return Promise.resolve(values);
-        }
-    };
+    if (cb) {
+      process.nextTick(cb.bind(null, null));
+    } else if (self.usePromises) {
+      return Promise.resolve(values);
+    }
+  };
 
-    self.get = function(key, options, cb) {
-        if (typeof options === 'function') {
-            cb = options;
-        }
-        var value = lruCache.get(key);
+  self.get = function (key, options, cb) {
+    if (typeof options === 'function') {
+      cb = options;
+    }
+    var value = lruCache.get(key);
 
-        if (cb) {
-            process.nextTick(cb.bind(null, null, value));
-        } else if (self.usePromises) {
-            return Promise.resolve(value);
-        } else {
-            return value;
-        }
-    };
+    if (cb) {
+      process.nextTick(cb.bind(null, null, value));
+    } else if (self.usePromises) {
+      return Promise.resolve(value);
+    } else {
+      return value;
+    }
+  };
 
-    self.mget = function() {
-        var args = Array.prototype.slice.apply(arguments);
-        var cb;
-        var options = {};
+  self.peek = function (key, options, cb) {
+    if (typeof options === 'function') {
+      cb = options;
+    }
 
-        if (typeof args[args.length - 1] === 'function') {
-            cb = args.pop();
-        }
+    var value = lruCache.peek(key);
 
-        if (isObject(args[args.length - 1])) {
-            options = args.pop();
-        }
+    if (cb) {
+      process.nextTick(cb.bind(null, null, value));
+    } else if (self.usePromises) {
+      return Promise.resolve(value);
+    } else {
+      return value;
+    }
+  };
 
-        var values = args.map(function(key) {
-            return lruCache.get(key);
-        });
+  self.mget = function () {
+    var args = Array.prototype.slice.apply(arguments);
+    var cb;
+    var options = {};
 
-        if (cb) {
-            process.nextTick(cb.bind(null, null, values));
-        } else if (self.usePromises) {
-            return Promise.resolve(values);
-        } else {
-            return values;
-        }
-    };
+    if (typeof args[args.length - 1] === 'function') {
+      cb = args.pop();
+    }
 
-    self.del = function() {
-        var args = Array.prototype.slice.apply(arguments);
-        var cb;
-        var options = {};
+    if (isObject(args[args.length - 1])) {
+      options = args.pop();
+    }
 
-        if (typeof args[args.length - 1] === 'function') {
-            cb = args.pop();
-        }
+    var values = args.map(function (key) {
+      return lruCache.get(key);
+    });
 
-        if (isObject(args[args.length - 1])) {
-            options = args.pop();
-        }
+    if (cb) {
+      process.nextTick(cb.bind(null, null, values));
+    } else if (self.usePromises) {
+      return Promise.resolve(values);
+    } else {
+      return values;
+    }
+  };
 
-        if (Array.isArray(args[0])) {
-            args = args[0];
-        }
+  self.del = function () {
+    var args = Array.prototype.slice.apply(arguments);
+    var cb;
+    var options = {};
 
-        args.forEach(function(key) {
-            lruCache.del(key);
-        });
+    if (typeof args[args.length - 1] === 'function') {
+      cb = args.pop();
+    }
 
-        if (cb) {
-            process.nextTick(cb.bind(null, null));
-        } else if (self.usePromises) {
-            return Promise.resolve();
-        }
-    };
+    if (isObject(args[args.length - 1])) {
+      options = args.pop();
+    }
 
-    self.reset = function(cb) {
-        lruCache.clear();
-        if (cb) {
-            process.nextTick(cb.bind(null, null));
-        } else if (self.usePromises) {
-            return Promise.resolve();
-        }
-    };
+    if (Array.isArray(args[0])) {
+      args = args[0];
+    }
 
-    self.keys = function(cb) {
-        var keys = lruCache.keys();
-        if (cb) {
-            process.nextTick(cb.bind(null, null, keys));
-        } else if (self.usePromises) {
-            return Promise.resolve(keys);
-        } else {
-            return keys;
-        }
-    };
+    args.forEach(function (key) {
+      lruCache.del(key);
+    });
 
-    self.has = lruCache.has.bind(lruCache)
+    if (cb) {
+      process.nextTick(cb.bind(null, null));
+    } else if (self.usePromises) {
+      return Promise.resolve();
+    }
+  };
 
-    return self;
+  self.reset = function (cb) {
+    lruCache.clear();
+    if (cb) {
+      process.nextTick(cb.bind(null, null));
+    } else if (self.usePromises) {
+      return Promise.resolve();
+    }
+  };
+
+  self.keys = function (cb) {
+    var keys = lruCache.keys();
+    if (cb) {
+      process.nextTick(cb.bind(null, null, keys));
+    } else if (self.usePromises) {
+      return Promise.resolve(keys);
+    } else {
+      return keys;
+    }
+  };
+
+  self.has = lruCache.has.bind(lruCache)
+
+  self.has = lruCache.has.bind(lruCache)
+
+
+  return self;
 };
 
 var methods = {
-    create: function(args) {
-        return memoryStore(args);
-    }
+  create: function (args) {
+    return memoryStore(args);
+  }
 };
 
 module.exports = methods;

@@ -80,8 +80,11 @@ module.exports = function cacheRenderer(nuxt, config) {
       });
     }
 
-    return cache.getAsync(cacheKey).then(function (cachedResult) {
+    return cache.peekAsync(cacheKey).then(function (cachedResult) {
 
+      // console.log('cacheKey',typeof cacheKey)
+      // console.log('has',cache.has(cacheKey))
+      // console.log('cachedResult',typeof cachedResult)
 
       if (cachedResult) {
         try {
@@ -94,6 +97,8 @@ module.exports = function cacheRenderer(nuxt, config) {
         return deserialize(cachedResult);
       }
 
+
+    // console.log('NO CACHE RESULT')
 
 
       return renderSetCache();
