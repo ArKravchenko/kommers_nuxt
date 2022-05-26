@@ -9,7 +9,7 @@ const instance = autocannon({
   pipelining: 50,
   // amount: 1000,
   idReplacement: true,
-  url:'https://prototype.kommersant.ru',
+  url:'localhost:3333',//'https://prototype.kommersant.ru',
   requests: fs.readFileSync('1000-space.txt',{encoding:'utf-8'}).split('\n').map(el=>{
 
     // console.log(el.slice(31))

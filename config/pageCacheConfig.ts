@@ -43,6 +43,13 @@ const pageCacheConfig = {
     ttl: process.env.PAGE_CACHE_ENABLED === 'true'
       ? Number(process.env.PAGE_CACHE_TTL) || 5:
       0 ,
+    // dispose(key:string,value:string,reason:string,...rest:any){
+    //   console.log('key',key)
+    //   // console.log('value',value)
+    //   console.log('reason',reason);
+    //   console.log('rest',rest);
+    // }
+    stale: true,
   },
 }
 

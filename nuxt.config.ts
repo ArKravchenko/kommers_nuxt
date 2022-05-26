@@ -183,7 +183,7 @@ const config: NuxtConfig = {
     //@ts-ignore
     ...((): NuxtConfig['modules'] => process.env.PAGE_CACHE_ENABLED === 'true'
       ? [
-        'nuxt-ssr-cache'
+        '@/modules/nuxt-ssr-cache-swr/middleware.js'
       ] : [])(),
     //@ts-ignore
     ...((): NuxtConfig['modules'] => process.env.COMPONENT_CACHE_ENABLED === 'true'
