@@ -21,10 +21,11 @@ import LazyHydrate from "vue-lazy-hydration";
 // TODO время прочтения выводить и на разводящей и в доке в одном формате
 // TODO crumbs выводить и на разводящей и в доке в одном формате
 @Component({
-  // //@ts-ignore
-  // serverCacheKey(a:any) {
-  //   return JSON.stringify(a)
-  // },
+  //@ts-ignore
+  serverCacheKey(a:any) {
+    // console.log(Object.keys(a))
+    return JSON.stringify(a)
+  },
 
   components:{
     Vote,

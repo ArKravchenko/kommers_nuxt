@@ -2,6 +2,7 @@
 
 
   <article class="doc">
+    {{Math.random()}} ArticleLongContent cache
 
     <DocHeader
       :hide-titles="getHideTitles"

@@ -58,7 +58,16 @@ const myModule: Module<any> = async function (moduleOptions) {
       // TODO has incompatible types
       this.options.render.bundleRenderer.cache = new LRUWithLog(Object.assign({
         max: 10000,
-        maxAge: 1000 * 60 * 15
+        maxAge: 1000 * 60 * 15,
+        maxSize: (8192_000_000 / 8) / 2, //(8192_000_000/64)/2 is ~730 docs
+        sizeCalculation: (v: { html:string }, k:string) => {
+          const valueLength = v.html? v.html.length : JSON.stringify(v).length
+          // console.log(k)
+          return valueLength + k.length
+        },
+        // dispose: args.dispose,
+        // length: args.length,
+        allowStale: true
       }, moduleOptions))
   }
 }

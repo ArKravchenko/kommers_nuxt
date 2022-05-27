@@ -5,8 +5,8 @@ import autocannon from 'autocannon'
 const instance = autocannon({
   workers: 4,
   duration: 1000,
-  connections: 20,
-  pipelining: 50,
+  connections: 10,
+  pipelining: 10,
   // amount: 1000,
   idReplacement: true,
   url:'localhost:3333',//'https://prototype.kommersant.ru',
