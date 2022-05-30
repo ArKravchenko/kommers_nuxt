@@ -1,5 +1,5 @@
 <template>
-  <picture v-if="src">
+  <picture>
 
     <source v-if="webpSrcSet && sizes"
             :class="sourceClass"

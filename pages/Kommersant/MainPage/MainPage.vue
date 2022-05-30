@@ -20,7 +20,9 @@
 
           <div class="hide_mobile">
             <!-- яркое пятно -->
-            <LightSpot  v-if="getLightSpot" :lightSpotData="getLightSpot"/>
+            <LazyHydrate :when-visible="lazyHydrateWhenVisibleParams">
+              <LightSpot v-if="getLightSpot" :lightSpotData="getLightSpot"/>
+            </LazyHydrate>
           </div>
         </div>
 
@@ -55,7 +57,9 @@
 
     <div class="layout hide_desktop">
       <!-- яркое пятно мобильное -->
-      <LightSpot v-if="getLightSpot" :lightSpotData="getLightSpot"/>
+      <LazyHydrate :when-visible="lazyHydrateWhenVisibleParams">
+        <LightSpot v-if="getLightSpot" :lightSpotData="getLightSpot"/>
+      </LazyHydrate>
     </div>
 
 
@@ -76,7 +80,9 @@
     <!-- мультимедиа -->
     <div class="layout">
       <div class="main">
-        <Multimedia v-if="getMultimedia" :multimedia-data="getMultimedia"/>
+        <LazyHydrate :when-visible="lazyHydrateWhenVisibleParams">
+          <Multimedia v-if="getMultimedia" :multimedia-data="getMultimedia"/>
+        </LazyHydrate>
       </div>
     </div>
 
@@ -205,7 +211,9 @@
     <div class="layout">
       <div class="main">
         <!-- провести время -->
-        <SpendTime v-if="getSpendTime" :spend-time-data="getSpendTime"/>
+        <LazyHydrate :when-visible="lazyHydrateWhenVisibleParams">
+          <SpendTime v-if="getSpendTime" :spend-time-data="getSpendTime"/>
+        </LazyHydrate>
       </div>
     </div>
 

@@ -30,14 +30,24 @@
     <div class="spend__list">
 
       <template v-for="(item,i) in spendTimeData.data.docs">
-        <article :class="['spend__item',{'spend__item--wide':i === 6 || i === 8 || i === 10}] ">
+        <article :key="i"
+                 :class="['spend__item',{'spend__item--wide':i === 6 || i === 8 || i === 10}] ">
           <div class="spend__photo">
-            <img class="spend__img"
-                 :src="$imgPlaceholder"
-                 :data-src="cdnUrl+item.img.src"
-                 v-lazytest
-                 :alt="item.img.alt"
+            <Picture
+              :img-class="'spend__img'"
+              :src="item.img.src"
+              :alt="item.img.alt"
+              :webp-src-set="item.img.webpSrcSet"
+              :jpeg-src-set="item.img.jpegSrcSet"
+              :sizes="getSizes"
+              :noscript-string="getNoscriptString(item)"
             />
+<!--            <img class="spend__img"-->
+<!--                 :src="$imgPlaceholder"-->
+<!--                 :data-src="cdnUrl+item.img.src"-->
+<!--                 v-lazytest-->
+<!--                 :alt="item.img.alt"-->
+<!--            />-->
 <!--            <component v-if="$isServer" is="noscript">-->
 <!--              <img class="spend__img"-->
 <!--                   :src="cdnUrl+item.img.src"-->
@@ -59,6 +69,6 @@
 </template>
 
 <script src="./SpendTime.ts" lang="ts"></script>
-<style src="./SpendTime.scss" lang="scss" scoped></style>
+<style src="./SpendTime.scss" lang="scss" ></style>
 
 

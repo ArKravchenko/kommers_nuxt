@@ -24,7 +24,8 @@ import Vote from '~/components/MainPage/Vote/Vote.vue'
 import MostReadableAside from '~/components/MainPage/MostReadableAside/MostReadableAside.vue'
 import SpendGallery from '~/components/MainPage/SpendGallery/SpendGallery.vue'
 import CompanyNews from '~/components/MainPage/CompanyNews/CompanyNews.vue'
-import Multimedia from '~/components/MainPage/Multimedia/Multimedia.vue'
+// import Multimedia from '~/components/MainPage/Multimedia/Multimedia.vue'
+import Multimedia from '~/components/MainPage/Multimedia/MultimediaSwiperTest/MultimediaSwiperTest.vue'
 
 // const MainToday: AsyncComponent = () => import('~/components/MainPage/MainToday/MainToday.vue')
 // const Opinions: AsyncComponent = () => import('~/components/MainPage/Opinions/Opinions.vue')
@@ -147,7 +148,10 @@ export default class MainPage extends Vue {
   get getSpendTime() {
     return this.mainPageWidgets
       && this.mainPageWidgets.spendTime
+  }
 
+  get lazyHydrateWhenVisibleParams(){
+    return { rootMargin: '400px' }
   }
 
   mounted() {
