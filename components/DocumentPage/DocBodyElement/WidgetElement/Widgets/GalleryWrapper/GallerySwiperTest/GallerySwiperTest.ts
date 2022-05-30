@@ -5,7 +5,7 @@ import HtmlTagElement from '@/components/DocumentPage/DocBodyElement/HtmlTagElem
 
 // import Swiper JS
 const SwiperImport = () => import(
-  /* webpackChunkName: "SwiperImport." */
+  /* webpackChunkName: "SwiperImport_N_K_P." */
   /* webpackMode: "eager" */
   './SwiperTreeShaken');
 import type Swiper from 'swiper'

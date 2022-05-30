@@ -16,7 +16,7 @@ const BlockquoteOfTheDay: AsyncComponent = () => import("../BlockquoteOfTheDay/B
 
 // import Swiper JS
 const SwiperImport = () => import(
-  /* webpackChunkName: "SwiperImport." */
+  /* webpackChunkName: "SwiperImport_N_K." */
   /* webpackMode: "eager" */
   './SwiperTreeShaken');
 import type Swiper from 'swiper'

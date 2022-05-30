@@ -3,7 +3,7 @@ import type {Multimedia as IMultimedia} from "~/interfaces/API/MainPageApi";
 
 // import Swiper JS
 const SwiperImport = () => import(
-  /* webpackChunkName: "SwiperImport." */
+  /* webpackChunkName: "SwiperImport_N_K." */
   /* webpackMode: "eager" */
   './../../LightSpot/LightSpotSwiperTest/SwiperTreeShaken');
 import type Swiper from 'swiper'
