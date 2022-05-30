@@ -14,7 +14,25 @@ export default class VideoOfTheDay extends Vue {
     // }
   }) videoOfTheDayData!: LightSpot.IVideo | null;
 
-  cdnUrl: string = process.env.CDN_URL || ''
+  get getVideoOfTheDayImageSrc(){
+    return this.videoOfTheDayData?.content?.img?.src
+    && this.videoOfTheDayData.content.img.src
+  }
+
+  get getVideoOfTheDayImageAlt(){
+    return this.videoOfTheDayData?.content?.img?.alt
+      && this.videoOfTheDayData.content.img.alt
+  }
+
+  get getNoscriptString() {
+    return this.getVideoOfTheDayImageSrc
+      && `<img class="slider-img fallback_image"
+                     src="${this.getVideoOfTheDayImageSrc}"
+                     alt="${this.getVideoOfTheDayImageAlt}"
+                >`
+  }
+
+  // cdnUrl: string = process.env.CDN_URL || ''
 
   mounted(){
     //  console.log('this.videoOfTheDayData',this.videoOfTheDayData)

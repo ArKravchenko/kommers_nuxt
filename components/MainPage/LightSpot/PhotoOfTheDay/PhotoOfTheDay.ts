@@ -14,7 +14,27 @@ export default class PhotoOfTheDay extends Vue {
     // }
   }) photoOfTheDayData!: LightSpot.IPhoto | null;
 
-  cdnUrl: string = process.env.CDN_URL || ''
+  // cdnUrl: string = process.env.CDN_URL || ''
+
+
+  get getPhotoOfTheDayImageSrc(){
+    return this.photoOfTheDayData?.content?.img?.src
+      && this.photoOfTheDayData.content.img.src
+  }
+
+  get getPhotoOfTheDayImageAlt(){
+    return this.photoOfTheDayData?.content?.img?.alt
+      && this.photoOfTheDayData.content.img.alt
+  }
+
+  get getNoscriptString() {
+    return this.getPhotoOfTheDayImageSrc
+      && `<img class="slider-img fallback_image"
+                     src="${this.getPhotoOfTheDayImageSrc}"
+                     alt="${this.getPhotoOfTheDayImageAlt}"
+                >`
+  }
+
 
   mounted(){
     //  console.log('this.photoOfTheDayData',this.photoOfTheDayData)

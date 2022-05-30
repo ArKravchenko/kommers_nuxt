@@ -14,7 +14,25 @@ export default class GraphOfTheDay extends Vue {
     // }
   }) graphOfTheDayData!: LightSpot.IChart | null;
 
-  cdnUrl: string = process.env.CDN_URL || ''
+  // cdnUrl: string = process.env.CDN_URL || ''
+
+  get getGraphOfTheDayImageSrc(){
+    return this.graphOfTheDayData?.content?.img?.src
+      && this.graphOfTheDayData.content.img.src
+  }
+
+  get getGraphOfTheDayImageAlt(){
+    return this.graphOfTheDayData?.content?.img?.alt
+      && this.graphOfTheDayData.content.img.alt
+  }
+
+  get getNoscriptString() {
+    return this.getGraphOfTheDayImageSrc
+      && `<img class="photd__img slider-img fallback_image"
+                     src="${this.getGraphOfTheDayImageSrc}"
+                     alt="${this.getGraphOfTheDayImageAlt}"
+                >`
+  }
 
   mounted(){
     //  console.log('this.graphOfTheDayData',this.graphOfTheDayData)
