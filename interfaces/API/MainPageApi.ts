@@ -785,6 +785,7 @@ export namespace ArticleLong {
   // вписывали кастомный HTML со скриптами. Такие документа если и удастся распарсить, то не до конца, и все что прилетит ему в тело
   // придется вставлять как сырой HTML
   export interface IArticleLong {
+    dataHash: string,
     data: {
       docId: number;
       regionId: number;

@@ -1,0 +1,9 @@
+.idea
+.nuxt
+.git
+logs
+.gitignore
+TODO.md
+yarn-error.log
+Dockerfile
+.dockerignore
