@@ -7,3 +7,5 @@ TODO.md
 yarn-error.log
 Dockerfile
 .dockerignore
+docker-compose.yaml
+docker-stack.yaml

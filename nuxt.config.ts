@@ -20,6 +20,7 @@ let interval = setInterval(() => {
       return acc += el[el.url]
     }, '')
     try {
+      fs.ensureDir(path.resolve(__dirname, './logs/'));
       fs.writeFileSync(path.resolve(__dirname, './logs/logs.csv'), preparedLog, {flag: 'a'})
       log.length = 0
       console.log('logs been written', path.resolve(__dirname, './logs/logs.csv'))

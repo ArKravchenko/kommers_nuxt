@@ -28,8 +28,11 @@ COPY --from=source ${APP_ROOT}/nuxt.config.ts ${APP_ROOT}/nuxt.config.ts
 COPY --from=source ${APP_ROOT}/package.json ${APP_ROOT}/package.json
 COPY --from=source ${APP_ROOT}/modules ${APP_ROOT}/modules
 COPY --from=source ${APP_ROOT}/serverMiddleware ${APP_ROOT}/serverMiddleware
-EXPOSE 3333
+#EXPOSE 3333
 ENV HOST=0.0.0.0
+RUN apk --no-cache add curl
+#HEALTHCHECK --interval=10s --timeout=10s --retries=5 --start-period=15s \
+#  CMD curl -f http://0.0.0.0:3333 || exit 1
 CMD ["yarn", "start"]
 
 
