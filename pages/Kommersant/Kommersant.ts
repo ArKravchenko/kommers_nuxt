@@ -4,11 +4,13 @@ import type {Actualno as IActualno} from '~/interfaces/API/MainPageApi';
 // import Cols from '@/components/oldGeneral/Cols/Cols'
 import Actualno from '@/components/general/Actualno/Actualno.vue';
 import {fetcher} from '@/helpers/fetcher';
+import LazyHydrate from "vue-lazy-hydration";
 
 @Component({
   components: {
     // Cols,
-    Actualno
+    Actualno,
+    LazyHydrate
   }
 })
 export default class Kommersant extends Vue {

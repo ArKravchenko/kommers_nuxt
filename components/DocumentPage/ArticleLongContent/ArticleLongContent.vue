@@ -2,7 +2,9 @@
 
 
   <article class="doc">
-    {{Math.random()}} ArticleLongContent cache
+    <LazyHydrate never>
+      <span>{{ Math.random() }} ArticleLongContent cache</span>
+    </LazyHydrate>
 
     <DocHeader
       :hide-titles="getHideTitles"

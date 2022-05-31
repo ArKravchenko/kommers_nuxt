@@ -7,7 +7,7 @@ import HtmlTagElement from '@/components/DocumentPage/DocBodyElement/HtmlTagElem
 const SwiperImport = () => import(
   /* webpackChunkName: "SwiperImport_N_K_P." */
   /* webpackMode: "eager" */
-  './SwiperTreeShaken');
+  '@/helpers/SwiperImport_N_K_P');
 import type Swiper from 'swiper'
 
 type ArrayElement<ArrayType extends readonly unknown[]> = ArrayType[number];

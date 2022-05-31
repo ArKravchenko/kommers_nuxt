@@ -18,7 +18,7 @@ const BlockquoteOfTheDay: AsyncComponent = () => import("../BlockquoteOfTheDay/B
 const SwiperImport = () => import(
   /* webpackChunkName: "SwiperImport_N_K." */
   /* webpackMode: "eager" */
-  './SwiperTreeShaken');
+  '@/helpers/SwiperImport_N_K');
 import type Swiper from 'swiper'
 
 type ArrayElement<ArrayType extends readonly unknown[]> = ArrayType[number];

@@ -4,7 +4,9 @@
       <Actualno :actualnoData="actualnoData"/>
       <!-- Cols is just the example component with action and getter-->
 <!--      <Cols/>-->
-      <div>{{Math.random()}} Kommersant page cache</div>
+      <LazyHydrate never>
+        <div>{{Math.random()}} Kommersant page cache</div>
+      </LazyHydrate>
       <nuxt-child/>
     </div>
 </template>
