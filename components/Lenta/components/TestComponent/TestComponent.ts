@@ -1,4 +1,4 @@
-import {Vue, Component} from 'vue-property-decorator'
+import {Vue, Component} from 'nuxt-property-decorator'
 // @ts-ignore
 import axios from 'axios';
 

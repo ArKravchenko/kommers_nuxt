@@ -1,4 +1,4 @@
-import {Vue, Watch, Component} from 'vue-property-decorator'
+import {Vue, Watch, Component} from 'nuxt-property-decorator'
 import {IWindow} from "../../Interfaces/IWindow";
 
 declare let window: IWindow

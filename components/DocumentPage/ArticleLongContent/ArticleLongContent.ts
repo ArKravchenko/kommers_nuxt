@@ -23,8 +23,8 @@ import LazyHydrate from "vue-lazy-hydration";
 @Component({
   //@ts-ignore
   serverCacheKey(a:any) {
-    // console.log(Object.keys(a))
-    return JSON.stringify(a)
+    // console.log(Object.keys(a.articleLongContent))
+    return a.articleLongContent?.dataHash ? a.articleLongContent.dataHash : JSON.stringify(a)
   },
 
   components:{

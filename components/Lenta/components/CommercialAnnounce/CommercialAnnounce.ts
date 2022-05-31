@@ -1,4 +1,4 @@
-import {Vue, Component, Prop} from 'vue-property-decorator'
+import {Vue, Component, Prop} from 'nuxt-property-decorator'
 import {IWindow} from "../../Interfaces/IWindow";
 import config from '@/components/Lenta/config/config.json';
 
