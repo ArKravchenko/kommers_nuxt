@@ -21,8 +21,24 @@ services:
         parallelism: 2
         delay: 10s
         order: start-first
+#    depends_on:
+#      - redis
 #      placement:
 #        constraints: [ node.role == worker ]
+#  redis:
+#    image: redis:6.0.6
+#    networks:
+#      - my_network
+#    ports:
+#      - 6379:6379
+#    command: [ sh, -c, "rm -f /data/dump.rdb && redis-server" ] # disable persistence
+#    deploy:
+#      mode: global
+#      update_config:
+#        delay: 10s
+#        order: start-first
+#  #      placement:
+#  #        constraints: [ node.role == worker ]
 networks:
   my_network:
     driver: overlay

@@ -2,7 +2,8 @@
 import type {Module} from '@nuxt/types';
 import LRU from 'lru-cache';
 // import type LRUCache from "lru-cache";
-
+// import RedisClient from 'ioredis'
+// import type {RedisKey} from 'ioredis'
 
 const myModule: Module<any> = async function (moduleOptions) {
   {
@@ -69,6 +70,51 @@ const myModule: Module<any> = async function (moduleOptions) {
         // length: args.length,
         allowStale: true
       }, moduleOptions))
+
+    // const redisInstance = new RedisClient({lazyConnect:true})
+    // await redisInstance.connect(()=>{
+    //   console.log('redis connected')
+    // })
+    //
+    // class RedisWithLog {
+    //   options!: any;
+    //   redisInstance!: RedisClient
+    //
+    //   constructor(options: { ttl:number,redis: RedisClient }) {
+    //     this.redisInstance = options.redis;
+    //     this.options = options
+    //   }
+    //
+    //   set(key: RedisKey, value: any): Promise<'OK'> {
+    //     console.log('set', key)
+    //     const set = this.redisInstance.set(key, value.html)
+    //     this.redisInstance.expire(key, this.options.ttl)
+    //     return set;
+    //   }
+    //
+    //   get(key: string, cb?: (res: any) => void): string | void {
+    //     const result = this.redisInstance.get(key)
+    //       .then(res => {
+    //         console.log('get', key)
+    //         cb ? cb({ components: [], html: res }) : undefined
+    //       });
+    //     // const res = { components: [], html: result }
+    //     // const res = super.get(key, this.options);
+    //     //   if (!res) cb();
+    //     //   else cb({ components: [], html: res });
+    //     // if (!res) cb();
+    //     // else cb({ components: [], html: res });
+    //     // return res
+    //   }
+    //
+    //   has(key: string, cb?: (a: any) => any) {
+    //     this.redisInstance.exists(key).then((res) => {
+    //       cb ? cb(1 === res) : undefined
+    //     })
+    //   }
+    // }
+    //
+    // this.options.render.bundleRenderer.cache = new RedisWithLog({ ttl: 60 * 24, redis: redisInstance })
   }
 }
 
