@@ -97,3 +97,7 @@ https://blog.vuestorefront.io/vue-and-nuxt-performance-optimization-checklist/
 
 
 siege -f 1000-space.txt --no-parser -t 50s -v -b -c 10  -d 0
+
+
+/usr/local/var/www
+/usr/local/etc/nginx
