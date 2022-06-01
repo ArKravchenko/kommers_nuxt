@@ -1,7 +1,7 @@
 import {Component, Prop, Vue} from 'nuxt-property-decorator'
 import type {SpendTime as ISpendTime} from "~/interfaces/API/MainPageApi";
-import Picture from "~/components/general/Picture/Picture";
-import type {ArticleLong} from "~/interfaces/API/MainPageApi";
+// import Picture from "~/components/general/Picture/Picture";
+// import type {ArticleLong} from "~/interfaces/API/MainPageApi";
 
 type ArrayElement<ArrayType extends readonly unknown[]> = ArrayType[number];
 
@@ -14,7 +14,7 @@ type ArrayElement<ArrayType extends readonly unknown[]> = ArrayType[number];
     return a.spendTimeData?.dataHash ? a.spendTimeData.dataHash : JSON.stringify(a)
   },
   components: {
-    Picture
+    // Picture
   },
 })
 export default class SpendTime extends Vue {
