@@ -8,28 +8,31 @@ import fs from 'fs-extra';
 import path from 'path';
 import pwaRuntimeCacheConfig from "./config/pwaRuntimeCacheConfig";
 
-// const log: any = [];
-// let interval = setInterval(() => {
-//   if (log.length > 0) {
-//     fs.ensureDir(path.resolve(__dirname, './logs/'))
-//     const preparedLog = log.reduce((acc: string, el: any) => {
-//       el.timings.ssrToApiSentStr = `${el.timings.ssrToApiSent - el.timings.browserToSsrReceived}`
-//       el.timings.apiToSsrReceivedStr = `${el.timings.apiToSsrReceived - el.timings.ssrToApiSent}`
-//       el.timings.ssrToClientSentStr = `${el.timings.ssrToClientSent - el.timings.apiToSsrReceived}`
-//       el[el.url] = `${el.url},  ${el.timings.ssrToApiSentStr}, ${el.timings.apiToSsrReceivedStr}, ${el.timings.ssrToClientSentStr}\n`
-//       return acc += el[el.url]
-//     }, '')
-//     try {
-//       fs.ensureDir(path.resolve(__dirname, './logs/'));
-//       fs.writeFileSync(path.resolve(__dirname, './logs/logs.csv'), preparedLog, {flag: 'a'})
-//       log.length = 0
-//       console.log('logs been written', path.resolve(__dirname, './logs/logs.csv'))
-//     } catch (e) {
-//       console.error('Error during log writing', path.resolve(__dirname, './logs/logs.csv'))
-//     }
-//     // console.log(log)
-//   }
-// }, 10_000)
+const log: any = [];
+let interval: ReturnType<typeof setInterval>;
+if (process.env.ENABLE_LOGS === 'true') {
+  interval = setInterval(() => {
+    if (log.length > 0) {
+      fs.ensureDir(path.resolve(__dirname, './logs/'))
+      const preparedLog = log.reduce((acc: string, el: any) => {
+        el.timings.ssrToApiSentStr = `${el.timings.ssrToApiSent - el.timings.browserToSsrReceived}`
+        el.timings.apiToSsrReceivedStr = `${el.timings.apiToSsrReceived - el.timings.ssrToApiSent}`
+        el.timings.ssrToClientSentStr = `${el.timings.ssrToClientSent - el.timings.apiToSsrReceived}`
+        el[el.url] = `${el.url},  ${el.timings.ssrToApiSentStr}, ${el.timings.apiToSsrReceivedStr}, ${el.timings.ssrToClientSentStr}\n`
+        return acc += el[el.url]
+      }, '')
+      try {
+        fs.ensureDir(path.resolve(__dirname, './logs/'));
+        fs.writeFileSync(path.resolve(__dirname, './logs/logs.csv'), preparedLog, { flag: 'a' })
+        log.length = 0
+        console.log('logs been written', path.resolve(__dirname, './logs/logs.csv'))
+      } catch (e) {
+        console.error('Error during log writing', path.resolve(__dirname, './logs/logs.csv'))
+      }
+      // console.log(log)
+    }
+  }, 10_000)
+}
 
 const scssVars = `
 @use "sass:string";
@@ -257,9 +260,11 @@ const config: NuxtConfig = {
 
         // console.log(Object.keys(context.nuxt))
 
-        // if (context?.nuxt?.state?.timings) {
-        //   log.push({ url, timings: context.nuxt.state.timings })
-        // }
+        if (process.env.ENABLE_LOGS === 'true') {
+          if (context?.nuxt?.state?.timings) {
+            log.push({ url, timings: context.nuxt.state.timings })
+          }
+        }
 
       }
       // },
@@ -278,9 +283,12 @@ const config: NuxtConfig = {
     },
     build: {
       done() {
-        // clearInterval(interval);
-        // fs.ensureDir(path.resolve(__dirname, './logs/'));
-        // fs.writeFileSync(path.resolve(__dirname, './logs/logs.csv'), 'url, ssrToApiSent [+ms], apiToSsrReceived [+ms], ssrToClientSent [+ms] \n', { flag: 'w' })
+        if (process.env.ENABLE_LOGS === 'true') {
+
+          clearInterval(interval);
+          fs.ensureDir(path.resolve(__dirname, './logs/'));
+          fs.writeFileSync(path.resolve(__dirname, './logs/logs.csv'), 'url, ssrToApiSent [+ms], apiToSsrReceived [+ms], ssrToClientSent [+ms] \n', { flag: 'w' })
+        }
       }
     }
   },
