@@ -58,7 +58,7 @@
           <div class="spend__text">
             <h4 class="spend__tag">{{ item.tag }}</h4>
             <h2 class="spend__name">
-              <a :href="item.href" class="spend__link link spend__link--overlay">{{ item.title }}</a>
+              <a :href="item.href" class="spend__link link link_overlay">{{ item.title }}</a>
             </h2>
           </div>
         </article>
