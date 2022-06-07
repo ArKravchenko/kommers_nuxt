@@ -21,6 +21,7 @@ import CompanyNews from '~/components/MainPage/CompanyNews/CompanyNews.vue'
 
 import ArticleLongContent from '~/components/DocumentPage/ArticleLongContent/ArticleLongContent.vue'
 import ArticlePreview from '~/components/DocumentPage/ArticlePreview/ArticlePreview.vue'
+import {MetaInfo} from "vue-meta";
 
 
 @Component({
@@ -84,12 +85,25 @@ export default class DocumentPage extends Vue {
   }
 
   head() {
-    return this.getNoIndex ? {
-      meta: [
-        { hid: 'robots', name: 'robots', content: 'noindex' }
-      ]
-    } : {}
+    return this.headJson
+  }
 
+  get headJson(): MetaInfo  {
+    return {
+      title: this.getTitle
+        ? this.$extractText(this.getTitle)
+        : '',
+      meta: this.getNoIndex
+        ? [
+          { hid: 'robots', name: 'robots', content: 'noindex' }
+        ]
+        : []
+    }
+  }
+
+  get getTitle(){
+    return this.docPageData?.data?.title?.length
+      && this.docPageData.data.title
   }
 
   get getNoIndex() {

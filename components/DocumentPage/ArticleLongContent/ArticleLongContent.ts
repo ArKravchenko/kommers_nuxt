@@ -65,7 +65,7 @@ export default class ArticleLongContent extends Vue {
   }
 
   headJson: MetaInfo = {
-    title: this.getTitle ? this.$extractText(this.getTitle) : '',
+    // title: this.getTitle ? this.$extractText(this.getTitle) : '',
   }
 
   get getSharingHref(){
