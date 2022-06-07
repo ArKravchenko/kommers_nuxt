@@ -175,7 +175,18 @@ const config: NuxtConfig = {
     ],
     '@nuxtjs/style-resources',
     // 'nuxt-font-loader',
+    '@nuxtjs/google-analytics'
   ],
+
+  googleAnalytics: {
+    id: 'UA-230680117-1',
+    debug: {
+      enabled: false,
+      sendHitTask: true,
+      trace: true,
+    },
+
+  },
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [

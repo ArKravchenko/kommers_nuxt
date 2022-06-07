@@ -116,6 +116,58 @@ export default class DocumentPage extends Vue {
   // }
 
 
+  //TODO TEST LAZY LENTA
+  observer!: IntersectionObserver;
+
+  // visible: boolean = false;
+
+  lazyDocs: DocPageAPI.Endpoint_4[]=[]
+
+  lazyDocsIds = [
+    '5154649',
+    '5152798',
+    '5154572',
+    '5153056',
+    '5154638',
+  ]
+
+
+  async fetchLazyDoc(docId:string){
+    const docPageData: DocPageAPI.Endpoint_4
+      = await fetcher('docPageData', {
+      query: {
+        docId,
+      }
+    })
+      .then(res => {
+        if (res.ok) {
+          return res.json()
+        } else {
+          // ctx.error({
+          //   statusCode: res.status,
+          //   message: JSON.stringify({
+          //     url: res.url,
+          //     statusText: res.statusText,
+          //   }),
+          //
+          // })
+        }
+      })
+      .catch(err => {
+        // ctx.error({
+        //   statusCode: 404,
+        //   message: JSON.stringify(err)
+        // })
+      })
+
+    if(docPageData){
+      this.lazyDocs.push(docPageData)
+    } else {
+      this.lazyDocsIds.push(docId)
+    }
+    this.observer.observe(<Element>this.$refs.visibilityTarget);
+  }
+
   mounted() {
     // console.log(this.$route.meta)
     // if(this.$route.meta?.id){
@@ -124,6 +176,37 @@ export default class DocumentPage extends Vue {
     //   alert(this.$route.params.id)
     // }
     console.log('this.docPageData', this.docPageData)
+
+    let options = {
+      rootMargin: '400px',
+      threshold: 0
+    };
+
+    this.observer = new IntersectionObserver((entry,observer)=>{
+      entry.forEach(({ isIntersecting })=>{
+        if (isIntersecting){
+
+          // alert(nextDoc)
+          if (this.lazyDocs.length <= 4 && this.lazyDocsIds.length){
+            const nextDoc = this.lazyDocsIds.pop()
+            if (nextDoc && nextDoc !== this.$route.params.id){
+              this.fetchLazyDoc(nextDoc)
+            } else if (this.lazyDocsIds.length){
+              this.fetchLazyDoc(this.lazyDocsIds.pop()!)
+            }
+          }
+          observer.unobserve(<Element>this.$refs.visibilityTarget)
+        }
+      })
+    }, options);
+
+    this.observer.observe(<Element>this.$refs.visibilityTarget);
   }
+
+  beforeUnmount(){
+    this.observer.disconnect();
+  }
+
+  //TODO TEST LAZY LENTA END
 
 }
