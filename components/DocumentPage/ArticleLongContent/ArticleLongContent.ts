@@ -51,6 +51,15 @@ export default class ArticleLongContent extends Vue {
     // }
   }) articleLongContent!: ArticleLong.IArticleLong | null;
 
+  @Prop({
+    type: Boolean,
+    required: false,
+    default: false,
+    // validator(value: MainPageAPI.Endpoint_4): boolean {
+    //   return !!value.rates && !!value.items
+    // }
+  }) preview!: boolean;
+
   head(): MetaInfo {
     return this.headJson
   }

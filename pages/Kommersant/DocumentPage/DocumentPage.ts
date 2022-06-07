@@ -20,6 +20,7 @@ import CompanyNews from '~/components/MainPage/CompanyNews/CompanyNews.vue'
 
 
 import ArticleLongContent from '~/components/DocumentPage/ArticleLongContent/ArticleLongContent.vue'
+import ArticlePreview from '~/components/DocumentPage/ArticlePreview/ArticlePreview.vue'
 
 
 @Component({
@@ -28,6 +29,7 @@ import ArticleLongContent from '~/components/DocumentPage/ArticleLongContent/Art
     Promo,
     CompanyNews,
     ArticleLongContent,
+    ArticlePreview
     // Banner
   },
 })

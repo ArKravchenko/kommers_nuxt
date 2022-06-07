@@ -1,7 +1,7 @@
 <template>
 
 
-  <article class="doc">
+  <article :class="['doc',{'doc--preview':preview}]">
     <LazyHydrate never>
       <span>{{ Math.random() }} ArticleLongContent cache</span>
     </LazyHydrate>

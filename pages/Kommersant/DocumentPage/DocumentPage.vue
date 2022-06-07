@@ -46,13 +46,14 @@
     <!-- Блок 1 end -->
 
     <!-- Блок 2 -->
-    <div class="layout js-lenta-article" :key="lazyDocIndex" v-for="(lazyDoc,lazyDocIndex) in lazyDocs">
+    <div class="layout" :key="lazyDocIndex" v-for="(lazyDoc,lazyDocIndex) in lazyDocs">
       <div class="main grid">
         <div class="grid-col grid-col-s3">
           <!-- article long content  -->
-          <div class="lenta_top_doc">
-            <ArticleLongContent v-if="lazyDoc" :article-long-content="lazyDoc"/>
-          </div>
+          <ArticlePreview v-if="lazyDoc" :article-long-content="lazyDoc"/>
+<!--          <div class="lenta_top_doc">-->
+<!--            <ArticleLongContent v-if="lazyDoc" :article-long-content="lazyDoc"/>-->
+<!--          </div>-->
 
           <!-- 1.3. Бизнес-анонс 1 (платная публикация) 300Х300 -->
           <div class="hide_desktop">
@@ -60,7 +61,7 @@
           </div>
 
           <!-- 1.4. Блок вовлечения -- Картина дня -->
-          <div style="min-height: 150px;background-color: red">
+          <div style="min-height: 250px;background-color: red">
             Картина дня
             <% include inc/article/doc_picture_of_the_day.html %>
           </div>
