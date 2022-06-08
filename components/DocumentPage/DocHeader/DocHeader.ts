@@ -98,12 +98,14 @@ export default class DocHeader extends Vue {
     && isUpdate
       ? `${new Date(date).toLocaleTimeString('ru-ru',
       {
+        timeZone:'Europe/Moscow',
         hour: 'numeric',
         minute: 'numeric'
       })}`
       + (!this.getIsSameDay ?
         `, ${new Date(date).toLocaleDateString('ru-ru',
           {
+            timeZone:'Europe/Moscow',
             month: 'numeric',
             day: 'numeric',
           })}`
@@ -111,6 +113,7 @@ export default class DocHeader extends Vue {
       : date
       && new Date(date).toLocaleDateString('ru-ru',
         {
+          timeZone:'Europe/Moscow',
           year: 'numeric',
           month: 'numeric',
           day: 'numeric',
