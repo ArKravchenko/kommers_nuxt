@@ -31,6 +31,7 @@ COPY --from=source ${APP_ROOT}/config ${APP_ROOT}/config
 COPY --from=source ${APP_ROOT}/static ${APP_ROOT}/static
 COPY --from=source ${APP_ROOT}/.env ${APP_ROOT}/.env
 #COPY --from=source ${APP_ROOT}/ecosystem.config.json ${APP_ROOT}/ecosystem.config.json
+COPY --from=source ${APP_ROOT}/mockData ${APP_ROOT}/mockData
 COPY --from=source ${APP_ROOT}/nuxt.config.ts ${APP_ROOT}/nuxt.config.ts
 COPY --from=source ${APP_ROOT}/package.json ${APP_ROOT}/package.json
 COPY --from=source ${APP_ROOT}/modules ${APP_ROOT}/modules
