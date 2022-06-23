@@ -39,7 +39,7 @@ COPY --from=source ${APP_ROOT}/serverMiddleware ${APP_ROOT}/serverMiddleware
 ENV HOST=0.0.0.0
 RUN apk --no-cache add curl
 #HEALTHCHECK --interval=10s --timeout=10s --retries=5 --start-period=15s \
-#  CMD curl -f http://0.0.0.0:3333 || exit 1
+#  CMD curl -f http://0.0.0.0:3333/healthz || exit 1
 CMD ["yarn", "start"]
 
 
