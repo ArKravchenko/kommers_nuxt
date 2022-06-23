@@ -7,6 +7,9 @@ import type {NuxtConfig} from '@nuxt/types'
 import fs from 'fs-extra';
 import path from 'path';
 import pwaRuntimeCacheConfig from "./config/pwaRuntimeCacheConfig";
+import {docPageDataShort} from './mockData'
+
+const docPageDataShortString = JSON.stringify(docPageDataShort)
 
 const log: any = [];
 let interval: ReturnType<typeof setInterval>;
@@ -77,6 +80,9 @@ const config: NuxtConfig = {
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
+    htmlAttrs:{
+      lang: 'ru'
+    },
     title: 'kommersant_new',
     meta: [
       { charset: 'utf-8' },
@@ -120,6 +126,13 @@ const config: NuxtConfig = {
   serverMiddleware: [
     '@/serverMiddleware/timings.ts',
     // '@/serverMiddleware/headers.ts',
+    {
+      path: '/healthz',
+      handler: (req, res, next) => {
+        res.setHeader('Content-Type','application/json; charset=utf-8')
+        res.end(docPageDataShortString)
+      }
+    }
   ],
 
   // nuxt-font-loader config
