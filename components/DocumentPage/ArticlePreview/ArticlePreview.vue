@@ -2,8 +2,10 @@
 
   <div>
 <!--    <ArticleLongContent :preview="preview" :article-long-content="articleLongContent"/>-->
-    <ArticleLongContent v-if="docPageData && !getIsRawHtml" :preview="preview" :article-long-content="docPageData"/>
-    <ArticleLongContentRawHTML v-else-if="docPageData && getIsRawHtml" :preview="preview" :article-long-content="docPageData"/>
+    <template v-if="articleLongContent">
+      <ArticleLongContent v-if="!getIsRawHtml" :preview="preview" :article-long-content="articleLongContent"/>
+      <ArticleLongContentRawHTML v-else-if="getIsRawHtml" :preview="preview" :article-long-content="articleLongContent"/>
+    </template>
     <button v-if="preview"
             class="ui-button ui-button--standart doc_button"
             @click="showFullClickHandler"

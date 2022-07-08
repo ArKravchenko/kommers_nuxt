@@ -3,7 +3,7 @@
  <div>
    {{Math.random()}} ServiceMenu component cache
 
-   <input type="checkbox" class="hide js-toggle-input" id="archive_compact" checked>
+   <input type="checkbox" class="hide" id="archive_compact" checked>
 
    <div class="service_menu">
 
@@ -22,7 +22,7 @@
      </div>
      <div class="service_menu__item">
        <label class="ui-icon" for="archive_compact" @click="isServiceMenuOpenToggle">
-         <span class="icon_text js-toggle-item">
+         <span class="icon_text">
 				    {{ isServiceMenuOpen? 'Скрыть архив' : 'Архив' }}
          </span>
 

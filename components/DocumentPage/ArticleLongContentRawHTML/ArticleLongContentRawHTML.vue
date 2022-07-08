@@ -18,20 +18,19 @@
 
 <!--IMPORTANT!!!
     THIS PART should be never rerendered  as custom scripts could refer to containers in that code -->
-    <LazyHydrate never v-if="getIsRawHtml">
-      <div class="doc__body" v-if="$isServer" v-once>
+      <div class="doc__body">
         <div class="hide_mobile">
           <ArticleSharing :reading-time="getReadingTime" :sharing-href="getSharingHref"/>
         </div>
 
-        <template>
-          <div class="doc__body"
-               v-if="getRawHtml"
-               v-html="getRawHtml"/>
-        </template>
-
+        <LazyHydrate never v-if="getIsRawHtml">
+          <template v-if="getRawHtml">
+            <div v-if="$isServer" v-once
+                 class="doc__body"
+                 v-html="getRawHtml"/>
+          </template>
+        </LazyHydrate>
       </div>
-    </LazyHydrate>
 
     <!-- 1.2. ADV 600Х250 (в конце статьи, перед блоком подписок) -->
     <div class="adv_600x240 hide_mobile">
