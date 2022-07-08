@@ -49,7 +49,7 @@ const pageCacheConfig = {
     //   console.log('reason',reason);
     //   console.log('rest',rest);
     // }
-    stale: true,
+    // stale: true,
   },
 }
 

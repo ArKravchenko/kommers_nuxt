@@ -101,3 +101,5 @@ siege -f 1000-space.txt --no-parser -t 50s -v -b -c 10  -d 0
 
 /usr/local/var/www
 /usr/local/etc/nginx
+
+https://phoenixnap.com/kb/nfs-docker-volumes#:~:text=Volumes%20are%20existing%20directories%20on,NFS%20remote%20file%2Dsharing%20system.

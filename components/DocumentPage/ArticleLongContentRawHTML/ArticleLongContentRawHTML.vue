@@ -1,9 +1,9 @@
 <template>
 
 
-  <article :class="['doc',{'doc--preview':preview}]">
+  <article :class="['doc',{'doc--preview':preview}]" ref="scripts">
     <LazyHydrate never>
-      <span>{{ Math.random() }} ArticleLongContent cache</span>
+      <span>{{ Math.random() }} ArticleLongContentRawHtml no-cache</span>
     </LazyHydrate>
 
     <DocHeader
@@ -16,42 +16,22 @@
       :sharing-href="getSharingHref"
     />
 
-    <div class="doc__body" v-if="!getIsRawHtml">
-      <div class="hide_mobile">
-        <ArticleSharing :reading-time="getReadingTime" :sharing-href="getSharingHref"/>
-      </div>
+<!--IMPORTANT!!!
+    THIS PART should be never rerendered  as custom scripts could refer to containers in that code -->
+    <LazyHydrate never v-if="getIsRawHtml">
+      <div class="doc__body" v-if="$isServer" v-once>
+        <div class="hide_mobile">
+          <ArticleSharing :reading-time="getReadingTime" :sharing-href="getSharingHref"/>
+        </div>
 
-
-      <template v-if="getDocBodyElements">
-        <template v-for="(child, i) in getDocBodyElements">
-<!--          <div>-->
-          <ErrorBoundary :key="i">
-            <DocBodyElement :doc-body-element="child" :para-wrapper-tag="'p'"
-                            :para-wrapper-class="'doc__text'"/>
-          </ErrorBoundary>
-<!--          </div>-->
+        <template>
+          <div class="doc__body"
+               v-if="getRawHtml"
+               v-html="getRawHtml"/>
         </template>
-      </template>
 
-    </div>
-
-
-<!--&lt;!&ndash;IMPORTANT!!!-->
-<!--    THIS PART should be never rerendered  as custom scripts could refer to containers in that code &ndash;&gt;-->
-<!--    <LazyHydrate never v-else-if="getIsRawHtml">-->
-<!--      <div class="doc__body" v-if="$isServer" v-once>-->
-<!--        <div class="hide_mobile">-->
-<!--          <ArticleSharing :reading-time="getReadingTime" :sharing-href="getSharingHref"/>-->
-<!--        </div>-->
-
-<!--        <template>-->
-<!--          <div class="doc__body"-->
-<!--               v-if="getRawHtml"-->
-<!--               v-html="getRawHtml"/>-->
-<!--        </template>-->
-
-<!--      </div>-->
-<!--    </LazyHydrate>-->
+      </div>
+    </LazyHydrate>
 
     <!-- 1.2. ADV 600Х250 (в конце статьи, перед блоком подписок) -->
     <div class="adv_600x240 hide_mobile">
@@ -94,7 +74,7 @@
 
 </template>
 
-<script src="./ArticleLongContent.ts" lang="ts"></script>
-<style src="./ArticleLongContent.scss" lang="scss"></style>
+<script src="./ArticleLongContentRawHTML.ts" lang="ts"></script>
+<style src="../ArticleLongContent/ArticleLongContent.scss" lang="scss"></style>
 
 

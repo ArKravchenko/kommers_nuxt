@@ -2,7 +2,7 @@ import {Component, Mutation, Prop, Vue} from 'nuxt-property-decorator'
 import type {ArticleLong} from "~/interfaces/API/MainPageApi";
 
 // import Vote from '@/components/MainPage/Vote/Vote.vue'
-import DocBodyElement from '@/components/DocumentPage/DocBodyElement/DocBodyElement.vue'
+// import DocBodyElement from '@/components/DocumentPage/DocBodyElement/DocBodyElement.vue'
 import DocHeader from '@/components/DocumentPage/DocHeader/DocHeader.vue';
 import DocFooter from '@/components/DocumentPage/DocFooter/DocFooter.vue';
 import ArticleSharing from '@/components/DocumentPage/ArticleSharing/ArticleSharing.vue';
@@ -22,14 +22,14 @@ import LazyHydrate from "vue-lazy-hydration";
 // TODO crumbs выводить и на разводящей и в доке в одном формате
 @Component({
   //@ts-ignore
-  serverCacheKey(a:any) {
-    // console.log(Object.keys(a.articleLongContent))
-    return a.articleLongContent?.dataHash ? a.articleLongContent.dataHash : JSON.stringify(a)
-  },
+  // serverCacheKey(a:any) {
+  //   // console.log(Object.keys(a.articleLongContent))
+  //   return a.articleLongContent?.dataHash ? a.articleLongContent.dataHash : JSON.stringify(a)
+  // },
 
   components:{
     // Vote,
-    DocBodyElement,
+    // DocBodyElement,
     DocHeader,
     DocFooter,
     ArticleSharing,
@@ -38,7 +38,7 @@ import LazyHydrate from "vue-lazy-hydration";
     LazyHydrate
   }
 })
-export default class ArticleLongContent extends Vue {
+export default class ArticleLongContentRawHTML extends Vue {
   @Mutation('injectHeadModule/injectScriptsString') injectScriptsString!: (scriptsString: string) => void
   @Mutation('injectHeadModule/injectStylesString') injectStylesString!: (stylesString: string) => void
 
@@ -169,12 +169,12 @@ export default class ArticleLongContent extends Vue {
       && this.articleLongContent.data.footer
   }
 
-  get getDocBodyElements(){
-    return this.articleLongContent?.data?.content
-      && !this.articleLongContent?.data?.content.isHtml
-      && this.articleLongContent?.data?.content.docBodyElements?.length
-      && this.articleLongContent.data.content.docBodyElements
-  }
+  // get getDocBodyElements(){
+  //   return this.articleLongContent?.data?.content
+  //     && !this.articleLongContent?.data?.content.isHtml
+  //     && this.articleLongContent?.data?.content.docBodyElements?.length
+  //     && this.articleLongContent.data.content.docBodyElements
+  // }
 
   get getIsRawHtml(){
     return this.articleLongContent?.data?.content
@@ -194,27 +194,27 @@ export default class ArticleLongContent extends Vue {
      * vue-renderer:SSR:templateParams NUXT HOOK AND STORE injectHeadModule
      * TO INJECT CUSTOM STYLES AND SCRIPTS STRINGS FROM THE ADMIN PANEL INTO A DOCUMENT
      */
-    // if(this.$isServer){
-    //   this.getIsRawHtml
-    //   && this.injectScriptsString(`
-    //     <script src="//im.kommersant.ru/ContentFlex/Redesign2020/kom2021.commonJS.js?2204291421064306"></script>
-    //     <script>
-    //       kommersant.antiCache.jsMark = '//im.kommersant.ru/ContentFlex/js/jquery.mark.min.js?2109231134459908';
-    //       kommersant.antiCache.jsJqueryValidate = '//im.kommersant.ru/ContentFlex/js/jquery.validate.min.js?2109231134459908';
-    //       kommersant.antiCache.jsNanoScroller = '//im.kommersant.ru/ContentFlex/js/jquery.nanoscroller.min.js?2109231134459908';
-    //       kommersant.antiCache.jsScrollMagic = '//im.kommersant.ru/ContentFlex/js/scrollmagic/ScrollMagic.min.js?2109231134459908';
-    //       kommersant.antiCache.jsHighmapsCisDisputed = '//im.kommersant.ru/ContentFlex/js/highmaps/cis-disputed.js?2109231134459908';
-    //       kommersant.antiCache.jsCharts = '//im.kommersant.ru/ContentFlex/js/charts.new2021.js?2202141653190991';
-    //       kommersant.antiCache.jsWidgets = '//im.kommersant.ru/ContentFlex/js/widgets.new2021.js?2201111747301991';
-    //       kommersant.antiCache.jsHighmapsWorldDisputed = '//im.kommersant.ru/ContentFlex/js/highmaps/world-disputed.js?2109231134459908';
-    //     </script>
-    //     <script src="//im.kommersant.ru/ContentFlex/Redesign2020/kom2021.article.js?2204291421064306"></script>
-    //     <script async src="//im.kommersant.ru/ContentFlex/Redesign2020/kom2021.commonAsyncJS.js?2204291421064306"></script>`)
-    //   this.getScripts
-    //   && this.injectScriptsString(`<script>${this.getScripts}</script>`)
-    //   this.getStyles
-    //   && this.injectStylesString(`<style>${this.getStyles}</style>`)
-    // }
+    if(this.$isServer){
+      this.getIsRawHtml
+      && this.injectScriptsString(`
+        <script src="//im.kommersant.ru/ContentFlex/Redesign2020/kom2021.commonJS.js?2204291421064306"></script>
+        <script>
+          kommersant.antiCache.jsMark = '//im.kommersant.ru/ContentFlex/js/jquery.mark.min.js?2109231134459908';
+          kommersant.antiCache.jsJqueryValidate = '//im.kommersant.ru/ContentFlex/js/jquery.validate.min.js?2109231134459908';
+          kommersant.antiCache.jsNanoScroller = '//im.kommersant.ru/ContentFlex/js/jquery.nanoscroller.min.js?2109231134459908';
+          kommersant.antiCache.jsScrollMagic = '//im.kommersant.ru/ContentFlex/js/scrollmagic/ScrollMagic.min.js?2109231134459908';
+          kommersant.antiCache.jsHighmapsCisDisputed = '//im.kommersant.ru/ContentFlex/js/highmaps/cis-disputed.js?2109231134459908';
+          kommersant.antiCache.jsCharts = '//im.kommersant.ru/ContentFlex/js/charts.new2021.js?2202141653190991';
+          kommersant.antiCache.jsWidgets = '//im.kommersant.ru/ContentFlex/js/widgets.new2021.js?2201111747301991';
+          kommersant.antiCache.jsHighmapsWorldDisputed = '//im.kommersant.ru/ContentFlex/js/highmaps/world-disputed.js?2109231134459908';
+        </script>
+        <script defer src="//im.kommersant.ru/ContentFlex/Redesign2020/kom2021.article.js?2204291421064306"></script>
+        <script defer src="//im.kommersant.ru/ContentFlex/Redesign2020/kom2021.commonAsyncJS.js?2204291421064306"></script>`)
+      this.getScripts
+      && this.injectScriptsString(`<script>${this.getScripts}</script>`)
+      this.getStyles
+      && this.injectStylesString(`<style>${this.getStyles}</style>`)
+    }
   }
 
   mounted(){

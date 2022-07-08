@@ -1,12 +1,14 @@
 import {Component, Prop, Vue} from 'nuxt-property-decorator'
 import type {ArticleLong} from "~/interfaces/API/MainPageApi";
 
-import ArticleLongContent from '~/components/DocumentPage/ArticleLongContent/ArticleLongContent.vue'
+import ArticleLongContent from '~/components/DocumentPage/ArticleLongContent/ArticleLongContent.vue';
+import ArticleLongContentRawHTML from '~/components/DocumentPage/ArticleLongContentRawHTML/ArticleLongContentRawHTML.vue';
 
 
 @Component({
   components: {
-    ArticleLongContent
+    ArticleLongContent,
+    ArticleLongContentRawHTML
   }
 })
 export default class ArticlePreview extends Vue {
@@ -19,7 +21,12 @@ export default class ArticlePreview extends Vue {
     // }
   }) articleLongContent!: ArticleLong.IArticleLong | null;
 
-  preview: boolean = true
+  preview: boolean = true;
+
+  get getIsRawHtml(){
+    return this.articleLongContent?.data?.content
+      && this.articleLongContent.data.content.isHtml
+  }
 
   showFullClickHandler() {
     this.preview = false

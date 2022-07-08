@@ -18,10 +18,15 @@ import CompanyNews from '~/components/MainPage/CompanyNews/CompanyNews.vue'
 //   /* webpackMode: "eager" */
 //   "@/components/general/Banner/Banner.vue");
 
+import ArticleLongContent from '~/components/DocumentPage/ArticleLongContent/ArticleLongContent.vue';
+import ArticleLongContentRawHTML from '~/components/DocumentPage/ArticleLongContentRawHTML/ArticleLongContentRawHTML.vue';
 
-import ArticleLongContent from '~/components/DocumentPage/ArticleLongContent/ArticleLongContent.vue'
-import ArticlePreview from '~/components/DocumentPage/ArticlePreview/ArticlePreview.vue'
-import {MetaInfo} from "vue-meta";
+const ArticlePreview = () => import(
+  /* webpackChunkName: "ArticlePreview." */
+  /* webpackMode: "lazy" */
+  '~/components/DocumentPage/ArticlePreview/ArticlePreview.vue');
+// import ArticlePreview from '~/components/DocumentPage/ArticlePreview/ArticlePreview.vue'
+import type {MetaInfo} from "vue-meta";
 
 
 @Component({
@@ -30,6 +35,7 @@ import {MetaInfo} from "vue-meta";
     Promo,
     CompanyNews,
     ArticleLongContent,
+    ArticleLongContentRawHTML,
     ArticlePreview
     // Banner
   },
@@ -86,6 +92,11 @@ export default class DocumentPage extends Vue {
 
   head() {
     return this.headJson
+  }
+
+  get getIsRawHtml(){
+    return this.docPageData?.data?.content?.isHtml
+    && this.docPageData?.data?.content?.htmlContent?.rawHtml
   }
 
   get headJson(): MetaInfo  {

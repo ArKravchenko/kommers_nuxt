@@ -10,7 +10,10 @@
         <div class="grid-col grid-col-s3">
           <!-- article long content  -->
           <div class="lenta_top_doc">
-            <ArticleLongContent v-if="docPageData" :article-long-content="docPageData"/>
+            <template v-if="docPageData">
+              <ArticleLongContent v-if="!getIsRawHtml" :article-long-content="docPageData"/>
+              <ArticleLongContentRawHTML v-else-if="getIsRawHtml" :article-long-content="docPageData"/>
+            </template>
           </div>
 
           <!-- 1.3. Бизнес-анонс 1 (платная публикация) 300Х300 -->
