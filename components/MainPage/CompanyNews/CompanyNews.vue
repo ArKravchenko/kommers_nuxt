@@ -24,6 +24,7 @@
                 class="ba__name ba__name--black">
               <a v-if="getItemHref(item)"
                  :href="getItemHref(item)"
+                 v-bind="getItemHrefTarget(item)"
                  class="link">
                 {{ getItemTitle(item) }}
               </a>
@@ -35,6 +36,7 @@
                 class="ba__subtitle ba__subtitle--black">
               <a v-if="getItemHref(item)"
                  :href="getItemHref(item)"
+                 v-bind="getItemHrefTarget(item)"
                  class="link link_overlay">
                 {{ getItemSubtitle(item) }}
               </a>

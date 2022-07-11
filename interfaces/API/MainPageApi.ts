@@ -356,6 +356,7 @@ export namespace CompanyNews {
     title: string;
     subtitle: string;
     href: string;
+    external: boolean,
     pubDate: Date;
   }
 

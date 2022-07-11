@@ -60,6 +60,11 @@ export default class CompanyNews extends Vue {
       && item.href
   }
 
+  getItemHrefTarget(item: ICompanyNews.NewsItem) {
+    return item.external
+      && { target: '_blanc'}
+  }
+
   formatDate(date: Date) {
     return new Date(date).toLocaleDateString('ru-ru',
       {
