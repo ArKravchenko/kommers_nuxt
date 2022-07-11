@@ -7,7 +7,9 @@ export function fetcher(requiredData: string, params?: { query: { [key: string]:
     listPageWidgets: '/list_page/Endpoint_4',
     listPageDocs: '/list_page/Endpoint_6',
     docPageData: '/doc_page/Endpoint_4',
-    companyNews: '/main_page/Endpoint_7'
+    companyNews: '/main_page/Endpoint_7',
+    spendGalleryTopData: '/main_page/Endpoint_5',
+    spendGalleryBottomData: '/main_page/Endpoint_6'
   }
 
   let queryString = ''

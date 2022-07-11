@@ -21,11 +21,17 @@
         <div class="grid-col grid-col-m">
           <article class="uho">
             <div class="uho__photo">
-              <img class="uho__img"
-                   :data-src="cdnUrl+getFirst.img.src"
-                   v-lazytest
-                   :src="$imgPlaceholder"
-                   alt="">
+<!--              <img class="uho__img"-->
+<!--                   :data-src="cdnUrl+getFirst.img.src"-->
+<!--                   v-lazytest-->
+<!--                   :src="$imgPlaceholder"-->
+<!--                   alt="">-->
+              <Picture
+                :img-class="'uho__img'"
+                :src="getFirst.img.src"
+                :alt="getFirst.img.alt"
+                :noscript-string="getFirstImgNoscriptString"
+              />
 <!--              <component v-if="$isServer" is="noscript">-->
 <!--                <img class="uho__img"-->
 <!--                     :src="cdnUrl+getFirst.img.src"-->
@@ -64,6 +70,6 @@
 </template>
 
 <script src="./Rubric.ts" lang="ts"></script>
-<style src="./Rubric.scss" lang="scss" scoped></style>
+<style src="./Rubric.scss" lang="scss"></style>
 
 

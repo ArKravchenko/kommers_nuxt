@@ -1,6 +1,10 @@
 import {Component, Vue} from 'nuxt-property-decorator'
 import type {Context} from "@nuxt/types";
-import type {MainPageAPI, CompanyNews as ICompanyNews} from "~/interfaces/API/MainPageApi";
+import type {
+  MainPageAPI,
+  CompanyNews as ICompanyNews,
+  PromoGalleryTop,
+} from "~/interfaces/API/MainPageApi";
 // import type {AsyncComponent} from 'vue'
 import {fetcher} from "~/helpers/fetcher";
 // import {ArticleLong} from "~/interfaces/API/MainPageApi";
@@ -61,6 +65,8 @@ import Multimedia from '~/components/MainPage/Multimedia/MultimediaSwiperTest/Mu
 export default class MainPage extends Vue {
   mainPageWidgets: MainPageAPI.Endpoint_4 | null = null;
   companyNewsData: ICompanyNews.ICompanyNews | null = null;
+  spendGalleryTopData: PromoGalleryTop.PromoDoc | null = null;
+  spendGalleryBottomData: PromoGalleryTop.PromoDoc | null = null;
 
   async asyncData(ctx: Context) {
 
@@ -99,12 +105,26 @@ export default class MainPage extends Vue {
       .then(handleRes)
       .catch(errorCatch404)
 
+    const spendGalleryTopDataPromise: Promise<PromoGalleryTop.IPromoGallery>
+      = fetcher('spendGalleryTopData')
+      .then(handleRes)
+      .catch(errorCatch404)
+
+    const spendGalleryBottomDataPromise: Promise<PromoGalleryTop.IPromoGallery>
+      = fetcher('spendGalleryBottomData')
+      .then(handleRes)
+      .catch(errorCatch404)
+
     const [
       mainPageWidgets,
-      companyNewsData
+      companyNewsData,
+      spendGalleryTopData,
+      spendGalleryBottomData
     ] = await Promise.all([
       mainPageWidgetsPromise,
-      companyNewsDataPromise
+      companyNewsDataPromise,
+      spendGalleryTopDataPromise,
+      spendGalleryBottomDataPromise
     ])
 
     if (process.server) {
@@ -113,7 +133,9 @@ export default class MainPage extends Vue {
 
     return {
       mainPageWidgets,
-      companyNewsData
+      companyNewsData,
+      spendGalleryTopData,
+      spendGalleryBottomData
     }
   }
 

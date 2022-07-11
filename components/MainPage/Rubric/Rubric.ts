@@ -31,6 +31,13 @@ export default class Rubric extends Vue {
     return this.rubricData?.docs.slice(1)
   }
 
+  get getFirstImgNoscriptString(){
+    return `
+    <img class="uho__img fallback_image"
+    src="${this.getFirst?.img.src}"
+    alt="${this.getFirst?.img.alt}">`
+  }
+
   mounted(){
      // console.log('this.rubricData',this.rubricData)
   }

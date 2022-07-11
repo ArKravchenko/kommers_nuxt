@@ -332,9 +332,10 @@ export namespace PromoGalleryTop {
     tag: string;
     href: string;
     img: ImageSimple;
+    isSelfLink:boolean;
   }
 
-  interface IPromoGallery {
+  export interface IPromoGallery {
     data: {
       items: PromoDoc[]
     }

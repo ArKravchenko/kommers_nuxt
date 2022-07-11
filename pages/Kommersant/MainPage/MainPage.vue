@@ -126,10 +126,10 @@
       </div>
     </div>
 
-    <div class="layout">
+    <div class="layout" v-if="spendGalleryTopData">
       <div class="main">
         <!-- Квадратные управляемые анонсы -->
-        <SpendGallery :spend-gallery-data="{}"/>
+        <SpendGallery :spend-gallery-data="spendGalleryTopData"/>
       </div>
     </div>
 
@@ -161,7 +161,7 @@
       </div>
     </div>
 
-    <div class="layout hide_mobile">
+    <div class="layout hide_mobile" v-if="companyNewsData">
       <CompanyNews :company-news-data="companyNewsData"/>
     </div>
 
@@ -174,7 +174,7 @@
             <Rubric :rubric-data="rubric"/>
           </template>
 
-          <div class="hide_desktop">
+          <div class="hide_desktop" v-if="companyNewsData">
             <CompanyNews :company-news-data="companyNewsData"/>
           </div>
 
@@ -217,10 +217,10 @@
       </div>
     </div>
 
-    <div class="layout">
+    <div class="layout" v-if="spendGalleryBottomData">
       <div class="main">
         <!-- Квадратные управляемые анонсы -->
-        <SpendGallery :spend-gallery-data="{}"/>
+        <SpendGallery :spend-gallery-data="spendGalleryBottomData"/>
       </div>
     </div>
 
