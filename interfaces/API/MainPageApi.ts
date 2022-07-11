@@ -336,6 +336,7 @@ export namespace PromoGalleryTop {
   }
 
   export interface IPromoGallery {
+    dataHash: string;
     data: {
       items: PromoDoc[]
     }
