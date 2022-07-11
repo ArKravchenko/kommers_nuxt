@@ -1,6 +1,6 @@
 import {Component, Vue} from 'nuxt-property-decorator'
 import type {Context} from "@nuxt/types";
-import type {DocPageAPI} from "~/interfaces/API/MainPageApi";
+import type {DocPageAPI, CompanyNews as ICompanyNews} from "~/interfaces/API/MainPageApi";
 // import type {AsyncComponent} from 'vue'
 import {fetcher} from "~/helpers/fetcher";
 // import {ArticleLong} from "~/interfaces/API/MainPageApi";
@@ -42,6 +42,7 @@ import type {MetaInfo} from "vue-meta";
 })
 export default class DocumentPage extends Vue {
   docPageData: DocPageAPI.Endpoint_4 | null = null;
+  companyNewsData: ICompanyNews.ICompanyNews | null = null;
 
 
   async asyncData(ctx: Context) {
@@ -54,32 +55,48 @@ export default class DocumentPage extends Vue {
       ctx.store.commit('setSsrToApiSent', Date.now())
     }
 
-    const docPageData: DocPageAPI.Endpoint_4
-      = await fetcher('docPageData', {
+    const errorCatch404 = (err:Error) => {
+      ctx.error({
+        statusCode: 404,
+        message: JSON.stringify(err)
+      })
+    }
+
+    const handleRes = (res:Response) => {
+      if (res.ok) {
+        return res.json()
+      } else {
+        ctx.error({
+          statusCode: res.status,
+          message: JSON.stringify({
+            url: res.url,
+            statusText: res.statusText,
+          }),
+        })
+      }
+    }
+
+    const docPageDataPromise: Promise<DocPageAPI.Endpoint_4>
+      = fetcher('docPageData', {
       query: {
         docId,
       }
     })
-      .then(res => {
-        if (res.ok) {
-          return res.json()
-        } else {
-          ctx.error({
-            statusCode: res.status,
-            message: JSON.stringify({
-              url: res.url,
-              statusText: res.statusText,
-            }),
+      .then(handleRes)
+      .catch(errorCatch404)
 
-          })
-        }
-      })
-      .catch(err => {
-        ctx.error({
-          statusCode: 404,
-          message: JSON.stringify(err)
-        })
-      })
+    const companyNewsDataPromise: Promise<ICompanyNews.ICompanyNews>
+      = fetcher('companyNews')
+      .then(handleRes)
+      .catch(errorCatch404)
+
+    const [
+      docPageData,
+      companyNewsData,
+    ] = await Promise.all([
+      docPageDataPromise,
+      companyNewsDataPromise,
+    ])
 
 
     if (process.server) {
@@ -87,6 +104,7 @@ export default class DocumentPage extends Vue {
     }
     return {
       docPageData,
+      companyNewsData,
     }
   }
 

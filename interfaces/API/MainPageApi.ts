@@ -360,6 +360,7 @@ export namespace CompanyNews {
   }
 
   export interface ICompanyNews {
+    dataHash: string,
     data: {
       title: string;
       href: string;

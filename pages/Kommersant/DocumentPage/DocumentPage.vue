@@ -94,7 +94,7 @@
     <!-- Новости компаний -->
     <div class="layout">
       <div class="lenta_ba">
-        <CompanyNews :company-news-data="{}"/>
+        <CompanyNews :company-news-data="companyNewsData"/>
       </div>
     </div>
     <!-- Новости компаний end-->

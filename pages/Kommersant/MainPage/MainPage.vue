@@ -162,7 +162,7 @@
     </div>
 
     <div class="layout hide_mobile">
-      <CompanyNews :company-news-data="{}"/>
+      <CompanyNews :company-news-data="companyNewsData"/>
     </div>
 
     <div class="layout">
@@ -175,7 +175,7 @@
           </template>
 
           <div class="hide_desktop">
-            <CompanyNews :company-news-data="{}"/>
+            <CompanyNews :company-news-data="companyNewsData"/>
           </div>
 
           <template v-if="getRubrics && index >=9 && index < 11"

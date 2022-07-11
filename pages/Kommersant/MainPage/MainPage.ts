@@ -1,6 +1,6 @@
 import {Component, Vue} from 'nuxt-property-decorator'
 import type {Context} from "@nuxt/types";
-import type {MainPageAPI} from "~/interfaces/API/MainPageApi";
+import type {MainPageAPI, CompanyNews as ICompanyNews} from "~/interfaces/API/MainPageApi";
 // import type {AsyncComponent} from 'vue'
 import {fetcher} from "~/helpers/fetcher";
 // import {ArticleLong} from "~/interfaces/API/MainPageApi";
@@ -60,6 +60,7 @@ import Multimedia from '~/components/MainPage/Multimedia/MultimediaSwiperTest/Mu
 })
 export default class MainPage extends Vue {
   mainPageWidgets: MainPageAPI.Endpoint_4 | null = null;
+  companyNewsData: ICompanyNews.ICompanyNews | null = null;
 
   async asyncData(ctx: Context) {
 
@@ -67,28 +68,44 @@ export default class MainPage extends Vue {
       ctx.store.commit('setSsrToApiSent', Date.now())
     }
 
-    const mainPageWidgets: MainPageAPI.Endpoint_4 =
-      await fetcher('mainPageWidgets')
-        .then(res => {
-          if (res.ok) {
-            return res.json()
-          } else {
-            ctx.error({
-              statusCode: res.status,
-              message: JSON.stringify({
-                url: res.url,
-                statusText: res.statusText,
-              }),
+    const errorCatch404 = (err:Error) => {
+      ctx.error({
+        statusCode: 404,
+        message: JSON.stringify(err)
+      })
+    }
 
-            })
-          }
+    const handleRes = (res:Response) => {
+      if (res.ok) {
+        return res.json()
+      } else {
+        ctx.error({
+          statusCode: res.status,
+          message: JSON.stringify({
+            url: res.url,
+            statusText: res.statusText,
+          }),
         })
-        .catch(err => {
-          ctx.error({
-            statusCode: 404,
-            message: JSON.stringify(err)
-          })
-        })
+      }
+    }
+
+    const mainPageWidgetsPromise: Promise<MainPageAPI.Endpoint_4> =
+       fetcher('mainPageWidgets')
+        .then(handleRes)
+        .catch(errorCatch404)
+
+    const companyNewsDataPromise: Promise<ICompanyNews.ICompanyNews>
+      = fetcher('companyNews')
+      .then(handleRes)
+      .catch(errorCatch404)
+
+    const [
+      mainPageWidgets,
+      companyNewsData
+    ] = await Promise.all([
+      mainPageWidgetsPromise,
+      companyNewsDataPromise
+    ])
 
     if (process.server) {
       ctx.store.commit('setApiToSsrReceived', Date.now())
@@ -96,6 +113,7 @@ export default class MainPage extends Vue {
 
     return {
       mainPageWidgets,
+      companyNewsData
     }
   }
 

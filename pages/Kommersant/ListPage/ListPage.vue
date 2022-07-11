@@ -188,7 +188,7 @@
 
     <div class="layout">
       <!-- новости компаний -->
-      <CompanyNews :company-news-data="{}"/>
+      <CompanyNews :company-news-data="companyNewsData"/>
 
       <div class="adv_layer adv_300x250 hide_desktop">
           <div style="width: 300px; height: 250px;background-color: grey">300x250</div>

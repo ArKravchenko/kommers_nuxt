@@ -1,6 +1,6 @@
 import {Component, Vue} from 'nuxt-property-decorator'
 import type {Context} from "@nuxt/types";
-import type {ListPageAPI} from "~/interfaces/API/MainPageApi";
+import type {ListPageAPI, CompanyNews as ICompanyNews} from "~/interfaces/API/MainPageApi";
 // import type {AsyncComponent} from 'vue'
 import {fetcher} from "~/helpers/fetcher";
 // import {ArticleLong} from "~/interfaces/API/MainPageApi";
@@ -39,6 +39,7 @@ import ListPageDocs from '~/components/ListPage/ListPageDocs/ListPageDocs.vue'
 export default class ListPage extends Vue {
   listPageWidgets: ListPageAPI.Endpoint_4 | null = null;
   listPageDocs: ListPageAPI.Endpoint_6 | null = null;
+  companyNewsData: ICompanyNews.ICompanyNews | null = null;
 
 
   async asyncData(ctx: Context) {
@@ -54,32 +55,35 @@ export default class ListPage extends Vue {
       ctx.store.commit('setSsrToApiSent', Date.now())
     }
 
+    const errorCatch404 = (err: Error) => {
+      ctx.error({
+        statusCode: 404,
+        message: JSON.stringify(err)
+      })
+    }
+
+    const handleRes = (res: Response) => {
+      if (res.ok) {
+        return res.json()
+      } else {
+        ctx.error({
+          statusCode: res.status,
+          message: JSON.stringify({
+            url: res.url,
+            statusText: res.statusText,
+          }),
+        })
+      }
+    }
+
     const listPageWidgetsPromise: Promise<ListPageAPI.Endpoint_4>
       = fetcher('listPageWidgets', {
       query: {
         tagId,
       }
     })
-      .then(res => {
-        if (res.ok) {
-          return res.json()
-        } else {
-          ctx.error({
-            statusCode: res.status,
-            message: JSON.stringify({
-              url: res.url,
-              statusText: res.statusText,
-            }),
-
-          })
-        }
-      })
-      .catch(err => {
-        ctx.error({
-          statusCode: 404,
-          message: JSON.stringify(err)
-        })
-      })
+      .then(handleRes)
+      .catch(errorCatch404)
 
 
     const listPageDocsPromise: Promise<ListPageAPI.Endpoint_6>
@@ -89,31 +93,19 @@ export default class ListPage extends Vue {
         count: 20
       }
     })
-      .then(res => {
-        if (res.ok) {
-          return res.json()
-        } else {
-          ctx.error({
-            statusCode: res.status,
-            message: JSON.stringify({
-              url: res.url,
-              statusText: res.statusText,
-            }),
+      .then(handleRes)
+      .catch(errorCatch404)
 
-          })
-        }
-      })
-      .catch(err => {
-        ctx.error({
-          statusCode: 404,
-          message: JSON.stringify(err)
-        })
-      })
+    const companyNewsDataPromise: Promise<ICompanyNews.ICompanyNews>
+      = fetcher('companyNews')
+      .then(handleRes)
+      .catch(errorCatch404)
 
     const [
       listPageWidgets,
-      listPageDocs
-    ] = await Promise.all([listPageWidgetsPromise, listPageDocsPromise])
+      listPageDocs,
+      companyNewsData
+    ] = await Promise.all([listPageWidgetsPromise, listPageDocsPromise, companyNewsDataPromise])
 
     if (process.server) {
       ctx.store.commit('setApiToSsrReceived', Date.now())
@@ -121,6 +113,7 @@ export default class ListPage extends Vue {
     return {
       listPageWidgets,
       listPageDocs,
+      companyNewsData
     }
   }
 
