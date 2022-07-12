@@ -64,9 +64,7 @@ export default class ArticleLongContent extends Vue {
     return this.headJson
   }
 
-  headJson: MetaInfo = {
-    // title: this.getTitle ? this.$extractText(this.getTitle) : '',
-  }
+  headJson: MetaInfo = {}
 
   get getSharingHref(){
     return this.articleLongContent?.data?.docId
@@ -144,6 +142,17 @@ export default class ArticleLongContent extends Vue {
     && this.articleLongContent.data.title
   }
 
+  get getTitleString(){
+    return this.getTitle
+      ? this.$extractText(this.getTitle)
+      : ''
+  }
+
+  get getDocId(){
+    return this.articleLongContent?.data?.docId
+      && this.articleLongContent.data.docId.toString() || ''
+  }
+
   get getSubtitle(){
     return this.articleLongContent?.data?.subtitle?.length
       && this.articleLongContent.data.subtitle
@@ -216,6 +225,8 @@ export default class ArticleLongContent extends Vue {
     //   && this.injectStylesString(`<style>${this.getStyles}</style>`)
     // }
   }
+
+  observer!: IntersectionObserver;
 
   mounted(){
     // if (this.getIsRawHtml){
@@ -293,9 +304,29 @@ export default class ArticleLongContent extends Vue {
     //   }
     // })
 
-
-
     // console.log('this.articleLongContent',this.articleLongContent)
+
+    // Обсервер для замены урла
+    let options = {
+      rootMargin: '0px',
+      threshold: 0.2
+    };
+    this.observer = new IntersectionObserver((entry,observer)=>{
+      entry.forEach(({ isIntersecting })=>{
+        if (isIntersecting){
+          if (!window.location.pathname.includes(`/doc/${this.getDocId}`)){
+            window.history.replaceState(null, this.getTitleString, `/doc/${this.getDocId}`);
+            document.title = this.getTitleString;
+          }
+        }
+      })
+    }, options);
+
+    this.observer.observe(<Element>this.$el);
+  }
+
+  beforeUnmount(){
+    this.observer.disconnect();
   }
 
 

@@ -43,6 +43,7 @@ import type {MetaInfo} from "vue-meta";
 export default class DocumentPage extends Vue {
   docPageData: DocPageAPI.Endpoint_4 | null = null;
   companyNewsData: ICompanyNews.ICompanyNews | null = null;
+  lazyDocsIds: DocPageAPI.LazyLoadIds = [];
 
 
   async asyncData(ctx: Context) {
@@ -50,6 +51,10 @@ export default class DocumentPage extends Vue {
 
     const docId = ctx.route.params.id
     // console.log(ctx.route.params.id)
+    // TagType тип тега.
+    // 3 - регион
+    // 4 - паблишинг
+    const tagType = 3
 
     if (process.server) {
       ctx.store.commit('setSsrToApiSent', Date.now())
@@ -98,6 +103,18 @@ export default class DocumentPage extends Vue {
       companyNewsDataPromise,
     ])
 
+    const region = docPageData?.data?.regionId
+
+    const lazyDocsIds: ICompanyNews.ICompanyNews
+      = await fetcher('lazyDocsIds', {
+      query: {
+        id: region,
+        type: tagType
+      }
+    })
+      .then(handleRes)
+      .catch(errorCatch404)
+
 
     if (process.server) {
       ctx.store.commit('setApiToSsrReceived', Date.now())
@@ -105,6 +122,7 @@ export default class DocumentPage extends Vue {
     return {
       docPageData,
       companyNewsData,
+      lazyDocsIds
     }
   }
 
@@ -168,16 +186,9 @@ export default class DocumentPage extends Vue {
 
   lazyDocs: DocPageAPI.Endpoint_4[]=[]
 
-  lazyDocsIds = [
-    '5154649',
-    '5152798',
-    '5154572',
-    '5153056',
-    '5154638',
-  ]
 
-
-  async fetchLazyDoc(docId:string){
+  async fetchLazyDoc(docId: number | undefined) {
+    if(!docId) return
     const docPageData: DocPageAPI.Endpoint_4
       = await fetcher('docPageData', {
       query: {
@@ -188,21 +199,11 @@ export default class DocumentPage extends Vue {
         if (res.ok) {
           return res.json()
         } else {
-          // ctx.error({
-          //   statusCode: res.status,
-          //   message: JSON.stringify({
-          //     url: res.url,
-          //     statusText: res.statusText,
-          //   }),
-          //
-          // })
+          console.error(`Fetch lazy doc fail, response status ${res.status}`)
         }
       })
       .catch(err => {
-        // ctx.error({
-        //   statusCode: 404,
-        //   message: JSON.stringify(err)
-        // })
+       console.error('Fetch lazy doc fail',err)
       })
 
     if(docPageData){
@@ -214,12 +215,6 @@ export default class DocumentPage extends Vue {
   }
 
   mounted() {
-    // console.log(this.$route.meta)
-    // if(this.$route.meta?.id){
-    //   alert(this.$route.meta?.id)
-    // } else {
-    //   alert(this.$route.params.id)
-    // }
     console.log('this.docPageData', this.docPageData)
 
     let options = {
@@ -230,14 +225,12 @@ export default class DocumentPage extends Vue {
     this.observer = new IntersectionObserver((entry,observer)=>{
       entry.forEach(({ isIntersecting })=>{
         if (isIntersecting){
-
-          // alert(nextDoc)
           if (this.lazyDocs.length <= 4 && this.lazyDocsIds.length){
             const nextDoc = this.lazyDocsIds.pop()
-            if (nextDoc && nextDoc !== this.$route.params.id){
+            if (nextDoc && nextDoc.toString() != this.$route.params.id){
               this.fetchLazyDoc(nextDoc)
             } else if (this.lazyDocsIds.length){
-              this.fetchLazyDoc(this.lazyDocsIds.pop()!)
+              this.fetchLazyDoc(this.lazyDocsIds.pop())
             }
           }
           observer.unobserve(<Element>this.$refs.visibilityTarget)

@@ -799,6 +799,8 @@ export namespace ArticleLong {
       updatedAt: Date;
 
       meta: {
+        advInsideOff: boolean;
+        rightNowOn: boolean;
         commentsOff: boolean;
         nativeRollOff: boolean;
         noIndex: boolean;
@@ -954,15 +956,24 @@ export namespace DocPageAPI {
   export interface Endpoint_1 extends Actualno.APIDataStructure {
   }
 
-  // Лента не описывалась
+  // // Лента не описывалась
   // export interface Endpoint_2 extends Lenta.APIDataStructure{}
 
   // Реклама не описывалась
   // interface Endpoint_3 extends Ads.APIDataStructure{}
 
-  export interface Endpoint_4 extends ArticleLong.APIDataStructure{
+  export interface Endpoint_4 extends ArticleLong.APIDataStructure {
 
   }
+
+  // Переименованный Endpoint_4
+  export interface DocContent extends Endpoint_4 {}
+
+  // Документы для подшоужаемой ленты
+  export type LazyLoadIds = number[]  //?type=3&id=77 (id это регион)
+
+  // Документы для "Только что"
+  export type RightNowIds = number[] //?regionid=23
 
   export interface Endpoint_5 extends Multimedia.APIDataStructure {
   }
