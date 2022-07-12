@@ -318,8 +318,8 @@ export default class ArticleLongContentRawHTML extends Vue {
 
     // Обсервер для замены урла
     let options = {
-      rootMargin: '0px',
-      threshold: 0.2
+      rootMargin: '0px 0px 0px 0px',
+      threshold: [0.1]
     };
     this.observer = new IntersectionObserver((entry,observer)=>{
       entry.forEach(({ isIntersecting })=>{

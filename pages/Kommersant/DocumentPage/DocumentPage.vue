@@ -5,7 +5,7 @@
 <!--    </pre>-->
     <!-- simple article zone start -->
     <!-- Блок 1 -->
-    <div class="layout js-lenta-article">
+    <div class="layout">
       <div class="main grid">
         <div class="grid-col grid-col-s3">
           <!-- article long content  -->
