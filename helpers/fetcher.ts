@@ -2,14 +2,14 @@ const BASE_URL = process.env.BASE_API_URL;
 
 export function fetcher(requiredData: string, params?: { query: { [key: string]: string | number } }):Promise<Response> {
   const map: { [key: string]: string } = {
-    actualno: '/main_page/Endpoint_1',
-    mainPageWidgets: '/main_page/Endpoint_4',
-    listPageWidgets: '/list_page/Endpoint_4',
-    listPageDocs: '/list_page/Endpoint_6',
+    actualno: '/common_data/Actual',
+    mainPageWidgets: '/main_page/Blocks',
+    listPageWidgets: '/list_page/Blocks',
+    listPageDocs: '/list_page/DocTape',
     docPageData: '/doc_page/DocContent',
-    companyNews: '/main_page/Endpoint_7',
-    spendGalleryTopData: '/main_page/Endpoint_5',
-    spendGalleryBottomData: '/main_page/Endpoint_6',
+    companyNews: '/main_page/CompanyNews',
+    spendGalleryTopData: '/main_page/PromoGalleryTop',
+    spendGalleryBottomData: '/main_page/PromoGalleryBottom',
     lazyDocsIds:'/doc_page/LazyLoadIds',
   }
 
