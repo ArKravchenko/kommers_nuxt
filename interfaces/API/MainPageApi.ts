@@ -132,7 +132,7 @@ export namespace Top {
     img?: ImageFull;
   }
 
-  interface ITop {
+  export interface ITop {
     dataHash: string;
     data: {
       docs: Doc[]

@@ -25,7 +25,12 @@ const ArticlePreview = () => import(
   /* webpackChunkName: "ArticlePreview." */
   /* webpackMode: "lazy" */
   '~/components/DocumentPage/ArticlePreview/ArticlePreview.vue');
-// import ArticlePreview from '~/components/DocumentPage/ArticlePreview/ArticlePreview.vue'
+
+const PictureOfTheDay = () => import(
+  /* webpackChunkName: "PictureOfTheDay." */
+  /* webpackMode: "lazy" */
+  '~/components/DocumentPage/PictureOfTheDay/PictureOfTheDay.vue');
+
 import type {MetaInfo} from "vue-meta";
 
 
@@ -36,7 +41,8 @@ import type {MetaInfo} from "vue-meta";
     CompanyNews,
     ArticleLongContent,
     ArticleLongContentRawHTML,
-    ArticlePreview
+    ArticlePreview,
+    PictureOfTheDay,
     // Banner
   },
 })
@@ -103,7 +109,7 @@ export default class DocumentPage extends Vue {
       companyNewsDataPromise,
     ])
 
-    const region = docPageData?.data?.regionId
+    const region: DocPageAPI.DocContent['data']['regionId'] = docPageData?.data?.regionId
 
     const lazyDocsIds: ICompanyNews.ICompanyNews
       = await fetcher('lazyDocsIds', {
@@ -133,6 +139,11 @@ export default class DocumentPage extends Vue {
   get getIsRawHtml(){
     return this.docPageData?.data?.content?.isHtml
     && this.docPageData?.data?.content?.htmlContent?.rawHtml
+  }
+
+  get getRegionId(){
+    return this.docPageData?.data?.regionId
+    && this.docPageData.data.regionId
   }
 
   get headJson(): MetaInfo  {

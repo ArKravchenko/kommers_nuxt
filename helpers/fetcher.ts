@@ -8,9 +8,10 @@ export function fetcher(requiredData: string, params?: { query: { [key: string]:
     listPageDocs: '/list_page/DocTape',
     docPageData: '/doc_page/DocContent',
     companyNews: '/main_page/CompanyNews',
-    spendGalleryTopData: '/main_page/PromoGalleryTop',
-    spendGalleryBottomData: '/main_page/PromoGalleryBottom',
-    lazyDocsIds:'/doc_page/LazyLoadIds',
+    spendGalleryTop: '/main_page/PromoGalleryTop',
+    spendGalleryBottom: '/main_page/PromoGalleryBottom',
+    lazyDocsIds: '/doc_page/LazyLoadIds',
+    pictureOfTheDay: '/doc_page/TopNewsForDoc',
   }
 
   let queryString = ''

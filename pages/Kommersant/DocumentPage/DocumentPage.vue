@@ -21,11 +21,12 @@
             <Promo/>
           </div>
 
-          <!-- 1.4. Блок вовлечения -- Картина дня -->
-          <div style="min-height: 150px;background-color: red">
-            Картина дня
-            <% include inc/article/doc_picture_of_the_day.html %>
-          </div>
+          <PictureOfTheDay :region-id="getRegionId"/>
+<!--          &lt;!&ndash; 1.4. Блок вовлечения &#45;&#45; Картина дня &ndash;&gt;-->
+<!--          <div style="min-height: 150px;background-color: red">-->
+<!--            Картина дня-->
+<!--            <% include inc/article/doc_picture_of_the_day.html %>-->
+<!--          </div>-->
 
 
         </div>

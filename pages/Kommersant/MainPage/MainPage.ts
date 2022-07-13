@@ -106,12 +106,12 @@ export default class MainPage extends Vue {
       .catch(errorCatch404)
 
     const spendGalleryTopDataPromise: Promise<PromoGalleryTop.IPromoGallery>
-      = fetcher('spendGalleryTopData')
+      = fetcher('spendGalleryTop')
       .then(handleRes)
       .catch(errorCatch404)
 
     const spendGalleryBottomDataPromise: Promise<PromoGalleryTop.IPromoGallery>
-      = fetcher('spendGalleryBottomData')
+      = fetcher('spendGalleryBottom')
       .then(handleRes)
       .catch(errorCatch404)
 
