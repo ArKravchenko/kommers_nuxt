@@ -16,6 +16,11 @@ Vue.use(Router)
 
 export function createRouter() {
   return new Router({
+    scrollBehavior: (to, from, savedPosition)=>{
+      console.log(to)
+      if (to.name === 'Document')
+        return {x:0, y:0}
+    },
     mode: 'history',
     routes: [
       {
@@ -27,6 +32,7 @@ export function createRouter() {
             component: MainPage,
           },
           {
+            name:'Document',
             path: '/doc/:id',
             component: DocumentPage,
             props: true,
