@@ -109,17 +109,20 @@ export default class DocumentPage extends Vue {
       companyNewsDataPromise,
     ])
 
-    const region: DocPageAPI.DocContent['data']['regionId'] = docPageData?.data?.regionId
+    const region: DocPageAPI.DocContent['data']['regionId'] = docPageData?.data?.regionId || 77;
 
-    const lazyDocsIds: ICompanyNews.ICompanyNews
-      = await fetcher('lazyDocsIds', {
-      query: {
-        id: region,
-        type: tagType
-      }
-    })
-      .then(handleRes)
-      .catch(errorCatch404)
+    let lazyDocsIds: DocPageAPI.LazyLoadIds = [];
+
+    if (!docPageData?.data?.meta?.lazyLoadOff) {
+      lazyDocsIds = await fetcher('lazyDocsIds', {
+        query: {
+          id: region,
+          type: tagType
+        }
+      })
+        .then(handleRes)
+        .catch(errorCatch404)
+    }
 
 
     if (process.server) {
