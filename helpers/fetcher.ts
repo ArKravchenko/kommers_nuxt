@@ -12,6 +12,7 @@ export function fetcher(requiredData: string, params?: { query: { [key: string]:
     spendGalleryBottom: '/main_page/PromoGalleryBottom',
     lazyDocsIds: '/doc_page/LazyLoadIds',
     pictureOfTheDay: '/doc_page/TopNewsForDoc',
+    mostReadableAside: '/main_page/MostReadable'
   }
 
   let queryString = ''

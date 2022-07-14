@@ -386,9 +386,9 @@ export namespace MostReadable {
   }
 
 
-  interface IMostReadable {
+  export interface IMostReadable {
     data: {
-      docs: Doc[]
+      items: Doc[]
     }
   }
 

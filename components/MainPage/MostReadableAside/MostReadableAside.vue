@@ -1,31 +1,30 @@
 <template>
 
-  <section class="most_readable">
-    <div class="section_header section_header--aside most_readable__header slided_title">
+  <section class="most_readable" ref="observer">
+    <div v-if="mostReadableAsideData && getDocs"
+         class="section_header section_header--aside most_readable__header slided_title">
       <h3 class="section_name">
-        <a href="#" class="link section_name__link slided_title__link">
-          <span class="slided_title__text">Самое читаемое <span style="color: red">ЗАГЛУШКА</span></span>
-          <span href="#" class="vicon vicon--rarrow section_header__nav slided_title__nav">
-					<svg class="vicon__body">
-						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#vicon-rarrow"></use>
-					</svg>
-				</span>
-        </a>
+        Самое читаемое
       </h3>
     </div>
 
-    <div class="most_readable__content most_readable__shadow">
+    <div v-if="mostReadableAsideData && getDocs"
+         class="most_readable__content most_readable__shadow">
       <article class="most_readable__item">
         <div class="most_readable__photo stretch_photo">
-          <img class="most_readable__img"
-               :src="$imgPlaceholder"
-               v-lazytest
-               :data-src="'https://im.kommersant.ru/Issues.photo/CORP/2020/08/09/KMO_177361_00007_1_t218_161801.jpg'"
-               alt="">
+          <Picture
+            :src="getDocImg(getDocs[0]).src"
+            :alt="getDocImg(getDocs[0]).alt"
+            :img-class="'most_readable__img'"
+            :noscript-string="getNoscriptString(getDocs[0])"
+            :webp-src-set="getDocImg(getDocs[0]).webpSrcSet"
+            :jpeg-src-set="getDocImg(getDocs[0]).jpegSrcSet"
+            :sizes="'(min-width: 1198px) 300px, (min-width: 640px) 640px'"
+          />
         </div>
         <div class="most_readable__text">
-          <h4 class="most_readable__tag">
-            <span class="most_readable__number">278 893</span>
+          <h4 v-if="getDocViews(getDocs[0])" class="most_readable__tag">
+            <span class="most_readable__number">{{ getDocViews(getDocs[0]) }}</span>
             <span class="vicon vicon--eye">
 						<svg class="vicon__body">
 							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#vicon-eye"></use>
@@ -33,79 +32,48 @@
 					</span>
           </h4>
           <h2 class="most_readable__name">
-            <a href="#" class="most_readable__link link ">«Был бы говенный губернатор, за него бы не вышли»</a>
+            <a v-if="getDocHref(getDocs[0])"
+               :href="getDocHref(getDocs[0])"
+               class="most_readable__link link ">
+              {{ getDocTitle(getDocs[0]) }}
+            </a>
+            <template v-else>
+              {{ getDocTitle(getDocs[0]) }}
+            </template>
           </h2>
         </div>
       </article>
-      <article class="most_readable__item">
-        <div class="most_readable__text">
-          <h4 class="most_readable__tag">
-            <span class="most_readable__number">112 309</span>
-            <span class="vicon vicon--eye">
-						<svg class="vicon__body">
-							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#vicon-eye"></use>
-						</svg>
-					</span>
-          </h4>
-          <h2 class="most_readable__name">
-            <a href="#" class="most_readable__link link ">Оппозиционерам тут не место</a>
-          </h2>
-        </div>
-      </article>
-      <article class="most_readable__item">
-        <div class="most_readable__text">
-          <h4 class="most_readable__tag">
-            <span class="most_readable__number">84 568</span>
-            <span class="vicon vicon--eye">
-						<svg class="vicon__body">
-							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#vicon-eye"></use>
-						</svg>
-					</span>
-          </h4>
-          <h2 class="most_readable__name">
-            <a href="#" class="most_readable__link link ">Посадка в неадеквате</a>
-          </h2>
-        </div>
-      </article>
-      <article class="most_readable__item">
-        <div class="most_readable__text">
-          <h4 class="most_readable__tag">
-            <span class="most_readable__number">77 303</span>
-            <span class="vicon vicon--eye">
-						<svg class="vicon__body">
-							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#vicon-eye"></use>
-						</svg>
-					</span>
-          </h4>
-          <h2 class="most_readable__name">
-            <a href="#" class="most_readable__link link ">В Думе давали премьера</a>
-          </h2>
-        </div>
-      </article>
-      <article class="most_readable__item">
-        <div class="most_readable__text">
-          <h4 class="most_readable__tag">
-            <span class="most_readable__number">62 047</span>
-            <span class="vicon vicon--eye">
-						<svg class="vicon__body">
-							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#vicon-eye"></use>
-						</svg>
-					</span>
-          </h4>
-          <h2 class="most_readable__name">
-            <a href="#" class="most_readable__link link ">Заемщики повышенного спроса</a>
-          </h2>
-        </div>
-      </article>
+
+
+      <template v-for="(doc, index) in getDocs.slice(1)">
+        <article class="most_readable__item" :key="index">
+          <div class="most_readable__text">
+            <h4 class="most_readable__tag" v-if="getDocViews(doc)">
+              <span class="most_readable__number">{{ getDocViews(doc) }}</span>
+              <span class="vicon vicon--eye">
+                <svg class="vicon__body">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#vicon-eye"></use>
+                </svg>
+              </span>
+            </h4>
+            <h2 class="most_readable__name">
+              <a v-if="getDocHref(doc)" :href="getDocHref(doc)" class="most_readable__link link ">
+                {{ getDocTitle(doc) }}
+              </a>
+              <template v-else>
+                {{ getDocTitle(doc) }}
+              </template>
+            </h2>
+          </div>
+        </article>
+      </template>
     </div>
   </section>
 
 
-
-
 </template>
 
-<!--<script src="./Vote.ts" lang="ts"></script>-->
+<script src="./MostReadableAside.ts" lang="ts"></script>
 <style src="./MostReadableAside.scss" lang="scss" scoped></style>
 
 

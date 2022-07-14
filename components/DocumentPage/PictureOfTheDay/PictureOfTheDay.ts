@@ -42,8 +42,6 @@ export default class PictureOfTheDay extends Vue {
     })
   }
 
-  fetchOnServer = false;
-
   expanded = false;
 
   expandHandler() {
