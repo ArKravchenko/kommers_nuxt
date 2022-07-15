@@ -32,13 +32,15 @@ export default class PictureOfTheDay extends Vue {
         return res.json()
       } else {
         console.error('Error fetching pictureOfTheDay data', res.status)
+        setTimeout(() => this.fetch(), 3000);
       }
     }).then((data:Top.Doc[])=>{
       this.pictureOfTheDayData = data;
       // console.log('pictureOfTheDay',data)
     })
       .catch((err:Error)=>{
-      console.error(err)
+        console.error(err);
+        setTimeout(() => this.fetch(), 3000);
     })
   }
 

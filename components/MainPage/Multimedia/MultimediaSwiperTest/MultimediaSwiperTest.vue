@@ -5,7 +5,7 @@
     {{ Math.random() }} Multimedia component cache
     <div class="section_header slided_title">
       <h3 class="section_name">
-        <a href="/specials?from=multimedia" class="link section_name__link slided_title__link">
+        <a v-if="!inDoc" href="/specials?from=multimedia" class="link section_name__link slided_title__link">
           <span class="section_name__text slided_title__text">Мультимедиа</span>
           <span class="vicon vicon--rarrow section_header__nav slided_title__nav">
 					<svg class="vicon__body">
@@ -13,8 +13,11 @@
 					</svg>
 				</span>
         </a>
+        <template v-else>
+          Мультимедиа
+        </template>
       </h3>
-      <div class="section_header__list">
+      <div class="section_header__list" v-if="!inDoc">
         <a href="#" class="section_header__more link">Фото</a>
         <a href="#" class="section_header__more link">Видео</a>
         <a href="#" class="section_header__more link">Спецпроекты</a>
@@ -75,7 +78,10 @@
 
 
       </div>
-      <div ref="sliderNext" class="multimedia__nav_button multimedia__nav_button--next slider-nav_button slider-next">
+      <div ref="sliderNext" style="display: block"
+           :class="['multimedia__nav_button multimedia__nav_button--next slider-nav_button slider-next',
+            {'multimedia__scroll_indicator': inDoc && !reachEnd}]"
+      >
         <a href="#" class="multimedia__nav_link link slider-link">
 				<span v-show="!scroll" class="vicon vicon--rarrow slider-nav_icon">
 					<svg class="vicon__body"><use xmlns:xlink="http://www.w3.org/1999/xlink"

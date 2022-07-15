@@ -29,7 +29,11 @@ import MostReadableAside from '~/components/MainPage/MostReadableAside/MostReada
 import SpendGallery from '~/components/MainPage/SpendGallery/SpendGallery.vue'
 import CompanyNews from '~/components/MainPage/CompanyNews/CompanyNews.vue'
 // import Multimedia from '~/components/MainPage/Multimedia/Multimedia.vue'
-import Multimedia from '~/components/MainPage/Multimedia/MultimediaSwiperTest/MultimediaSwiperTest.vue'
+// import Multimedia from '~/components/MainPage/Multimedia/MultimediaSwiperTest/MultimediaSwiperTest.vue';
+const Multimedia = () => import(
+  /* webpackChunkName: "Multimedia." */
+  /* webpackMode: "lazy" */
+  "~/components/MainPage/Multimedia/MultimediaSwiperTest/MultimediaSwiperTest.vue");
 
 // const MainToday: AsyncComponent = () => import('~/components/MainPage/MainToday/MainToday.vue')
 // const Opinions: AsyncComponent = () => import('~/components/MainPage/Opinions/Opinions.vue')

@@ -1,6 +1,10 @@
 import {Component, Vue} from 'nuxt-property-decorator'
 import type {Context} from "@nuxt/types";
-import type {DocPageAPI, CompanyNews as ICompanyNews} from "~/interfaces/API/MainPageApi";
+import type {
+  DocPageAPI,
+  CompanyNews as ICompanyNews,
+  Multimedia as IMultimedia
+} from "~/interfaces/API/MainPageApi";
 // import type {AsyncComponent} from 'vue'
 import {fetcher} from "~/helpers/fetcher";
 // import {ArticleLong} from "~/interfaces/API/MainPageApi";
@@ -12,7 +16,11 @@ import {fetcher} from "~/helpers/fetcher";
 // import Opinions from '~/components/MainPage/Opinions/Opinions.vue'
 import Promo from '~/components/general/Promo/Promo.vue'
 import CompanyNews from '~/components/MainPage/CompanyNews/CompanyNews.vue'
-// import Multimedia from '~/components/MainPage/Multimedia/Multimedia.vue'
+// import Multimedia from '~/components/MainPage/Multimedia/MultimediaSwiperTest/MultimediaSwiperTest.vue'
+const Multimedia = () => import(
+  /* webpackChunkName: "Multimedia." */
+  /* webpackMode: "lazy" */
+  "~/components/MainPage/Multimedia/MultimediaSwiperTest/MultimediaSwiperTest.vue");
 // const Banner = () => import(
 //   /* webpackChunkName: "Banner." */
 //   /* webpackMode: "eager" */
@@ -43,6 +51,7 @@ import type {MetaInfo} from "vue-meta";
     ArticleLongContentRawHTML,
     ArticlePreview,
     PictureOfTheDay,
+    Multimedia,
     // Banner
   },
 })
@@ -50,6 +59,7 @@ export default class DocumentPage extends Vue {
   docPageData: DocPageAPI.Endpoint_4 | null = null;
   companyNewsData: ICompanyNews.ICompanyNews | null = null;
   lazyDocsIds: DocPageAPI.LazyLoadIds = [];
+  multimediaData: IMultimedia.IMultimedia | null = null;
 
 
   async asyncData(ctx: Context) {
@@ -133,6 +143,37 @@ export default class DocumentPage extends Vue {
       companyNewsData,
       lazyDocsIds
     }
+  }
+
+  async fetchMultimedia(){
+    // TagType тип тега.
+    // 3 - регион
+    // 4 - паблишинг
+    const tagType = 3
+
+    const region: DocPageAPI.DocContent['data']['regionId'] = this.docPageData?.data?.regionId || 77;
+
+    await fetcher('docMultimedia', {
+      query: {
+        id: region,
+        type: tagType
+      }
+    })
+      .then((res:Response) => {
+        if (res.ok) {
+          return res.json()
+        } else {
+          console.error('Error fetching multimediaData data', res.status);
+          setTimeout(() => this.fetchMultimedia(), 3000)
+        }
+      }).then((data:IMultimedia.IMultimedia)=>{
+        this.multimediaData = data;
+        // console.log('pictureOfTheDay',data)
+      })
+      .catch((err:Error)=>{
+        console.error(err);
+        setTimeout(() => this.fetchMultimedia(), 3000)
+      })
   }
 
   head() {
@@ -230,6 +271,7 @@ export default class DocumentPage extends Vue {
 
   mounted() {
     console.log('this.docPageData', this.docPageData)
+    // console.log('this.multimediaData',this.multimediaData)
 
     let options = {
       rootMargin: '400px',
@@ -239,6 +281,9 @@ export default class DocumentPage extends Vue {
     this.observer = new IntersectionObserver((entry,observer)=>{
       entry.forEach(({ isIntersecting })=>{
         if (isIntersecting){
+          if (!this.multimediaData) {
+            this.fetchMultimedia();
+          }
           if (this.lazyDocs.length <= 4 && this.lazyDocsIds.length){
             const nextDoc = this.lazyDocsIds.pop()
             if (nextDoc && nextDoc.toString() != this.$route.params.id){

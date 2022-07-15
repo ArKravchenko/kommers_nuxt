@@ -64,11 +64,15 @@
             <Promo/>
           </div>
 
-          <!-- 1.4. Блок вовлечения -- Картина дня -->
-          <div style="min-height: 250px;background-color: red">
-            Картина дня
-            <% include inc/article/doc_picture_of_the_day.html %>
+
+          <div class="lenta_multimedia">
+            <Multimedia in-doc :multimedia-data="{data:{items:multimediaData}}"/>
           </div>
+          <!-- 1.4. Блок вовлечения -- Картина дня -->
+<!--          <div v-else style="min-height: 250px;background-color: red">-->
+<!--            Картина дня-->
+<!--            <% include inc/article/doc_picture_of_the_day.html %>-->
+<!--          </div>-->
 
 
         </div>

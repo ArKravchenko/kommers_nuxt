@@ -26,6 +26,15 @@ export default class Multimedia extends Vue {
     // }
   }) multimediaData!: IMultimedia.IMultimedia | null;
 
+  @Prop({
+    type: Boolean,
+    required: false,
+    default: false,
+    // validator(value: MainPageAPI.Endpoint_4): boolean {
+    //   return !!value.rates && !!value.items
+    // }
+  }) inDoc!: boolean;
+
   // cdnUrl: string = process.env.CDN_URL || ''
 
   get getItems(){
@@ -40,6 +49,8 @@ export default class Multimedia extends Vue {
                      alt="${item.img.alt}"
                 >`
   }
+
+  reachEnd = false;
 
   swiper: InstanceType<typeof Swiper> | null = null
   scroll = true;
@@ -59,6 +70,14 @@ export default class Multimedia extends Vue {
             // Optional parameters
             // direction: 'vertical',
             // loop: true,
+            on:{
+              reachEnd:()=>{
+                this.reachEnd=true
+              },
+              fromEdge:()=>{
+                this.reachEnd=false
+              }
+            },
 
             keyboard: {
               enabled: true,
@@ -72,7 +91,7 @@ export default class Multimedia extends Vue {
 
             breakpoints:{
               1198:{
-                slidesPerView: 4,
+                slidesPerView: this.inDoc? 2.7083 : 4,
                 spaceBetween: 40,
               }
             },
