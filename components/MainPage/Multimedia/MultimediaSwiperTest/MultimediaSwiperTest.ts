@@ -10,7 +10,12 @@ import type Swiper from 'swiper'
 
 type ArrayElement<ArrayType extends readonly unknown[]> = ArrayType[number];
 
-@Component({})
+@Component({
+  //@ts-ignore
+  serverCacheKey(a: any) {
+    return a.multimediaData?.dataHash ? a.multimediaData.dataHash : JSON.stringify(a)
+  },
+})
 export default class Multimedia extends Vue {
   @Prop({
     type: Object,
@@ -39,11 +44,17 @@ export default class Multimedia extends Vue {
   swiper: InstanceType<typeof Swiper> | null = null
   scroll = true;
 
+  created(){
+    if(process.client) {
+      this.scroll = false;
+    }
+  }
+
   mounted(){
     this.$nextTick(() => {
       SwiperImport().then(({ default: Swiper, Navigation, Keyboard }) => {
         const initSwiper = () => {
-          this.scroll = false;
+          // this.scroll = false;
           this.swiper = new Swiper(<HTMLElement>this.$refs.swiper, {
             // Optional parameters
             // direction: 'vertical',
@@ -98,7 +109,7 @@ export default class Multimedia extends Vue {
         }
       })
     })
-    //  console.log('this.multimediaData',this.multimediaData)
+     console.log('this.multimediaData',this.multimediaData)
   }
 
 }

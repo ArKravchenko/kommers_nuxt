@@ -2,6 +2,7 @@
 
 
   <section v-if="getItems" class="multimedia" id="multimedia">
+    {{ Math.random() }} Multimedia component cache
     <div class="section_header slided_title">
       <h3 class="section_name">
         <a href="/specials?from=multimedia" class="link section_name__link slided_title__link">
@@ -25,14 +26,14 @@
     <div ref="swiper" class="swiper multimedia__slider slider slider-multimedia slider-multimedia-main slider-multimedia-fit">
       <div ref="sliderPrev" class="multimedia__nav_button multimedia__nav_button--prev slider-nav_button slider-prev">
         <a href="#" class="multimedia__nav_link link slider-link">
-				<span class="vicon vicon--larrow slider-nav_icon">
+				<span v-show="!scroll" class="vicon vicon--larrow slider-nav_icon">
 					<svg class="vicon__body"><use xmlns:xlink="http://www.w3.org/1999/xlink"
                                         xlink:href="#vicon-rarrow"></use></svg>
 				</span>
           <span class="vh">Предыдущий слайд</span>
         </a>
       </div>
-      <div :class="['swiper-wrapper multimedia__canvas slider-multimedia-resizable',{'slider-canvas':scroll}]">
+      <div :class="['swiper-wrapper multimedia__canvas slider-multimedia-resizable']">
         <template v-for="item in getItems">
           <div class="multimedia__item slider-item slider-multimedia-resizable-item swiper-slide" style="margin-right: 40px">
             <article class="uho">
@@ -76,7 +77,7 @@
       </div>
       <div ref="sliderNext" class="multimedia__nav_button multimedia__nav_button--next slider-nav_button slider-next">
         <a href="#" class="multimedia__nav_link link slider-link">
-				<span class="vicon vicon--rarrow slider-nav_icon">
+				<span v-show="!scroll" class="vicon vicon--rarrow slider-nav_icon">
 					<svg class="vicon__body"><use xmlns:xlink="http://www.w3.org/1999/xlink"
                                         xlink:href="#vicon-rarrow"></use></svg>
 				</span>

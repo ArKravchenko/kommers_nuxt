@@ -57,12 +57,18 @@ export default class LightSpot extends Vue {
   swiper: InstanceType<typeof Swiper> | null = null
   scroll = true;
 
+  created(){
+    if(process.client) {
+      this.scroll = false;
+    }
+  }
+
   mounted() {
     //  console.log('this.lightSpotData', this.lightSpotData)
     this.$nextTick(() => {
       SwiperImport().then(({ default: Swiper, Navigation, Keyboard }) => {
         const initSwiper = () => {
-          this.scroll = false;
+          // this.scroll = false;
           this.swiper = new Swiper(<HTMLElement>this.$refs.swiper, {
             // Optional parameters
             // direction: 'vertical',
