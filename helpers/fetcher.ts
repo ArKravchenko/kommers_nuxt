@@ -14,6 +14,7 @@ export function fetcher(requiredData: string, params?: { query: { [key: string]:
     pictureOfTheDay: '/doc_page/TopNewsForDoc',
     mostReadableAside: '/main_page/MostReadable',
     docMultimedia: '/doc_page/Multimedia',
+    docViewsComments:'/doc_page/Counters'
   }
 
   let queryString = ''

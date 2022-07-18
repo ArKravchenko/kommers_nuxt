@@ -2,27 +2,29 @@
 
   <div class="doc_sharing">
     <div class="doc_sharing__body">
-		<span class="sharing" title="Количество просмотров: 128К">
+		<span class="sharing" :title="`Количество просмотров: ${getViews}`">
 			<span class="vicon sharing__icon sharing__icon_m">
 				<svg class="vicon__body">
 					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#vicon-eye"></use>
 				</svg>
 			</span>
 			<span class="sharing__text">
-				128К <span style="color: red"> ЗАГЛУШКА</span>
+				{{ getViews || getViews === 0 ? getViews : '&nbsp;' }}
+<!--        <span style="color: red"> ЗАГЛУШКА</span>-->
 			</span>
 		</span>
 
-      <a class="sharing link" href="#comments" title="Комментариев: 87">
+      <a @click.prevent.stop="openComments" class="sharing link" href="#comments" :title="`Комментариев: ${getComments}`">
 			<span class="vicon sharing__icon sharing__icon_m">
 				<svg class="vicon__body"><use xmlns:xlink="http://www.w3.org/1999/xlink"
                                       xlink:href="#vicon-commenting"></use></svg>
 			</span>
-        <!-- <span class="sharing__text" itemprop="interactionStatistic" itemscope itemtype="https://schema.org/InteractionCounter">
+        <span class="sharing__text" itemprop="interactionStatistic" itemscope
+              itemtype="https://schema.org/InteractionCounter">
           <meta itemprop="interactionType" content="https://schema.org/CommentAction"/>
-          <meta itemprop="userInteractionCount" content="298" />
-          99+
-        </span> -->
+          <meta itemprop="userInteractionCount" :content="this.comments"/>
+          {{ getComments || getComments === 0 ? getComments : '&nbsp;' }}
+        </span>
       </a>
 
       <span class="sharing" v-if="readingTime" :title="`Время прочтения: ${readingTime}`">

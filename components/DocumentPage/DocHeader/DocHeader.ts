@@ -60,6 +60,12 @@ export default class DocHeader extends Vue {
     default: null,
   }) sharingHref!: string | null;
 
+  @Prop({
+    type: String,
+    required: false,
+    default: null,
+  }) docId!: string | null;
+
 
   get getTitle(){
     return this.title?.length

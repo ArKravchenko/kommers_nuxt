@@ -14,11 +14,15 @@
       :breadcrumb="getBreadcrumb"
       :reading-time="getReadingTime"
       :sharing-href="getSharingHref"
+      :doc-id="getDocId"
     />
 
     <div class="doc__body" v-if="!getIsRawHtml">
       <div class="hide_mobile">
-        <ArticleSharing :reading-time="getReadingTime" :sharing-href="getSharingHref"/>
+        <ArticleSharing :doc-id="getDocId"
+                        :reading-time="getReadingTime"
+                        :sharing-href="getSharingHref"
+        />
       </div>
 
 

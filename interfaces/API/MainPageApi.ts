@@ -986,4 +986,10 @@ export namespace DocPageAPI {
 
   export interface Endpoint_8 extends CompanyNews.APIDataStructure {
   }
+
+  // views and comments count for doc sideMenu
+  export interface Counters {
+    views?: number;
+    comments?: number;
+  }
 }

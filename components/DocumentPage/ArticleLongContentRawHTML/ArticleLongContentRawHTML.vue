@@ -14,13 +14,17 @@
       :breadcrumb="getBreadcrumb"
       :reading-time="getReadingTime"
       :sharing-href="getSharingHref"
+      :doc-id="getDocId"
     />
 
 <!--IMPORTANT!!!
     THIS PART should be never rerendered  as custom scripts could refer to containers in that code -->
       <div class="doc__body">
         <div class="hide_mobile">
-          <ArticleSharing :reading-time="getReadingTime" :sharing-href="getSharingHref"/>
+          <ArticleSharing :reading-time="getReadingTime"
+                          :sharing-href="getSharingHref"
+                          :doc-id="getDocId"
+          />
         </div>
 
         <LazyHydrate never v-if="getIsRawHtml">
