@@ -14,7 +14,7 @@ export default class ThemeSa extends Vue {
     // }
   }) themeSaData!: SuperAnnounce.IThemeSA | null;
 
-  cdnUrl: string = process.env.CDN_URL || '';
+  // cdnUrl: string = process.env.CDN_URL || '';
 
   formatDate(date: Date){
     return new Date(date).toLocaleDateString('ru-ru',

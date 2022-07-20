@@ -14,7 +14,18 @@ export default class IssueSa extends Vue {
     // }
   }) issueSaData!: SuperAnnounce.IIssueSA | null;
 
-  cdnUrl: string = process.env.CDN_URL || ''
+  // cdnUrl: string = process.env.CDN_URL || '';
+
+  formatDate(date: Date){
+    return new Date(date).toLocaleDateString('ru-ru',
+      {
+        year: 'numeric',
+        month: 'numeric',
+        day: 'numeric',
+        hour: 'numeric',
+        minute:'numeric'
+      })
+  }
 
   mounted(){
     //  console.log('this.issueSaData', this.issueSaData)

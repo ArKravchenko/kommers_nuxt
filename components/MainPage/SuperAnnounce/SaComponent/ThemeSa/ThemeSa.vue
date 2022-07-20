@@ -4,7 +4,7 @@
     <div class="sa__cover">
 		<span class="sa__photo">
 			<img class="sa__img"
-           :data-src="cdnUrl+themeSaData.content.img.src"
+           :data-src="themeSaData.content.img.src"
            :src="$imgPlaceholder"
            :alt="themeSaData.content.img.alt"
            v-lazytest

@@ -3,12 +3,12 @@
 
   <main>
 
-    <div class="layout">
+    <div class="layout" v-if="getSaPrimary">
       <!-- картина дня -->
       <div class="main">
-        <div v-if="getSaPrimary">
+<!--        <div>-->
           <SuperAnnounce :saData="getSaPrimary"/>
-        </div>
+<!--        </div>-->
       </div>
     </div>
 
@@ -39,12 +39,14 @@
           </div>
         </div>
 
-        <div v-if="getSaSecondary">
-          <SuperAnnounce :saData="getSaSecondary"/>
-        </div>
       </div>
     </div>
     <!-- картина дня end-->
+    <div class="layout"  v-if="getSaSecondary">
+      <div class="main">
+        <SuperAnnounce :saData="getSaSecondary"/>
+      </div>
+    </div>
 
     <div class="layout hide_desktop">
       <div class="adv_300x250">
