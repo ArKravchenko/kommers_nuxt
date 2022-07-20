@@ -264,7 +264,7 @@ export default class DocumentPage extends Vue {
     if(docPageData){
       this.lazyDocs.push(docPageData)
     } else {
-      this.lazyDocsIds.push(docId)
+      this.lazyDocsIds.unshift(docId)
     }
     this.observer.observe(<Element>this.$refs.visibilityTarget);
   }
@@ -284,12 +284,12 @@ export default class DocumentPage extends Vue {
           if (!this.multimediaData) {
             this.fetchMultimedia();
           }
-          if (this.lazyDocs.length <= 4 && this.lazyDocsIds.length){
-            const nextDoc = this.lazyDocsIds.pop()
+          if (this.lazyDocs.length < 4 && this.lazyDocsIds.length){
+            const nextDoc = this.lazyDocsIds.shift()
             if (nextDoc && nextDoc.toString() != this.$route.params.id){
               this.fetchLazyDoc(nextDoc)
             } else if (this.lazyDocsIds.length){
-              this.fetchLazyDoc(this.lazyDocsIds.pop())
+              this.fetchLazyDoc(this.lazyDocsIds.shift())
             }
           }
           observer.unobserve(<Element>this.$refs.visibilityTarget)
