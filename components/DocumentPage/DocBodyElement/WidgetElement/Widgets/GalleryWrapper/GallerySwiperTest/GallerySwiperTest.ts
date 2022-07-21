@@ -7,7 +7,7 @@ import HtmlTagElement from '@/components/DocumentPage/DocBodyElement/HtmlTagElem
 const SwiperImport = () => import(
   /* webpackChunkName: "SwiperImport_N_K_P." */
   /* webpackMode: "eager" */
-  '@/helpers/SwiperImport_N_K_P');
+  '@/helpers/SwiperImport_N_K_P_H');
 import type Swiper from 'swiper'
 
 type ArrayElement<ArrayType extends readonly unknown[]> = ArrayType[number];
@@ -104,12 +104,13 @@ export default class GallerySwiperTest extends Vue {
 
   mounted(){
     this.$nextTick(()=>{
-      SwiperImport().then(({default:Swiper,Navigation, Pagination, Keyboard })=>{
+      SwiperImport().then(({ default: Swiper, Navigation, Pagination, Keyboard, HashNavigation }) => {
         const initSwiper = ()=>{
           this.swiper = new Swiper(<HTMLElement>this.$el,{
             // Optional parameters
             // direction: 'vertical',
             // loop: true,
+            hashNavigation: true,
 
             keyboard: {
               enabled: true,
@@ -129,7 +130,8 @@ export default class GallerySwiperTest extends Vue {
             modules: [
               Navigation,
               Pagination,
-              Keyboard
+              Keyboard,
+              HashNavigation
             ]
             //
             // // And if we need scrollbar

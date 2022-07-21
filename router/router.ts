@@ -17,8 +17,7 @@ Vue.use(Router)
 export function createRouter() {
   return new Router({
     scrollBehavior: (to, from, savedPosition)=>{
-      console.log(to)
-      if (to.name === 'Document')
+      if (to.name === 'Document' && to.path !== from.path)
         return {x:0, y:0}
     },
     mode: 'history',

@@ -49,6 +49,7 @@
     </div>
     <!-- Блок 1 end -->
 
+    <!-- todo вынести lazyDocs в отдельный компонент -->
     <!-- Блок 2 -->
     <div class="layout" :key="lazyDocIndex" v-for="(lazyDoc,lazyDocIndex) in lazyDocs">
       <div class="main grid">

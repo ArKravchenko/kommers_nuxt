@@ -10,7 +10,7 @@
       <div class="doc_media__item slider-item swiper-slide"
              v-for="(item, index) in getGalleryItems"
              :key="'slide_'+index"
-             data-slider-id="id2083689">
+             :data-hash="`id${item.imageId}`">
           <figure class="doc_media__figure">
             <div class="photo">
               <Picture
