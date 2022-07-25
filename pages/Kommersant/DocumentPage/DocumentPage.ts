@@ -27,11 +27,11 @@ const Multimedia = () => import(
 //   "@/components/general/Banner/Banner.vue");
 
 const ArticleLongContent = () => import(
-  /* webpackChunkName: "ArticleLongContent." */
+  /* webpackChunkName: "ArticleLongContent" */
   /* webpackMode: "lazy" */
   "~/components/DocumentPage/ArticleLongContent/ArticleLongContent.vue");
 const ArticleLongContentRawHTML = () => import(
-  /* webpackChunkName: "ArticleLongContentRawHTML." */
+  /* webpackChunkName: "ArticleLongContentRawHTML" */
   /* webpackMode: "lazy" */
   "~/components/DocumentPage/ArticleLongContentRawHTML/ArticleLongContentRawHTML.vue");
 // import ArticleLongContent from '~/components/DocumentPage/ArticleLongContent/ArticleLongContent.vue';

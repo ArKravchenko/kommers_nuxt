@@ -15,11 +15,11 @@ const Multimedia = () => import(
   /* webpackMode: "lazy" */
   "~/components/MainPage/Multimedia/MultimediaSwiperTest/MultimediaSwiperTest.vue");
 const ArticleLongContent = () => import(
-  /* webpackChunkName: "ArticleLongContent." */
+  /* webpackChunkName: "ArticleLongContent" */
   /* webpackMode: "lazy" */
   "~/components/DocumentPage/ArticleLongContent/ArticleLongContent.vue");
 const ArticleLongContentRawHTML = () => import(
-  /* webpackChunkName: "ArticleLongContentRawHTML." */
+  /* webpackChunkName: "ArticleLongContentRawHTML" */
   /* webpackMode: "lazy" */
   "~/components/DocumentPage/ArticleLongContentRawHTML/ArticleLongContentRawHTML.vue");
 
