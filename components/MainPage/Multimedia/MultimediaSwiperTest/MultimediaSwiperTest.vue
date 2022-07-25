@@ -2,7 +2,8 @@
 
 
   <section v-if="getItems" class="multimedia" id="multimedia">
-    {{ Math.random() }} Multimedia component cache
+    <span v-if="this.$isServer">{{ Math.random() }} Multimedia component cache</span>
+
     <div class="section_header slided_title">
       <h3 class="section_name">
         <a v-if="!inDoc" href="/specials?from=multimedia" class="link section_name__link slided_title__link">

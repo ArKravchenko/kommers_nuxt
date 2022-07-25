@@ -26,18 +26,36 @@ const Multimedia = () => import(
 //   /* webpackMode: "eager" */
 //   "@/components/general/Banner/Banner.vue");
 
-import ArticleLongContent from '~/components/DocumentPage/ArticleLongContent/ArticleLongContent.vue';
-import ArticleLongContentRawHTML from '~/components/DocumentPage/ArticleLongContentRawHTML/ArticleLongContentRawHTML.vue';
+const ArticleLongContent = () => import(
+  /* webpackChunkName: "ArticleLongContent." */
+  /* webpackMode: "lazy" */
+  "~/components/DocumentPage/ArticleLongContent/ArticleLongContent.vue");
+const ArticleLongContentRawHTML = () => import(
+  /* webpackChunkName: "ArticleLongContentRawHTML." */
+  /* webpackMode: "lazy" */
+  "~/components/DocumentPage/ArticleLongContentRawHTML/ArticleLongContentRawHTML.vue");
+// import ArticleLongContent from '~/components/DocumentPage/ArticleLongContent/ArticleLongContent.vue';
+// import ArticleLongContentRawHTML from '~/components/DocumentPage/ArticleLongContentRawHTML/ArticleLongContentRawHTML.vue';
 
 const ArticlePreview = () => import(
   /* webpackChunkName: "ArticlePreview." */
   /* webpackMode: "lazy" */
   '~/components/DocumentPage/ArticlePreview/ArticlePreview.vue');
+const JustAgo = () => import(
+  /* webpackChunkName: "JustAgo." */
+  /* webpackMode: "lazy" */
+  '~/components/DocumentPage/JustAgo/JustAgo.vue');
 
 const PictureOfTheDay = () => import(
   /* webpackChunkName: "PictureOfTheDay." */
   /* webpackMode: "lazy" */
   '~/components/DocumentPage/PictureOfTheDay/PictureOfTheDay.vue');
+
+// import LazyLenta from '~/components/DocumentPage/LazyLenta/LazyLenta.vue';
+const LazyLenta = () => import(
+  /* webpackChunkName: "LazyLenta." */
+  /* webpackMode: "lazy" */
+  '~/components/DocumentPage/LazyLenta/LazyLenta.vue');
 
 import type {MetaInfo} from "vue-meta";
 
@@ -52,6 +70,8 @@ import type {MetaInfo} from "vue-meta";
     ArticlePreview,
     PictureOfTheDay,
     Multimedia,
+    LazyLenta,
+    JustAgo,
     // Banner
   },
 })
@@ -145,36 +165,36 @@ export default class DocumentPage extends Vue {
     }
   }
 
-  async fetchMultimedia(){
-    // TagType тип тега.
-    // 3 - регион
-    // 4 - паблишинг
-    const tagType = 3
-
-    const region: DocPageAPI.DocContent['data']['regionId'] = this.docPageData?.data?.regionId || 77;
-
-    await fetcher('docMultimedia', {
-      query: {
-        id: region,
-        type: tagType
-      }
-    })
-      .then((res:Response) => {
-        if (res.ok) {
-          return res.json()
-        } else {
-          console.error('Error fetching multimediaData data', res.status);
-          setTimeout(() => this.fetchMultimedia(), 3000)
-        }
-      }).then((data:IMultimedia.IMultimedia)=>{
-        this.multimediaData = data;
-        // console.log('pictureOfTheDay',data)
-      })
-      .catch((err:Error)=>{
-        console.error(err);
-        setTimeout(() => this.fetchMultimedia(), 3000)
-      })
-  }
+  // async fetchMultimedia(){
+  //   // TagType тип тега.
+  //   // 3 - регион
+  //   // 4 - паблишинг
+  //   const tagType = 3
+  //
+  //   const region: DocPageAPI.DocContent['data']['regionId'] = this.docPageData?.data?.regionId || 77;
+  //
+  //   await fetcher('docMultimedia', {
+  //     query: {
+  //       id: region,
+  //       type: tagType
+  //     }
+  //   })
+  //     .then((res:Response) => {
+  //       if (res.ok) {
+  //         return res.json()
+  //       } else {
+  //         console.error('Error fetching multimediaData data', res.status);
+  //         setTimeout(() => this.fetchMultimedia(), 3000)
+  //       }
+  //     }).then((data:IMultimedia.IMultimedia)=>{
+  //       this.multimediaData = data;
+  //       // console.log('pictureOfTheDay',data)
+  //     })
+  //     .catch((err:Error)=>{
+  //       console.error(err);
+  //       setTimeout(() => this.fetchMultimedia(), 3000)
+  //     })
+  // }
 
   head() {
     return this.headJson
@@ -236,38 +256,40 @@ export default class DocumentPage extends Vue {
 
   //TODO TEST LAZY LENTA
   observer!: IntersectionObserver;
+  renderLazyDocs = false;
+  renderJustAgo = false;
 
   // visible: boolean = false;
 
-  lazyDocs: DocPageAPI.Endpoint_4[]=[]
+  // lazyDocs: DocPageAPI.Endpoint_4[]=[]
 
 
-  async fetchLazyDoc(docId: number | undefined) {
-    if(!docId) return
-    const docPageData: DocPageAPI.Endpoint_4
-      = await fetcher('docPageData', {
-      query: {
-        docId,
-      }
-    })
-      .then(res => {
-        if (res.ok) {
-          return res.json()
-        } else {
-          console.error(`Fetch lazy doc fail, response status ${res.status}`)
-        }
-      })
-      .catch(err => {
-       console.error('Fetch lazy doc fail',err)
-      })
-
-    if(docPageData){
-      this.lazyDocs.push(docPageData)
-    } else {
-      this.lazyDocsIds.unshift(docId)
-    }
-    this.observer.observe(<Element>this.$refs.visibilityTarget);
-  }
+  // async fetchLazyDoc(docId: number | undefined) {
+  //   if(!docId) return
+  //   const docPageData: DocPageAPI.Endpoint_4
+  //     = await fetcher('docPageData', {
+  //     query: {
+  //       docId,
+  //     }
+  //   })
+  //     .then(res => {
+  //       if (res.ok) {
+  //         return res.json()
+  //       } else {
+  //         console.error(`Fetch lazy doc fail, response status ${res.status}`)
+  //       }
+  //     })
+  //     .catch(err => {
+  //      console.error('Fetch lazy doc fail',err)
+  //     })
+  //
+  //   if(docPageData){
+  //     this.lazyDocs.push(docPageData)
+  //   } else {
+  //     this.lazyDocsIds.unshift(docId)
+  //   }
+  //   this.observer.observe(<Element>this.$refs.visibilityTarget);
+  // }
 
   mounted() {
     console.log('this.docPageData', this.docPageData)
@@ -281,18 +303,12 @@ export default class DocumentPage extends Vue {
     this.observer = new IntersectionObserver((entry,observer)=>{
       entry.forEach(({ isIntersecting })=>{
         if (isIntersecting){
-          if (!this.multimediaData) {
-            this.fetchMultimedia();
+          if (!this.renderJustAgo) {
+            this.renderJustAgo = true;
+          } else {
+            this.renderLazyDocs = true;
+            observer.unobserve(<Element>this.$refs.visibilityTarget)
           }
-          if (this.lazyDocs.length < 4 && this.lazyDocsIds.length){
-            const nextDoc = this.lazyDocsIds.shift()
-            if (nextDoc && nextDoc.toString() != this.$route.params.id){
-              this.fetchLazyDoc(nextDoc)
-            } else if (this.lazyDocsIds.length){
-              this.fetchLazyDoc(this.lazyDocsIds.shift())
-            }
-          }
-          observer.unobserve(<Element>this.$refs.visibilityTarget)
         }
       })
     }, options);
