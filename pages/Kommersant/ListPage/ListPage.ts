@@ -8,11 +8,15 @@ import {fetcher} from "~/helpers/fetcher";
 
 // TODO keep imports in the same order on every page or replace with lazy pages
 import TopNews from '~/components/MainPage/TopNews/TopNews.vue'
-import LightSpot from '~/components/MainPage/LightSpot/LightSpot.vue'
+import LightSpot from '~/components/MainPage/LightSpot/LightSpotSwiperTest/LightSpotSwiperTest.vue'
 import Opinions from '~/components/MainPage/Opinions/Opinions.vue'
 import Promo from '~/components/general/Promo/Promo.vue'
 import CompanyNews from '~/components/MainPage/CompanyNews/CompanyNews.vue'
-import Multimedia from '~/components/MainPage/Multimedia/Multimedia.vue'
+// import Multimedia from '~/components/MainPage/Multimedia/Multimedia.vue'
+const Multimedia = () => import(
+  /* webpackChunkName: "Multimedia." */
+  /* webpackMode: "lazy" */
+  "~/components/MainPage/Multimedia/MultimediaSwiperTest/MultimediaSwiperTest.vue");
 
 import ServiceMenu from '~/components/ListPage/ServiceMenu/ServiceMenu.vue'
 import ListPageDocs from '~/components/ListPage/ListPageDocs/ListPageDocs.vue'
@@ -49,6 +53,7 @@ export default class ListPage extends Vue {
     // TODO listPageWidgets.mainToday заменить на данные как у среза рубрики
 
     const tagId = ctx.route.params.id
+    const type = ctx.route.params.type
     // console.log(ctx.route.params.id)
 
     if (process.server) {
@@ -78,9 +83,13 @@ export default class ListPage extends Vue {
 
     const listPageWidgetsPromise: Promise<ListPageAPI.Endpoint_4>
       = fetcher('listPageWidgets', {
-      query: {
-        tagId,
-      }
+      // query: {
+      //   tagId,
+      // },
+      path: [
+        type,
+        tagId
+      ]
     })
       .then(handleRes)
       .catch(errorCatch404)
@@ -89,9 +98,13 @@ export default class ListPage extends Vue {
     const listPageDocsPromise: Promise<ListPageAPI.Endpoint_6>
       = fetcher('listPageDocs', {
       query: {
-        tagId,
+        // tagId,
         count: 20
-      }
+      },
+      path: [
+        type,
+        tagId
+      ]
     })
       .then(handleRes)
       .catch(errorCatch404)
@@ -162,7 +175,8 @@ export default class ListPage extends Vue {
     // } else {
     //   alert(this.$route.params.id)
     // }
-    console.log('this.listPageWidgets', this.listPageWidgets)
+    console.log('this.listPageWidgets', this.listPageWidgets);
+    console.log(this.$route.params)
     // console.log('this.listPageDocs', this.listPageDocs)
   }
 

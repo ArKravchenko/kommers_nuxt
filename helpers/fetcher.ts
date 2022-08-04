@@ -1,6 +1,6 @@
 const BASE_URL = process.env.BASE_API_URL;
 
-export function fetcher(requiredData: string, params?: { query: { [key: string]: string | number } }):Promise<Response> {
+export function fetcher(requiredData: string, params?: { query?: { [key: string]: string | number }, path?: string[]}):Promise<Response> {
   const map: { [key: string]: string } = {
     actualno: '/common_data/Actual',
     mainPageWidgets: '/main_page/Blocks',
@@ -18,16 +18,6 @@ export function fetcher(requiredData: string, params?: { query: { [key: string]:
     rightNow: '/doc_page/RightNowIds'
   }
 
-  let queryString = ''
-  if (params) {
-    queryString = params.query
-      ? Object.keys(params.query)
-        .reduce((acc: string, el: string, index: number) => {
-          return acc + `${index ? '&' : ''}${el}=${params.query[el]}`
-        }, '?')
-      : ''
-  }
-
   if (process.env.MOCK_DATA && process.env.MOCK_DATA === 'true') {
     // console.log(`Required data for ${requiredData} been taken from mock`)
     //@ts-ignore
@@ -40,10 +30,30 @@ export function fetcher(requiredData: string, params?: { query: { [key: string]:
         })
     )
   } else {
-    if (process.env.NODE_ENV === 'development'){
-      console.log(BASE_URL + map[requiredData] + queryString)
+    let queryString = ''
+    let pathString= ''
+    if (params) {
+      queryString = params.query
+        ? Object.keys(params.query)
+          .reduce((acc: string, el: string, index: number) => {
+            return acc + `${index ? '&' : ''}${el}=${params.query?.[el]}`
+          }, '?')
+        : '';
+
+      pathString = params.path
+        ? params.path
+          .reduce((acc: string, el: string,) => {
+            return acc + `/${el}`
+          }, '')
+        : '';
     }
-    return fetch(BASE_URL + map[requiredData] + queryString)
+
+    const url = BASE_URL + map[requiredData] + pathString + queryString
+
+    if (process.env.NODE_ENV === 'development'){
+      console.log(url)
+    }
+    return fetch(url)
   }
 
 

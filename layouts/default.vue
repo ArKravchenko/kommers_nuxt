@@ -22,18 +22,28 @@
               <a href="/">
                 <h2>Main</h2>
               </a>
-              <a href="/listPage/15">
-                <h2>ListPage Урал /listPage/15</h2>
+              <a href="/theme/3389">
+                <h2>Талибы с картинкой и описанием /theme/3389 (Описание есть также у 34, 36, 39, 40, 41)</h2>
               </a>
-              <a href="/listPage/10">
-                <h2>ListPage Культура /listPage/10</h2>
+              <a href="/publishing/210">
+                <h2>Разводящая с виджетами /publishing/210</h2>
               </a>
-              <a href="/listPage/14">
-                <h2>ListPage Сибирь /listPage/14</h2>
+              <a href="/region/78">
+                <h2>Другая разводящая с виджетами (Питер) /region/78</h2>
               </a>
-              <a href="/listPage/35">
-                <h2>ListPage с картинкой и описанием /listPage/35 (Описание есть также у 34, 36, 39, 40, 41)</h2>
-              </a>
+<!--              <a href="/listPage/15">-->
+<!--                <h2>ListPage Урал /listPage/15</h2>-->
+<!--              </a>-->
+<!--              <a href="/listPage/35">-->
+<!--                <h2>ListPage Талибы /listPage/35</h2>-->
+<!--              </a>-->
+<!--              <a href="/listPage/10">-->
+<!--                <h2>ListPage Культура /listPage/10</h2>-->
+<!--              </a>-->
+<!--              <a href="/listPage/14">-->
+<!--                <h2>ListPage Сибирь /listPage/14</h2>-->
+<!--              </a>-->
+
               <a href="/doc/5154649">
                 <h2>Doc /doc/5154649</h2>
               </a>

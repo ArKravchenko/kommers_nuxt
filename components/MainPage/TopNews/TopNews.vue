@@ -35,12 +35,12 @@
         </article>
       </template>
 
-      <article class="top_news__item">
+      <article class="top_news__item" v-if="getPartner">
         <h2 class="top_news__name">
-          <a :href="topNewsData.data.partner.href || '#'"
+          <a :href="getPartner.href || '#'"
              class="top_news__link"
-             :target="topNewsData.data.partner.isSelfLink? '_self' : '_blanc'">
-            {{ topNewsData.data.partner.title }}&nbsp<span class="top_news__update">Партнерский проект</span>
+             :target="getPartner.isSelfLink? '_self' : '_blanc'">
+            {{ getPartner.title }}&nbsp<span class="top_news__update">Партнерский проект</span>
           </a>
         </h2>
       </article>

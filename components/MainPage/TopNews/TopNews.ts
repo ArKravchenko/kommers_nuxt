@@ -23,6 +23,11 @@ export default class TopNews extends Vue {
     return this.topNewsData?.data?.docs?.length
       && this.topNewsData.data.docs
   }
+
+  get getPartner() {
+    return this.topNewsData?.data?.partner
+      && this.topNewsData.data.partner
+  }
   // mounted(){
   //   console.log('this.topNewsData',this.topNewsData)
   // }

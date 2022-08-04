@@ -37,7 +37,7 @@ export function createRouter() {
             props: true,
           },
           {
-            path: '/listPage/:id',
+            path: '/:type(rubric|theme|region|publishing|author|issue|appgroup)/:id',
             component: ListPage,
           },
           {
