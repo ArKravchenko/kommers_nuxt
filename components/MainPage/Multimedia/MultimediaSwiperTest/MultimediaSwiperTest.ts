@@ -3,9 +3,9 @@ import type {Multimedia as IMultimedia} from "~/interfaces/API/MainPageApi";
 
 // import Swiper JS
 const SwiperImport = () => import(
-  /* webpackChunkName: "SwiperImport_N_K." */
-  /* webpackMode: "eager" */
-  '@/helpers/SwiperImport_N_K');
+  /* webpackChunkName: "SwiperImport_N_K_P_H." */
+  /* webpackMode: "lazy" */
+  '@/helpers/SwiperImport_N_K_P_H');
 import type Swiper from 'swiper'
 
 type ArrayElement<ArrayType extends readonly unknown[]> = ArrayType[number];
