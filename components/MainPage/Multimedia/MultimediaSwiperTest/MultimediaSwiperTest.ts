@@ -33,7 +33,7 @@ export default class Multimedia extends Vue {
     // validator(value: MainPageAPI.Endpoint_4): boolean {
     //   return !!value.rates && !!value.items
     // }
-  }) inDoc!: boolean;
+  }) narrow!: boolean;
 
   // cdnUrl: string = process.env.CDN_URL || ''
 
@@ -91,7 +91,7 @@ export default class Multimedia extends Vue {
 
             breakpoints:{
               1198:{
-                slidesPerView: this.inDoc? 2.7083 : 4,
+                slidesPerView: this.narrow? 2.7083 : 4,
                 spaceBetween: 40,
               }
             },

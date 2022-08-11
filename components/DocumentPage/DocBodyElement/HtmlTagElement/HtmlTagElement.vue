@@ -16,6 +16,6 @@
 --></template>
 
 <script src="./HtmlTagElement.ts" lang="ts"></script>
-<style src="./HtmlTagElement.scss" lang="scss"></style>
+<!--<style src="./HtmlTagElement.scss" lang="scss"></style>-->
 
 

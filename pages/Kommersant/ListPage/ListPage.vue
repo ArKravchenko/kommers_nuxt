@@ -7,6 +7,7 @@
       <div class="layout">
         <div class="rubric">
           <section class="main grid">
+<!--            <SuperAnnounce v-if="getSuperAnnounce" :sa-data="getSuperAnnounce"/>-->
 <!--            <div id="superannounce1">-->
 <!--              <% include inc/superannounce.html %>-->
 <!--            </div>-->
@@ -57,32 +58,64 @@
               </div>
 
 <!--               настраиваемые блоки-->
-              <section class="top_news" id="rubric_news">
-                <TopNews v-if="getTop" :top-news-data="getTop"/>
-              </section>
+<!--              <section class="top_news" id="rubric_news">-->
+<!--                <TopNews v-if="getTop" :top-news-data="getTop"/>-->
+<!--              </section>-->
 
-              <div id="rubric_spot">
-                <!-- яркое пятно -->
-                <LightSpot  v-if="getLightSpot" :lightSpotData="getLightSpot"/>
-              </div>
+<!--              <div id="rubric_spot">-->
+<!--                &lt;!&ndash; яркое пятно &ndash;&gt;-->
+<!--                <LightSpot  v-if="getLightSpot" :lightSpotData="getLightSpot"/>-->
+<!--              </div>-->
 
-              <div id="r_multimedia" class="lenta_multimedia">
-                <!-- мультимедиа -->
-                <Multimedia v-if="getMultimedia" :multimedia-data="getMultimedia"/>
-              </div>
+<!--              <div id="r_multimedia" class="lenta_multimedia">-->
+<!--                &lt;!&ndash; мультимедиа &ndash;&gt;-->
+<!--                <Multimedia v-if="getMultimedia" narrow :multimedia-data="getMultimedia"/>-->
+<!--              </div>-->
 
-              <div id="r_common_rubric">
-                <!-- подвальный настраиваемый блок -->
-<!--                <div style="width: 100%; height: 240px; background-color: gray">-->
-<!--                  Срез рубрики-->
-<!--                  <% include inc/rubrics/common.html %>-->
-<!--                </div>-->
-              </div>
+<!--              <div id="r_common_rubric">-->
+<!--                <Rubric :rubric-data="getMainToday"/>-->
+<!--              </div>-->
+<!--              &lt;!&ndash; мнения &ndash;&gt;-->
+<!--              <div id="opinion">-->
+<!--                <Opinions narrow v-if="getOpinions" :opinions-data="getOpinions"/>-->
+<!--              </div>-->
 
-              <!-- мнения -->
-              <div class="grid" id="opinion">
-                <Opinions v-if="getOpinions" :opinions-data="getOpinions"/>
-              </div>
+                <template v-for="(item,index) in getWidgetsSorted">
+                  <section v-if="item.widgetName==='top'"
+                           :key="index+ item.widgetName"
+                           class="top_news"
+                           id="rubric_news">
+                    <TopNews v-if="getTop" :top-news-data="getTop"/>
+                  </section>
+
+                  <div  v-else-if="item.widgetName==='lightSpot'"
+                        :key="index+ item.widgetName"
+                        id="rubric_spot">
+                    <!-- яркое пятно -->
+                    <LightSpot  v-if="getLightSpot" :lightSpotData="getLightSpot"/>
+                  </div>
+
+                  <div v-else-if="item.widgetName==='multimedia'"
+                       :key="index+ item.widgetName"
+                       id="r_multimedia" class="lenta_multimedia">
+                    <!-- мультимедиа -->
+                    <Multimedia v-if="getMultimedia" narrow :multimedia-data="getMultimedia"/>
+                  </div>
+
+                  <div v-else-if="item.widgetName==='mainToday'"
+                       :key="index+ item.widgetName"
+                       id="r_common_rubric">
+                    <Rubric :rubric-data="getMainToday"/>
+                  </div>
+                  <!-- мнения -->
+                  <div v-else-if="item.widgetName==='opinions'"
+                       :key="index+ item.widgetName"
+                       id="opinion">
+                    <Opinions narrow v-if="getOpinions" :opinions-data="getOpinions"/>
+                  </div>
+<!--                  {{index}}) name: {{item.widgetName}}; order {{item.order}}; <br>-->
+                </template>
+
               <!-- настраиваемые блоки end -->
 
               <!-- ### 1 - 10 ### -->

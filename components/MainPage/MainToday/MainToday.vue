@@ -4,7 +4,7 @@
     <div class="main grid">
       <div class="section_header section_header--main slided_title">
         <h3 class="section_name">
-          <a href="#" class="link section_name__link slided_title__link">
+          <a href="/glavnoe?from=glavnoe" class="link section_name__link slided_title__link">
             <span class="section_name__text slided_title__text">Главное</span>
             <span href="#" class="vicon vicon--rarrow section_header__nav slided_title__nav">
 						<svg class="vicon__body">

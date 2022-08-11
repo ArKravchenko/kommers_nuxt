@@ -8,6 +8,12 @@ export interface ImageFull extends ImageSimple {
   jpegSrcSet: string | null;
 }
 
+
+interface HashWrapper<T>{
+  dataHash: string;
+  data: T
+}
+
 export namespace Actualno {
   enum ChangeTrend {
     positive = 1,
@@ -940,7 +946,7 @@ export namespace ListPageAPI {
     };
     top: Top.APIDataStructure & Order;
     lightSpot: LightSpot.APIDataStructure & Order;
-    mainToday: MainToday.APIDataStructure & Order;
+    mainToday:  HashWrapper<Rubrics.Rubric> & Order;
     multimedia: Multimedia.APIDataStructure & Order;
     opinions: Opinions.APIDataStructure & Order
   }

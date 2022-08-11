@@ -12,7 +12,7 @@ import {fetcher} from "~/helpers/fetcher";
 import SuperAnnounce from '~/components/MainPage/SuperAnnounce/SuperAnnounce.vue'
 import TopNews from '~/components/MainPage/TopNews/TopNews.vue'
 // import LightSpot from '~/components/MainPage/LightSpot/LightSpot.vue'
-import LightSpot from '~/components/MainPage/LightSpot/LightSpotSwiperTest/LightSpotSwiperTest.vue'
+// import LightSpot from '~/components/MainPage/LightSpot/LightSpotSwiperTest/LightSpotSwiperTest.vue'
 import MainToday from '~/components/MainPage/MainToday/MainToday.vue'
 import Opinions from '~/components/MainPage/Opinions/Opinions.vue'
 import Promo from '~/components/general/Promo/Promo.vue'
@@ -34,6 +34,10 @@ const Multimedia = () => import(
   /* webpackChunkName: "Multimedia." */
   /* webpackMode: "lazy" */
   "~/components/MainPage/Multimedia/MultimediaSwiperTest/MultimediaSwiperTest.vue");
+const LightSpot = () => import(
+  /* webpackChunkName: "LightSpot" */
+  /* webpackMode: "lazy" */
+  "~/components/MainPage/LightSpot/LightSpotSwiperTest/LightSpotSwiperTest.vue");
 
 // const MainToday: AsyncComponent = () => import('~/components/MainPage/MainToday/MainToday.vue')
 // const Opinions: AsyncComponent = () => import('~/components/MainPage/Opinions/Opinions.vue')

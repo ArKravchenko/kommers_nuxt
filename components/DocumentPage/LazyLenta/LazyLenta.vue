@@ -17,7 +17,7 @@
 
 
           <div class="lenta_multimedia">
-            <Multimedia in-doc :multimedia-data="multimediaData"/>
+            <Multimedia narrow :multimedia-data="multimediaData"/>
           </div>
           <!-- 1.4. Блок вовлечения -- Картина дня -->
 <!--          <div v-else style="min-height: 250px;background-color: red">-->

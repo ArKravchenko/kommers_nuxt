@@ -6,17 +6,27 @@ import {fetcher} from "~/helpers/fetcher";
 // import {ArticleLong} from "~/interfaces/API/MainPageApi";
 // import Cols from '~/components/general/Cols/Cols.vue'
 
-// TODO keep imports in the same order on every page or replace with lazy pages
+// TODO keep imports in the same order on every page or replace with lazy pages;
+
+// import SuperAnnounce from '~/components/MainPage/SuperAnnounce/SuperAnnounce.vue'
 import TopNews from '~/components/MainPage/TopNews/TopNews.vue'
-import LightSpot from '~/components/MainPage/LightSpot/LightSpotSwiperTest/LightSpotSwiperTest.vue'
+// import LightSpot from '~/components/MainPage/LightSpot/LightSpotSwiperTest/LightSpotSwiperTest.vue'
 import Opinions from '~/components/MainPage/Opinions/Opinions.vue'
 import Promo from '~/components/general/Promo/Promo.vue'
+
+import Rubric from '~/components/MainPage/Rubric/Rubric.vue'
 import CompanyNews from '~/components/MainPage/CompanyNews/CompanyNews.vue'
+
+
 // import Multimedia from '~/components/MainPage/Multimedia/Multimedia.vue'
 const Multimedia = () => import(
   /* webpackChunkName: "Multimedia." */
   /* webpackMode: "lazy" */
   "~/components/MainPage/Multimedia/MultimediaSwiperTest/MultimediaSwiperTest.vue");
+const LightSpot = () => import(
+  /* webpackChunkName: "LightSpot" */
+  /* webpackMode: "lazy" */
+  "~/components/MainPage/LightSpot/LightSpotSwiperTest/LightSpotSwiperTest.vue");
 
 import ServiceMenu from '~/components/ListPage/ServiceMenu/ServiceMenu.vue'
 import ListPageDocs from '~/components/ListPage/ListPageDocs/ListPageDocs.vue'
@@ -37,6 +47,8 @@ import ListPageDocs from '~/components/ListPage/ListPageDocs/ListPageDocs.vue'
     LightSpot,
     Multimedia,
     ListPageDocs,
+    // SuperAnnounce,
+    Rubric
     // Banner
   },
 })
@@ -152,6 +164,43 @@ export default class ListPage extends Vue {
       && this.listPageWidgets.multimedia
   }
 
+  // get getSuperAnnounce() {
+  //   return this.listPageWidgets
+  //     && this.listPageWidgets.superAnnounce
+  // }
+
+  get getMainToday() {
+    return this.listPageWidgets
+      && this.listPageWidgets.mainToday?.data
+  }
+
+  get getWidgetsSorted() {
+    const widgets:Array<{widgetName: 'top' | 'lightSpot' | 'multimedia' | 'mainToday' | 'opinions'}
+    & {[key: string]: any}> = [];
+    this.getTop && widgets.push({
+      ...{widgetName: 'top'},
+      ...this.getTop
+    });
+    this.getLightSpot && widgets.push({
+      ...{widgetName: 'lightSpot'},
+      ...this.getLightSpot
+    });
+    this.getMultimedia && widgets.push({
+      ...{widgetName: 'multimedia'},
+      ...this.getMultimedia
+    });
+    this.getMainToday && widgets.push({
+      ...{widgetName: 'mainToday'},
+      ...this.getMainToday
+    });
+    this.getOpinions && widgets.push({
+      ...{widgetName: 'opinions'},
+      ...this.getOpinions
+    });
+
+    return widgets.sort((a: any, b: any) => a?.order && b?.order ? a.order - b.order : 1)
+  }
+
   get getTitle() {
     return this.listPageWidgets?.pageData?.title
       && this.listPageWidgets.pageData.title
@@ -176,7 +225,7 @@ export default class ListPage extends Vue {
     //   alert(this.$route.params.id)
     // }
     console.log('this.listPageWidgets', this.listPageWidgets);
-    console.log(this.$route.params)
+    // console.log(this.$route.params)
     // console.log('this.listPageDocs', this.listPageDocs)
   }
 

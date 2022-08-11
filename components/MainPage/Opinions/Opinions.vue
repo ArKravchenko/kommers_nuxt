@@ -7,7 +7,9 @@
         <div v-if="index % 2 === 0" class="grid-col grid-col-m">
           <OpinionSmall :opinion-data="opinion"/>
         </div>
-        <div v-else-if="index % 2 === 1" class="grid-col grid-col-m2">
+        <div v-else-if="index % 2 === 1"
+             class="grid-col"
+             :class="[narrow ? 'grid-col-xs2' : 'grid-col-m2']">
           <OpinionBig :opinion-data="opinion"/>
         </div>
       </template>

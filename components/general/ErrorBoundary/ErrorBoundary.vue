@@ -8,5 +8,5 @@
 </template>
 
 <script src="./ErrorBoundary.ts" lang="ts"></script>
-<style src="./ErrorBoundary.scss" lang="scss" scoped></style>
+<!--<style src="./ErrorBoundary.scss" lang="scss" scoped></style>-->
 

@@ -21,6 +21,15 @@ export default class Opinions extends Vue {
     // }
   }) opinionsData!: MainPageAPI.Endpoint_4['opinions'] | null;
 
+  @Prop({
+    type: Boolean,
+    required: false,
+    default: false,
+    // validator(value: MainPageAPI.Endpoint_4): boolean {
+    //   return !!value.rates && !!value.items
+    // }
+  }) narrow!: boolean;
+
   cdnUrl: string = process.env.CDN_URL || ''
 
   get getOpinions(){
