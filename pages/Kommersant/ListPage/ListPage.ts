@@ -171,34 +171,40 @@ export default class ListPage extends Vue {
 
   get getMainToday() {
     return this.listPageWidgets
-      && this.listPageWidgets.mainToday?.data
+      && this.listPageWidgets.mainToday
   }
 
   get getWidgetsSorted() {
-    const widgets:Array<{widgetName: 'top' | 'lightSpot' | 'multimedia' | 'mainToday' | 'opinions'}
-    & {[key: string]: any}> = [];
-    this.getTop && widgets.push({
-      ...{widgetName: 'top'},
-      ...this.getTop
+    type Item = {widgetName: 'top' | 'lightSpot' | 'multimedia' | 'mainToday' | 'opinions'}
+      & {order: number};
+
+    const orderOrInfinity = (getter?: {order: number; [key: string]: any} | null) => {
+      return getter?.order || Infinity
+    }
+
+    const widgets:Array<Item> = [];
+    widgets.push({
+      widgetName: 'top',
+      order: orderOrInfinity(this.getTop)
     });
     this.getLightSpot && widgets.push({
-      ...{widgetName: 'lightSpot'},
-      ...this.getLightSpot
+      widgetName: 'lightSpot',
+      order: orderOrInfinity(this.getLightSpot)
     });
     this.getMultimedia && widgets.push({
-      ...{widgetName: 'multimedia'},
-      ...this.getMultimedia
+      widgetName: 'multimedia',
+      order: orderOrInfinity(this.getMultimedia)
     });
     this.getMainToday && widgets.push({
-      ...{widgetName: 'mainToday'},
-      ...this.getMainToday
+      widgetName: 'mainToday',
+      order: orderOrInfinity(this.getMainToday)
     });
     this.getOpinions && widgets.push({
-      ...{widgetName: 'opinions'},
-      ...this.getOpinions
+      widgetName: 'opinions',
+      order: orderOrInfinity(this.getOpinions)
     });
 
-    return widgets.sort((a: any, b: any) => a?.order && b?.order ? a.order - b.order : 1)
+    return widgets.sort((a: Item, b: Item) => a.order - b.order)
   }
 
   get getTitle() {

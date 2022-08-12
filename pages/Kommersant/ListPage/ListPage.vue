@@ -73,7 +73,7 @@
 <!--              </div>-->
 
 <!--              <div id="r_common_rubric">-->
-<!--                <Rubric :rubric-data="getMainToday"/>-->
+<!--                <Rubric :rubric-data="getMainToday? getMainToday.data : null"/>-->
 <!--              </div>-->
 <!--              &lt;!&ndash; мнения &ndash;&gt;-->
 <!--              <div id="opinion">-->
@@ -81,37 +81,38 @@
 <!--              </div>-->
 
                 <template v-for="(item,index) in getWidgetsSorted">
-                  <section v-if="item.widgetName==='top'"
-                           :key="index+ item.widgetName"
+                  <section v-if="item.widgetName==='top' && getTop"
+                           :key="index + item.widgetName"
                            class="top_news"
                            id="rubric_news">
-                    <TopNews v-if="getTop" :top-news-data="getTop"/>
+                    <TopNews :top-news-data="getTop"/>
                   </section>
 
-                  <div  v-else-if="item.widgetName==='lightSpot'"
-                        :key="index+ item.widgetName"
+                  <div  v-else-if="item.widgetName==='lightSpot' && getLightSpot"
+                        :key="index + item.widgetName"
                         id="rubric_spot">
                     <!-- яркое пятно -->
-                    <LightSpot  v-if="getLightSpot" :lightSpotData="getLightSpot"/>
+                    <LightSpot :lightSpotData="getLightSpot"/>
                   </div>
 
-                  <div v-else-if="item.widgetName==='multimedia'"
-                       :key="index+ item.widgetName"
-                       id="r_multimedia" class="lenta_multimedia">
+                  <div v-else-if="item.widgetName==='multimedia' && getMultimedia"
+                       :key="index + item.widgetName"
+                       id="r_multimedia"
+                       class="lenta_multimedia">
                     <!-- мультимедиа -->
-                    <Multimedia v-if="getMultimedia" narrow :multimedia-data="getMultimedia"/>
+                    <Multimedia narrow :multimedia-data="getMultimedia"/>
                   </div>
 
-                  <div v-else-if="item.widgetName==='mainToday'"
-                       :key="index+ item.widgetName"
+                  <div v-else-if="item.widgetName==='mainToday' && getMainToday && getMainToday.data"
+                       :key="index + item.widgetName"
                        id="r_common_rubric">
-                    <Rubric :rubric-data="getMainToday"/>
+                    <Rubric :rubric-data="getMainToday.data"/>
                   </div>
                   <!-- мнения -->
-                  <div v-else-if="item.widgetName==='opinions'"
-                       :key="index+ item.widgetName"
+                  <div v-else-if="item.widgetName==='opinions' && getOpinions"
+                       :key="index + item.widgetName"
                        id="opinion">
-                    <Opinions narrow v-if="getOpinions" :opinions-data="getOpinions"/>
+                    <Opinions narrow :opinions-data="getOpinions"/>
                   </div>
 <!--                  {{index}}) name: {{item.widgetName}}; order {{item.order}}; <br>-->
                 </template>
