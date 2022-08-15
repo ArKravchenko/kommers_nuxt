@@ -9,9 +9,9 @@
     </div>
 
     <div v-if="mostReadableAsideData && getDocs"
-         class="most_readable__content most_readable__shadow">
+         class="most_readable__content" :class="{'most_readable__shadow': !wide}">
       <article class="most_readable__item">
-        <div class="most_readable__photo stretch_photo">
+        <div v-if="!wide" class="most_readable__photo stretch_photo">
           <Picture
             :src="getDocImg(getDocs[0]).src"
             :alt="getDocImg(getDocs[0]).alt"

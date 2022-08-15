@@ -25,7 +25,11 @@ import Promo from '~/components/general/Promo/Promo.vue'
 import SpendTime from '~/components/MainPage/SpendTime/SpendTime.vue'
 import Rubric from '~/components/MainPage/Rubric/Rubric.vue'
 import Vote from '~/components/MainPage/Vote/Vote.vue'
-import MostReadableAside from '~/components/MainPage/MostReadableAside/MostReadableAside.vue'
+// import MostReadableAside from '~/components/MainPage/MostReadableAside/MostReadableAside.vue';
+const MostReadableAside = () => import(
+  /* webpackChunkName: "MostReadableAside" */
+  /* webpackMode: "lazy" */
+  "~/components/MainPage/MostReadableAside/MostReadableAside.vue");
 import SpendGallery from '~/components/MainPage/SpendGallery/SpendGallery.vue'
 import CompanyNews from '~/components/MainPage/CompanyNews/CompanyNews.vue'
 // import Multimedia from '~/components/MainPage/Multimedia/Multimedia.vue'

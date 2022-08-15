@@ -16,9 +16,13 @@
           </div>
 
 
-          <div class="lenta_multimedia">
-            <Multimedia narrow :multimedia-data="multimediaData"/>
-          </div>
+          <section v-if="!(lazyDocIndex % 2)" class="lenta_multimedia">
+            <Multimedia  narrow :multimedia-data="multimediaData"/>
+          </section>
+
+          <section v-else class="most_readable">
+            <MostReadableAside wide/>
+          </section>
           <!-- 1.4. Блок вовлечения -- Картина дня -->
 <!--          <div v-else style="min-height: 250px;background-color: red">-->
 <!--            Картина дня-->

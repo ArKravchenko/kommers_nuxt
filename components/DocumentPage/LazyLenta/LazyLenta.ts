@@ -5,6 +5,13 @@ import type {
 } from "~/interfaces/API/MainPageApi";
 import {fetcher} from "~/helpers/fetcher";
 
+
+// import MostReadableAside from '~/components/MainPage/MostReadableAside/MostReadableAside.vue'
+const MostReadableAside = () => import(
+  /* webpackChunkName: "MostReadableAside" */
+  /* webpackMode: "lazy" */
+  "~/components/MainPage/MostReadableAside/MostReadableAside.vue");
+
 const Promo = () => import(
   /* webpackChunkName: "Promo." */
   /* webpackMode: "lazy" */
@@ -25,6 +32,7 @@ const ArticlePreview = () => import(
     Promo,
     ArticlePreview,
     Multimedia,
+    MostReadableAside
   },
 })
 export default class LazyLenta extends Vue {

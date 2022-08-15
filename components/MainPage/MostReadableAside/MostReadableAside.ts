@@ -1,4 +1,4 @@
-import {Component, Vue} from 'nuxt-property-decorator'
+import {Component, Prop, Vue} from 'nuxt-property-decorator'
 import type {MostReadable as IMostReadable} from "~/interfaces/API/MainPageApi";
 import {fetcher} from "~/helpers/fetcher";
 
@@ -13,6 +13,15 @@ import {fetcher} from "~/helpers/fetcher";
   fetchOnServer: false,
 })
 export default class MostReadableAside extends Vue {
+  @Prop({
+    type: Boolean,
+    required: false,
+    default: false,
+    // validator(value: MainPageAPI.Endpoint_4): boolean {
+    //   return !!value.rates && !!value.items
+    // }
+  }) wide!: boolean;
+
   mostReadableAsideData: IMostReadable.IMostReadable | null = null;
 
   fetchData() {
