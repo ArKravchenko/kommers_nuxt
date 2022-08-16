@@ -7,6 +7,7 @@ export function fetcher(requiredData: string, params?: { query?: { [key: string]
     listPageWidgets: '/list_page/Blocks',
     listPageDocs: '/list_page/DocTape',
     docPageData: '/doc_page/DocContent',
+    galleryPageData: '/doc_page/gallery',
     companyNews: '/main_page/CompanyNews',
     spendGalleryTop: '/main_page/PromoGalleryTop',
     spendGalleryBottom: '/main_page/PromoGalleryBottom',

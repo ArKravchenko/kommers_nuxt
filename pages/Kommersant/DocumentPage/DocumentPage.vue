@@ -118,4 +118,4 @@
 
 <script src="./DocumentPage.ts" lang="ts"></script>
 
-<style src="./DocumentPage.scss" scoped lang="scss"></style>
+<!--<style src="./DocumentPage.scss" scoped lang="scss"></style>-->

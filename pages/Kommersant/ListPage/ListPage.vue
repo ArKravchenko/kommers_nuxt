@@ -225,13 +225,14 @@
       <CompanyNews :company-news-data="companyNewsData"/>
 
       <div class="adv_layer adv_300x250 hide_desktop">
-          <div style="width: 300px; height: 250px;background-color: grey">300x250</div>
+        <client-only>
+          <Banner :place-id="300300"/>
+        </client-only>
       </div>
 
       <div class="adv_section hide_mobile">
         <!-- перетяжка -->
         <div class="adv_980x240">
-<!--          <div style="width: 970px; height: 250px;background-color: grey">970x250</div>-->
           <client-only>
             <Banner :place-id="970250"/>
           </client-only>

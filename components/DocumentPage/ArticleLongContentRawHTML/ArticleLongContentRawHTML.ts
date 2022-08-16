@@ -324,8 +324,8 @@ export default class ArticleLongContentRawHTML extends Vue {
     this.observer = new IntersectionObserver((entry,observer)=>{
       entry.forEach(({ isIntersecting })=>{
         if (isIntersecting){
-          if (!window.location.pathname.includes(`/doc/${this.getDocId}`)){
-            window.history.replaceState(null, this.getTitleString, `/doc/${this.getDocId}`);
+          if (!window.location.pathname.includes(`/${this.$route.params.doctype}/${this.getDocId}`)){
+            window.history.replaceState(null, this.getTitleString, `/${this.$route.params.doctype}/${this.getDocId}`);
             document.title = this.getTitleString;
           }
         }

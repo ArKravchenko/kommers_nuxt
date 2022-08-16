@@ -9,6 +9,7 @@ import Kommersant from '~/pages/Kommersant/Kommersant.vue'
 // const Kommersant = () => import('~/pages/Kommersant/Kommersant.vue').then(i => i.default)
 const MainPage: AsyncComponent = () => import('~/pages/Kommersant/MainPage/MainPage.vue').then(i => i.default)
 const DocumentPage: AsyncComponent = () => import('~/pages/Kommersant/DocumentPage/DocumentPage.vue').then(i => i.default)
+const GalleryPage: AsyncComponent = () => import('~/pages/Kommersant/GalleryPage/GalleryPage.vue').then(i => i.default)
 const ListPage: AsyncComponent = () => import('~/pages/Kommersant/ListPage/ListPage.vue').then(i => i.default)
 
 
@@ -17,7 +18,7 @@ Vue.use(Router)
 export function createRouter() {
   return new Router({
     scrollBehavior: (to, from, savedPosition)=>{
-      if (to.name === 'Document' && to.path !== from.path)
+      if ((to.name === 'Document' || to.name === 'Gallery') && to.path !== from.path)
         return {x:0, y:0}
     },
     mode: 'history',
@@ -32,8 +33,14 @@ export function createRouter() {
           },
           {
             name:'Document',
-            path: '/doc/:id',
+            path: '/:doctype(doc)/:id',
             component: DocumentPage,
+            props: true,
+          },
+          {
+            name:'Gallery',
+            path: '/:doctype(gallery)/:id',
+            component: GalleryPage,
             props: true,
           },
           {

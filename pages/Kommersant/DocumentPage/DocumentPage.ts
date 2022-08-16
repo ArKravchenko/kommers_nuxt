@@ -17,10 +17,10 @@ import {fetcher} from "~/helpers/fetcher";
 import Promo from '~/components/general/Promo/Promo.vue'
 import CompanyNews from '~/components/MainPage/CompanyNews/CompanyNews.vue'
 // import Multimedia from '~/components/MainPage/Multimedia/MultimediaSwiperTest/MultimediaSwiperTest.vue'
-const Multimedia = () => import(
-  /* webpackChunkName: "Multimedia." */
-  /* webpackMode: "lazy" */
-  "~/components/MainPage/Multimedia/MultimediaSwiperTest/MultimediaSwiperTest.vue");
+// const Multimedia = () => import(
+//   /* webpackChunkName: "Multimedia." */
+//   /* webpackMode: "lazy" */
+//   "~/components/MainPage/Multimedia/MultimediaSwiperTest/MultimediaSwiperTest.vue");
 // const Banner = () => import(
 //   /* webpackChunkName: "Banner." */
 //   /* webpackMode: "eager" */
@@ -37,10 +37,10 @@ const ArticleLongContentRawHTML = () => import(
 // import ArticleLongContent from '~/components/DocumentPage/ArticleLongContent/ArticleLongContent.vue';
 // import ArticleLongContentRawHTML from '~/components/DocumentPage/ArticleLongContentRawHTML/ArticleLongContentRawHTML.vue';
 
-const ArticlePreview = () => import(
-  /* webpackChunkName: "ArticlePreview." */
-  /* webpackMode: "lazy" */
-  '~/components/DocumentPage/ArticlePreview/ArticlePreview.vue');
+// const ArticlePreview = () => import(
+//   /* webpackChunkName: "ArticlePreview." */
+//   /* webpackMode: "lazy" */
+//   '~/components/DocumentPage/ArticlePreview/ArticlePreview.vue');
 const JustAgo = () => import(
   /* webpackChunkName: "JustAgo." */
   /* webpackMode: "lazy" */
@@ -67,9 +67,9 @@ import type {MetaInfo} from "vue-meta";
     CompanyNews,
     ArticleLongContent,
     ArticleLongContentRawHTML,
-    ArticlePreview,
+    // ArticlePreview,
     PictureOfTheDay,
-    Multimedia,
+    // Multimedia,
     LazyLenta,
     JustAgo,
     // Banner
