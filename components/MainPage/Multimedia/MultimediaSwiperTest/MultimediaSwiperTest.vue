@@ -2,7 +2,9 @@
 
 
   <section v-if="getItems" class="multimedia" id="multimedia">
-    <span v-if="this.$isServer">{{ Math.random() }} Multimedia component cache</span>
+    <LazyHydrate never>
+      <span v-if="this.$isServer">{{ Math.random() }} Multimedia component cache</span>
+    </LazyHydrate>
 
     <div class="section_header slided_title">
       <h3 class="section_name">

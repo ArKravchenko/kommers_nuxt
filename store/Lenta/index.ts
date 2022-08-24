@@ -49,7 +49,7 @@ export const actions: ActionTree<IState, IState> = {
         : apiUrl,
       {
         method: 'GET',
-        credentials: 'include',
+        // credentials: 'include',
       })
       .then(res => {
         if (res.ok) {

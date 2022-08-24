@@ -7,6 +7,7 @@ const SwiperImport = () => import(
   /* webpackMode: "lazy" */
   '@/helpers/SwiperImport_N_K_P_H');
 import type Swiper from 'swiper'
+import LazyHydrate from "vue-lazy-hydration";
 
 type ArrayElement<ArrayType extends readonly unknown[]> = ArrayType[number];
 
@@ -15,6 +16,9 @@ type ArrayElement<ArrayType extends readonly unknown[]> = ArrayType[number];
   serverCacheKey(a: any) {
     return a.multimediaData?.dataHash ? a.multimediaData.dataHash : JSON.stringify(a)
   },
+  components:{
+    LazyHydrate
+  }
 })
 export default class Multimedia extends Vue {
   @Prop({

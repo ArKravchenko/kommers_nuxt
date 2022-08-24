@@ -20,6 +20,7 @@ import Promo from '~/components/general/Promo/Promo.vue'
 //   /* webpackChunkName: "Banner." */
 //   /* webpackMode: "eager" */
 //   "@/components/general/Banner/Banner.vue");
+import LazyHydrate from "vue-lazy-hydration";
 
 // TODO keep imports in the same order on every page or replace with lazy pages
 import SpendTime from '~/components/MainPage/SpendTime/SpendTime.vue'
@@ -71,6 +72,7 @@ const LightSpot = () => import(
     SpendGallery,
     CompanyNews,
     Multimedia,
+    LazyHydrate
     // Banner
   },
 })

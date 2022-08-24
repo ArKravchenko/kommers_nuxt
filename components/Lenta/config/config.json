@@ -1,8 +1,8 @@
 {
-  "apiUrl": "//kommersant.ru/news/newsline",
+  "apiUrl": "https://srdkprot.kommersant.ru/api/common_data/doctape",
   "apiUrlPersonal": "//kommersant.ru/news/SubscribedNewsline",
-  "apiUrlBusiness": "//kommersant.ru/news/BusinessNewsline",
-  "apiUrlDebug": "//kommersant.ru/news/newsline",
+  "apiUrlBusiness": "https://srdkprot.kommersant.ru/api/common_data/doctape",
+  "apiUrlDebug": "https://srdkprot.kommersant.ru/api/common_data/doctape",
   "longPollingEndpoint": "/server-push",
   "adjustLentaHref": "/LK/SubscriptionSettings",
   "lentaHref": "/lenta?from=all_lenta",
