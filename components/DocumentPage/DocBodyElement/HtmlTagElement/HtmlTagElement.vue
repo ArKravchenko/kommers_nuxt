@@ -1,6 +1,12 @@
 <template><!--
 
-  --><component v-if="htmlTagElement"
+  --><component v-if="htmlTagElement && !getChildren"
+                :is="htmlTagElement.tagName"
+                v-bind="getAttributes"
+                ref="root"
+  /><!--
+
+  --><component v-else-if="htmlTagElement"
              :is="htmlTagElement.tagName"
              v-bind="getAttributes"
              ref="root"
