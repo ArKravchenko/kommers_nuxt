@@ -3,7 +3,8 @@
   <div class="incut_content">
     <!-- нативный чекбокс для расхлопов -->
     <input :id="uniqueInputId" class="js-toggle-input vh" type="checkbox" aria-hidden="true">
-    <h2 class="incut_content__name incut_4698571_222333_name" @click="clickIsExpandedToggle">
+    <h2 class="incut_content__name incut_4698571_222333_name"
+        @click.stop.prevent="clickIsExpandedToggle">
       <template v-if="getTitle">
         <DocBodyElement v-for="(child, i) in getTitle"
                         :key="'title'+i"
@@ -11,14 +12,18 @@
         />
       </template>
       <label :for="uniqueInputId" class="incut_content__label" aria-hidden="true" >
-          <span :class="['incut_content__arrow ui-rotate',{'ui-rotate_180':isExpanded}]">
+          <span class="incut_content__arrow ui-rotate"
+                :class="{'ui-rotate_180':isExpanded}"
+          >
             <span class="vicon vicon--rarrow" aria-hidden="true">
               <svg class="vicon__body"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#vicon-rarrow"></use></svg>
             </span>
           </span>
       </label>
     </h2>
-    <div :class="['ui-collapse',isExpanded? 'ui-collapse--show': 'ui-collapse--hide']"
+    <div ref="collapse"
+         class="ui-collapse ui-collapse--animated"
+         :class="[isExpanded? 'ui-collapse--show': 'ui-collapse--hide']"
          data-toggle-class-animated="ui-collapse--animated"
     >
       <div v-if="getCollapseRawHtml"

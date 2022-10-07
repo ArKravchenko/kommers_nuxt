@@ -49,10 +49,12 @@ export default class Collapse extends Vue {
 
   isExpanded: boolean = false;
 
-  clickIsExpandedToggle(e: Event) {
-    e.stopPropagation();
-    e.preventDefault();
+  clickIsExpandedToggle() {
+    const el = (<HTMLElement>this.$refs['collapse']);
     this.isExpanded = !this.isExpanded
+    el.style.maxHeight = this.isExpanded
+      ? el.scrollHeight + "px"
+      : '';
   }
 
   uniqueInputId: string = Math.random().toString()

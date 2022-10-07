@@ -517,6 +517,7 @@
 	visibility: visible;
 	opacity: 1;
 	position: relative; /* We need this to prevent browsers not collapsing blocks properly. */
+  will-change: max-height;
 }
 .ui-collapse.ui-collapse--hide {
 	visibility: hidden;
