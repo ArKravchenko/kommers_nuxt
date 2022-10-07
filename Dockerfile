@@ -3,7 +3,7 @@ ARG APP_ROOT=/kommersant
 ENV NODE_ENV production
 WORKDIR ${APP_ROOT}
 COPY package.json yarn.lock ${APP_ROOT}
-RUN yarn install
+RUN yarn install --frozen-lockfile
 #RUN npm install --location=global npm
 #RUN apk add --no-cache --virtual .gyp \
 #        python3 \
