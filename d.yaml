@@ -1,0 +1,121 @@
+version: "3.8"
+services:
+  #  registry:
+  #    image: "registry:2"
+  #    networks:
+  #      - my_network
+  #    ports:
+  #      - 5000:5000
+  #    volumes:
+  #      - /home/proton/front/registry_volume:/var/lib/registry
+  #    deploy:
+  #      mode: global
+  #      update_config:
+  #        parallelism: 1
+  #        delay: 10s
+  #        order: start-first
+  #    depends_on:
+  #      - redis
+  #      placement:
+  #        constraints: [ node.labels.registry == true ]
+  front:
+    image: $IMAGE
+    environment:
+      - PAGE_CACHE_TTL=10
+    #    image: "kom"
+    #    restart: always
+    networks:
+      - my_network
+    ports:
+      - 3333:3333
+    healthcheck:
+      test: curl -f http://0.0.0.0:3333/healthz || exit 1
+      interval: 10s
+      timeout: 10s
+      retries: 5
+      start_period: 15s
+    deploy:
+      mode: replicated
+      replicas: 8
+      update_config:
+        parallelism: 2
+        delay: 10s
+        order: start-first
+      #    depends_on:
+      #      - redis
+      placement:
+        constraints: [ node.labels.front == true ]
+  front2:
+    image: $IMAGE
+    environment:
+      - PAGE_CACHE_ENABLED=false
+    #    image: "kom"
+    #    restart: always
+    networks:
+      - my_network
+    ports:
+      - 3335:3333
+    healthcheck:
+      test: curl -f http://0.0.0.0:3333/healthz || exit 1
+      interval: 10s
+      timeout: 10s
+      retries: 5
+      start_period: 15s
+    deploy:
+      mode: replicated
+      replicas: 8
+      update_config:
+        parallelism: 2
+        delay: 10s
+        order: start-first
+      #    depends_on:
+      #      - redis
+      placement:
+        constraints: [ node.labels.front == true ]
+  front3:
+    image: $IMAGE
+    environment:
+      - PAGE_CACHE_ENABLED=false
+      - COMPONENT_CACHE_TTL=0
+      - COMPONENT_CACHE_ENABLED=false
+    #    image: "kom"
+    #    restart: always
+    networks:
+      - my_network
+    ports:
+      - 3337:3333
+    healthcheck:
+      test: curl -f http://0.0.0.0:3333/healthz || exit 1
+      interval: 10s
+      timeout: 10s
+      retries: 5
+      start_period: 15s
+    deploy:
+      mode: replicated
+      replicas: 8
+      update_config:
+        parallelism: 2
+        delay: 10s
+        order: start-first
+      #    depends_on:
+      #      - redis
+      placement:
+        constraints: [ node.labels.front == true ]
+  #  redis:
+  #    image: redis:6.0.6
+  #    networks:
+  #      - my_network
+  #    ports:
+  #      - 6379:6379
+  #    command: [ sh, -c, "rm -f /data/dump.rdb && redis-server" ] # disable persistence
+  #    deploy:
+  #      mode: global
+  #      update_config:
+  #        delay: 10s
+  #        order: start-first
+  #  #      placement:
+  #  #        constraints: [ node.role == worker ]
+  networks:
+    my_network:
+      driver: overlay
+  #    driver: bridge

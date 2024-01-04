@@ -1,0 +1,22 @@
+http:
+  routers:
+    Router0:
+      entryPoints:
+        - web
+      service: "weightedWhoami"
+      rule: "PathPrefix(`/`)"
+  services:
+    weightedWhoami:
+      weighted:
+        services:
+          - name: whoami@docker
+            weight: 1
+#          - name: whoami2@docker
+#            weight: 0
+          - name: front@docker
+            weight: 1
+        sticky:
+          cookie:
+            name: stickAB
+            secure: false
+            httpOnly: true

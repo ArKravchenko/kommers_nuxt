@@ -1,0 +1,130 @@
+version: "3.8"
+services:
+  traefik:
+    # The official v2 Traefik docker image
+    image: traefik:v2.9
+    # Enables the web UI and tells Traefik to listen to docker
+#    command: "
+#    --api.insecure=true
+#    --providers.docker
+#    --providers.docker.network=my_network
+#    --providers.docker.swarmMode=true
+#    --entryPoints.web.address=:80
+#    --entryPoints.web2.address=:81
+#    --providers.docker.exposedByDefault=false
+#    "
+    networks:
+      - my_network
+    ports:
+      # The HTTP port
+      - "80:80"
+      - "81:81"
+#      - "3333:81"
+      # The Web UI (enabled by --api.insecure=true)
+      - "8080:8080"
+    volumes:
+      # So that Traefik can listen to the Docker events
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ./traefik.yaml:/traefik.yaml:ro
+      - ./dynamic/:/dynamic/:ro
+    deploy:
+      mode: replicated
+#      two replicas needed to reload configuration from static traefik.yaml
+      replicas: 2
+      update_config:
+        parallelism: 1
+        delay: 10s
+        order: start-first
+    depends_on:
+      - whoami
+      - whoami2
+      - front
+  whoami:
+    # A container that exposes an API to show its IP address
+    image: traefik/whoami
+#    labels:
+#      - "traefik.enable=true"
+#      - "traefik.http.routers.whoami.rule=PathPrefix(`/`)"
+    networks:
+      - my_network
+    deploy:
+      mode: replicated
+      replicas: 1
+      update_config:
+        parallelism: 1
+        delay: 10s
+        order: start-first
+      labels:
+        - "traefik.enable=true"
+        - "traefik.http.services.whoami.loadbalancer.server.port=80"
+        - "traefik.http.routers.whoami.rule=PathPrefix(`/`)"
+        - "traefik.http.routers.whoami.entrypoints=web"
+        - "traefik.http.services.whoami.loadbalancer.sticky.cookie=true"
+        - "traefik.http.services.whoami.loadbalancer.sticky.cookie.httponly=true"
+        - "traefik.http.services.whoami.loadbalancer.sticky.cookie.name=stickContainer"
+
+  whoami2:
+    # A container that exposes an API to show its IP address
+    image: traefik/whoami
+    #    labels:
+    #      - "traefik.enable=true"
+    #      - "traefik.http.routers.whoami.rule=PathPrefix(`/`)"
+    networks:
+      - my_network
+    deploy:
+      mode: replicated
+      replicas: 2
+      update_config:
+        parallelism: 1
+        delay: 10s
+        order: start-first
+      labels:
+        - "traefik.enable=true"
+        - "traefik.http.services.whoami2.loadbalancer.server.port=80"
+        - "traefik.http.routers.whoami2.rule=PathPrefix(`/`)"
+        - "traefik.http.routers.whoami2.entrypoints=web"
+        - "traefik.http.services.whoami2.loadbalancer.sticky.cookie=true"
+        - "traefik.http.services.whoami2.loadbalancer.sticky.cookie.httponly=true"
+        - "traefik.http.services.whoami2.loadbalancer.sticky.cookie.name=stickContainer"
+#    ports:
+#      - 3333:80
+  front:
+    image: "arkravchenko/kommersant_nuxt:healthz31"
+    environment:
+      - PAGE_CACHE_TTL=10
+    #    image: "kom"
+    #    restart: always
+    networks:
+      - my_network
+#    ports:
+#      - 3333:3333
+    healthcheck:
+      test: curl -f http://0.0.0.0:3333/healthz || exit 1
+      interval: 10s
+      timeout: 10s
+      retries: 5
+      start_period: 15s
+    deploy:
+      mode: replicated
+      replicas: 2
+      update_config:
+        parallelism: 2
+        delay: 10s
+        order: start-first
+      labels:
+        - "traefik.enable=true"
+        - "traefik.http.services.front.loadbalancer.server.port=3333"
+        - "traefik.http.routers.front.rule=PathPrefix(`/`)"
+        - "traefik.http.routers.front.entrypoints=web"
+        - "traefik.http.services.front.loadbalancer.sticky.cookie=true"
+        - "traefik.http.services.front.loadbalancer.sticky.cookie.httponly=true"
+        - "traefik.http.services.front.loadbalancer.sticky.cookie.name=stickContainer"
+#    depends_on:
+#      - redis
+#      placement:
+#        constraints: [ node.labels.front == true ]
+networks:
+  my_network:
+    driver: overlay
+    external: true
+#    driver: bridge

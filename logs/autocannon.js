@@ -6,10 +6,10 @@ const instance = autocannon({
   workers: 4,
   duration: 1000,
   connections: 10,
-  pipelining: 10,
+  pipelining: 1,
   // amount: 1000,
   idReplacement: true,
-  url:'localhost:3333',//'https://prototype.kommersant.ru',
+  url:'https://proton.kommersant.ru',
   requests: fs.readFileSync('1000-space.txt',{encoding:'utf-8'}).split('\n').map(el=>{
 
     // console.log(el.slice(31))

@@ -1,0 +1,145 @@
+version: "3.8"
+services:
+  traefik:
+    image: traefik:v2.9
+    networks:
+      - my_network
+    ports:
+      # The HTTP port
+      - "3333:3333"
+      # The Web UI (enabled by --api.insecure=true)
+      - "8080:8080"
+    volumes:
+      # So that Traefik can listen to the Docker events
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ./d_traefik.yaml:/traefik.yaml:ro
+      - ./d_dynamic/:/dynamic/:ro
+    deploy:
+      mode: replicated
+      #      two replicas needed to reload configuration from static traefik.yaml
+      replicas: 2
+      update_config:
+        parallelism: 1
+        delay: 10s
+        order: start-first
+      placement:
+        constraints:
+          - node.labels.name == proton
+          - node.role == manager
+    depends_on:
+      - front
+      - front2
+      - front3
+      - whoami
+  front:
+    image: $IMAGE
+    environment:
+      - PAGE_CACHE_TTL=10
+    networks:
+      - my_network
+#    ports:
+#      - 3333:3333
+    healthcheck:
+      test: curl -f http://0.0.0.0:3333/healthz || exit 1
+      interval: 10s
+      timeout: 10s
+      retries: 5
+      start_period: 15s
+    deploy:
+      mode: replicated
+      replicas: 8
+      update_config:
+        parallelism: 2
+        delay: 10s
+        order: start-first
+      placement:
+        constraints: [ node.labels.front == true ]
+      labels:
+        - "traefik.enable=true"
+        - "traefik.http.services.front.loadbalancer.server.port=3333"
+        - "traefik.http.routers.front.rule=PathPrefix(`/`)"
+        - "traefik.http.routers.front.entrypoints=web"
+        - "traefik.http.services.front.loadbalancer.sticky.cookie=true"
+        - "traefik.http.services.front.loadbalancer.sticky.cookie.httponly=true"
+        - "traefik.http.services.front.loadbalancer.sticky.cookie.name=stickContainer"
+  front2:
+    image: $IMAGE
+    environment:
+      - PAGE_CACHE_ENABLED=false
+    #    image: "kom"
+    #    restart: always
+    networks:
+      - my_network
+    ports:
+      - 3335:3333
+    healthcheck:
+      test: curl -f http://0.0.0.0:3333/healthz || exit 1
+      interval: 10s
+      timeout: 10s
+      retries: 5
+      start_period: 15s
+    deploy:
+      mode: replicated
+      replicas: 8
+      update_config:
+        parallelism: 2
+        delay: 10s
+        order: start-first
+      #    depends_on:
+      #      - redis
+      placement:
+        constraints: [ node.labels.front == true ]
+  front3:
+    image: $IMAGE
+    environment:
+      - PAGE_CACHE_ENABLED=false
+      - COMPONENT_CACHE_TTL=0
+      - COMPONENT_CACHE_ENABLED=false
+    #    image: "kom"
+    #    restart: always
+    networks:
+      - my_network
+    ports:
+      - 3337:3333
+    healthcheck:
+      test: curl -f http://0.0.0.0:3333/healthz || exit 1
+      interval: 10s
+      timeout: 10s
+      retries: 5
+      start_period: 15s
+    deploy:
+      mode: replicated
+      replicas: 8
+      update_config:
+        parallelism: 2
+        delay: 10s
+        order: start-first
+      #    depends_on:
+      #      - redis
+      placement:
+        constraints: [ node.labels.front == true ]
+  whoami:
+    # A container that exposes an API to show its IP address
+    image: traefik/whoami
+    networks:
+      - my_network
+    deploy:
+      mode: replicated
+      replicas: 2
+      update_config:
+        parallelism: 1
+        delay: 10s
+        order: start-first
+      labels:
+        - "traefik.enable=true"
+        - "traefik.http.services.whoami.loadbalancer.server.port=80"
+        - "traefik.http.routers.whoami.rule=PathPrefix(`/`)"
+        - "traefik.http.routers.whoami.entrypoints=web"
+        - "traefik.http.services.whoami.loadbalancer.sticky.cookie=true"
+        - "traefik.http.services.whoami.loadbalancer.sticky.cookie.httponly=true"
+        - "traefik.http.services.whoami.loadbalancer.sticky.cookie.name=stickContainer"
+networks:
+  my_network:
+    driver: overlay
+    external: true
+

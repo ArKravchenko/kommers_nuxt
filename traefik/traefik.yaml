@@ -1,0 +1,26 @@
+## STATIC CONFIGURATION
+## This file is loaded once per service creation and overrides commandline configuration from dockerfile
+log:
+  level: INFO
+
+api:
+  insecure: true
+  dashboard: true
+
+entryPoints:
+  web:
+    address: ":80"
+  web2:
+    address: ":81"
+
+providers:
+  docker:
+    network: my_network
+    swarmMode: true
+    exposedByDefault: false
+    swarmModeRefreshSeconds: 5
+    watch: true
+  #    endpoint: "unix:///var/run/docker.sock"
+  file:
+    directory: "./dynamic/"
+    watch: true

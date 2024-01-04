@@ -1,0 +1,48 @@
+http:
+  routers:
+    Router0:
+      entryPoints:
+        - web2
+      service: "weightedWhoami"
+      rule: "PathPrefix(`/`)"
+  services:
+    weightedWhoami:
+      weighted:
+        services:
+          - name: whoami@docker
+            weight: 1
+          - name: whoami2@docker
+            weight: 0
+          - name: front@docker
+            weight: 1
+        sticky:
+          cookie:
+            name: stickAB
+            secure: false
+            httpOnly: true
+#            sameSite: foobar
+#      loadBalancer:
+#        sticky:
+#          cookie:
+#            name: foobar
+#            secure: false
+#            httpOnly: true
+#            sameSite: foobar
+#        servers:
+#          - url: "http://whoami:80@docker"
+#        healthCheck:
+#          scheme: foobar
+#          path: foobar
+#          method: foobar
+#          port: 42
+#          interval: foobar
+#          timeout: foobar
+#          hostname: foobar
+#          followRedirects: true
+#          headers:
+#            name0: foobar
+#            name1: foobar
+#        passHostHeader: true
+#        responseForwarding:
+#          flushInterval: foobar
+#        serversTransport: foobar
